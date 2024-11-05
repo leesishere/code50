@@ -37,7 +37,12 @@ unicode_dict = {
 def main():
     # Example usage
     for code, description in unicode_dict.items():
-        print(code +f" {description}")
+        smilley = chr(code)
+        print(f"{smilley} {description}")
+
+    # Convert Unicode code point to a character
+    unicode_char = chr(0x1F637)
+    print(unicode_char)  # Output: 😷
 
 
 def emoticons(s):
