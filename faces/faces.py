@@ -39,12 +39,14 @@ def main():
     response = emoticons(message)
     print(response)
 
-split_list = text.split(", ")
-# Find the last element in the list
-last_element = split_list[-1]
+
 
 
 def emoticons(s):
+    split_list = s.split(" ")
+    # Find the last element in the list
+    last_element = split_list[-1]
+
     for code, description in unicode_dict.items():
         # Remove the 'U+' prefix
         hex_string = code.replace('U+', '')
