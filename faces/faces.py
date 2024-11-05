@@ -42,9 +42,9 @@ def emoticons(s):
     for value in values_to_find:
         key_for_value = next((key for key, val in unicode_dict.items() if val == value), None)
         if key_for_value is not None:
-            return_message += make_printable(key_for_value)
+            return_message += " " + make_printable(key_for_value)
         else:
-            return_message += value
+            return_message += " " + value
     return  return_message
 
 def make_printable(u):
