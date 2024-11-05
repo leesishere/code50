@@ -7,10 +7,8 @@ extension = {
     "txt":"text/plain",
     "zip":"application/zip"
 }
-
-file, ext = input("File name: ").split(".")
-
 try:
+    file, ext = input("File name: ").split(".")
     print(extension[ext])
 except:
     print()
