@@ -1,13 +1,12 @@
-from art import * # Generate a smiley face using the 'art' library
+
 
 def main():
     #print(slow(input()))
     print("\u263A")  # ☺
     print("\u263B")  # ☻
     print(":D")
-
-    smiley_face = text2art(":)")
-    print(smiley_face)
+    print("\U0001F642")
+    print("\U0001F641")
 
 
 def emoticons(s):
