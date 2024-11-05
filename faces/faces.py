@@ -48,7 +48,7 @@ def emoticons(s):
     except:
         print("Program only accepts the following emoations :)")
         list_all_options()
-        return
+        return "\n"
     return return_message + " " + make_printable(key_for_value)
 
 def make_printable(u):
