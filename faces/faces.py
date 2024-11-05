@@ -20,7 +20,7 @@ unicode_dict = {
     "U+1F641": ":(",
     "U+1F624": ">:(",
     "U+1F628": "D:",
-    "U+1F629": ":(",
+
     "U+1F62A": "-_-",
     "U+1F62D": "T_T",
     "U+1F631": "D:",
@@ -60,3 +60,5 @@ def list_all_options():
         print(f"{make_printable(code)} {description}")
 
 main()
+
+print ()
