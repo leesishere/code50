@@ -6,7 +6,7 @@
 #############################
 
 def main():
-    greating = input().lower().strip()
+    greating = input("Greating: ").lower().strip()
     if 'hello' == greating[:5]:
         print("$0")
     elif 'h' == greating[0]:
