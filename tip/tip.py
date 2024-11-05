@@ -22,7 +22,7 @@ def percent_to_float(p: str) -> float:
     # Remove the % sign
     p = p.replace("%", "")
     # Convert the string to a float
-    float(d)
-    return float(d)
+    p = float(p)/100
+    return p 
 
 main()
