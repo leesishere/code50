@@ -48,7 +48,7 @@ def emoticons(s):
     # One-liner to find the key for the given value
     key_for_value = next(key for key, value in unicode_dict.items() if value == last_element)
 
-    print(f"{make_printable(key_for_value)}") 
+    return make_printable(key_for_value)
 
 def make_printable(u):
        # Remove the 'U+' prefix
