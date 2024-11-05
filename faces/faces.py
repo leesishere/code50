@@ -37,14 +37,14 @@ def main():
 
 def emoticons(s):
     split_list = s.split(" ")
-
+    return_message = ''
     for value_to_find in split_list:
         # Check if the value exists and print the corresponding key
         for key, value in unicode_dict.items():
             if value == value_to_find:
                 return_message += make_printable(key) + " "
         else:
-            return_message += value_to_find
+            return_message += value_to_find + " "
     return return_message
 
 def make_printable(u):
