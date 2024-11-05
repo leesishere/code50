@@ -43,8 +43,8 @@ def emoticons(s):
         for key, value in unicode_dict.items():
             if value == value_to_find:
                 return_message += make_printable(key) + " "
-            else:
-                return_message += value_to_find + " "
+        else:
+            return_message += value_to_find + " "
     return return_message
 
 def make_printable(u):
