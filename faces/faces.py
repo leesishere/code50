@@ -31,7 +31,7 @@ unicode_dict = {
 
 def main():
     message = input()
-    response = emoticons(message)
+    emoticons(message)
     #print(response)
 
 
