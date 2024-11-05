@@ -8,6 +8,6 @@ extension = {
     ".zip", "application/zip"
 }
 
-file, ext = input("File name: ").slit(".")
+file, ext = input("File name: ").split(".")
 
 print(ext)
