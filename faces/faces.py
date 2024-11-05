@@ -41,9 +41,11 @@ def emoticons(s):
     # Find the last element in the list
     last_element = split_list[-1]
 
+    try:
     # One-liner to find the key for the given value
     key_for_value = next(key for key, value in unicode_dict.items() if value == last_element)
     return_message = ", ".join(split_list[:-1])
+
     return return_message + " " + make_printable(key_for_value)
 
 def make_printable(u):
