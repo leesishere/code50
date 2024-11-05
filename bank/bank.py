@@ -7,6 +7,7 @@
 
 def main():
     greating = input().lower()
-    print(greating[:5])
+    
+    greating[:5]
 
 main()
