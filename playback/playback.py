@@ -1,6 +1,6 @@
 
 def main():
-
+    print(slow(input()))
 
 def slow(s):
     # Split the string by spaces
@@ -12,4 +12,4 @@ def slow(s):
     # Join the list back into a string
     return '...'.join(replaced_text)
 
-
+main()
