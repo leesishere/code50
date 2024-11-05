@@ -6,7 +6,8 @@ def main():
 
 
 def dollars_to_float(d):
-    
+    # dollars_to_float, which should accept a str as input (formatted as $##.##, wherein each # is a decimal digit),
+    # remove the leading $, and return the amount as a float. For instance, given $50.00 as input, it should return 50.0.
 
 
 def percent_to_float(p):
