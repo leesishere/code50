@@ -54,5 +54,6 @@ extensions = {
 
 
 ext = input("File name: ").lower().strip().split(".")[:-1]
-print(extensions[ext])
+print(ext)
+#print(extensions[ext])
 
