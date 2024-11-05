@@ -37,7 +37,7 @@ unicode_dict = {
 def main():
     # Example usage
     for code, description in unicode_dict.items():
-        smilley = chr(code)
+        smilley = int(code, 16)
         print(f"{smilley} {description}")
 
     # Convert Unicode code point to a character
