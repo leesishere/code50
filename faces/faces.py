@@ -36,19 +36,17 @@ def main():
 
 
 def emoticons(s):
-    split_list = s.split(" ")
+    values_to_find = s.split(" ")
     return_message = ''
 
-    key_for_value = next((key for key, value in unicode_dict.items() if value == value_to_find), None)
-
-    for value_to_find in split_list:
-        # Check if the value exists and print the corresponding key
-        for key, value in unicode_dict.items():
-            if value == value_to_find:
-                return_message += make_printable(key) + " "
+    # Iterate through the list of values and find the corresponding keys
+    for value in values_to_find:
+        key_for_value = next((key for key, val in unicode_dict.items() if val == value), None)
+        if key_for_value:
+            print(f"The key for value {value} is {key_for_value}.")
         else:
-            return_message += value_to_find + " "
-    return return_message
+            print(f"The value {value} is not found in the dictionary.")
+
 
 def make_printable(u):
        # Remove the 'U+' prefix
