@@ -31,18 +31,13 @@ unicode_dict = {
     "U+1F637": ":mask:"
 }
 
-# Example usage
-for code, description in unicode_dict.items():
-    print(f"{code}: {description}")
+
 
 
 def main():
-    #print(slow(input()))
-    print("\u263A")  # ☺
-    print("\u263B")  # ☻
-    print(":D")
-    print("\U0001F642")
-    print("\U0001F641")
+    # Example usage
+    for code, description in unicode_dict.items():
+        print(code +f" {description}")
 
 
 def emoticons(s):
