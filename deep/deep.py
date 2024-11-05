@@ -6,7 +6,7 @@
 
 
 def main():
-    input_answer = input("What is the answer to the Great Question of Life, the Universe and Everything? ").lower()
+    input_answer = input("What is the answer to the Great Question of Life, the Universe and Everything? ").lower().strip()
     print(answer(input_answer))
 
 
