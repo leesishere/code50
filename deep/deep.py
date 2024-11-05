@@ -6,5 +6,7 @@
 
 answer = ["42","orty-two","forty two"]
 
-inpuy_answer = input("What is the answer to the Great Question of Life, the Universe and Everything?")
+input_answer = input("What is the answer to the Great Question of Life, the Universe and Everything?")
 
+if input_answer in answer:
+    print("Yes")
