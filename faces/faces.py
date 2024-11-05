@@ -46,6 +46,7 @@ def emoticons(s):
         key_for_value = next(key for key, value in unicode_dict.items() if value == last_element)
         return_message = ", ".join(split_list[:-1])
         for value_to_find in split_list:
+            
             if key_for_value = [key for key, value in unicode_dict.items() if value == value_to_find]:
                 return_message += " " + make_printable(key_for_value)
             else
