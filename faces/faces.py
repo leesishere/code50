@@ -47,6 +47,19 @@ def emoticons(s):
     # Find the last element in the list
     last_element = split_list[-1]
 
+    # Example dictionary
+    my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+    # Value to find
+    value_to_find = 2
+
+    # One-liner to find the key for the given value
+    key_for_value = next(key for key, value in my_dict.items() if value == value_to_find)
+
+    print(key_for_value)  # Output: b
+
+
+
     for code, description in unicode_dict.items():
         # Remove the 'U+' prefix
         hex_string = code.replace('U+', '')
