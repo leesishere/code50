@@ -38,8 +38,20 @@ def main():
 
 def emoticons(s):
     split_list = s.split(" ")
-    # Find the last element in the list
-    last_element = split_list[-1]
+    # Example dictionary
+    my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+    # Value to find
+    value_to_find = 2
+
+    # Check if the value exists and print the corresponding key
+    for key, value in my_dict.items():
+        if value == value_to_find:
+            print(f"The key for value {value_to_find} is {key}.")
+            break
+    else:
+        print(f"The value {value_to_find} is not found in the dictionary.")
+
 
     try:
         # One-liner to find the key for the given value
