@@ -4,14 +4,25 @@
 # outputting Yes if the user inputs 42 or (case-insensitively) forty-two or forty two. Otherwise output No.
 ###################
 
-answer = ["42","forty-two","forty two"]
 
-input_answer = input("What is the answer to the Great Question of Life, the Universe and Everything? ")
+def main():
+    input_answer = input("What is the answer to the Great Question of Life, the Universe and Everything? ")
+    print(answer(input_answer))
 
-match:
 
 
-if input_answer in answer:
-    print("Yes")
-else:
-    print("No")
+def answer(r):
+    match r:
+        case "42" | "forty-two" | "forty two":
+            return "Yes"
+        case _:
+            return "No"
+
+def answer_two(a):
+    answer = ["42","forty-two","forty two"]
+    if a in answer:
+        print("Yes")
+    else:
+        print("No")
+
+main()
