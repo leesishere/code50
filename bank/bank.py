@@ -7,4 +7,6 @@
 
 def main():
     greating = input()
-    
+    print(greating[:4])
+
+main()
