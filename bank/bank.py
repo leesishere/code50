@@ -5,4 +5,5 @@
 # Ignore any leading whitespace in the user’s greeting, and treat the user’s greeting case-insensitively.
 #############################
 
-
+def main(greating):
+    
