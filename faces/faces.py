@@ -35,7 +35,16 @@ unicode_dict = {
 
 
 def main():
-    # Example usage
+    message = input()
+    response = emoticons(message)
+    print(response)
+
+split_list = text.split(", ")
+# Find the last element in the list
+last_element = split_list[-1]
+
+
+def emoticons(s):
     for code, description in unicode_dict.items():
         # Remove the 'U+' prefix
         hex_string = code.replace('U+', '')
@@ -45,12 +54,5 @@ def main():
         unicode_char = chr(unicode_int)
 
         print(f"{unicode_char} {description}")
-
-
-def emoticons(s):
-    find_emotions = s.plit(' ')
-    [x for x in find_emotions if x == ':)' ]
-   # slit space and then Join the list back into a string...
-    return '...'.join(s.split(' '))
 
 main()
