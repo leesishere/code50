@@ -53,6 +53,6 @@ extensions = {
 }
 
 
-file, ext = input("File name: ").split(".").strip()
-print(extension[ext])
+file, ext = input("File name: ").strip().split(".")
+print(extensions[ext])
 
