@@ -1,5 +1,5 @@
-first = input().lower()
-print(first)
+print(input().lower())
+#print(first)
 
 second = input().lower()
 print(second)
