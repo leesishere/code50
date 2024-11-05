@@ -1,4 +1,4 @@
 c = 300000000
-m = input("m: ")
+m = float(input("m: ")) # Convert input to a float
 e = m * (c ** 2)
-print(f"E: {e}")
+print(f"e: {e}")
