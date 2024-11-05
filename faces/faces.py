@@ -2,6 +2,7 @@ def main():
     #print(slow(input()))
     print("\u263A")  # ☺
     print("\u263B")  # ☻
+    print(":D")
 
 
 def emoticons(s):
