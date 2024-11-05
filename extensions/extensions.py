@@ -1,14 +1,59 @@
-extension = {
-    "gif":"image/gif",
-    "jpg":"image/jpeg",
-    "jpeg":"image/jpeg",
-    "png":"image/png",
-    "pdf":"application/pdf",
-    "txt":"text/plain",
-    "zip":"application/zip"
+extensions = {
+    "html": "text/html",
+    "htm": "text/html",
+    "txt": "text/plain",
+    "css": "text/css",
+    "js": "text/javascript",
+    "json": "application/json",
+    "xml": "application/xml",
+    "pdf": "application/pdf",
+    "zip": "application/zip",
+    "rar": "application/x-rar-compressed",
+    "tar": "application/x-tar",
+    "gz": "application/gzip",
+    "7z": "application/x-7z-compressed",
+    "jpg": "image/jpeg",
+    "jpeg": "image/jpeg",
+    "png": "image/png",
+    "gif": "image/gif",
+    "webp": "image/webp",
+    "svg": "image/svg+xml",
+    "bmp": "image/bmp",
+    "ico": "image/vnd.microsoft.icon",
+    "mp3": "audio/mpeg",
+    "wav": "audio/wav",
+    "ogg": "audio/ogg",
+    "mp4": "video/mp4",
+    "avi": "video/x-msvideo",
+    "mkv": "video/x-matroska",
+    "webm": "video/webm",
+    "doc": "application/msword",
+    "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "xls": "application/vnd.ms-excel",
+    "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "ppt": "application/vnd.ms-powerpoint",
+    "pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "md": "text/markdown",
+    "csv": "text/csv",
+    "tsv": "text/tab-separated-values",
+    "rtf": "application/rtf",
+    "odp": "application/vnd.oasis.opendocument.presentation",
+    "ods": "application/vnd.oasis.opendocument.spreadsheet",
+    "odt": "application/vnd.oasis.opendocument.text",
+    "apk": "application/vnd.android.package-archive",
+    "bat": "application/x-msdos-program",
+    "exe": "application/vnd.microsoft.portable-executable",
+    "sh": "application/x-sh",
+    "py": "text/x-python",
+    "java": "text/x-java-source",
+    "c": "text/x-c",
+    "cpp": "text/x-c++src",
+    "php": "application/x-httpd-php",
+    "bin": "application/octet-stream"
 }
+
+
 try:
-    file, ext = input("File name: ").split(".")
+    file, ext = input("File name: ").split(".").
     print(extension[ext])
-except:
-    print()
+
