@@ -34,7 +34,6 @@ def main():
     emoticons(message)
     #print(response)
 
-
 def emoticons(s):
     values_to_find = s.split(" ")
     return_message = ''
