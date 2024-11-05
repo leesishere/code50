@@ -42,7 +42,7 @@ def emoticons(s):
     for value in values_to_find:
         key_for_value = next((key for key, val in unicode_dict.items() if val == value), None)
         if key_for_value is not None:
-            print(f"The key for value {make_printable(value)} is {key_for_value}.")
+            make_printable(key_for_value)}.")
         else:
             print(f"The value {value} is not found in the dictionary.")
 
