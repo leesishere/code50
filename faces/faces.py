@@ -45,7 +45,7 @@ def emoticons(s):
                 return_message += make_printable(key) + " "
         else:
             return_message += value_to_find
-    return 
+    return return_message
 
 def make_printable(u):
        # Remove the 'U+' prefix
