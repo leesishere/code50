@@ -6,12 +6,12 @@
 #############################
 
 def main():
-    greating = input().lower()
+    greating = input().lower().strip()
     if 'hello' == greating[:5]:
         print("$0")
     elif 'h' == greating[0]:
         print("$20")
     else:
         print("$100")
-        
+
 main()
