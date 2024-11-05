@@ -10,4 +10,4 @@ extension = {
 
 file, ext = input("File name: ").split(".")
 
-print(ext)
+print(extension[ext])
