@@ -40,34 +40,26 @@ def main():
     print(response)
 
 
-
-
 def emoticons(s):
     split_list = s.split(" ")
     # Find the last element in the list
     last_element = split_list[-1]
 
-    # Example dictionary
-    my_dict = {'a': 1, 'b': 2, 'c': 3}
-
-    # Value to find
-    value_to_find = 2
-
     # One-liner to find the key for the given value
-    key_for_value = next(key for key, value in my_dict.items() if value == value_to_find)
+    key_for_value = next(key for key, value in unicode_dict.items() if value == last_element)
 
-    print(key_for_value)  # Output: b
+    print(f"{make_printable(key_for_value)}") 
 
-
-
-    for code, description in unicode_dict.items():
-        # Remove the 'U+' prefix
-        hex_string = code.replace('U+', '')
+def make_printable(u):
+       # Remove the 'U+' prefix
+        hex_string = u.replace('U+', '')
         # Convert the string to an integer
         unicode_int = int(hex_string, 16)
         # Get the Unicode character
-        unicode_char = chr(unicode_int)
+        return chr(unicode_int)
 
-        print(f"{unicode_char} {description}")
+def list_all_options():
+    for code, description in unicode_dict.items():
+        print(f"{make_printable(code)} {description}")
 
 main()
