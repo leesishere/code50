@@ -21,8 +21,8 @@ def dollars_to_float(d: str) -> float:
 def percent_to_float(p: str) -> float:
     # Remove the % sign
     p = p.replace("%", "")
-    # Convert the string to a float
+    # Convert the string to a float and 100th
     p = float(p)/100
-    return p 
+    return p
 
 main()
