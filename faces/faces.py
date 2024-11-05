@@ -38,6 +38,9 @@ def main():
 def emoticons(s):
     split_list = s.split(" ")
     return_message = ''
+
+    key_for_value = next((key for key, value in unicode_dict.items() if value == value_to_find), None)
+
     for value_to_find in split_list:
         # Check if the value exists and print the corresponding key
         for key, value in unicode_dict.items():
