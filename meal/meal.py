@@ -25,10 +25,10 @@ def convert(time):
             min = min.replace('p.m.', '').strip()
             min = int(min)
             hour = int(hour) + 12
-        if type(float(time)) == type(1.0):
-            hour, min = time.split('.')
-            hour = int(hour)
-            min = int(min) * 60
+        #if type(float(time)) == type(1.0):
+        #    hour, min = time.split('.')
+        #    hour = int(hour)
+        #    min = int(min) * 60
     return int(hour), int(min)
 
 if __name__ == "__main__":
