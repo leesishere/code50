@@ -52,9 +52,8 @@ extensions = {
     "bin": "application/octet-stream"
 }
 
-try:
-    file, ext = input("File name: ").lower().strip().split(".")[-1]
-    print(extensions[ext])
-except:
-    print()
+
+file, ext = input("File name: ").lower().strip().split(".")[-1]
+print(extensions[ext])
+
 
