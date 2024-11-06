@@ -13,17 +13,22 @@ def main():
 
 
 def convert(time):
-    hour, min = time.split(':')
-    if 'a.m.' in min:
-        min = min.replace('a.m.', '').strip()
-        min = int(min)
+    if '.' in time:
+        hour, min = time.split('.')
         hour = int(hour)
-        if hour > 12:
-            hour -= 12
-    if 'p.m.' in min:
-        min = min.replace('p.m.', '').strip()
-        min = int(min)
-        hour = int(hour) + 12
+        min = int(min) * 60
+    if ':' in time:
+        hour, min = time.split(':')
+        if 'a.m.' in min:
+            min = min.replace('a.m.', '').strip()
+            min = int(min)
+            hour = int(hour)
+            if hour > 12:
+                hour -= 12
+        if 'p.m.' in min:
+            min = min.replace('p.m.', '').strip()
+            min = int(min)
+            hour = int(hour) + 12
     return int(hour), int(min)
 
 if __name__ == "__main__":
