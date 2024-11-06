@@ -7,7 +7,7 @@
 def main():
     time = input("What time is it? ").strip()
     hour, min = time.split(':')
-
+    if '.' in file
 
 def convert(time):
     ...
