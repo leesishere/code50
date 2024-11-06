@@ -7,9 +7,11 @@
 def main():
     time = input("What time is it? ").lower().strip()
     hour, min = time.split(':')
-    if 'a.m.' in min or 'p.m.' in min:
-        
+    if 'a.m.' in min:
+        min.replace("a.m.", "").strip()
 
+
+'p.m.' in min:
 def convert(time):
     ...
 
