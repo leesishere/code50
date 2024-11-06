@@ -13,6 +13,7 @@ def main():
 
 
 def convert(time):
+    
     if ':' in time:
         hour, min = time.split(':')
         if 'a.m.' in min:
