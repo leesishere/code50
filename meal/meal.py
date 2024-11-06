@@ -5,7 +5,7 @@
 
 
 def main():
-    time = input("What time is it? ").
+    time = input("What time is it? ").strip()
     hour, min = time.split(':')
 
 
