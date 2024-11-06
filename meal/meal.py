@@ -4,6 +4,14 @@ import re
 # and dinner between 18:00 and 19:00. Wouldn’t it be nice if you had a program that could tell you what to eat when?
 ######################
 
+# Define the regular expression pattern
+
+# ante meridiem
+ante = r'\b(a\.m\.|am)\b'
+
+# post meridiem
+post = r'\b(p\.m\.|pm)\b'
+
 
 def main():
     time = input("What time is it? ").lower().strip()
@@ -14,8 +22,7 @@ def main():
 
 
 def convert(time):
-    #ante meridiem
-    #post meridiem
+
     time_list = time.strip().split()
     if len(time_list) > 1:
 
