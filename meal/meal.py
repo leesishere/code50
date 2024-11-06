@@ -13,10 +13,6 @@ def main():
 
 
 def convert(time):
-    if '.' in time:
-        hour, min = time.split('.')
-        hour = int(hour)
-        min = int(min) * 60
     if ':' in time:
         hour, min = time.split(':')
         if 'a.m.' in min:
@@ -29,6 +25,10 @@ def convert(time):
             min = min.replace('p.m.', '').strip()
             min = int(min)
             hour = int(hour) + 12
+        if '.' in time:
+            hour, min = time.split('.')
+            hour = int(hour)
+            min = int(min) * 60
     return int(hour), int(min)
 
 if __name__ == "__main__":
