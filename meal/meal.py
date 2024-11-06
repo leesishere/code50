@@ -6,6 +6,13 @@
 
 def main():
     time = input("What time is it? ").lower().strip()
+    hour, min = convert(time)
+    print(hour)
+    print(min)
+    #breakfast time
+    #lunch time
+
+def convert(time):
     hour, min = time.split(':')
     if 'a.m.' in min:
         min.replace("a.m.", "").strip()
@@ -16,16 +23,8 @@ def main():
         min.replace("p.m.", "").strip()
         min = int(min)
         hour = int(hour) + 12
-
-
-def convert(time):
-    ...
-
+    return hour, min
 
 if __name__ == "__main__":
     main()
 
-
-
-breakfast time
-lunch time
