@@ -19,7 +19,12 @@ def am_pm(s):
     # post meridiem
     post = r'\b(p\.m\.|pm)\b'
 
-    re.search(ante, s, re.IGNORECASE)
+    if re.search(ante, s, re.IGNORECASE):
+        return True
+    elif re.search(post, s, re.IGNORECASE):
+        return True
+    else:
+        return False
 
 def convert(time):
 
