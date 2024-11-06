@@ -25,7 +25,7 @@ def convert(time):
             min = min.replace('p.m.', '').strip()
             min = int(min)
             hour = int(hour) + 12
-        if float(time) == float:
+        if type(float(time)) == type(1.0):
             hour, min = time.split('.')
             hour = int(hour)
             min = int(min) * 60
