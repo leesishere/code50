@@ -56,5 +56,7 @@ file = input("File name: ")
 if file.split("."):
     ext = file.lower().strip().split(".")[-1]
     print(extensions[ext])
+else:
+    print("application/octet-stream")
 
 
