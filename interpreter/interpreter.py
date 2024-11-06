@@ -2,7 +2,7 @@ def main():
     x, y, z = input("Expression: ").split(' ')
     print(math_it(float(x),y,float(z)))
 
-def math_it(x,y,z) -> float:
+def math_it(x,y,z) -> float{.2}:
 
     match y:
         case '+':
