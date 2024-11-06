@@ -2,18 +2,18 @@ def main():
     x, y, z = input("Expression: ").split(' ')
     print(math_it(float(x),y,float(z)))
 
-def math_it(x,y,z) -> float{.2}:
+def math_it(x,y,z) -> float:
 
     match y:
         case '+':
-            return x + z
+            return rount(x + z, 1)
         case '-':
-            return x - z
+            return rounf(x - z, 1)
         case '*':
-            return x * z
+            return round(x * z,1)
         case '/':
             if z != 0:
-                return x / z
+                return round(x / z,1)
         case _:
             return "Other number"
 
