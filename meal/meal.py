@@ -14,10 +14,6 @@ def main():
         min = int(min)
         hour = int(hour)
         
-
-
-
-'p.m.' in min:
 def convert(time):
     ...
 
