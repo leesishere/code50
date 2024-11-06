@@ -25,8 +25,10 @@ def pm(s):
 
 def convert(time):
     time_list = time.strip().split()
+    # check if there is a . or : to find hour and minute...
     if len(time_list) > 1:
-        print(time_list[-1])
+        if pm(time_list[-1]):
+
     exit()
     if ':' in time:
         hour, min = time.split(':')
