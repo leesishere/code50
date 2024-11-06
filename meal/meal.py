@@ -6,11 +6,6 @@ import re
 
 # Define the regular expression pattern
 
-# ante meridiem
-ante = r'\b(a\.m\.|am)\b'
-
-# post meridiem
-post = r'\b(p\.m\.|pm)\b'
 
 
 def main():
@@ -22,6 +17,13 @@ def main():
 
 
 def convert(time):
+    # ante meridiem
+    ante = r'\b(a\.m\.|am)\b'
+
+    # post meridiem
+    post = r'\b(p\.m\.|pm)\b'
+
+    re.search(pattern, text, re.IGNORECASE):
 
     time_list = time.strip().split()
     if len(time_list) > 1:
