@@ -56,3 +56,4 @@ ext = input("File name: ").lower().strip().split(".")[-1]
 print(f"{ext}")
 #print(extensions[ext])
 
+
