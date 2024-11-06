@@ -17,7 +17,7 @@ def am(s):
     ante = r'\b(a\.m\.|am)\b'
     return re.search(ante, s, re.IGNORECASE)
 
- def pm(s):
+def pm(s):
     # post meridiem (pm)
     post = r'\b(p\.m\.|pm)\b'
     return re.search(post, s, re.IGNORECASE)
@@ -26,7 +26,7 @@ def am(s):
 def convert(time):
     time_list = time.strip().split()
     if len(time_list) > 1:
-        print(time_list[:-1])
+        print(time_list[-1])
     exit()
     if ':' in time:
         hour, min = time.split(':')
