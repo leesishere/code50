@@ -7,8 +7,10 @@
 def main():
     time = input("What time is it? ").lower().strip()
     hour, min = convert(time)
-    if hour in [7,8]:
-        
+    print("reakfast time") if hour == 7
+    print("reakfast time") if hour == 8 and min == 00
+
+
     print(hour)
     print(min)
     #breakfast time
