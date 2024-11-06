@@ -4,9 +4,6 @@ import re
 # and dinner between 18:00 and 19:00. Wouldn’t it be nice if you had a program that could tell you what to eat when?
 ######################
 
-# Define the regular expression pattern
-
-
 
 def main():
     time = input("What time is it? ").lower().strip()
