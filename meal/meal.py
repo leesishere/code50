@@ -5,7 +5,8 @@
 
 
 def main():
-    input("What time is it? ")
+    time = input("What time is it? ").
+    hour, min = time.split(':')
 
 
 def convert(time):
