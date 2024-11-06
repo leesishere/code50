@@ -9,11 +9,14 @@ def main():
     hour, min = time.split(':')
     if 'a.m.' in min:
         min.replace("a.m.", "").strip()
+        hour = int(hour)
+        if hour > 12:
+            hour -= 12
     if 'p.m.' in min:
         min.replace("p.m.", "").strip()
         min = int(min)
         hour = int(hour) + 12
-    
+
 
 def convert(time):
     ...
