@@ -7,9 +7,9 @@
 def main():
     time = input("What time is it? ").lower().strip()
     hour, min = convert(time)
-    print("breakfast time") if hour == 7 or (hour == 8 and min == 00)
-    print("lunch time") if hour == 12 or (hour == 13 and min == 00)
-    print("dinner time") if hour == 18 or (hour == 19 and min == 00)
+    print("breakfast time") if hour == 7 or (hour == 8 and min == 00) else None
+    print("lunch time") if hour == 12 or (hour == 13 and min == 00) else None
+    print("dinner time") if hour == 18 or (hour == 19 and min == 00) else None
 
 
 def convert(time):
