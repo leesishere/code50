@@ -12,26 +12,22 @@ def main():
     print("lunch time") if hour == 12 or (hour == 13 and min == 00) else None
     print("dinner time") if hour == 18 or (hour == 19 and min == 00) else None
 
-def am_pm(s):
-    # ante meridiem
+def am(s):
+    # ante meridiem (am)
     ante = r'\b(a\.m\.|am)\b'
+    return re.search(ante, s, re.IGNORECASE)
 
-    # post meridiem
+ def pm(s):
+    # post meridiem (pm)
     post = r'\b(p\.m\.|pm)\b'
+    return re.search(post, s, re.IGNORECASE)
 
-    if re.search(ante, s, re.IGNORECASE):
-        return True
-    elif re.search(post, s, re.IGNORECASE):
-        return True
-    else:
-        return False
 
 def convert(time):
-
     time_list = time.strip().split()
     if len(time_list) > 1:
-
-
+        print(time_list[:-1])
+    exit()
     if ':' in time:
         hour, min = time.split(':')
         if 'a.m.' in min:
