@@ -5,9 +5,10 @@
 
 
 def main():
-    time = input("What time is it? ").strip()
+    time = input("What time is it? ").lower().strip()
     hour, min = time.split(':')
-    if '.' in file
+    if 'a.m.' in min or 'p.m.' in min:
+        
 
 def convert(time):
     ...
