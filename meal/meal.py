@@ -5,29 +5,24 @@
 
 
 def main():
-    '''
     time = input("What time is it? ").lower().strip()
     hour, min = convert(time)
     print(hour)
     print(min)
     #breakfast time
     #lunch time
-    '''
 
-    time_string = "00 p.m."
-    modified_time_string = time_string.replace('p.m.', '').strip()
-    print(modified_time_string)  # Output: 3:00
 
 
 def convert(time):
     hour, min = time.split(':')
     if 'a.m.' in min:
-        min.replace('a.m.', '').strip()
+        min = min.replace('a.m.', '').strip()
         hour = int(hour)
         if hour > 12:
             hour -= 12
     if 'p.m.' in min:
-        min.replace('p.m.', '').strip()
+        min = min.replace('p.m.', '').strip()
         print(min)
         exit()
         min = int(min)
