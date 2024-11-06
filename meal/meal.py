@@ -20,7 +20,7 @@ def convert(time):
         if hour > 12:
             hour -= 12
     if 'p.m.' in min:
-        min.replace("p.m.", "").strip()
+        min.replace('p.m.', "").strip()
         print(min)
         exit()
         min = int(min)
