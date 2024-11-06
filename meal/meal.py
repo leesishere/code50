@@ -9,7 +9,9 @@ def main():
     hour, min = convert(time)
     print("breakfast time") if hour == 7 or (hour == 8 and min == 00)
     print("lunch time") if hour == 12 or (hour == 13 and min == 00)
+    print("dinner time") if hour == 12 or (hour == 13 and min == 00)
 
+dinner time
 
     print(hour)
     print(min)
