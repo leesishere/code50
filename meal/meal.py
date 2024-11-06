@@ -20,6 +20,7 @@ def convert(time):
     hour, min = time.split(':')
     if 'a.m.' in min:
         min = min.replace('a.m.', '').strip()
+        min = int(min)
         hour = int(hour)
         if hour > 12:
             hour -= 12
