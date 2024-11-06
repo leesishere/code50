@@ -8,7 +8,7 @@ def main():
     time = input("What time is it? ").lower().strip()
     hour, min = convert(time)
     if hour in [7,8]:
-
+        
     print(hour)
     print(min)
     #breakfast time
