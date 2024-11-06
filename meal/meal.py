@@ -24,7 +24,7 @@ def convert(time):
         min = min.replace('p.m.', '').strip()
         min = int(min)
         hour = int(hour) + 12
-    return hour, min
+    return int(hour), int(min)
 
 if __name__ == "__main__":
     main()
