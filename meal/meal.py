@@ -14,6 +14,8 @@ def main():
 
 def convert(time):
     hour, min = time.split(':')
+    print(min)
+    exit()
     if 'a.m.' in min:
         min.replace("a.m.", "").strip()
         hour = int(hour)
