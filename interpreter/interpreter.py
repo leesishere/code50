@@ -1,6 +1,6 @@
 def main():
     x, y, z = input("Expression: ").split(' ')
-    print(math_it(int(x),y,int(z)))
+    print(math_it(float(x),y,float(z)))
 
 def math_it(x,y,z) -> float:
 
