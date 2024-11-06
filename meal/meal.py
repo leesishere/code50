@@ -15,9 +15,9 @@ def main():
 def convert(time):
     #ante meridiem
     #post meridiem
-    time_list = time.strip().split(' ' )
-    print(len(time_list))
-    exit()
+    time_list = time.strip().split()
+    if len(time_list) > 1:
+
     if ':' in time:
         hour, min = time.split(':')
         if 'a.m.' in min:
