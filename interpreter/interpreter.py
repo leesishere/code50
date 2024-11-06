@@ -1,15 +1,18 @@
-x, y, z = input("Expression: ").split(' ')
+def main():
+    x, y, z = input("Expression: ").split(' ')
+    print(math_it(x,y,z))
 
+def math_it(x,y,z):
+    match y:
+        case '+':
+            return x + z
+        case '-':
+            return x - z
+        case '*':
+            return x * z
+        case '/':
+            return x / z
+        case _:
+            return "Other number"
 
-match y:
-    case '+':
-        return x + z
-    case '-':
-        return x - z
-    case '*':
-        return x * z
-    case '/':
-        return x / z
-    case _:
-        return "Other number"
-
+main()
