@@ -53,7 +53,7 @@ extensions = {
 }
 
 file = input("File name: ")
-if file.split("."):
+if '.' in file:
     ext = file.lower().strip().split(".")[-1]
     print(extensions[ext])
 else:
