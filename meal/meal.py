@@ -13,8 +13,8 @@ def main():
     #breakfast time
     #lunch time
     '''
-    
-    time_string = "3:00 p.m."
+
+    time_string = "00 p.m."
     modified_time_string = time_string.replace('p.m.', '').strip()
     print(modified_time_string)  # Output: 3:00
 
