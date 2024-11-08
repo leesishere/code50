@@ -20,7 +20,7 @@ def is_valid(s):
     if s[0] == '0':
         return False
     plate_list = order_of_things(s)
-    
+    plate_list[0]
 
 
     print(count_letters(s))
