@@ -6,9 +6,10 @@ def main():
 def convert(camelCase):
     snake_case = ''
     for i in range(len(camelCase)):
-        print(camelCase[i].isupper())
+        print(camelCase[i].isupper(), end='')
         if camelCase[i].isupper():
             snake_case = snake_case + '_' + camelCase[i].lower()
+            print(snake_case)
         else:
             snake_case = snake_case + camelCase[i]
     return snake_case
