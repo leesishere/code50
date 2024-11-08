@@ -14,6 +14,9 @@ def main():
         try:
             coin = input("Insert Coin: ")
             coin = int(coin)
+            if coin not in cents:
+                continue
+
         except:
             # Define the pattern to split by digits and non-digits
             continue
