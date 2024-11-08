@@ -17,6 +17,7 @@ def is_valid(s):
         plate_list = order_of_things(s)
         # Numbers cannot be used in the middle of a plate; they must come at the end.
         # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.
+        # CS50P2
         if count_letters(plate_list[0]) == 0 or count_letters(plate_list[-1]) == 0:
             return False
 
