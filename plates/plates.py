@@ -21,6 +21,8 @@ def count_letters(s):
     return sum(1 for char in s if type(char) == type('A'))
 
 def count_numbers(s):
+    try:
+        
     return sum(1 for num in s if type(num) == type(0))
 
 
