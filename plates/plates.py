@@ -22,6 +22,7 @@ def is_valid(s):
         if count_letters(plate_list[0]) and count_letters(plate_list[-1]):
             return False
         #The first number used cannot be a ‘0’.”
+        plate_list
         [num for num in plate_list if num in numbers]
 
 def count_letters(s):
