@@ -20,7 +20,7 @@ def is_valid(s):
 
         print(f"count_letters(plate_list[0]) = {count_letters(plate_list[0])}")
         print(f"count_letters(plate_list[-1]) = {count_letters(plate_list[-1])}")
-        print({plate_list[-1]})
+        print(f"{plate_list[0]} {plate_list[-1]}")
         if count_letters(plate_list[0]) and count_letters(plate_list[-1]):
             return False
 
