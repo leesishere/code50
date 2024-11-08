@@ -23,8 +23,11 @@ def is_valid(s):
             return False
         #The first number used cannot be a ‘0’.”
         for num in plate_list
+            if count_numbers(num):
+                if num[0] = '0':
+                    return False
+                
 
-            
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
