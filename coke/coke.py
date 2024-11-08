@@ -14,11 +14,12 @@ def main():
     while amount > 0:
         print("Amount Due:", amount)
         try:
-            coin = int(input("Insert Coin: "))
+            coin = input("Insert Coin: ")
+            coin = int(coin)
         except:
             # Define the pattern to split by digits and non-digits
             pattern = r'(\d+|\D+)'
-            parts = re.findall(pattern, text)
+            parts = re.findall(pattern, coin)
 
             print(parts)  # Output: ['abc', '123', 'def', '456', 'ghi', '789']
 
