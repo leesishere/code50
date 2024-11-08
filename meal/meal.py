@@ -7,46 +7,40 @@ import re
 
 def main():
     time = input("What time is it? ").lower().strip()
-    hour, min = convert(time)
-    print("breakfast time") if hour == 7 or (hour == 8 and min == 00) else None
-    print("lunch time") if hour == 12 or (hour == 13 and min == 00) else None
-    print("dinner time") if hour == 18 or (hour == 19 and min == 00) else None
+    if am(time) or pm(time):
+        time = extra_challenge(time)
+    else:
+        time = convert(time)
+        
+    print("breakfast time") if time >= 7 and time <= 8 else None
+    print("lunch time") if time >= 12 and time <= 13  else None
+    print("dinner time") if time >= 18 and time <= 19  else None
+
 
 def am(s):
     # ante meridiem (am)
-    ante = r'\b(a\.m\.|am)\b'
+    ante = r'(a\.m\.|am)'
     return re.search(ante, s, re.IGNORECASE)
 
 def pm(s):
     # post meridiem (pm)
-    post = r'\b(p\.m\.|pm)\b'
+    post = r'(p\.m\.|pm)'
     return re.search(post, s, re.IGNORECASE)
 
-
 def convert(time):
-    time_list = time.strip().split()
-    # check if there is a . or : to find hour and minute...
-    if len(time_list) > 1:
-        if pm(time_list[-1]):
+    hour, min = time.split(':')
+    min = int(min)/60
+    time = int(hour) + min
+    return time
 
-    exit()
-    if ':' in time:
-        hour, min = time.split(':')
-        if 'a.m.' in min:
-            min = min.replace('a.m.', '').strip()
-            min = int(min)
-            hour = int(hour)
-            if hour > 12:
-                hour -= 12
-        if 'p.m.' in min:
-            min = min.replace('p.m.', '').strip()
-            min = int(min)
-            hour = int(hour) + 12
-        #if type(float(time)) == type(1.0):
-        #    hour, min = time.split('.')
-        #    hour = int(hour)
-        #    min = int(min) * 60
-    return int(hour), int(min)
+ #:## a.m. ##:## a.m.
+def extra_challenge(time):
+    time, am_pm = time.split()
+    time = convert(time)
+    if pm(am_pm):
+        if time < 12:
+            time *= 12
+    return time
 
 if __name__ == "__main__":
     main()
