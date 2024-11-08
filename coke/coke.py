@@ -5,20 +5,12 @@
 # Assume that the user will only input integers, and ignore any integer that isn’t an accepted denomination.
 
 def main():
+
     amount = 50
     while amount <= 0:
         print("Amount Due: ", amount)
-        print("Insert Coin: " + coin)
-        amount += cents
-        coin = int(input("Amount Due: " + amount))
-
-
-
-
-
-
-
-
+        coin = input("Insert Coin: ")
+        amount -= cents
 
 
 
