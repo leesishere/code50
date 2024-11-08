@@ -21,9 +21,9 @@ def is_valid(s):
         plate_list = order_of_things(s)
 
         # Numbers cannot be used in the middle of a plate
-        if count_letters(plate_list[0]) and count_lettersplate_list[-1]:
+        if count_letters(plate_list[0]) and count_letters(plate_list[-1]):
             return False
-        
+
     print(count_letters(s))
     print(count_numbers(s))
 
