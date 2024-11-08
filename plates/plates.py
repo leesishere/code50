@@ -14,7 +14,7 @@ def main():
 def is_valid(s):
     if len(s) > 6:
         return False
-    []
+    [x for x in l if type(x) == type(0)]
 
 
 
