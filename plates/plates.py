@@ -22,15 +22,5 @@ def count_numbers(s):
     return sum(1 for num in s if type(num) == type(0))
 
 
-letters = r'[a-zA-Z]'
-pattern = r'\d+'
-
-result = ''.join(letters_only)
-
-
-# Define the pattern to split by digits and non-digits
-pattern = r'(\d+|\D+)'
-parts = re.findall(pattern, text)
-
 if __name__ == "__main__":
     main()
