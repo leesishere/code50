@@ -5,8 +5,11 @@
 # Assume that the user will only input integers, and ignore any integer that isn’t an accepted denomination.
 
 def main():
-    while coints < 50:
-        input("Amount Due: 50")
+    amount = 0
+    while amount < 50:
+        cents = int(input("Amount Due: 50"))
+        amount - cents
+        
 
 
 
