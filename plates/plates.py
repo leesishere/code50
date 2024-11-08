@@ -41,9 +41,9 @@ def non_letter_or_number(s):
 
     # Filter out empty strings from the result
     non_matching_parts = [part for part in non_matching_parts if part]
-    if not non_matching_parts:
-        return True
-    return False
+    if not non_matching_parts: # found pariods, commas etc.
+        return False
+    return True
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
