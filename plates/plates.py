@@ -5,7 +5,7 @@
 
 
 letters = r'[a-zA-Z]'
-pattern = r'(\d+|\D+)'
+pattern = r'\d+'
 
 result = ''.join(letters_only)
 
