@@ -8,11 +8,11 @@ def main():
 
     amount = 50
     while amount > 0:
-        print("Amount Due: ", amount)
+        print("Amount Due:", amount)
         coin = int(input("Insert Coin: "))
         amount -= coin
 
-    print("Changed Owed: ", abs(amount))
+    print("Changed Owed:", abs(amount))
 
 
 if __name__ == "__main__":
