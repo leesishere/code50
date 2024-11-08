@@ -21,6 +21,7 @@ def is_valid(s):
         # Numbers cannot be used in the middle of a plate; they must come at the end.
         if count_letters(plate_list[0]) and count_letters(plate_list[-1]):
             return False
+        The first number used cannot be a ‘0’.”
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
@@ -34,9 +35,6 @@ def order_of_things(s):
     # Define the pattern to split by digits and non-digits
     pattern = r'[a-zA-Z]+|\d+'
     return re.findall(pattern, s)
-
-
-
 
 if __name__ == "__main__":
     main()
