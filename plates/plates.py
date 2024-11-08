@@ -17,8 +17,6 @@ def is_valid(s):
         return False
     if count_letters(s[:2]) != 2:
         return False
-    if s[0] == '0':
-        return False
     plate_list = order_of_things(s)
     plate_list[0]
 
