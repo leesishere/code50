@@ -2,6 +2,8 @@
 # “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”#
 # “Numbers cannot be used in the middle of a plate; they must come at the end. For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable. The first number used cannot be a ‘0’.”
 # “No periods, spaces, or punctuation marks are allowed.”
+import re
+
 
 def main():
     plate = input("Plate: ")
@@ -30,6 +32,15 @@ def count_letters(s):
 def count_numbers(s):
     numbers = list('0123456789')
     return sum(1 for num in s if num in numbers)
+
+
+
+text = "abc123def456ghi789"
+# Define the pattern to split by digits and non-digits
+pattern = r'(\d+|\D+)'
+parts = re.findall(pattern, text)
+
+print(parts)  # Output: ['abc', '123', 'def', '456', 'ghi', '789']
 
 
 if __name__ == "__main__":
