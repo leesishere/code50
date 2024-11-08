@@ -6,10 +6,11 @@
 
 def main():
     amount = 0
-    coin = int(input("Amount Due: 50"))
+    coin = int(input("Amount Due: 50")) 
     while amount < 50:
         print("Insert Coin: " + coin)
-        coin = int(input("Amount Due: " + amount += cents))
+        amount += cents
+        coin = int(input("Amount Due: " + amount))
 
 
 
