@@ -45,8 +45,9 @@ def non_letter_or_number(s):
 
     # Filter out empty strings from the result
     non_matching_parts = [part for part in non_matching_parts if part]
-    print(non_matching_parts)
+
     if len(non_matching_parts) == 0:
+        print(non_matching_parts)
         return True
     return False
 
