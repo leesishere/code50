@@ -9,7 +9,7 @@ def main():
     coin = int(input("Amount Due: 50"))
     while amount < 50:
         int(input("Insert Coin: " + coin))
-
+        coin = int(input("Amount Due: 50"))
         amount += cents
 
 
