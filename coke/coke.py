@@ -19,6 +19,7 @@ def main():
         except:
             # Define the pattern to split by digits and non-digits
             pattern = r'(\d+|\D+)'
+            pattern = r'(\d+)'
             parts = re.findall(pattern, coin)
 
             print(parts)  # Output: ['abc', '123', 'def', '456', 'ghi', '789']
