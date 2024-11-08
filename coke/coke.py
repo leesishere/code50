@@ -8,9 +8,9 @@ def main():
     amount = 0
     coin = int(input("Amount Due: 50"))
     while amount < 50:
-        int(input("Insert Coin: " + coin))
-        coin = int(input("Amount Due: 50"))
-        amount += cents
+        print("Insert Coin: " + coin)
+        coin = int(input("Amount Due: " + amount += cents))
+
 
 
 
