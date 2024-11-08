@@ -7,10 +7,10 @@
 def main():
 
     amount = 50
-    while amount <= 0:
+    while amount >= 0:
         print("Amount Due: ", amount)
-        coin = input("Insert Coin: ")
-        amount -= cents
+        coin = int(input("Insert Coin: "))
+        amount -= coin
 
 
 
