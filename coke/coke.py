@@ -4,3 +4,16 @@
 # Once the user has inputted at least 50 cents, output how many cents in change the user is owed.
 # Assume that the user will only input integers, and ignore any integer that isn’t an accepted denomination.
 
+def main():
+    while coints < 50:
+        input("Amount Due: 50")
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    main()
