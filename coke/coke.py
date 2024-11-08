@@ -16,13 +16,9 @@ def main():
             coin = int(coin)
             if coin not in cents:
                 continue
-
         except:
-            # Define the pattern to split by digits and non-digits
             continue
         amount -= coin
-
-
     print("Change Owed:", abs(amount))
 
 
