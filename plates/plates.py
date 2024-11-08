@@ -6,3 +6,6 @@
 
 letters = r'[a-zA-Z]'
 pattern = r'(\d+|\D+)'
+
+result = ''.join(letters_only)
+
