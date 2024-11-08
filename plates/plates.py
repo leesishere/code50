@@ -15,8 +15,6 @@ def main():
 def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
-    if count_letters(s[:2]) != 2:
-        return False
     if count_numbers:
         plate_list = order_of_things(s)
         # Numbers cannot be used in the middle of a plate
