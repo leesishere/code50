@@ -22,7 +22,8 @@ def is_valid(s):
         if count_letters(plate_list[0]) and count_letters(plate_list[-1]):
             return False
         #The first number used cannot be a ‘0’.”
-        [1 for num in s if num in numbers]
+        [num for num in plate_list if num in numbers]
+
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
     return sum(1 for char in s if char.upper() in alphabet)
