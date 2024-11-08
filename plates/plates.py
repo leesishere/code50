@@ -9,3 +9,7 @@ pattern = r'\d+'
 
 result = ''.join(letters_only)
 
+
+# Define the pattern to split by digits and non-digits
+pattern = r'(\d+|\D+)'
+parts = re.findall(pattern, text)
