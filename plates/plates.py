@@ -26,13 +26,11 @@ def is_valid(s):
         for num in plate_list:
             if count_numbers(num):
                 if num[0] == '0':
-                    print('num[0] == \'0\'')
                     return False
 
     # “No periods, spaces, or punctuation marks are allowed.”
     # Define patterns for characters and numbers
     if non_letter_or_number(s):
-        print('non_letter_or_number(s)')
         return False
 
     return True
@@ -46,9 +44,9 @@ def non_letter_or_number(s):
     # Filter out empty strings from the result
     non_matching_parts = [part for part in non_matching_parts if part]
 
-    if len(non_matching_parts) != 0:
-        return False
-    return True
+    if len(non_matching_parts) == 0:
+        return True
+    return False
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
