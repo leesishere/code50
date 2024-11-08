@@ -10,6 +10,8 @@ def main():
     while amount > 0:
         print("Amount Due:", amount)
         coin = int(input("Insert Coin: "))
+        if type(coin) != type(0):
+            continue
         amount -= coin
 
     print("Change Owed:", abs(amount))
