@@ -7,7 +7,8 @@ def main():
 
 def convert(camelCase):
     snake_case = ''
-    camelCase[0] = camelCase.lower() if camelCase[0].isupper() else camelCase[0]
+    if camelCase[0].isupper():
+        camelCase[0] = camelCase[0].lower()
     for i in range(len(camelCase)):
         #print(camelCase[i].isupper(), end='')
         if camelCase[i].isupper():
