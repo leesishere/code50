@@ -15,6 +15,9 @@ def is_valid(s):
         return False
     if s[0] == '0':
         return False
+    if count_letters(s[:2]) != 2:
+        return False
+
 
     print(count_letters(s))
     print(count_numbers(s))
