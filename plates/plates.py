@@ -14,7 +14,8 @@ def main():
 def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
-    if 
+    if s[0] == '0':
+        return False
 
 def count_letters(s):
     return sum(1 for char in s if type(char) == type('A'))
