@@ -6,11 +6,6 @@
 import re
 
 text = "abc123def456ghi789..."
-# Define the pattern to split by digits and non-digits
-pattern = r'(\d+|\D+)'
-parts = re.findall(pattern, text)
-
-print(parts)  # Output: ['abc', '123', 'def', '456', 'ghi', '789']
 
 
 def main():
@@ -21,7 +16,12 @@ def main():
         try:
             coin = int(input("Insert Coin: "))
         except:
-            
+            # Define the pattern to split by digits and non-digits
+            pattern = r'(\d+|\D+)'
+            parts = re.findall(pattern, text)
+
+            print(parts)  # Output: ['abc', '123', 'def', '456', 'ghi', '789']
+
             continue
         amount -= coin
 
