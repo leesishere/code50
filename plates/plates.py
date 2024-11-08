@@ -19,12 +19,11 @@ def is_valid(s):
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-    return sum(1 for char in s if type(char) == type('A'))
+    return sum(1 for char in s if char.upper() in alphabet)
 
 def count_numbers(s):
-    try:
-
-    return sum(1 for num in s if type(num) == type(0))
+    numbers = list('0123456789')
+    return sum(1 for num in s if num in numbers)
 
 
 if __name__ == "__main__":
