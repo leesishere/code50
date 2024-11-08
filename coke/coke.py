@@ -9,11 +9,8 @@ text = "abc123def456ghi789..."
 
 
 def main():
-
     amount = 50
     while amount > 0:
-
-
         try:
             coin = input("Insert Coin: ")
             coin = int(coin)
