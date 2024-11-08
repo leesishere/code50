@@ -22,7 +22,8 @@ def main():
             print(f"Amount Due: {amount}{parts[1]}")
             continue
         amount -= coin
-        print(f"Amount Due: {amount}")
+        if amount > 0:
+            print(f"Amount Due: {amount}")
 
     print("Change Owed:", abs(amount))
 
