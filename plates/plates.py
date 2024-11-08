@@ -1,6 +1,5 @@
-# “Numbers cannot be used in the middle of a plate; they must come at the end. For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable. The first number used cannot be a ‘0’.”
 
-# “No periods, spaces, or punctuation marks are allowed.”
+
 import re
 
 
@@ -19,6 +18,7 @@ def is_valid(s):
     if count_numbers:
         plate_list = order_of_things(s)
         # Numbers cannot be used in the middle of a plate; they must come at the end.
+        # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.
         if count_letters(plate_list[0]) and count_letters(plate_list[-1]):
             return False
         #The first number used cannot be a ‘0’.”
@@ -26,7 +26,8 @@ def is_valid(s):
             if count_numbers(num):
                 if num[0] = '0':
                     return False
-                
+    # “No periods, spaces, or punctuation marks are allowed.”
+    if 
 
 
 def count_letters(s):
