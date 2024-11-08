@@ -17,9 +17,10 @@ def is_valid(s):
         return False
     if count_letters(s[:2]) != 2:
         return False
-
     if s[0] == '0':
         return False
+    plate_list = order_of_things(s)
+    
 
 
     print(count_letters(s))
@@ -33,9 +34,10 @@ def count_numbers(s):
     numbers = list('0123456789')
     return sum(1 for num in s if num in numbers)
 
-# Define the pattern to split by digits and non-digits
-pattern = r'(\d+|[A-Z])'
-parts = re.findall(pattern, text)
+def order_of_things(s):
+    # Define the pattern to split by digits and non-digits
+    pattern = r'(\d+|[A-Z])'
+    return re.findall(pattern, s)
 
 
 
