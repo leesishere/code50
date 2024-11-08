@@ -8,8 +8,9 @@ def main():
     amount = 0
     while amount < 50:
         cents = int(input("Amount Due: 50"))
-        amount - cents
+        amount += cents
         
+
 
 
 
