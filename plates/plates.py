@@ -12,7 +12,10 @@ def main():
 
 
 def is_valid(s):
-    ...
+    if len(s) > 6:
+        return False
+    
+
 
 
 
