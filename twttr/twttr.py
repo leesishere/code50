@@ -4,13 +4,14 @@
 # whether inputted in uppercase or lowercase.
 
 # list of vowels
-vowels = [A, E, I, O, U]
+vowels = ['A', 'E', 'I', 'O', 'U']
 
 def main():
-    c = input("Input: ")
-    print("output: " end="")
+    s = input("Input: ")
+    print("output: ", end="")
     for c in s:
-        print(c, end="")
+        if c.upper() not in vowels:
+            print(c, end="") 
     print()
 
 if __name__ == "__main__":
