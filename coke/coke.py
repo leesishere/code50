@@ -12,7 +12,8 @@ def main():
 
     amount = 50
     while amount > 0:
-        print(f"Amount Due: {amount}")
+
+
         try:
             coin = input("Insert Coin: ")
             coin = int(coin)
@@ -22,9 +23,10 @@ def main():
             pattern = r'(\d+)'
             parts = re.findall(pattern, coin)
             #amount -= int(parts[0])
-
+            print("Amount Due: 50 \n", end='')
             continue
         amount -= coin
+        print(f"Amount Due: {amount}")
 
     print("Change Owed:", abs(amount))
 
