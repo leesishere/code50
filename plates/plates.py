@@ -28,12 +28,12 @@ def is_valid(s):
 
     # “No periods, spaces, or punctuation marks are allowed.”
     # Define patterns for characters and numbers
-    if non_letter_or_number(s):
+    if only_letter_or_number(s):
         return False
 
     return True
 
-def non_letter_or_number(s):
+def only_letter_or_number(s):
     pattern = r'[a-zA-Z]+|\d+'
 
     # Use re.split() to find parts of the string that do not match the pattern
