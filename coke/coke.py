@@ -22,7 +22,6 @@ def main():
             pattern = r'(\d+)'
             parts = re.findall(pattern, coin)
             amount -= int(parts[0])
-            #print(parts)  # Output: ['abc', '123', 'def', '456', 'ghi', '789']
 
             continue
         amount -= coin
