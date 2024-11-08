@@ -21,6 +21,7 @@ def main():
         try:
             coin = int(input("Insert Coin: "))
         except:
+            
             continue
         amount -= coin
 
