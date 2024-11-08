@@ -19,7 +19,7 @@ def main():
             pattern = r'(\d+|\D+)'
             parts = re.findall(pattern, coin)
             #amount -= int(parts[0])
-            print(f"Amount Due: {parts[0]}{parts[1]}")
+            print(f"Amount Due: {amount}{parts[1]}")
             continue
         amount -= coin
         print(f"Amount Due: {amount}")
