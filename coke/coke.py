@@ -12,7 +12,7 @@ def main():
         coin = int(input("Insert Coin: "))
         amount -= coin
 
-    print("Changed Owed:", abs(amount))
+    print("Change Owed:", abs(amount))
 
 
 if __name__ == "__main__":
