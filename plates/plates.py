@@ -37,7 +37,7 @@ def count_numbers(s):
 
 def order_of_things(s):
     # Define the pattern to split by digits and non-digits
-    pattern = r'(\d+|[A-Z])'
+    pattern = r'[a-zA-Z]+|\d+'
     return re.findall(pattern, s)
 
 
