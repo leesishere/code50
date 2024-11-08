@@ -33,14 +33,11 @@ def count_numbers(s):
     numbers = list('0123456789')
     return sum(1 for num in s if num in numbers)
 
-
-
-text = "abc123def456ghi789"
 # Define the pattern to split by digits and non-digits
 pattern = r'(\d+|\D+)'
 parts = re.findall(pattern, text)
 
-print(parts)  # Output: ['abc', '123', 'def', '456', 'ghi', '789']
+
 
 
 if __name__ == "__main__":
