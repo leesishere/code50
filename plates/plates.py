@@ -14,9 +14,9 @@ def main():
 def is_valid(s):
     if len(s) > 6:
         return False
-    [x for x in l if type(x) == type(0)]
 
-
+def count_uppercase_letters(text): 
+    return sum(1 for char in text if char.isupper())
 
 
 letters = r'[a-zA-Z]'
