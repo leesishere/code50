@@ -11,6 +11,7 @@ def is_valid(s):
     # “All vanity plates must start with at least two letters.”
     # “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”#
     if count_letters(s[:2]) != 2 or len(s) > 6:
+        print('count_letters(s[:2]) != 2 or len(s) > 6')
         return False
 
     if count_numbers:
@@ -18,23 +19,25 @@ def is_valid(s):
         # Numbers cannot be used in the middle of a plate; they must come at the end.
         # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.
         if count_letters(plate_list[0]) and count_letters(plate_list[-1]):
+            print('count_letters(plate_list[0]) and count_letters(plate_list[-1])')
             return False
 
         #The first number used cannot be a ‘0’.”
         for num in plate_list:
             if count_numbers(num):
                 if num[0] == '0':
+                    print('num[0] == \'0\'')
                     return False
 
     # “No periods, spaces, or punctuation marks are allowed.”
     # Define patterns for characters and numbers
     if non_letter_or_number(s):
+        print('non_letter_or_number(s)')
         return False
 
     return True
 
 def non_letter_or_number(s):
-
     pattern = r'[a-zA-Z]+|\d+'
 
     # Use re.split() to find parts of the string that do not match the pattern
