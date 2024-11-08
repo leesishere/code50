@@ -26,19 +26,24 @@ def is_valid(s):
             if count_numbers(num):
                 if num[0] = '0':
                     return False
+    if non_letter_or_number(s):
+        return False
+    
+
+def non_letter_or_number(s):
     # “No periods, spaces, or punctuation marks are allowed.”
     # Define patterns for characters and numbers
     pattern = r'[a-zA-Z]+|\d+'
 
     # Use re.split() to find parts of the string that do not match the pattern
-    non_matching_parts = re.split(pattern, text)
+    non_matching_parts = re.split(pattern, s)
 
     # Filter out empty strings from the result
     non_matching_parts = [part for part in non_matching_parts if part]
 
     if non_matching_parts:
         return False
-
+    return True
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
