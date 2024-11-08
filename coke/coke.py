@@ -12,7 +12,7 @@ def main():
 
     amount = 50
     while amount > 0:
-        print("Amount Due:", amount)
+        print(f"Amount Due: {amount}")
         try:
             coin = input("Insert Coin: ")
             coin = int(coin)
