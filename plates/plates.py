@@ -46,10 +46,9 @@ def non_letter_or_number(s):
     # Filter out empty strings from the result
     non_matching_parts = [part for part in non_matching_parts if part]
 
-    if len(non_matching_parts) == 0:
-        print(non_matching_parts)
-        return True
-    return False
+    if len(non_matching_parts) != 0:
+        return False
+    return True
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
