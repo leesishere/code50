@@ -18,11 +18,12 @@ def is_valid(s):
         return False
 
 def count_letters(s):
+    alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
     return sum(1 for char in s if type(char) == type('A'))
 
 def count_numbers(s):
     try:
-        
+
     return sum(1 for num in s if type(num) == type(0))
 
 
