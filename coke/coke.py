@@ -16,10 +16,10 @@ def main():
             coin = int(coin)
         except:
             # Define the pattern to split by digits and non-digits
-            pattern = r'(\d+|\D+)'
-            parts = re.findall(pattern, coin)
+            #pattern = r'(\d+|\D+)'
+            #parts = re.findall(pattern, coin)
             #amount -= int(parts[0])
-            print(f"Amount Due: {amount}{parts[1]}")
+            #print(f"Amount Due: {amount}{parts[1]}")
             continue
         amount -= coin
         if amount > 0:
