@@ -3,7 +3,7 @@ def main():
     camelCase = input("camelCase: ")
 
     snake_case = convert(camelCase)
-    print(snake_case)
+    print("snake_case: " + snake_case)
 
 def convert(camelCase):
     snake_case = ''
