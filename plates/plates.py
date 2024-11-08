@@ -34,7 +34,7 @@ def count_numbers(s):
     return sum(1 for num in s if num in numbers)
 
 # Define the pattern to split by digits and non-digits
-pattern = r'(\d+|\D+)'
+pattern = r'(\d+|[A-Z])'
 parts = re.findall(pattern, text)
 
 
