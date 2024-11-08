@@ -23,6 +23,7 @@ def is_valid(s):
             return False
         #The first number used cannot be a ‘0’.”
         for num in plate_list
+
             
 
 def count_letters(s):
