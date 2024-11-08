@@ -7,19 +7,11 @@
 vowels = [A, E, I, O, U]
 
 def main():
-    amount = 50
-    while amount > 0:
-        print(f"Amount Due: {amount}")
-        try:
-            coin = input("Insert Coin: ")
-            coin = int(coin)
-            if coin not in cents:
-                continue
-        except:
-            continue
-        amount -= coin
-    print("Change Owed:", abs(amount))
-
+    c = input("Input: ")
+    print("output: " end="")
+    for c in s:
+        print(c, end="")
+    print()
 
 if __name__ == "__main__":
     main()
