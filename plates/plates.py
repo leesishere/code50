@@ -27,7 +27,17 @@ def is_valid(s):
                 if num[0] = '0':
                     return False
     # “No periods, spaces, or punctuation marks are allowed.”
-    if 
+    # Define patterns for characters and numbers
+    pattern = r'[a-zA-Z]+|\d+'
+
+    # Use re.split() to find parts of the string that do not match the pattern
+    non_matching_parts = re.split(pattern, text)
+
+# Filter out empty strings from the result
+non_matching_parts = [part for part in non_matching_parts if part]
+
+print(non_matching_parts)  # Output: ['.', ',', '!']
+
 
 
 def count_letters(s):
