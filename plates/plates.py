@@ -33,11 +33,11 @@ def is_valid(s):
     # Use re.split() to find parts of the string that do not match the pattern
     non_matching_parts = re.split(pattern, text)
 
-# Filter out empty strings from the result
-non_matching_parts = [part for part in non_matching_parts if part]
+    # Filter out empty strings from the result
+    non_matching_parts = [part for part in non_matching_parts if part]
 
-print(non_matching_parts)  # Output: ['.', ',', '!']
-
+    if non_matching_parts:
+        return False
 
 
 def count_letters(s):
