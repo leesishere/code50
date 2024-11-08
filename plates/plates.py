@@ -18,7 +18,7 @@ def is_valid(s):
         return False
     if count_numbers:
         plate_list = order_of_things(s)
-        # Numbers cannot be used in the middle of a plate
+        # Numbers cannot be used in the middle of a plate; they must come at the end.
         if count_letters(plate_list[0]) and count_letters(plate_list[-1]):
             return False
 
