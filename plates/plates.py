@@ -16,6 +16,9 @@ def is_valid(s):
     if s[0] == '0':
         return False
 
+    print(count_letters(s))
+    0rint(count_numbers(s))
+
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
     return sum(1 for char in s if char.upper() in alphabet)
