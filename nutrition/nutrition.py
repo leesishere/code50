@@ -25,11 +25,18 @@ fruit = {
 
 def main():
     item = input("Input: ").lower().strip()
-    print(item)
-    print(fruit[item])
 
-    if fruit[item]:
+    if get(item):
         print("Coleries:", fruit[item])
+    else:
+        print("", end=='')
+
+def get(item):
+    try:
+        return fruit[item]
+    except:
+        return None
+
 
 if __name__ == "__main__":
     main()
