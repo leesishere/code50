@@ -41,7 +41,7 @@ def main():
     #Dates in format AAAA #, ####
     if dates2:
         # Find all matches
-        matches = re.findall(pattern, text)
+        matches = re.findall(pattern, dates2)
 
         # Print the groups
         for match in matches:
