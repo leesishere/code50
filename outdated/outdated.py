@@ -40,6 +40,12 @@ def main():
 
     #Dates in format AAAA #, ####
     if dates2:
+        # Find all matches
+        matches = re.findall(pattern, text)
+        # Print the groups for match in matches:
+        protocol, domain, path = match
+        print(f"Protocol: {protocol}, Domain: {domain}, Path: {path}")
+
         print("Dates in format AAAA #, ####:", dates2)
 
 
