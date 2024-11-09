@@ -8,6 +8,7 @@ def main():
             grocery_list.append(item)
         except EOFError:
             grocery_list = sorted(grocery_list)
+            print()
             for item in grocery_list:
                 print(item)
             exit()
