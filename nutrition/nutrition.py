@@ -23,7 +23,9 @@ fruit = {
 
 def main():
     item = input("Input: ").lower()
-    print("Coleries:", fruit[item])
-
+    try:
+        print("Coleries:", fruit[item])
+    except:
+        print(,end='')
 if __name__ == "__main__":
     main()
