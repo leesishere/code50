@@ -22,7 +22,7 @@ fruit = {
 }
 
 def main():
-    item = input("Input: ").lower()
+    item = input("Input: ").lower().strip()
     if fruit.get('item'):
         print("Coleries:", fruit.get('item'))
     if __name__ == "__main__":
