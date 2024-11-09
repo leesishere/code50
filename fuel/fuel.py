@@ -4,7 +4,12 @@ def main():
         fract = input("Fraction: ")
         if type(fract) == type(1.0):
             percentage = fract * 100
-            print_string = f"{percentage}%"
+            if percentage < 2:
+                print_string = f"E"
+            elif percentage > 89:
+                print_string = f"F"
+            else:
+                print_string = f"{percentage}%"
             break
     print(f"{print_string}")
 
