@@ -10,7 +10,7 @@ def convert_fraction(f):
         try:
             numerator, denominator = f.split('/')
             return float(umerator/denominator)
-        exept ValueError:
+        except ValueError:
             pass
 
 
