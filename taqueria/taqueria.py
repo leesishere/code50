@@ -14,7 +14,7 @@ def main():
 
     while True:
         try:
-            item = input("Item : ").lower().title()
+            item = input("Item: ").lower().title()
             print(f"{item} = {menu[item]}")
             total += menu[item]
             print(f"Total: ${total:.2f}")
