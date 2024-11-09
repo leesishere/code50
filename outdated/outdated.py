@@ -48,7 +48,7 @@ def main():
             month, day, year = match
             print(f"Month: {month}, Day: {day}, Year: {year}")
 
-        print("Dates in format AAAA #, ####:", dates2)
+        #print("Dates in format AAAA #, ####:", dates2)
 
 
 
