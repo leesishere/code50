@@ -34,9 +34,9 @@ def main():
 
     # Print the results
 
-    if not dates1:
+    if dates1:
         print("Dates in format ##/##/##:", dates1)
-    if not dates2:
+    if dates2:
         print("Dates in format AAAA #, ####:", dates2)
 
 
