@@ -21,6 +21,8 @@ fruit = {
     'watermelon':80
 }
 
+
+
 def main():
     item = input("Input: ").lower().strip()
     print(item)
