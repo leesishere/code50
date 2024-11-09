@@ -33,9 +33,12 @@ def main():
     dates2 = re.findall(pattern2, date)
 
     # Print the results
+    #Dates in format ##/##/##
 
     if dates1:
         print("Dates in format ##/##/##:", dates1)
+
+    #Dates in format AAAA #, ####
     if dates2:
         print("Dates in format AAAA #, ####:", dates2)
 
