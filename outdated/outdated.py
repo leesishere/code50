@@ -1,3 +1,5 @@
+import re
+
 def main():
     [
     "January",
@@ -13,8 +15,9 @@ def main():
     "November",
     "December"
     ]
-    
-    input("Date: ")
+
+    date = input("Date: ")
+    patter = []
 
 
 
