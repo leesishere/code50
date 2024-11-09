@@ -10,7 +10,7 @@ def main():
             grocery_list = sorted(grocery_list)
             for item in grocery_list:
                 count = sum(1 for x in grocery_list if item == x )
-                print(f"{count} {item.upper}")
+                print(f"{count} {item.upper()}")
             exit()
         except Exception:
             pass
