@@ -26,11 +26,5 @@ def convert_fraction(f):
         pass
 
 
-
-
-
-
-
-
 if __name__ == "__main__":
     main()
