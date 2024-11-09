@@ -1,6 +1,3 @@
-
-price = 0.0
-
 def main():
     menu = {
         "Baja Taco": 4.25,
@@ -13,12 +10,13 @@ def main():
         "Taco": 3.00,
         "Tortilla Salad": 8.00
     }
+    price = 0.0
 
     while True:
         item = input("Item : ").lower().title()
         print(f"{item} = {menu[item]}")
-        global price = price + menu[item]
-        #print(f"Title : {price}")
+        price += menu[item]
+        print(f"Title : {price}")
 
 
 
