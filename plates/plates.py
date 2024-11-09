@@ -19,6 +19,10 @@ def is_valid(s):
         # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.
         # CS50P2
         print(plate_list)
+        number_cnt = 0
+        for i in plate_list:
+            if count_numbers(i):
+                number_cnt += 1
         
 
         if count_numbers(plate_list[-1]):
