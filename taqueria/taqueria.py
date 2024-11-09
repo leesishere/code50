@@ -12,7 +12,11 @@ def main():
         "Taco": 3.00,
         "Tortilla Salad": 8.00
     }
-    print(menu)
+    while True:
+        item = input("Item :).lower()
+        try:
+            
+
 
 
 
