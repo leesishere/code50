@@ -22,8 +22,7 @@ fruit = {
 }
 
 def main():
-    item = input("Input: ")
-
+    item = input("Input: ").lower()
     print("Coleries:", fruit[item])
 
 if __name__ == "__main__":
