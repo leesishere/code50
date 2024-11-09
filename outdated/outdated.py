@@ -25,7 +25,7 @@ def main():
     date = input("Date: ")
 
     # Define regex patterns for both date formats
-    pattern1 = r'\b\d{2}/\d{2}/\d{2}\b'  # Pattern for ##/##/##
+    pattern1 = r'\b(\d{2})/(\d{2})/(\d{2})\b'  # Pattern for ##/##/##
     pattern2 = r'\b(\w+) (\d{1,2}), (\d{4})\b'  # Pattern for AAAA #, ####
 
     # Find all matches for both patterns
