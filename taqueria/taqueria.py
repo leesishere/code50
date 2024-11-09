@@ -17,7 +17,7 @@ def main():
             item = input("Item : ").lower().title()
             print(f"{item} = {menu[item]}")
             total += menu[item]
-            print(f"Title : {total}")
+            print(f"Title : ${total}")
         except EOFError:
             print()
             exit()
