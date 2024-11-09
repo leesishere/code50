@@ -3,19 +3,16 @@ def main():
 
 
 
-
-try:
-
-except ValueError¶
-
-
 def convert_fraction(f):
     f = f.replace(" ", "")
-    try:
-        numerator, denominator = f.split('/')
-        return float(umerator/denominator)
-    exept ValueError:
-        
+
+    while
+        try:
+            numerator, denominator = f.split('/')
+            return float(umerator/denominator)
+        exept ValueError:
+            pass
+
 
 
 
