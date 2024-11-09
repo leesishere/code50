@@ -26,7 +26,7 @@ def main():
 
     # Define regex patterns for both date formats
     pattern1 = r'\b\d{2}/\d{2}/\d{2}\b'  # Pattern for ##/##/##
-    pattern2 = r'\b\w+ \d{1,2}, \d{4}\b'  # Pattern for AAAA #, ####
+    pattern2 = r'\b(\w+) (\d{1,2}), (\d{4})\b'  # Pattern for AAAA #, ####
 
     # Find all matches for both patterns
     dates1 = re.findall(pattern1, date)
@@ -41,14 +41,14 @@ def main():
     #Dates in format AAAA #, ####
     if dates2:
         # Find all matches
-        matches = re.findall(pattern, date)
+        matches = re.findall(pattern2, date)
 
         # Print the groups
         for match in matches:
             month, day, year = match
             print(f"Month: {month}, Day: {day}, Year: {year}")
 
-        p#rint("Dates in format AAAA #, ####:", dates2)
+        print("Dates in format AAAA #, ####:", dates2)
 
 
 
