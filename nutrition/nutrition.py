@@ -23,7 +23,10 @@ fruit = {
 
 def main():
     item = input("Input: ").lower().strip()
+    print(item)
+    print(fruit.get('item'))
     if fruit.get('item'):
         print("Coleries:", fruit.get('item'))
-    if __name__ == "__main__":
+
+if __name__ == "__main__":
     main()
