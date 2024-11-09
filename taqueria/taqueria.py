@@ -19,6 +19,7 @@ def main():
             total += menu[item]
             print(f"Title : {total}")
         except EOFError:
+            print()
             exit()
         except Exception:
             pass
