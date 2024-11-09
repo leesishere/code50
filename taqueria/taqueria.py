@@ -20,6 +20,8 @@ def main():
             print(f"Title : {total}")
         except:
             pass
+        except EOFError:
+            exit()
 
 
 
