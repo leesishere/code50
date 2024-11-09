@@ -10,6 +10,7 @@ def main():
             elif percentage > 89:
                 print_string = f"F"
             else:
+                percentage = int(percentage)
                 print_string = f"{percentage}%"
             break
     print(f"{print_string}")
@@ -18,7 +19,9 @@ def convert_fraction(f):
     f = f.replace(" ", "")
     try:
         numerator, denominator = f.split('/')
-        return float(umerator/denominator)
+        numerator = int(numerator)
+        denominator = int(denominator)
+        return float(numerator/denominator)
     except ValueError:
         pass
 
