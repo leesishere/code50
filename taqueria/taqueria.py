@@ -15,10 +15,9 @@ def main():
     }
 
     while True:
-        item = input("Item : ").lower()
-        print(f"{item} {menu[item]}")
+        item = input("Item : ").lower().title()
         try:
-            item = item.title()
+            item = item.title(),title()
             print(f"{item} {menu[item]}")
             price += menu['item']
             print(f"Title : {price}")
