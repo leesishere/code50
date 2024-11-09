@@ -23,7 +23,7 @@ def is_valid(s):
         for i in plate_list:
             if count_numbers(i):
                 number_cnt += 1
-        
+        print(number_cnt)
 
         if count_numbers(plate_list[-1]):
             return False
