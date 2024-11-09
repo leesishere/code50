@@ -1,4 +1,5 @@
 
+price = 0
 
 def main():
     menu = {
@@ -12,11 +13,13 @@ def main():
         "Taco": 3.00,
         "Tortilla Salad": 8.00
     }
+
     while True:
         item = input("Item :").lower()
         try:
             item = item.title()
-            print(menu['itme'])
+            price = menu['item']
+            print(menu['item'])
         except:
             pass
 
