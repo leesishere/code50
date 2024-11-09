@@ -45,7 +45,7 @@ def main():
 
         # Print the groups
         for match in matches:
-            month, day, year = match
+            month, day, year = matches
             print(f"Month: {month}, Day: {day}, Year: {year}")
 
         #print("Dates in format AAAA #, ####:", dates2)
