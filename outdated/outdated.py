@@ -45,10 +45,10 @@ def main():
 
         # Print the groups
         for match in matches:
-            protocol, domain, path = match
-            print(f"Protocol: {protocol}, Domain: {domain}, Path: {path}")
+            month, day, year = match
+            print(f"Month: {month}, Day: {day}, Year: {year}")
 
-        print("Dates in format AAAA #, ####:", dates2)
+        p#rint("Dates in format AAAA #, ####:", dates2)
 
 
 
