@@ -1,5 +1,4 @@
 
-global price
 price = 0.0
 
 def main():
@@ -18,7 +17,7 @@ def main():
     while True:
         item = input("Item : ").lower().title()
         print(f"{item} = {menu[item]}")
-        global price += menu[item]
+        global price = price + menu[item]
         #print(f"Title : {price}")
 
 
