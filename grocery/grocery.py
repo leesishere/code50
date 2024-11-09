@@ -16,7 +16,7 @@ def main():
                     print(f"{count} {item.upper()}")
 
                 previous = item.upper()
-            exit()
+            break
         except Exception:
             pass
 
