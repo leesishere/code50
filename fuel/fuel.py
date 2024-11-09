@@ -6,7 +6,7 @@ def main():
 def convert_fraction(f):
     f = f.replace(" ", "")
 
-    while
+    while True:
         try:
             numerator, denominator = f.split('/')
             return float(umerator/denominator)
