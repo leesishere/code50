@@ -21,9 +21,20 @@ def main():
     # If the user’s input is not a valid date in either format, prompt the user again.
     # Assume that every month has no more than 31 days; no need to validate whether a month has 28, 29, 30, or 31 days.
 
-    patter = r'
+
     date = input("Date: ")
-    patter = []
+
+    # Define regex patterns for both date formats
+    pattern1 = r'\b\d{2}/\d{2}/\d{2}\b'  # Pattern for ##/##/##
+    pattern2 = r'\b\w+ \d{1,2}, \d{4}\b'  # Pattern for AAAA #, ####
+
+    # Find all matches for both patterns
+    dates1 = re.findall(pattern1, date)
+    dates2 = re.findall(pattern2, date)
+
+    # Print the results
+    print("Dates in format ##/##/##:", dates1)  # Output: ['09/11/24']
+    print("Dates in format AAAA #, ####:", dates2)  # Output: ['November 9, 2024']
 
 
 
