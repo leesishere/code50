@@ -2,6 +2,7 @@
 def main():
     while True:
         fract = input("Fraction: ")
+        fract = convert_fraction(fract)
         if type(fract) == type(1.0):
             percentage = fract * 100
             if percentage < 2:
