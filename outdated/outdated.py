@@ -29,19 +29,19 @@ def main():
     pattern2 = r'\b(\w+) (\d{1,2}), (\d{4})\b'  # Pattern for AAAA #, ####
 
     # Find all matches for both patterns
-    dates1 = re.findall(pattern1, date)
-    dates2 = re.findall(pattern2, date)
+    match1 = re.findall(pattern1, date)
+    match2 = re.findall(pattern2, date)
 
     # Print the results
     #Dates in format ##/##/##
 
-    if dates1:
+    if match1:
         print("Dates in format ##/##/##:", dates1)
 
     #Dates in format AAAA #, ####
-    if dates2:
-        # Find all matches
-        matches = re.findall(pattern2, date)
+    if match2:
+    
+        match2.group(1)
 
         # Print the groups
         for match in matches:
