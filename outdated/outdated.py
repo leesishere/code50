@@ -34,8 +34,10 @@ def main():
 
     # Print the results
 
-    print("Dates in format ##/##/##:", dates1) if dates1
-    print("Dates in format AAAA #, ####:", dates2) if dates12
+    if not dates1:
+        print("Dates in format ##/##/##:", dates1)
+    if not dates2:
+        print("Dates in format AAAA #, ####:", dates2)
 
 
 
