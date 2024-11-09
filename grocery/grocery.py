@@ -12,6 +12,7 @@ def main():
             for item in grocery_list:
                 count = sum(1 for x in grocery_list if item == x )
                 if previous.upper() != item.upper():
+                    print(f"{previous.upper()} != {item.upper()}")
                     print(f"{count} {item.upper()}")
                 else:
                     previous = item.upper()
