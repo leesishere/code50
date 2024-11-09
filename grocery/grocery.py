@@ -5,10 +5,9 @@ def main:
     while True:
         try:
             item = input().lower().title().strip()
-            
+            grocery_list.append(item)
         except EOFError:
-            # needed to add the final total to get the test script to pass the code :-(
-            print(f"${total:.2f}")
+            
             exit()
         except Exception:
             pass
