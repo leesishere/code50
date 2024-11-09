@@ -25,6 +25,7 @@ def is_valid(s):
         if number_cnt > 1:
             return False
 
+        print(count_numbers(plate_list[-1]))
         if count_numbers(plate_list[-1]):
             return False
 
