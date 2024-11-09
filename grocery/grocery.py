@@ -7,6 +7,7 @@ def main():
             item = input().lower().title().strip()
             grocery_list.append(item)
         except EOFError:
+            print()
             grocery_list = sorted(grocery_list)
             previous = ''
             for item in grocery_list:
