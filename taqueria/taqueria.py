@@ -13,9 +13,12 @@ def main():
         "Tortilla Salad": 8.00
     }
     while True:
-        item = input("Item :).lower()
+        item = input("Item :").lower()
         try:
-            
+            item = item.title()
+            print(menu['itme'])
+        except:
+            pass
 
 
 
