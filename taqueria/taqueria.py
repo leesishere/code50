@@ -10,14 +10,16 @@ def main():
         "Taco": 3.00,
         "Tortilla Salad": 8.00
     }
-    price = 0.0
+    total = 0.0
 
     while True:
-        item = input("Item : ").lower().title()
-        print(f"{item} = {menu[item]}")
-        price += menu[item]
-        print(f"Title : {price}")
-
+        try:
+            item = input("Item : ").lower().title()
+            print(f"{item} = {menu[item]}")
+            total += menu[item]
+            print(f"Title : {total}")
+        except:
+            pass
 
 
 
