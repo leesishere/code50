@@ -29,7 +29,7 @@ def main():
     if get(item):
         print("Coleries:", fruit[item])
     else:
-        print("", end=='')
+        print("", end='')
 
 def get(item):
     try:
