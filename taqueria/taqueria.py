@@ -15,7 +15,7 @@ def main():
     }
 
     while True:
-        item = input("Item :").lower()
+        item = input("Item : ").lower()
         try:
             item = item.title()
             print(f"{item} {menu['item']}")
