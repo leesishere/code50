@@ -18,10 +18,11 @@ def main():
             print(f"{item} = {menu[item]}")
             total += menu[item]
             print(f"Title : {total}")
-        except:
-            pass
         except EOFError:
             exit()
+        except Exception:
+            pass
+
 
 
 
