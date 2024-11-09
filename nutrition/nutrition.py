@@ -24,7 +24,8 @@ fruit = {
 def main():
     item = input("Input: ").lower().strip()
     print(item)
-    print(fruit.get('item'))
+    print(fruit[item])
+
     if fruit.get('item'):
         print("Coleries:", fruit.get('item'))
 
