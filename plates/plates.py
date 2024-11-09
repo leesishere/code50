@@ -25,10 +25,6 @@ def is_valid(s):
         if number_cnt > 1:
             return False
 
-        print(count_numbers(plate_list[-1]))
-        if count_numbers(plate_list[-1]):
-            return False
-
         #The first number used cannot be a ‘0’.”
         for num in plate_list:
             if count_numbers(num):
