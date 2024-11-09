@@ -33,8 +33,9 @@ def main():
     dates2 = re.findall(pattern2, date)
 
     # Print the results
-    print("Dates in format ##/##/##:", dates1)  # Output: ['09/11/24']
-    print("Dates in format AAAA #, ####:", dates2)  # Output: ['November 9, 2024']
+
+    print("Dates in format ##/##/##:", dates1) if dates1
+    print("Dates in format AAAA #, ####:", dates2) if dates12
 
 
 
