@@ -40,6 +40,8 @@ def main():
 
     #Dates in format AAAA #, ####
     if dates2:
+        print(dates2)
+        exit()
         # Find all matches
         matches = re.findall(pattern, dates2)
 
