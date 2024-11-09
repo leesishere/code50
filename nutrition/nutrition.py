@@ -26,8 +26,8 @@ def main():
     print(item)
     print(fruit[item])
 
-    if fruit.get('item'):
-        print("Coleries:", fruit.get('item'))
+    if fruit[item]:
+        print("Coleries:", fruit[item])
 
 if __name__ == "__main__":
     main()
