@@ -18,6 +18,7 @@ def main():
         item = input("Item :").lower()
         try:
             item = item.title()
+            print(item)
             price += menu['item']
             print(f"Title : {price}")
         except:
