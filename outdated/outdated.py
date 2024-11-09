@@ -16,6 +16,7 @@ def main():
     "December"
     ]
 
+    # accept September 8, 1636 or 9/8/1636 and return 1636-9-8
     date = input("Date: ")
     patter = []
 
