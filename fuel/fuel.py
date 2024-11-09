@@ -10,8 +10,13 @@ except ValueError¶
 
 
 def convert_fraction(f):
-    numerator, denominator = s.split('/')
-    
+    f = f.replace(" ", "")
+    try:
+        numerator, denominator = f.split('/')
+        return float(umerator/denominator)
+    exept ValueError:
+        
+
 
 
 
