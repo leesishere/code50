@@ -10,6 +10,7 @@ def main():
             grocery_list = sorted(grocery_list)
             print()
             for item in grocery_list:
+                count = [x for x in grocery_list if item == x ]
                 print(item)
             exit()
         except Exception:
