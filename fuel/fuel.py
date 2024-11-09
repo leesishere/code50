@@ -21,8 +21,13 @@ def convert_fraction(f):
         numerator, denominator = f.split('/')
         numerator = int(numerator)
         denominator = int(denominator)
+        # force error if numarator is more than denominator
+        if numerator > denominator:
+            denominator = 0
         return float(numerator/denominator)
     except ValueError:
+        pass
+    except ZeroDivisionError:
         pass
 
 
