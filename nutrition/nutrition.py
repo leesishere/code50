@@ -23,9 +23,8 @@ fruit = {
 
 def main():
     item = input("Input: ").lower()
-    try:
-        print("Coleries:", str(fruit[item]))
-    except:
-        print(,end='')
+    print("Coleries:", fruit[item])
+    #except:
+    #    print(,end='')
 if __name__ == "__main__":
     main()
