@@ -40,13 +40,13 @@ def main():
 
     #Dates in format AAAA #, ####
     if match2:
-    
+
         match2.group(1)
 
         # Print the groups
-        for match in matches:
-            month, day, year = matches
-            print(f"Month: {month}, Day: {day}, Year: {year}")
+        #for match in matches:
+        month, day, year = match2.group(1)
+        print(f"Month: {month}, Day: {day}, Year: {year}")
 
         #print("Dates in format AAAA #, ####:", dates2)
 
