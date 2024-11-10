@@ -27,22 +27,25 @@ def main():
     pattern1 = r'\b\s*(\d{1,2})\s*/\s*(\d{1,2})\s*/\s*(\d{4})\s*\b'  # Pattern for ##/##/####
     pattern2 = r'\b\s*(\w+)\s*(\d{1,2})\s*,\s*(\d{4})\s*\b'  # Pattern for AAAA #, ####
 
-
     # Find all matches for both patterns
     match1 = re.search(pattern1, date)
     match2 = re.search(pattern2, date)
 
     #Dates in format ##/##/##
-    if match1:
+    if match1 and not convert_date(match1, month_list):
         print(f"{convert_date(match1, month_list)}")
+
     #Dates in format Month_Name #, ####
-    if match2:
+    if match2 and not convert_date(match2, month_list):
         print(f"{convert_date(match2, month_list)}")
 
 def convert_date(match,month_list):
         month = match.group(1)
         day = match.group(2)
         year = match.group(3)
+
+        if day > 30:
+            return False
 
         if not month.isdigit():
             month = month_list[month.title()] # assign month name to month number
