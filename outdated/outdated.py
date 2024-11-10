@@ -51,18 +51,13 @@ def main():
         year = match2.group(3)
         # assign month name to month number
         month = month_list[month.title()]
-        if len(str(month).zfill(2)) != 2:
-            month = '0' + str(month)
-        if len(str(day).zfill(2)) != 2:
-            day = '0' + str(day)
+        month = str(month).zfill(2)
+        day = str(day).zfill(2)
         print(f"{year}-{month}-{day}")
 
 
 
 if __name__ == "__main__":
     main()
-def pad_with_zeros(s, num):
-    return str(s).zfill(num)
 
-print(pad_with_zeros("123", 6))  # Output: "00123"
 
