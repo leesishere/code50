@@ -61,6 +61,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+def pad_with_zeros(s, num):
+    return str(s).zfill(num)
 
 print(pad_with_zeros("123", 6))  # Output: "00123"
 
