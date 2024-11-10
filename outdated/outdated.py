@@ -24,8 +24,8 @@ def main():
     date = input("Date: ").strip()
 
     # Define regex patterns for both date formats
-    pattern1 = r'\b\s+(\d{1,2})\s+/\s+(\d{1,2})\s+/\s+(\d{4})\s+\b'  # Pattern for ##/##/####
-    pattern2 = r'\b\s+(\w+)\s+(\d{1,2})\s+,\s+(\d{4})\s+\b'  # Pattern for AAAA #, ####
+    pattern1 = r'\b\s*(\d{1,2})\s*/\s*(\d{1,2})\s*/\s*(\d{4})\s*\b'  # Pattern for ##/##/####
+    pattern2 = r'\b\s*(\w+)\s*(\d{1,2})\s*,\s*(\d{4})\s*\b'  # Pattern for AAAA #, ####
 
 
     # Find all matches for both patterns
