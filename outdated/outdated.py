@@ -62,4 +62,5 @@ def main():
 if __name__ == "__main__":
     main()
 
+print(pad_with_zeros("123", 6))  # Output: "00123"
 
