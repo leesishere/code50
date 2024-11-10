@@ -29,7 +29,16 @@ def main():
 
     pattern = r'\b(\d{1,2})/(\d{1,2})/(\d{4})\b|\b(\w+) (\d{1,2}), (\d{4})\b'  # Pattern for ##/##/####
 
-
+    match = re.search(pattern, date)
+    if match:
+        month = match.group(1)
+        day = match.group(2)
+        year = match.group(3)
+        # assign month name to month number
+        month = month_list[month.title()]
+        month = str(month).zfill(2)
+        day = str(day).zfill(2)
+        print(f"{year}-{month}-{day}")
 
     # Find all matches for both patterns
     match1 = re.search(pattern1, date)
