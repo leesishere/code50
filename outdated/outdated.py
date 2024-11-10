@@ -36,6 +36,7 @@ def main():
     #Dates in format ##/##/##
 
     if match1:
+        print("hi")
         month = match1.group(1)
         day = match1.group(2)
         year = match1.group(3)
