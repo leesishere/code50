@@ -32,11 +32,11 @@ def main():
     match2 = re.search(pattern2, date)
 
     #Dates in format ##/##/##
-    if match1 and not convert_date(match1, month_list):
+    if match1 and convert_date(match1, month_list):
         print(f"{convert_date(match1, month_list)}")
 
     #Dates in format Month_Name #, ####
-    if match2 and not convert_date(match2, month_list):
+    if match2 and convert_date(match2, month_list):
         print(f"{convert_date(match2, month_list)}")
 
 def convert_date(match,month_list):
