@@ -31,6 +31,7 @@ def main():
     # Find all matches for both patterns
     match1 = re.findall(pattern1, date)
     match2 = re.findall(pattern2, date)
+    match2 = re.search(pattern2, date)
 
     # Print the results
     #Dates in format ##/##/##
