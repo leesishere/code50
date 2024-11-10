@@ -52,7 +52,7 @@ def convert_date(match,month_list):
             except:
                 return None
 
-        if int(month) > 12 or int(day) > 30:
+        if int(month) > 12 or int(day) > 31:
             return None
 
         # create leading zero if needed
