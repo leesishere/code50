@@ -44,9 +44,8 @@ def convert_date(match,month_list):
         day = match.group(2)
         year = match.group(3)
 
-        print(not month.isdigit())
-        # assign month name to month number
-        month = month_list[month.title()]
+        if not month.isdigit():
+            month = month_list[month.title()] # assign month name to month number
 
         # create leading zero if needed
         month = str(month).zfill(2)
