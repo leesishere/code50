@@ -32,9 +32,7 @@ def main():
     match1 = re.search(pattern1, date)
     match2 = re.search(pattern2, date)
 
-    # Print the results
     #Dates in format ##/##/##
-    print(match1)
     if match1:
         month = match1.group(1)
         day = match1.group(2)
@@ -42,7 +40,7 @@ def main():
         # print YYYY-MM-DD format
         print(f"{year}-{month}-{day}")
 
-    #Dates in format AAAA #, ####
+    #Dates in format Month_Name #, ####
     if match2:
         month = match2.group(1)
         day = match2.group(2)
