@@ -16,28 +16,30 @@ def main():
             "December":12
     }
 
+    # Define regex patterns for both date formats
+    pattern1 = r'\b\s*(\d{1,2})\s*/\s*(\d{1,2})\s*/\s*(\d{4})\s*\b'  # Pattern for ##/##/####
+    pattern2 = r'\b\s*(\w+)\s*(\d{1,2})\s*,\s*(\d{4})\s*\b'  # Pattern for AAAA #, ####
+
     # accept September 8, 1636 or 9/8/1636 and return 1636-9-8
     # Then output that same date in YYYY-MM-DD format.
     # If the user’s input is not a valid date in either format, prompt the user again.
     # Assume that every month has no more than 31 days; no need to validate whether a month has 28, 29, 30, or 31 days.
 
-    date = input("Date: ").strip()
+    while True:
+        date = input("Date: ").strip()
 
-    # Define regex patterns for both date formats
-    pattern1 = r'\b\s*(\d{1,2})\s*/\s*(\d{1,2})\s*/\s*(\d{4})\s*\b'  # Pattern for ##/##/####
-    pattern2 = r'\b\s*(\w+)\s*(\d{1,2})\s*,\s*(\d{4})\s*\b'  # Pattern for AAAA #, ####
+        # Find all matches for both patterns
+        match1 = re.search(pattern1, date)
+        match2 = re.search(pattern2, date)
 
-    # Find all matches for both patterns
-    match1 = re.search(pattern1, date)
-    match2 = re.search(pattern2, date)
-
-    #Dates in format ##/##/##
-    if match1 and convert_date(match1, month_list):
-        print(f"{convert_date(match1, month_list)}")
-
-    #Dates in format Month_Name #, ####
-    if match2 and convert_date(match2, month_list):
-        print(f"{convert_date(match2, month_list)}")
+        #Dates in format ##/##/##
+        if match1 and convert_date(match1, month_list):
+            print(f"{convert_date(match1, month_list)}")
+            break
+        #Dates in format Month_Name #, ####
+        if match2 and convert_date(match2, month_list):
+            print(f"{convert_date(match2, month_list)}")
+            break
 
 def convert_date(match,month_list):
         month = match.group(1)
