@@ -47,10 +47,8 @@ def main():
         month = match2.group(1)
         day = match2.group(2)
         year = match2.group(3)
-        print(month_list[month.title()])
+        month = month_list[month.title()]
         print(f"{year}-{month}-{day}")
-
-        print(f"Month: {month}, Day: {day}, Year: {year}")
 
 if __name__ == "__main__":
     main()
