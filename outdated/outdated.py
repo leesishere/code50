@@ -51,9 +51,9 @@ def main():
         year = match2.group(3)
         # assign month name to month number
         month = month_list[month.title()]
-        if len(str(month).zfill(2)) == 2:
+        if len(str(month).zfill(2)) != 2:
             month = '0' + str(month)
-        if len(str(day).zfill(2)) == 2:
+        if len(str(day).zfill(2)) != 2:
             day = '0' + str(day)
         print(f"{year}-{month}-{day}")
 
