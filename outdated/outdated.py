@@ -39,9 +39,9 @@ def main():
         year = match1.group(3)
         # print YYYY-MM-DD format
         if len(str(month).zfill(2)) == 2:
-            month = '0' + month
+            month = '0' + str(month)
         if len(str(day).zfill(2)) == 2:
-            day = '0' + day
+            day = '0' + str(day)
         print(f"{year}-{month}-{day}")
 
     #Dates in format Month_Name #, ####
@@ -52,9 +52,9 @@ def main():
         # assign month name to month number
         month = month_list[month.title()]
         if len(str(month).zfill(2)) == 2:
-            month = '0' + month
+            month = '0' + str(month)
         if len(str(day).zfill(2)) == 2:
-            day = '0' + day
+            day = '0' + str(day)
         print(f"{year}-{month}-{day}")
 
 
