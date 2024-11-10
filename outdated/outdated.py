@@ -42,7 +42,7 @@ def main():
             month = '0' + month
         if len(str(day).zfill(2)) == 2:
             month = '0' + day
-        print(f"{year}-{format_digit(month)}-{format_digit(day)}")
+        print(f"{year}-{month}-{day}")
 
     #Dates in format Month_Name #, ####
     if match2:
@@ -55,12 +55,9 @@ def main():
             month = '0' + month
         if len(str(day).zfill(2)) == 2:
             month = '0' + day
-        print(f"{year}-{format_digit(month)}-{format_digit(day)}")
+        print(f"{year}-{month}-{day}")
 
-# Function to format digits with leading zeros
-def format_digit(digit):
-    if
-    return f"{digit:02}"
+
 
 if __name__ == "__main__":
     main()
