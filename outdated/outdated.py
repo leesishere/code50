@@ -38,7 +38,7 @@ def main():
         day = match1.group(2)
         year = match1.group(3)
         # print YYYY-MM-DD format
-        print(f"{year}-{month:01}-{day:01}")
+        print(f"{year}-{format_digit(month)}-{format_digit(day)}")
 
     #Dates in format Month_Name #, ####
     if match2:
@@ -47,7 +47,13 @@ def main():
         year = match2.group(3)
         # assign month name to month number
         month = month_list[month.title()]
-        print(f"{year}-{month:02}-{day:02}")
+        print(f"{year}-{format_digit(month)}-{format_digit(day)}")
+
+# Function to format digits with leading zeros
+def format_digit(digit):
+    return f"{digit:02}"
 
 if __name__ == "__main__":
     main()
+
+
