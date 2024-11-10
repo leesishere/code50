@@ -1,19 +1,19 @@
 import re
 
 def main():
-    [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
+    month = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
     ]
 
     # accept September 8, 1636 or 9/8/1636 and return 1636-9-8
@@ -48,7 +48,7 @@ def main():
         day = match2.group(2)
         year = match2.group(3)
         print(f"{year}-{month}-{day}")
-        
+
         print(f"Month: {month}, Day: {day}, Year: {year}")
 
 if __name__ == "__main__":
