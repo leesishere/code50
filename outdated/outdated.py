@@ -46,9 +46,5 @@ def main():
         year = match2.group(3)
         print(f"Month: {month}, Day: {day}, Year: {year}")
 
-        #print("Dates in format AAAA #, ####:", dates2)
-
-
-
 if __name__ == "__main__":
     main()
