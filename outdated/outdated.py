@@ -41,7 +41,7 @@ def main():
         if len(str(month).zfill(2)) == 2:
             month = '0' + month
         if len(str(day).zfill(2)) == 2:
-            month = '0' + day
+            day = '0' + day
         print(f"{year}-{month}-{day}")
 
     #Dates in format Month_Name #, ####
@@ -54,7 +54,7 @@ def main():
         if len(str(month).zfill(2)) == 2:
             month = '0' + month
         if len(str(day).zfill(2)) == 2:
-            month = '0' + day
+            day = '0' + day
         print(f"{year}-{month}-{day}")
 
 
