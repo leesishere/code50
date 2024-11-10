@@ -38,7 +38,7 @@ def main():
         day = match1.group(2)
         year = match1.group(3)
         # print YYYY-MM-DD format
-        print(f"{year}-{month:02}-{day:02}")
+        print(f"{year}-{month:01}-{day:01}")
 
     #Dates in format Month_Name #, ####
     if match2:
