@@ -50,7 +50,7 @@ def main():
         day = match2.group(2)
         year = match2.group(3)
 
-        print(month.isdigit())
+        print(not month.isdigit())
         # assign month name to month number
         month = month_list[month.title()]
 
@@ -60,6 +60,8 @@ def main():
 
         # print YYYY-MM-DD format
         print(f"{year}-{month}-{day}")
+
+def conver_date(date):
 
 
 if __name__ == "__main__":
