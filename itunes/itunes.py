@@ -11,7 +11,7 @@ for result in artist['results']:
 def cow(s):
     my_cow = r'''
   ___________
-| Hello World |
+ | All Done! |
   ===========
            \
             \
