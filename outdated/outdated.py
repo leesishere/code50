@@ -44,7 +44,7 @@ def convert_date(match,month_list):
         day = match.group(2)
         year = match.group(3)
 
-        if day > 30:
+        if int(day) > 30:
             return False
 
         if not month.isdigit():
