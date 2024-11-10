@@ -39,13 +39,16 @@ def main():
         month = match1.group(1)
         day = match1.group(2)
         year = match1.group(3)
-        print(f"Month: {month}, Day: {day}, Year: {year}")
+        # print YYYY-MM-DD format
+        print(f"{year}-{month}-{day}")
 
     #Dates in format AAAA #, ####
     if match2:
         month = match2.group(1)
         day = match2.group(2)
         year = match2.group(3)
+        print(f"{year}-{month}-{day}")
+        
         print(f"Month: {month}, Day: {day}, Year: {year}")
 
 if __name__ == "__main__":
