@@ -46,14 +46,15 @@ def convert_date(match,month_list):
         day = match.group(2)
         year = match.group(3)
 
-        if int(month) > 12 or int(day) > 30:
-            return None
-
         if not month.isdigit():
             try:
                 month = month_list[month.title()] # assign month name to month number
             except:
                 return None
+
+        if int(month) > 12 or int(day) > 30:
+            return None
+
         # create leading zero if needed
         month = str(month).zfill(2)
         day = str(day).zfill(2)
