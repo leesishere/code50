@@ -9,7 +9,7 @@ for result in artist['results']:
 
 
 def cow(s):
-    print('''
+    my_cow = r'''
   ___________
 | Hello World |
   ===========
@@ -20,6 +20,7 @@ def cow(s):
               (__)\       )\/\
                   ||----w |
                   ||     ||)
-''')
+'''
+    print(my_cow)
 
 cow('Hello World')
