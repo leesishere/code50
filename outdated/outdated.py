@@ -13,7 +13,7 @@ def main():
             "September":9,
             "October":10,
             "November":11,
-            "December:12s"
+            "December":12
     }
 
     # accept September 8, 1636 or 9/8/1636 and return 1636-9-8
@@ -47,7 +47,7 @@ def main():
         month = match2.group(1)
         day = match2.group(2)
         year = match2.group(3)
-        month[month.Title()]
+        print(month[month.Title()])
         print(f"{year}-{month}-{day}")
 
         print(f"Month: {month}, Day: {day}, Year: {year}")
