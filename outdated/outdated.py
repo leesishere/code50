@@ -26,6 +26,7 @@ def main():
     # Define regex patterns for both date formats
     pattern1 = r'\b(\d{2})/(\d{2})/(\d{2})\b'  # Pattern for ##/##/##
     pattern2 = r'\b(\w+) (\d{1,2}), (\d{4})\b'  # Pattern for AAAA #, ####
+    pattern = r'\b\d{2}/\d{2}/\d{4}\b'
 
     # Find all matches for both patterns
     match1 = re.search(pattern1, date)
