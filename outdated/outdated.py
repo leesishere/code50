@@ -34,21 +34,15 @@ def main():
 
     #Dates in format ##/##/##
     if match1:
-        month = match1.group(1)
-        day = match1.group(2)
-        year = match1.group(3)
-        # create leading zero if needed
-        month = str(month).zfill(2)
-        day = str(day).zfill(2)
-
-        # print YYYY-MM-DD format
-        print(f"{year}-{month}-{day}")
-
+        print(f"{convert_date(match1, month_list)}")
     #Dates in format Month_Name #, ####
     if match2:
-        month = match2.group(1)
-        day = match2.group(2)
-        year = match2.group(3)
+        print(f"{convert_date(match2, month_list)}")
+
+def convert_date(match,month_list):
+        month = match.group(1)
+        day = match.group(2)
+        year = match.group(3)
 
         print(not month.isdigit())
         # assign month name to month number
@@ -59,9 +53,7 @@ def main():
         day = str(day).zfill(2)
 
         # print YYYY-MM-DD format
-        print(f"{year}-{month}-{day}")
-
-def conver_date(date):
+        return f"{year}-{month}-{day}"
 
 
 if __name__ == "__main__":
