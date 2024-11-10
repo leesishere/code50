@@ -27,6 +27,9 @@ def main():
     pattern1 = r'\b(\d{1,2})/(\d{1,2})/(\d{4})\b'  # Pattern for ##/##/####
     pattern2 = r'\b(\w+) (\d{1,2}), (\d{4})\b'  # Pattern for AAAA #, ####
 
+    pattern = r'\b(\d{1,2})/(\d{1,2})/(\d{4})\b|\b(\w+) (\d{1,2}), (\d{4})\b'  # Pattern for ##/##/####
+
+
 
     # Find all matches for both patterns
     match1 = re.search(pattern1, date)
