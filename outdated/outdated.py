@@ -28,21 +28,6 @@ def main():
     pattern2 = r'\b(\w+) (\d{1,2}), (\d{4})\b'  # Pattern for AAAA #, ####
 
 
-    match = re.search(pattern, date)
-    if match:
-        month = match.group(1)
-        day = match.group(2)
-        year = match.group(3)
-        # assign month name to month number
-
-        print(month)
-        exit()
-        if not month.isdigit():
-            month = month_list[month.title()]
-        month = str(month).zfill(2)
-        day = str(day).zfill(2)
-        print(f"{year}-{month}-{day}")
-
     # Find all matches for both patterns
     match1 = re.search(pattern1, date)
     match2 = re.search(pattern2, date)
@@ -64,12 +49,16 @@ def main():
         month = match2.group(1)
         day = match2.group(2)
         year = match2.group(3)
+
         # assign month name to month number
         month = month_list[month.title()]
+
+        # create leading zero if needed
         month = str(month).zfill(2)
         day = str(day).zfill(2)
+
+        # print YYYY-MM-DD format
         print(f"{year}-{month}-{day}")
-'''
 
 
 if __name__ == "__main__":
