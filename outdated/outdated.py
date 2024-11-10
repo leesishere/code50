@@ -35,6 +35,7 @@ def main():
         day = match.group(2)
         year = match.group(3)
         # assign month name to month number
+        
         month = month_list[month.title()]
         month = str(month).zfill(2)
         day = str(day).zfill(2)
