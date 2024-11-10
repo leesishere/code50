@@ -35,6 +35,9 @@ def main():
         day = match.group(2)
         year = match.group(3)
         # assign month name to month number
+
+        print(month)
+        exit()
         if not month.isdigit():
             month = month_list[month.title()]
         month = str(month).zfill(2)
