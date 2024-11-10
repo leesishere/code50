@@ -24,9 +24,9 @@ def main():
     date = input("Date: ").strip()
 
     # Define regex patterns for both date formats
-    pattern1 = r'\b(\d{2})/(\d{2})/(\d{2})\b'  # Pattern for ##/##/##
+    pattern1 = r'\b(\d{2})/(\d{2})/(\d{4})\b'  # Pattern for ##/##/####
     pattern2 = r'\b(\w+) (\d{1,2}), (\d{4})\b'  # Pattern for AAAA #, ####
-    pattern = r'\b\d{2}/\d{2}/\d{4}\b'
+
 
     # Find all matches for both patterns
     match1 = re.search(pattern1, date)
@@ -36,7 +36,6 @@ def main():
     #Dates in format ##/##/##
     print(match1)
     if match1:
-        print("hi")
         month = match1.group(1)
         day = match1.group(2)
         year = match1.group(3)
