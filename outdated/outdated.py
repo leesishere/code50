@@ -37,7 +37,10 @@ def main():
     #Dates in format ##/##/##
 
     if match1:
-        print("Dates in format ##/##/##:", dates1)
+        month = match1.group(1)
+        day = match1.group(2)
+        year = match1.group(3)
+        print(f"Month: {month}, Day: {day}, Year: {year}")
 
     #Dates in format AAAA #, ####
     if match2:
