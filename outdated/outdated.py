@@ -42,7 +42,7 @@ def main():
         month = str(month).zfill(2)
         day = str(day).zfill(2)
         print(f"{year}-{month}-{day}")
-'''
+
     # Find all matches for both patterns
     match1 = re.search(pattern1, date)
     match2 = re.search(pattern2, date)
@@ -52,11 +52,11 @@ def main():
         month = match1.group(1)
         day = match1.group(2)
         year = match1.group(3)
+        # create leading zero if needed
+        month = str(month).zfill(2)
+        day = str(day).zfill(2)
+
         # print YYYY-MM-DD format
-        if len(str(month).zfill(2)) == 2:
-            month = '0' + str(month)
-        if len(str(day).zfill(2)) == 2:
-            day = '0' + str(day)
         print(f"{year}-{month}-{day}")
 
     #Dates in format Month_Name #, ####
