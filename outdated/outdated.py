@@ -50,6 +50,7 @@ def main():
         day = match2.group(2)
         year = match2.group(3)
 
+        print(month.isdigit())
         # assign month name to month number
         month = month_list[month.title()]
 
