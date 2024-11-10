@@ -51,6 +51,7 @@ def main():
 
 # Function to format digits with leading zeros
 def format_digit(digit):
+    if 
     return f"{digit:02}"
 
 if __name__ == "__main__":
