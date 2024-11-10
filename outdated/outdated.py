@@ -1,7 +1,7 @@
 import re
 
 def main():
-    month = {
+    month_list = {
             "January":1,
             "February":2,
             "March":3,
@@ -47,7 +47,7 @@ def main():
         month = match2.group(1)
         day = match2.group(2)
         year = match2.group(3)
-        print(month[month.title()])
+        print(month_list[month.title()])
         print(f"{year}-{month}-{day}")
 
         print(f"Month: {month}, Day: {day}, Year: {year}")
