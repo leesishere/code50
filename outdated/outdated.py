@@ -1,20 +1,20 @@
 import re
 
 def main():
-    month = [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
-    ]
+    month = {
+            "January":1,
+            "February":2,
+            "March":3,
+            "April":4,
+            "May":5,
+            "June":6,
+            "July":7,
+            "August":8,
+            "September":9,
+            "October":10,
+            "November":11,
+            "December:12s"
+    }
 
     # accept September 8, 1636 or 9/8/1636 and return 1636-9-8
     # Then output that same date in YYYY-MM-DD format.
@@ -47,6 +47,7 @@ def main():
         month = match2.group(1)
         day = match2.group(2)
         year = match2.group(3)
+        month[month.Title()]
         print(f"{year}-{month}-{day}")
 
         print(f"Month: {month}, Day: {day}, Year: {year}")
