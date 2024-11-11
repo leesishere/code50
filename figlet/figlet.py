@@ -5,6 +5,9 @@ from pprint import pprint
 
 
 class ArgParser:
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        
     def __init__(Figlet, flag, argv):
         self.flag_list = flag.split(',')
         self.font = self.get_font_name(argv)
