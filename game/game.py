@@ -9,7 +9,8 @@
 
 def main():
 
-    input_level = next(iter(lambda: (s:=input("Level: ").strip()) or None if s.isdigit() else iter(()), None))
+    while not (input_level := input("Level: ").strip()).isdigit(): pass
+
 
     guess = input("Guess: ")
 
