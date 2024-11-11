@@ -25,14 +25,10 @@ def main():
         font_list = figlet.getFonts()
         # Define the range
         start = 0
-        end = len(font_list)
-        pprint(font_list)
-        print(end)
-
-        # 'runyc' 'fbr_stri'
+        end = len(font_list) - 1
         # Generate a random number
-        random_number = random.randint(start, end)
-
+        random_index = random.randint(start, end)
+        print(font_list[random_index])
 
 if __name__ == "__main__":
     main()
