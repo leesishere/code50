@@ -4,9 +4,11 @@ def main():
     try:
         while True:
             user_input = input("Name: ")
+            if not user_input:
+                raise EOFError()
             name_list.append(user_input)
     except EOFError:
-        # make sure the user entered a name not a space or blank 
+        # make sure the user entered a name not a space or blank
         name_list = [name for name in name_list if name]
         print("\nAdieu, adieu, to ",end='')
         for name in name_list[0:-1]:
