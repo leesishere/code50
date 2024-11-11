@@ -19,6 +19,9 @@ class ArgParser:
     def is_font_type_present(self):
         return True if self.font else False
 
+    def is_font_type_in_Figlet(self):
+        return True if self.font else False
+
 # Example usage
 parser = ArgParser('-f,--font', sys.argv)
 print(parser.is_flag_present('-f'))  # Output: True
