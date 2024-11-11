@@ -9,13 +9,12 @@ def main():
 
     if args.font:
         requested_string = input("Input: ").lower()
-        print(f"Font specified: {args.font}")
 
         # Create a pyfiglet object with a specific font
-        figlet = pyfiglet.Figlet(font='slant')
+        figlet = pyfiglet.Figlet(font=args.font)
 
         # Generate ASCII art
-        ascii_art = figlet.renderText('Hello World')
+        ascii_art = figlet.renderText(requested_string )
 
         # Print the result
         print(ascii_art)
