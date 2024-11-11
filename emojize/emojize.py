@@ -14,7 +14,7 @@ def main():
         for word in colon_words:
             word = word.lower()
             print(word)
-            input_message = input_message.replace(word,emoji[word])
+            input_message = input_message.replace(word,emoji[word.lower()])
         print(input_message)
 
     '''
