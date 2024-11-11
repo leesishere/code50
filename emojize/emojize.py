@@ -5,14 +5,20 @@ sys.path.append('.')
 from emoji import emoji_dict
 emoji = emoji_dict
 
-pattern = 'r\b(\w*) (:\w*:)\b'
 
 def main():
     while True:
         input_emoji = input("Input: ").lower().strip()
+        pattern = r'\b(\w*) (:\w*:)\b'
+        match = re.search(pattern, input_emoji)
 
         try:
-            print(f"Output: {emoji[input_emoji]}")
+            message = match.group(1)
+            input_emoji = match.group(2)
+            if message:
+                print(f"Output: {message} {emoji[input_emoji]}")
+            else:
+                print(f"Output: {emoji[input_emoji]}")
             break
         except:
             pass
