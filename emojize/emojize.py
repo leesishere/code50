@@ -7,7 +7,7 @@ emoji = emoji_dict
 def main():
     if isinstance(emoji, set):
         print("It's a set!")
-        print(emoji[':1st_place_medal:'])
+        #print(emoji[':1st_place_medal:'])
 
 
 
