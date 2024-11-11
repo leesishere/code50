@@ -5041,7 +5041,6 @@
 ':zipper-mouth_face:':'🤐',
 ':zombie:':'🧟',
 ':Åland_Islands:':'🇦🇽',
-"	alias	':'alias 🇬🇧',
 ':ab:':'🆎',
 ':ab_button_blood_type:':'🆎',
 ':atm:':'🏧',
@@ -6683,5 +6682,5 @@
 ':yo_yo:':'🪀',
 ':zipper_mouth_face:':'🤐',
 ':flag_for_Åland_Islands:':'🇦🇽',
-':aland_islands:':'🇦🇽	"
+':aland_islands:':'🇦🇽'
  }
