@@ -6,6 +6,7 @@ from emoji import emoji_dict
 emoji = emoji_dict
 pattern_colon = r':\w+:'
 
+'''
 def main():
     while True:
         input_message = input("Input: ").strip().split()
@@ -20,6 +21,11 @@ def main():
         if message:
             print(f"output: {message}")
             break
+'''
+def main():
+    while True:
+        input_message = input("Input: ").strip().split()
+        
 
 if __name__ == "__main__":
     main()
