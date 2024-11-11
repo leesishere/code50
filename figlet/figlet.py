@@ -53,11 +53,7 @@ def main():
     if not parser.is_comandline_correct():
         sys.exit("Invalid usage")
 
-
     requested_string = input("Input: ").strip()
-
-
-
 
     if (parser.is_flag_present('-f') or parser.is_flag_present('--font')) and (parser.is_font_type_present() and parser.is_font_type_in_Figlet()):
         # Create a pyfiglet object with a specific font
@@ -68,8 +64,6 @@ def main():
 
         # Print the result
         print(f"Output:\n{ascii_art}")
-
-
 
 
 if __name__ == "__main__":
