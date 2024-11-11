@@ -6,8 +6,6 @@ def main():
         while True:
             user_input = input("Name: ").strip()
             name_list.append(user_input)
-            if not user_input:
-                raise EOFError
 
     except EOFError:
         if name_list[-1] != '':
@@ -24,8 +22,6 @@ def main():
             for name in name_list[0:-1]:
                 print(name + ", ", end='')
             print("and", name_list[-1])
-        else:
-            print(name_list[-1])
 
 
 if __name__ == "__main__":
