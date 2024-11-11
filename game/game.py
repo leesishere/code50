@@ -15,7 +15,7 @@ def main():
     random_integer = random.randint(1, int(input_level))
 
     while True:
-        while not (input_quess := input("Guess: ").strip()).isdigit(): pass
+        while not (input_quess := input("Guess: ").strip()).isdigit() or not (1 <= int(input_level) <= 100): pass
         input_quess = int(input_quess)
         if input_quess < random_integer:
             print('Too small!')
