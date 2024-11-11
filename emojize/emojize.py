@@ -7,22 +7,15 @@ emoji = emoji_dict
 
 def main():
     while True:
-        input_emoji = input("Input: ").lower().strip().split()
-
-        print(input_emoji)
-        exit()
-
-        try:
-            if len(message) == 2:
-                print(f"Output: {message[0]} {emoji[message[1]]}")
-                break
+        input_message = input("Input: ").lower().strip().split()
+        message = ''
+        for input_command_line in input_message:
+            if input_command_line[0] == ':' and input_command_line[:-1] == ':':
+                message += emoji[input_command_line] + ' '
             else:
-                print(f"Output: {emoji[message[0]]}")
-                break
-        except:
-            pass
-
-
+                message += ' '
+        if not message:
+            break
 
 if __name__ == "__main__":
     main()
