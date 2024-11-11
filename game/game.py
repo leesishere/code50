@@ -1,3 +1,5 @@
+import random
+
 # Prompts the user for a level,
 # If the user does not input a positive integer, the program should prompt again.
 # Randomly generates an integer between 1 and
