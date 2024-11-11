@@ -7,7 +7,8 @@ class ArgPaser:
     def __init__(self, name):
         self.name = name
         self.value = value
-parser.add_argument('-f', '--font', type=str, help='Specify the font name')
+
+parser.add_argument('-f', '--font')
 
     def display_info(self):
         print(f"Name: {self.name}, Value: {self.value}")
