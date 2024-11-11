@@ -8,6 +8,9 @@
 # If the guess is the same as that integer, the program should output Just right! and exit.
 
 def main():
-
+    while True:
+        level = input("Level: ")
+        guess = input("Guess: ")
+    
 if __name__ == "__main__":
     main()
