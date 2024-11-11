@@ -9,8 +9,10 @@ def main():
         print("Adieu, adieu, to ",end='')
         for name in name_list[0:-1]:
             print(name + ", ", end='')
-        print("and", name_list[-1])
-
+        if len(name_list) > 1:
+            print("and", name_list[-1])
+        else:
+            print(name_list[-1])
 
 
 if __name__ == "__main__":
