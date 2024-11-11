@@ -1,6 +1,7 @@
 import argparse
 from pyfiglet import Figlet
 import random
+import sys
 from pprint import pprint
 
 class ArgPaser:
@@ -8,14 +9,14 @@ class ArgPaser:
         self.param_one = param_one
         self.param_two = param_two
 
-    def display_info(self,arg):
-        return arg in self.param_one
+    def display_info(self, argument):
+        return argument in self.param_one
 
 
 # Example usage
 parser = ArgPaser('-f', '--font')
 
-parser.display_info()
+parser.display_info(sys.argv[1])
 exit()
 
 def main():
