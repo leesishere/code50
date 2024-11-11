@@ -15,6 +15,7 @@ def main():
         try:
             message = match.group(1)
             input_emoji = match.group(2)
+            print(message)
             if message:
                 print(f"Output: {message} {emoji[input_emoji]}")
             else:
