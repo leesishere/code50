@@ -14,11 +14,11 @@ def main():
             colon_words = re.findall(pattern_colon, input_command_line)
             if colon_words:
                 punctuation = input_command_line.replace(colon_words[0],'')
-                message += f"{colon_words[0]}{punctuation}"
+                message += f" {emoji[colon_words[0]]}{punctuation}"
 
             else:
-                message += input_command_line
-                
+                message += " " + input_command_line
+
             '''
             if input_command_line[0] == ':' and input_command_line[-1] == ':':
                input_command_line = input_command_line.lower()
