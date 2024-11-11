@@ -9,7 +9,7 @@ def main():
     parser.add_argument('-f', '--font', type=str, help='Specify the font name')
     args = parser.parse_args()
     figlet = Figlet()
-    
+
     if args.font:
         requested_string = input("Input: ").lower()
 
@@ -21,6 +21,9 @@ def main():
 
         # Print the result
         print(ascii_art)
+    else:
+        font_list = figlet.getFonts()
+        print(font_list)
 
 
 if __name__ == "__main__":
