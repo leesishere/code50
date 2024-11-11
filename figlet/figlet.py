@@ -8,7 +8,7 @@ from pprint import pprint
 class ArgParser:
     def __init__(self, flag, argv):
         self.flag_list = flag.split(',')
-        if len(argv) == 3: # file_name -flag font_name
+        if len(argv) == 3: # file_name[0] -flag[1] font_name[2]
             self.font = argv[2]
         else:
             self.font = None
