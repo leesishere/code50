@@ -9,14 +9,17 @@ class ArgParser(Figlet):
         super().__init__()
 
         self.flag_list = flag.split(',')
-        self.font = self.get_font_name(argv)
+        self.font = self.set_font_name(argv)
         self.font_list = self.getFonts()
 
-    def get_font_name(self, argv):
+    def set_font_name(self, argv):
         if len(argv) == 3: # file_name[0] -flag[1] font_name[2]
             return argv[2]
         else:
             return None
+            
+    def get_font_name(self):
+        return self.font
 
     def get_random_font(self):
         end = len(self.font_list) - 1
