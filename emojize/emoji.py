@@ -25,7 +25,6 @@ emoji_dict = {
     ":Austria:": "🇦🇹",
     ":Azerbaijan:": "🇦🇿",
     ":BACK_arrow:": "🔙",
-    ":B_button_(blood_type):": "🅱️",
     ":B_button_(blood_type):": "🅱",
     ":Bahamas:": "🇧🇸",
     ":Bahrain:": "🇧🇭",
