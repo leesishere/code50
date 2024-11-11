@@ -7,7 +7,7 @@ emoji = emoji_dict
 
 def main():
     while True:
-        input_emoji = input("Input: ").lower().strip()
+        input_emoji = input("Input: ").lower().strip().split()
 
         message = input_emoji.split()
 
