@@ -65,6 +65,5 @@ def main():
         # Print the result
         print(f"Output:\n{ascii_art}")
 
-
 if __name__ == "__main__":
-    main()
+   main()
