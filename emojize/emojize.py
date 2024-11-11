@@ -12,10 +12,12 @@ def main():
         pattern = r'\b(\w*) (:\w*:)\b'
         match = re.search(pattern, input_emoji)
 
+        message = match.group(1)
+        input_emoji = match.group(2)
+        print(message)
+
         try:
-            message = match.group(1)
-            input_emoji = match.group(2)
-            print(message)
+
             if message:
                 print(f"Output: {message} {emoji[input_emoji]}")
             else:
