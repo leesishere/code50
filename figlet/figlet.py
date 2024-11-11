@@ -14,8 +14,8 @@ class ArgPaser:
 
 # Example usage
 parser = ArgPaser('-f', '--font')
-
-print(parser.flags(sys.argv[1]))
+print(sys.argv[1])
+print(parser.flags('-f'))
 exit()
 
 def main():
