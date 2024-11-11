@@ -34,15 +34,8 @@ class ArgParser:
 
 def main():
     parser = ArgParser('-f,--font', sys.argv)
-    
-    print(parser.is_flag_present('-f'))  # Output: True
-    print(parser.is_flag_present('--font'))  # Output: True
-    print(parser.is_flag_present('--other'))  # Output: False
-    print(parser.is_font_type_present())  # Output: True/False
-
-
-    #print(sys.argv[1])
-    #print(sys.argv[2])
+    if (parser.is_flag_present('-f') or parser.is_flag_present('--font')) and parser.is_font_type_present():
+        
 
     exit()
 
