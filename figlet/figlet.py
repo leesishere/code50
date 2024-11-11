@@ -5,17 +5,17 @@ import sys
 from pprint import pprint
 
 class ArgPaser:
-    def __init__(self, param_one, param_two):
-        self.param = [param_one,param_two]
+    def __init__(self, flag_one, flag_two):
+        self.flags = [flag_one,flag_two]
 
-    def display_info(self, argument):
-        return argument in self.param
+    def flags(self, argument):
+        return argument in self.flags
 
 
 # Example usage
 parser = ArgPaser('-f', '--font')
 
-print(parser.display_info(sys.argv[1]))
+print(parser.flags(sys.argv[1]))
 exit()
 
 def main():
