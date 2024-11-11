@@ -42,7 +42,7 @@ class ArgParser(Figlet):
         return self.font in self.font_list
 
     def is_comandline_correct(self):
-        print(f"is_comandline_correct == {len(self.argv) == 3} and {not (self.is_flag_present() or self.is_font_type_in_Figlet())}")
+        print(f"is_comandline_correct == {len(self.argv) == 3} and { (not self.is_flag_present() or not self.is_font_type_in_Figlet())}")
         print(f"is_comandline_correct == {self.is_flag_present()} or {self.is_font_type_in_Figlet()}")
         if len(self.argv) == 2 and not self.is_flag_present():
             return False
