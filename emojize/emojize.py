@@ -11,16 +11,15 @@ def main():
 
         message = input_emoji.split()
 
-        #try:
-
-        if len(message) == 2:
-            print(f"Output: {message[0]} {emoji[message[1]]}")
-            break
-        else:
-            print(f"Output: {emoji[message[1]]}")
-            break
-        #except:
-        #    pass
+        try:
+            if len(message) == 2:
+                print(f"Output: {message[0]} {emoji[message[1]]}")
+                break
+            else:
+                print(f"Output: {emoji[message[0]]}")
+                break
+        except:
+            pass
 
 
 
