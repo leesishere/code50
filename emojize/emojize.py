@@ -8,9 +8,11 @@ pattern_colon = r':\w+:'
 
 def main():
     while True:
-        input_message = input("Input: ").strip().split()
+        input_message = input("Input: ").strip()
         colon_words = re.findall(pattern_colon, input_message)
-        print(colon_words)
+        for wrod in colon_words:
+            print(word)
+
     '''
         for input_command_line in input_message:
 
