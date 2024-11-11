@@ -38,7 +38,7 @@ class ArgParser(Figlet):
         return self.font in self.font_list
 
     def correct_comandline(self):
-        if len(self.argv)
+        if len(self.argv) 
 
 
 
