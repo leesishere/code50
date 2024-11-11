@@ -2,10 +2,11 @@ import sys
 sys.path.append('.')
 
 from emoji import emoji_dict
+emoji = emoji_dict
 
 def main():
 
-    print(emoji_dict[':1st_place_medal:'])
+    print(emoji[':1st_place_medal:'])
 
 
 
