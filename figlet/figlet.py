@@ -22,7 +22,7 @@ def main():
         print(ascii_art)
     else:
         font_list = figlet.getFonts()
-        print(font_list)
+        print(len(font_list))
 
 
 if __name__ == "__main__":
