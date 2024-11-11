@@ -5,15 +5,16 @@ from pprint import pprint
 
 
 def main():
-
+    # Access individual arguments
+    arg1 = sys.argv[1]
+    arg2 = sys.argv[2]
+    
     # Check if the correct number of arguments is provided
     if len(sys.argv) < 3:
         print("Usage: script.py <arg1> <arg2>")
         sys.exit(1)
 
-    # Access individual arguments
-    arg1 = sys.argv[1]
-    arg2 = sys.argv[2]
+
 
     # Print the arguments
     print(f"Argument 1: {arg1}")
