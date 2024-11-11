@@ -40,7 +40,8 @@ class ArgParser(Figlet):
     def is_comandline_correct(self):
         if len(self.argv) == 2 and (self.is_flag_present('-f') or self.is_flag_present('--font')):
             return False
-        elif():
+        elif(len(self.argv) == 3 and (parser.is_font_type_present() and parser.is_font_type_in_Figlet())):
+
         else:
             return True
 
