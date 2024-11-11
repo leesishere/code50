@@ -5,10 +5,10 @@ from pprint import pprint
 
 
 class ArgParser:
-    def __init__(self, flag, argv):
+    def __init__(Figlet, flag, argv):
         self.flag_list = flag.split(',')
         self.font = self.get_font_name(argv)
-        self.font_list = figlet.getFonts()
+        self.font_list = self.getFonts()
 
     def get_font_name(self, argv):
         if len(argv) == 3: # file_name[0] -flag[1] font_name[2]
