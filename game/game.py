@@ -10,7 +10,8 @@ import random
 
 def main():
 
-    while not (input_level := input("Level: ").strip()).isdigit(): pass
+    while not (input_level := input("Level: ").strip()).isdigit() or not (1 <= int(input_level) <= 100): pass
+
     random_integer = random.randint(1, int(input_level))
 
     while True:
