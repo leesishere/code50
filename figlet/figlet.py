@@ -5,13 +5,11 @@ import sys
 from pprint import pprint
 
 class ArgPaser:
-    def __init__(self, **param_one):
-        
-        self.param_one = param_one
-        self.param_two = param_two
+    def __init__(self, param_one, param_two):
+        self.param = [param_one,param_two]
 
     def display_info(self, argument):
-        return argument in self.param_one
+        return argument in self.param
 
 
 # Example usage
