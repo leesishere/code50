@@ -12,6 +12,7 @@ def main():
     except EOFError:
         if name_list[-1] != '':
             print()
+            
         # make sure the user entered a name not a space or blank
         name_list = [name for name in name_list if name]
         print("Adieu, adieu, to ",end='')
