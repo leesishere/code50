@@ -14,7 +14,7 @@ def main():
             colon_words = re.findall(pattern_colon, input_command_line)
             if colon_words:
                 punctuation = input_command_line.replace(colon_words[0],'')
-                print(f"{input_command_line} {colon_words[0]}")
+                print(f"{colon_words[0]}{punctuation}")
 
             else:
                 print(input_command_line)
