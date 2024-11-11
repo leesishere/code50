@@ -6,7 +6,7 @@ def main():
             user_input = input("Name: ")
             name_list.append(user_input)
     except EOFError:
-        print("Adieu, adieu, to ",end='')
+        print("\nAdieu, adieu, to ",end='')
         for name in name_list[0:-1]:
             print(name + ", ", end='')
         if len(name_list) > 1:
