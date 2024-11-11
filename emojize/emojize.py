@@ -1,4 +1,4 @@
-import emoji_dict from emoji
+import emoji from emoji_dict
 
 def main():
 
