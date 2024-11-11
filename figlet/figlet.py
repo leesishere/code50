@@ -8,17 +8,11 @@ class ArgPaser:
         self.font = []
 
     def add_argument(self,**kwarg):
-        '-f', '--font'
+        #'-f', '--font'
+        self.name = kwargs.get('name', 'Unknown') # Default to 'Unknown' if not provided d
 
     def display_info(self):
-        print(f"Name: {self.name}, Value: {self.value}")
-
-    def update_value(self, new_value):
-        self.value = new_value
-        print(f"Value updated to: {self.value}")
-
-    def get_value(self):
-        return self.value
+        print(f"Name: {self.name}")
 
 # Example usage
 obj = GenericClass("ExampleName", 42)
