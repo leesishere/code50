@@ -10,7 +10,7 @@ def main():
     while True:
         input_message = input("Input: ").strip()
         colon_words = re.findall(pattern_colon, input_message)
-        for wrod in colon_words:
+        for word in colon_words:
             print(word)
 
     '''
