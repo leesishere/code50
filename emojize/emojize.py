@@ -13,7 +13,7 @@ def main():
         for input_command_line in input_message:
             colon_words = re.findall(pattern_colon, input_command_line)
             if colon_words:
-                print(f"index = {input_command_line.find(colon_words[0])}")
+                print(f"index = {input_command_line.split(colon_words[0])}")
                 print(f"{input_command_line} {colon_words[0]}")
 
             else:
