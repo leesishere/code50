@@ -37,9 +37,9 @@ def main():
     figlet = Figlet()
     requested_string = input("Input: ").lower().strip()
 
-    if (parser.is_flag_present('-f') or parser.is_flag_present('--font')) and parser.is_font_type_present():
+    if (parser.is_flag_present('-f') or parser.is_flag_present('--font')) and (parser.is_font_type_present() and parser.is_font_type_in_Figlet()):
         # Create a pyfiglet object with a specific font
-        figlet.setFont(font=args.font)
+        figlet.setFont(font=parser.get_font_name())
 
         # Generate ASCII art
         ascii_art = figlet.renderText(requested_string)
