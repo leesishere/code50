@@ -10,8 +10,8 @@ def main():
     while True:
         input_message = input("Input: ").strip().split()
         colon_words = re.findall(pattern_colon, input_message)
-
-
+        print(colon_words)
+    '''
         for input_command_line in input_message:
 
             if colon_words:
@@ -19,7 +19,7 @@ def main():
                 message += f" {emoji[colon_words[0]]}{punctuation}"
             else:
                 message += " " + input_command_line
-
+    '''
 '''
 def main():
     while True:
