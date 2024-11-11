@@ -1,6 +1,4 @@
-def main():
-
-    emoji_dict = {
+ emoji_dict = {
         ":1st_place_medal:",
         "🥇",
         ":2nd_place_medal:",
@@ -13370,9 +13368,5 @@ def main():
         ":flag_for_Åland_Islands:",
         "🇦🇽",
         ":aland_islands:",
-        "🇦🇽",
-    }
-
-
-if __name__ == "__main__":
-    main()
+        "🇦🇽"
+}
