@@ -1,8 +1,8 @@
-import emoji
+import emoji_dict from emoji
 
 def main():
 
-    print(emojil.emoji_dict[':1st_place_medal:'])
+    print(emoji_dict[':1st_place_medal:'])
 
 
 
