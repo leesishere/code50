@@ -10,16 +10,14 @@ def main():
     if args.font:
         print(f"Font specified: {args.font}")
 
-# Create a pyfiglet object with a specific font
-figlet = pyfiglet.Figlet(font='slant')
+        # Create a pyfiglet object with a specific font
+        figlet = pyfiglet.Figlet(font='slant')
 
-# Generate ASCII art
-ascii_art = figlet.renderText('Hello World')
+        # Generate ASCII art
+        ascii_art = figlet.renderText('Hello World')
 
-# Print the result
-print(ascii_art)
-
-
+        # Print the result
+        print(ascii_art)
 
 
 if __name__ == "__main__":
