@@ -11,7 +11,9 @@ def main():
         input_message = input("Input: ").strip()
         colon_words = re.findall(pattern_colon, input_message)
         for word in colon_words:
-            print(word)
+            word = word.lower()
+            input_message = input_message.replace(word,emoji[word])
+        print(input_message)
 
     '''
         for input_command_line in input_message:
