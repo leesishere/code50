@@ -38,20 +38,24 @@ class ArgParser(Figlet):
         return self.font in self.font_list
 
     def is_comandline_correct(self):
-        print(len(self.argv))
-        if len(self.argv) == 2 and not (parser.is_flag_present('-f') or parser.is_flag_present('--font')):
+        if len(self.argv) == 2 and (self.is_flag_present('-f') or self.is_flag_present('--font')):
             return False
+        elif():
         else:
             return True
 
 
 def main():
     parser = ArgParser('-f,--font', sys.argv)
-    figlet = Figlet()
+
+    # check for correct usage
+    if not parser.is_comandline_correct():
+        sys.exit("Invalid usage")
+
+
     requested_string = input("Input: ").strip()
 
-    if not parser.is_comandline_correct():
-        print("Invalid usage")
+
 
 
     if (parser.is_flag_present('-f') or parser.is_flag_present('--font')) and (parser.is_font_type_present() and parser.is_font_type_in_Figlet()):
