@@ -17,10 +17,10 @@ class ArgParser:
             return None
 
     def get_random_font(self):
-        end = len(self.flag_list) - 1
+        end = len(self.font_list) - 1
         # Generate a random number
         random_index = random.randint(0, end)
-        return self.flag_list[random_index]
+        return self.font_list[random_index]
 
     def is_flag_present(self, argument):
         return argument in self.flag_list
@@ -29,8 +29,7 @@ class ArgParser:
         return True if self.font else False
 
     def is_font_type_in_Figlet(self):
-        self.font in 
-        return True if self.font else False
+        return self.font in self.font_list
 
 # Example usage
 parser = ArgParser('-f,--font', sys.argv)
