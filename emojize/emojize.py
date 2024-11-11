@@ -9,7 +9,8 @@ def main():
     while True:
         input_emoji = input("Input: ").lower().strip().split()
 
-        message = input_emoji.split()
+        print(input_emoji)
+        exit()
 
         try:
             if len(message) == 2:
