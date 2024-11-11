@@ -1,12 +1,15 @@
 import argparse
-import pyfiglet
+from pyfiglet import Figlet
+
+
 
 
 def main():
     parser = argparse.ArgumentParser(description='Process some arguments.')
     parser.add_argument('-f', '--font', type=str, help='Specify the font name')
     args = parser.parse_args()
-
+    figlet = Figlet()
+    
     if args.font:
         requested_string = input("Input: ").lower()
 
