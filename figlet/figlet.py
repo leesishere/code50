@@ -7,7 +7,7 @@ from pprint import pprint
 class ArgParser:
     def __init__(self, flag, argv):
         self.flag_list = flag.split(',')
-        self.font = get_font_name(argv)
+        self.font = self.get_font_name(argv)
         self.font_list = figlet.getFonts()
 
     def get_font_name(self, argv):
