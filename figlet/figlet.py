@@ -38,6 +38,7 @@ class ArgParser(Figlet):
         return self.font in self.font_list
 
     def is_comandline_correct(self):
+        print(len(self.argv))
         if len(self.argv) == 2 and not (parser.is_flag_present('-f') or parser.is_flag_present('--font')):
             return False
         else:
@@ -51,7 +52,7 @@ def main():
 
     if not parser.is_comandline_correct():
         print("Invalid usage")
-        
+
 
     if (parser.is_flag_present('-f') or parser.is_flag_present('--font')) and (parser.is_font_type_present() and parser.is_font_type_in_Figlet()):
         # Create a pyfiglet object with a specific font
