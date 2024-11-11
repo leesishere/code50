@@ -32,6 +32,7 @@ class ArgParser(Figlet):
         return self.font_list[random_index]
 
     def is_flag_present(self, argument):
+        print(f"{argument} - {self.flag_list}")
         return argument in self.flag_list
 
     def is_font_type_present(self):
