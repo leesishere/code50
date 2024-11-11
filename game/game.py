@@ -16,7 +16,12 @@ def main():
     Too small!
     Too large!
     Just right!
-    guess = input("Guess: ")
+    while True:
+        guess = input("Guess: ")
+        if guess < random_integer:
+            print('Too small!')
+        if guess > random_integer:
+            print('Too small!')
 
 if __name__ == "__main__":
     main()
