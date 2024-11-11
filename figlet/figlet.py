@@ -4,18 +4,20 @@ import random
 import sys
 from pprint import pprint
 
-class ArgPaser:
+
+class ArgParser:
     def __init__(self, flag_one, flag_two):
-        self.flags = [flag_one,flag_two]
+        self.flag_list = [flag_one, flag_two]
 
-    def flags(self, argument):
-        return argument in self.flags
-
+    def is_flag_present(self, argument):
+        return argument in self.flag_list
 
 # Example usage
-parser = ArgPaser('-f', '--font')
-print(sys.argv[1])
-print(parser.flags('-f'))
+parser = ArgParser('-f', '--font')
+print(parser.is_flag_present('-f'))  # Output: True
+print(parser.is_flag_present('--font'))  # Output: True
+print(parser.is_flag_present('--other'))  # Output: False
+
 exit()
 
 def main():
