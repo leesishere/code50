@@ -8,9 +8,8 @@ from pprint import pprint
 class ArgParser:
     def __init__(self, flag_one, flag_two, argv):
         self.flag_list = [flag_one, flag_two]
-        if len(argv) = 3
-            print(argv)
-            #self.font = argv[2]
+        if len(argv) == 3:
+            self.font = argv[2]
 
     def is_flag_present(self, argument):
         return argument in self.flag_list
@@ -20,12 +19,12 @@ class ArgParser:
 
 # Example usage
 parser = ArgParser('-f', '--font', sys.argv)
-print(parser.is_flag_present('-f'))  # Output: True
-print(parser.is_flag_present('--font'))  # Output: True
-print(parser.is_flag_present('--other'))  # Output: False
+#print(parser.is_flag_present('-f'))  # Output: True
+#print(parser.is_flag_present('--font'))  # Output: True
+#print(parser.is_flag_present('--other'))  # Output: False
 
-print(sys.argv[1])
-print(sys.argv[2])
+#print(sys.argv[1])
+#print(sys.argv[2])
 
 exit()
 
