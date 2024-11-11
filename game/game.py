@@ -11,15 +11,16 @@ import random
 def main():
 
     while not (input_level := input("Level: ").strip()).isdigit(): pass
-    print(input_level)
-    random_integer = random.randint(2, input_level)
+    random_integer = random.randint(1, int(input_level))
+
     while True:
-        guess = input("Guess: ")
-        if guess < random_integer:
+        while not (input_quess := input("Guess: ").strip()).isdigit(): pass
+        input_guess = int(input_quess)
+        if input_guess < random_integer:
             print('Too small!')
-        if guess > random_integer:
+        if input_guess > random_integer:
             print('Too large!')
-        if guess == random_integer:
+        if input_guess == random_integer:
             print('Just right!')
             break
 
