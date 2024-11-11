@@ -1,6 +1,7 @@
 import argparse
 from pyfiglet import Figlet
 import random
+from pprint import pprint
 
 def main():
     parser = argparse.ArgumentParser(description='Process some arguments.')
@@ -25,7 +26,7 @@ def main():
         # Define the range
         start = 0
         end = len(font_list)
-        print(font_list)
+        pprint(font_list)
         print(end)
         # Generate a random number
         random_number = random.randint(start, end)
