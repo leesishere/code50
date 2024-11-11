@@ -3,7 +3,7 @@ def main():
     name_list = []
     try:
         while True:
-            user_input = input("Name: ")
+            user_input = input("Name: ").strip()
             if not user_input:
                 raise EOFError()
             name_list.append(user_input)
