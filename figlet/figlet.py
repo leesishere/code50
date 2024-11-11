@@ -8,10 +8,14 @@ from pprint import pprint
 class ArgParser:
     def __init__(self, flag, argv):
         self.flag_list = flag.split(',')
+        self.font = get_font_name(argv)
+        self.font_list = figlet.getFonts()
+
+    def get_font_name(self, argv):
         if len(argv) == 3: # file_name[0] -flag[1] font_name[2]
-            self.font = argv[2]
+            return argv[2]
         else:
-            self.font = None
+            return None
 
     def is_flag_present(self, argument):
         return argument in self.flag_list
@@ -20,6 +24,8 @@ class ArgParser:
         return True if self.font else False
 
     def is_font_type_in_Figlet(self):
+
+
         return True if self.font else False
 
 # Example usage
