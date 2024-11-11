@@ -6,7 +6,7 @@ from pprint import pprint
 class CustomArgumentParser(argparse.ArgumentParser):
     def error(self, message):
         self.print_usage()
-        custom_message = f"Custom error: {message}\n"
+        custom_message = f"Invalid usage\n"
         self.exit(2, custom_message)
 
 def main():
@@ -15,7 +15,8 @@ def main():
     try:
         args = parser.parse_args()
     except:
-        self.exit(2, "Invalid usage")
+        pass
+
     figlet = Figlet()
     requested_string = input("Input: ").lower().strip()
 
