@@ -1,4 +1,3 @@
-import re
 import sys
 sys.path.append('.')
 
@@ -9,19 +8,15 @@ emoji = emoji_dict
 def main():
     while True:
         input_emoji = input("Input: ").lower().strip()
-        pattern = r'\b([a-zA-Z]) (:[a-zA-Z]:)\b'
-        match = re.search(pattern, input_emoji)
 
-        message = match.group(1)
-        input_emoji = match.group(2)
-        print(message)
+        message = input_emoji.split()
 
         try:
 
-            if message:
-                print(f"Output: {message} {emoji[input_emoji]}")
+            if len(message) == 2:
+                print(f"Output: {message[0]} {emoji[message[1]]}")
             else:
-                print(f"Output: {emoji[input_emoji]}")
+                print(f"Output: {emoji[message[1]]}")
             break
         except:
             pass
