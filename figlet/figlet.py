@@ -29,7 +29,7 @@ class ArgParser:
         return True if self.font else False
 
     def is_font_type_in_Figlet(self):
-        
+        self.font in 
         return True if self.font else False
 
 # Example usage
