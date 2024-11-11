@@ -9,6 +9,8 @@ def main():
                 raise EOFError
 
     except EOFError:
+        print(name_list[-1])
+        
         if name_list[-1] != '\n':
             print()
         # make sure the user entered a name not a space or blank
