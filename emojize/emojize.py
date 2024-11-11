@@ -9,7 +9,7 @@ emoji = emoji_dict
 def main():
     while True:
         input_emoji = input("Input: ").lower().strip()
-        pattern = r'\b(\w*) (:\w*:)\b'
+        pattern = r'\b([a-zA-Z]) (:[a-zA-Z]:)\b'
         match = re.search(pattern, input_emoji)
 
         message = match.group(1)
