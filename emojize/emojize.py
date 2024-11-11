@@ -1,13 +1,16 @@
+import re
 import sys
 sys.path.append('.')
 
 from emoji import emoji_dict
 emoji = emoji_dict
 
+pattern = 'r\b(\w*) (:\w*:)\b'
 
 def main():
     while True:
         input_emoji = input("Input: ").lower().strip()
+
         try:
             print(f"Output: {emoji[input_emoji]}")
             break
