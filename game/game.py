@@ -15,12 +15,12 @@ def main():
 
     while True:
         while not (input_quess := input("Guess: ").strip()).isdigit(): pass
-        input_guess = int(input_quess)
-        if input_guess < random_integer:
+        input_quess = int(input_quess)
+        if input_quess < random_integer:
             print('Too small!')
-        if input_guess > random_integer:
+        if input_quess > random_integer:
             print('Too large!')
-        if input_guess == random_integer:
+        if input_quess == random_integer:
             print('Just right!')
             break
 
