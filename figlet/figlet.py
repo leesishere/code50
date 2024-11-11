@@ -17,7 +17,7 @@ class ArgParser(Figlet):
             return argv[2]
         else:
             return None
-            
+
     def get_font_name(self):
         return self.font
 
@@ -50,7 +50,7 @@ def main():
         ascii_art = figlet.renderText(requested_string)
 
         # Print the result
-        print(ascii_art)
+        print(f"Output:\n{ascii_art}")
 
     exit()
 
