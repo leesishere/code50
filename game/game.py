@@ -10,7 +10,7 @@
 def main():
 
     while not (input_level := input("Level: ").strip()).isdigit(): pass
-
+    print(input_level)
 
     guess = input("Guess: ")
 
