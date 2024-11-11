@@ -63,7 +63,13 @@ def main():
         # Print the result
         print(f"Output:\n{ascii_art}")
     else:
-        get_random_font()
+        # Create a pyfiglet object with a specific font
+        parser.setFont(font=parser.get_random_font())
 
+        # Generate ASCII art
+        ascii_art = parser.renderText(requested_string)
+
+        # Print the result
+        print(f"Output:\n{ascii_art}")
 if __name__ == "__main__":
    main()
