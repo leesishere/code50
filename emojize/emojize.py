@@ -1,7 +1,7 @@
 import sys
 sys.path.append('.')
 
-import emoji from emoji_dict
+from emoji import emoji_dict
 
 def main():
 
