@@ -16,15 +16,6 @@ def main():
             input_message = input_message.replace(find_text, emoji[emoji_text])
         print(input_message)
 
-    '''
-        for input_command_line in input_message:
-
-            if colon_words:
-                punctuation = input_command_line.replace(colon_words[0],'')
-                message += f" {emoji[colon_words[0]]}{punctuation}"
-            else:
-                message += " " + input_command_line
-    '''
 '''
 def main():
     while True:
