@@ -1,4 +1,6 @@
 import argparse
+import pyfiglet
+
 
 def main():
     parser = argparse.ArgumentParser(description='Process some arguments.')
@@ -7,8 +9,15 @@ def main():
 
     if args.font:
         print(f"Font specified: {args.font}")
-    #else:
-    #    ys.exit("Exiting the program due to an error.")
+
+# Create a pyfiglet object with a specific font
+figlet = pyfiglet.Figlet(font='slant')
+
+# Generate ASCII art
+ascii_art = figlet.renderText('Hello World')
+
+# Print the result
+print(ascii_art)
 
 
 
