@@ -3,6 +3,24 @@ from pyfiglet import Figlet
 import random
 from pprint import pprint
 
+class ArgPaser:
+    def __init__(self, name):
+        self.name = name
+        self.value = value
+parser.add_argument('-f', '--font', type=str, help='Specify the font name')
+
+    def display_info(self):
+        print(f"Name: {self.name}, Value: {self.value}")
+
+    def update_value(self, new_value):
+        self.value = new_value
+        print(f"Value updated to: {self.value}")
+
+    def get_value(self):
+        return self.value
+
+# Example usage
+obj = GenericClass("ExampleName", 42)
 
 
 def main():
@@ -21,8 +39,7 @@ def main():
     print(f"Argument 1: {arg1}")
     print(f"Argument 2: {arg2}")
 
-    parser = argparse.ArgumentParser(description='Process some arguments.')
-    parser.add_argument('-f', '--font', type=str, help='Specify the font name')
+
     try:
         args = parser.parse_args()
     except:
