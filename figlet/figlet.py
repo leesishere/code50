@@ -40,9 +40,11 @@ class ArgParser(Figlet):
 def main():
     parser = ArgParser('-f,--font', sys.argv)
     figlet = Figlet()
-    requested_string = input("Input: ").lower().strip()
+    requested_string = input("Input: ").strip()
 
     if (parser.is_flag_present('-f') or parser.is_flag_present('--font')) and (parser.is_font_type_present() and parser.is_font_type_in_Figlet()):
+        
+
         # Create a pyfiglet object with a specific font
         figlet.setFont(font=parser.get_font_name())
 
@@ -52,11 +54,7 @@ def main():
         # Print the result
         print(f"Output:\n{ascii_art}")
 
-    exit()
 
-
-    #figlet = Figlet()
-    requested_string = input("Input: ").lower().strip()
 
 
 if __name__ == "__main__":
