@@ -12,8 +12,10 @@ def main():
         message = ''
         for input_command_line in input_message:
             colon_words = re.findall(pattern_colon, input_command_line)
-            print(f"{input_command_line} {colon_words}")
-
+            if colon_words:
+                print(f"{input_command_line} {colon_words[0]}")
+            else:
+                print(input_command_line)
             '''
             if input_command_line[0] == ':' and input_command_line[-1] == ':':
                input_command_line = input_command_line.lower()
