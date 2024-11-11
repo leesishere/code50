@@ -11,7 +11,8 @@ class ArgParser(Figlet):
         self.flag_list = flag.split(',')
         self.font = self.set_font_name(argv)
         self.font_list = self.getFonts()
-        self.argv = argv
+        if len(argv) < 2
+            self.argv = 
         if not self.is_comandline_correct():
             sys.exit("Invalid usage")
 
