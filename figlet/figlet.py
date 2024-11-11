@@ -42,7 +42,7 @@ class ArgParser(Figlet):
 
     def is_comandline_correct(self):
         print(f"{not self.is_flag_present()}")
-        if len(self.argv) == 2 and not self.is_flag_present():
+        if len(self.argv) == 2 and self.is_flag_present():
             return False
         elif(len(self.argv) == 3 and not self.is_font_type_in_Figlet()):
             return False
