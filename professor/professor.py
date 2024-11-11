@@ -1,7 +1,10 @@
 import random
 
 def main():
+    level = get_level()
+    number_math_problems = 10
 
+    
 
 def get_level():
     while not (input_level := input("Level: ").strip()).isdigit() or not (1 <= int(input_level) <= 3): pass
