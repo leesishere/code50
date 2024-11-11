@@ -3,6 +3,12 @@ from pyfiglet import Figlet
 import random
 from pprint import pprint
 
+class CustomArgumentParser(argparse.ArgumentParser):
+    def error(self, message):
+        self.print_usage()
+        custom_message = f"Custom error: {message}\n"
+        self.exit(2, custom_message)
+
 def main():
     parser = argparse.ArgumentParser(description='Process some arguments.')
     parser.add_argument('-f', '--font', type=str, help='Specify the font name')
