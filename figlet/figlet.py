@@ -8,12 +8,10 @@ def main():
     parser.add_argument('-f', '--font', type=str, help='Specify the font name')
     args = parser.parse_args()
     figlet = Figlet()
+    requested_string = input("Input: ").lower().strip()
 
     if args.font:
-        requested_string = input("Input: ").lower()
-
         # Create a pyfiglet object with a specific font
-        #print(args.font)
         figlet.setFont(font=args.font)
 
         # Generate ASCII art
@@ -28,6 +26,7 @@ def main():
         end = len(font_list) - 1
         # Generate a random number
         random_index = random.randint(start, end)
+
         print(font_list[random_index])
 
 if __name__ == "__main__":
