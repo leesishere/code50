@@ -11,7 +11,7 @@ def main():
     try:
         print(f"Output: {emoji[input_emoji]}")
         break
-    except
+    except:
         pass
 
 
