@@ -1,6 +1,9 @@
 import argparse
 import pyfiglet
 
+from pyfiglet import Figlet
+f = Figlet(font='slant')
+print f.renderText('text to render')
 
 def main():
     parser = argparse.ArgumentParser(description='Process some arguments.')
