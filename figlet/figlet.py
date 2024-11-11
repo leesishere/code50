@@ -21,6 +21,9 @@ print(parser.is_flag_present('-f'))  # Output: True
 print(parser.is_flag_present('--font'))  # Output: True
 print(parser.is_flag_present('--other'))  # Output: False
 
+print(sys.argv[1])
+print(sys.argv[2])
+
 exit()
 
 def main():
