@@ -28,6 +28,8 @@ def main():
         end = len(font_list)
         pprint(font_list)
         print(end)
+
+        # 'runyc' 'fbr_stri'
         # Generate a random number
         random_number = random.randint(start, end)
 
