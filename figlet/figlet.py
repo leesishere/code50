@@ -2,8 +2,6 @@ import argparse
 from pyfiglet import Figlet
 
 
-
-
 def main():
     parser = argparse.ArgumentParser(description='Process some arguments.')
     parser.add_argument('-f', '--font', type=str, help='Specify the font name')
@@ -14,10 +12,10 @@ def main():
         requested_string = input("Input: ").lower()
 
         # Create a pyfiglet object with a specific font
-        figlet = pyfiglet.Figlet(font=args.font)
+        figlet.setFont(font=args.font)
 
         # Generate ASCII art
-        ascii_art = figlet.renderText(requested_string )
+        ascii_art = figlet.renderText(requested_string)
 
         # Print the result
         print(ascii_art)
