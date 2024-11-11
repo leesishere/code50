@@ -15,9 +15,10 @@ def main():
 
             if len(message) == 2:
                 print(f"Output: {message[0]} {emoji[message[1]]}")
+                break
             else:
                 print(f"Output: {emoji[message[1]]}")
-            break
+                break
         except:
             pass
 
