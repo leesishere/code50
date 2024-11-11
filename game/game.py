@@ -13,6 +13,9 @@ def main():
     while not (input_level := input("Level: ").strip()).isdigit(): pass
     print(input_level)
     random_integer = random.randint(2, input_level)
+    Too small!
+    Too large!
+    Just right!
     guess = input("Guess: ")
 
 if __name__ == "__main__":
