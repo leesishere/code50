@@ -8,7 +8,7 @@ class ArgParser(Figlet):
     def __init__(self, flag, argv):
         super().__init__()
 
-        self.flag_list = flag.split(',')
+        self.flag_list = flag.split(",")
         self.font = self.set_font_name(argv)
         self.font_list = self.getFonts()
         self.argv = argv
@@ -17,7 +17,7 @@ class ArgParser(Figlet):
             sys.exit("Invalid usage")
 
     def set_font_name(self, argv):
-        if len(argv) == 3: # file_name[0] -flag[1] font_name[2]
+        if len(argv) == 3:  # file_name[0] -flag[1] font_name[2]
             return argv[2]
         else:
             return None
@@ -46,18 +46,22 @@ class ArgParser(Figlet):
     def is_comandline_correct(self):
         if len(self.argv) == 2 and not self.is_flag_present():
             return False
-        elif(len(self.argv) == 3 and (not self.is_flag_present() or not self.is_font_type_in_Figlet())):
+        elif len(self.argv) == 3 and (
+            not self.is_flag_present() or not self.is_font_type_in_Figlet()
+        ):
             return False
         else:
             return True
 
 
 def main():
-    parser = ArgParser('-f,--font', sys.argv)
+    parser = ArgParser("-f,--font", sys.argv)
 
     requested_string = input("Input: ").strip()
 
-    if parser.is_flag_present() and (parser.is_font_type_present() and parser.is_font_type_in_Figlet()):
+    if parser.is_flag_present() and (
+        parser.is_font_type_present() and parser.is_font_type_in_Figlet()
+    ):
         # Create a pyfiglet object with a specific font
         parser.setFont(font=parser.get_font_name())
 
@@ -75,6 +79,7 @@ def main():
 
         # Print the result
         print(f"Output:\n{ascii_art}")
-        
+
+
 if __name__ == "__main__":
-   main()
+    main()
