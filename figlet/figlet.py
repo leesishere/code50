@@ -9,7 +9,7 @@ def main():
     if args.font:
         print(f"Font specified: {args.font}")
     else:
-        print("No font specified.")
+        ys.exit("Exiting the program due to an error.")
 
 
 
