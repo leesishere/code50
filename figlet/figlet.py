@@ -8,12 +8,15 @@ class ArgPaser:
         self.param_one = param_one
         self.param_two = param_two
 
-    def display_info(self):
-        print(f"Name: {self.name}")
+    def display_info(self,arg):
+        return arg in self.param_one
+
 
 # Example usage
 parser = ArgPaser('-f', '--font')
 
+parser.display_info()
+exit()
 
 def main():
     # Access individual arguments
