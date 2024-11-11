@@ -4,11 +4,11 @@ import random
 from pprint import pprint
 
 class ArgPaser:
-    def __init__(self, name):
-        self.name = name
-        self.value = value
+    def __init__(self):
+        self.font = []
 
-parser.add_argument('-f', '--font')
+    def add_argument(self,**kwarg):
+        '-f', '--font'
 
     def display_info(self):
         print(f"Name: {self.name}, Value: {self.value}")
