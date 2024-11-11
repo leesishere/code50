@@ -8,6 +8,7 @@ def main():
     args = parser.parse_args()
 
     if args.font:
+        requested_font = input("Input: ").lower()
         print(f"Font specified: {args.font}")
 
         # Create a pyfiglet object with a specific font
