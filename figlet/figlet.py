@@ -12,10 +12,8 @@ class ArgParser(Figlet):
         self.font = self.set_font_name(argv)
         self.font_list = self.getFonts()
         self.argv = argv
-        print(self.is_comandline_correct())
         if not self.is_comandline_correct():
             sys.exit("Invalid usage")
-
 
     def set_font_name(self, argv):
         if len(argv) == 3: # file_name[0] -flag[1] font_name[2]
@@ -42,11 +40,9 @@ class ArgParser(Figlet):
         return self.font in self.font_list
 
     def is_comandline_correct(self):
-        print(f"is_comandline_correct == {len(self.argv) == 3} and { (not self.is_flag_present() or not self.is_font_type_in_Figlet())}")
-        print(f"is_comandline_correct == {self.is_flag_present()} or {self.is_font_type_in_Figlet()}")
         if len(self.argv) == 2 and not self.is_flag_present():
             return False
-        elif(len(self.argv) == 3 and not (self.is_flag_present() or self.is_font_type_in_Figlet())):
+        elif(len(self.argv) == 3 and (not self.is_flag_present() or not self.is_font_type_in_Figlet())):
             return False
         else:
             return True
@@ -54,8 +50,6 @@ class ArgParser(Figlet):
 
 def main():
     parser = ArgParser('-f,--font', sys.argv)
-
-
 
     requested_string = input("Input: ").strip()
 
