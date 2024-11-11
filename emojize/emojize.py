@@ -6,13 +6,13 @@ emoji = emoji_dict
 
 
 def main():
-    while true:
-        input_emoji = input("Input").lower().strip()
-    try:
-        print(f"Output: {emoji[input_emoji]}")
-        break
-    except:
-        pass
+    while True:
+        input_emoji = input("Input: ").lower().strip()
+        try:
+            print(f"Output: {emoji[input_emoji]}")
+            break
+        except:
+            pass
 
 
 
