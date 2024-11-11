@@ -14,12 +14,11 @@ def main():
 
                 message += emoji[input_command_line] + ' '
             else:
-                message += ' '
+                message += message + ' '
 
         if message:
             print(message)
-        else:
             break
-
+        
 if __name__ == "__main__":
     main()
