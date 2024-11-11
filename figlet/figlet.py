@@ -8,7 +8,7 @@ def main():
     # Access individual arguments
     arg1 = sys.argv[1]
     arg2 = sys.argv[2]
-    
+
     # Check if the correct number of arguments is provided
     if len(sys.argv) < 3:
         print("Usage: script.py <arg1> <arg2>")
@@ -19,9 +19,6 @@ def main():
     # Print the arguments
     print(f"Argument 1: {arg1}")
     print(f"Argument 2: {arg2}")
-
-if __name__ == "__main__":
-    main()
 
     parser = argparse.ArgumentParser(description='Process some arguments.')
     parser.add_argument('-f', '--font', type=str, help='Specify the font name')
