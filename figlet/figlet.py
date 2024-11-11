@@ -10,18 +10,22 @@ class ArgParser:
         self.flag_list = flag.split(',')
         if len(argv) == 3:
             self.font = argv[2]
+        else:
+            self.font = None
 
     def is_flag_present(self, argument):
         return argument in self.flag_list
 
-    def is_font_type_present(self, argument):
-        return argument in self.flag_list
+    def is_font_type_present(self):
+        return True if self.font else False
 
 # Example usage
 parser = ArgParser('-f,--font', sys.argv)
 print(parser.is_flag_present('-f'))  # Output: True
 print(parser.is_flag_present('--font'))  # Output: True
 print(parser.is_flag_present('--other'))  # Output: False
+print(parser.is_font_type_present())  # Output: True/False
+
 
 #print(sys.argv[1])
 #print(sys.argv[2])
