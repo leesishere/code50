@@ -13,6 +13,7 @@ def main():
         colon_words = re.findall(pattern_colon, input_message)
         for word in colon_words:
             word = word.lower()
+            print(word)
             input_message = input_message.replace(word,emoji[word])
         print(input_message)
 
