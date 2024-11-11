@@ -15,7 +15,7 @@ def main():
             if input_command_line[0] == ':' and input_command_line[-1] == ':':
                 message += emoji[input_command_line] + ' '
             else:
-                message += message + ' '
+                message +=  input_command_line' '
 
         if message:
             print(message)
