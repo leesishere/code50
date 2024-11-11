@@ -6,8 +6,9 @@ from pprint import pprint
 
 
 class ArgParser:
-    def __init__(self, flag_one, flag_two):
+    def __init__(self, flag_one, flag_two, argv):
         self.flag_list = [flag_one, flag_two]
+        
 
     def is_flag_present(self, argument):
         return argument in self.flag_list
@@ -16,7 +17,7 @@ class ArgParser:
         return argument in self.flag_list
 
 # Example usage
-parser = ArgParser('-f', '--font')
+parser = ArgParser('-f', '--font', sys.argv)
 print(parser.is_flag_present('-f'))  # Output: True
 print(parser.is_flag_present('--font'))  # Output: True
 print(parser.is_flag_present('--other'))  # Output: False
