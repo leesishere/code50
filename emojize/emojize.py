@@ -1,5 +1,6 @@
 
 def main():
+    
     # Example usage:
     thumbs_up_emojis = ["🤚", "👍", "👏"]
 
