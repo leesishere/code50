@@ -12,6 +12,7 @@ class ArgParser(Figlet):
         self.font = self.set_font_name(argv)
         self.font_list = self.getFonts()
         self.argv = argv
+        print(self.is_comandline_correct())
         if not self.is_comandline_correct():
             sys.exit("Invalid usage")
 
