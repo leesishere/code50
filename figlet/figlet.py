@@ -11,6 +11,7 @@ class ArgParser(Figlet):
         self.flag_list = flag.split(',')
         self.font = self.set_font_name(argv)
         self.font_list = self.getFonts()
+        self.argv = argv
 
     def set_font_name(self, argv):
         if len(argv) == 3: # file_name[0] -flag[1] font_name[2]
@@ -35,6 +36,10 @@ class ArgParser(Figlet):
 
     def is_font_type_in_Figlet(self):
         return self.font in self.font_list
+
+    def correct_comandline(self):
+        
+
 
 
 def main():
