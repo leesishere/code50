@@ -62,6 +62,8 @@ def main():
 
         # Print the result
         print(f"Output:\n{ascii_art}")
+    else:
+        get_random_font()
 
 if __name__ == "__main__":
    main()
