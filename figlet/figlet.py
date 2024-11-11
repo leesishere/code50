@@ -12,6 +12,9 @@ class ArgParser:
     def is_flag_present(self, argument):
         return argument in self.flag_list
 
+    def is_font_type_present(self, argument):
+        return argument in self.flag_list
+
 # Example usage
 parser = ArgParser('-f', '--font')
 print(parser.is_flag_present('-f'))  # Output: True
