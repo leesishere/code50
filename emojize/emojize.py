@@ -12,7 +12,7 @@ def main():
         message = ''
         for input_command_line in input_message:
             colon_words = re.findall(pattern_colon, input_command_line)
-            print(f"{input_command_line} {colon_words[0]}")
+            print(f"{input_command_line} {colon_words}")
 
             '''
             if input_command_line[0] == ':' and input_command_line[-1] == ':':
