@@ -4,18 +4,15 @@ import random
 from pprint import pprint
 
 class ArgPaser:
-    def __init__(self):
-        self.font = []
-
-    def add_argument(self,**kwarg):
-        #'-f', '--font'
-        self.name = kwargs.get('name', 'Unknown') # Default to 'Unknown' if not provided d
+    def __init__(self, param_one, param_two):
+        self.param_one = param_one
+        self.param_two = param_two
 
     def display_info(self):
         print(f"Name: {self.name}")
 
 # Example usage
-obj = GenericClass("ExampleName", 42)
+parser = ArgPaser('-f', '--font')
 
 
 def main():
