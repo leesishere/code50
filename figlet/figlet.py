@@ -27,7 +27,14 @@ def main():
         # Generate a random number
         random_index = random.randint(start, end)
 
-        print(font_list[random_index])
+        # Create a pyfiglet object with a specific font
+        figlet.setFont(font=font_list[random_index])
+
+        # Generate ASCII art
+        ascii_art = figlet.renderText(requested_string)
+
+        # Print the result
+        print(ascii_art)
 
 if __name__ == "__main__":
     main()
