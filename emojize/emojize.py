@@ -13,7 +13,9 @@ def main():
         for input_command_line in input_message:
             colon_words = re.findall(pattern_colon, input_command_line)
             if colon_words:
+                
                 print(f"{input_command_line} {colon_words[0]}")
+
             else:
                 print(input_command_line)
             '''
