@@ -6,7 +6,7 @@ from pprint import pprint
 
 class ArgParser(Figlet):
     def __init__(self, flag, argv):
-        super().__init__(*args, **kwargs)
+        super().__init__()
 
         self.flag_list = flag.split(',')
         self.font = self.get_font_name(argv)
@@ -52,7 +52,7 @@ def main():
     exit()
 
 
-    figlet = Figlet()
+    #figlet = Figlet()
     requested_string = input("Input: ").lower().strip()
 
 
