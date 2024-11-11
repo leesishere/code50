@@ -4,6 +4,7 @@ import random
 from pprint import pprint
 
 
+
 def main():
     # Access individual arguments
     arg1 = sys.argv[1]
