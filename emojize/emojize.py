@@ -18,7 +18,7 @@ def main():
             else:
                 message += " " + input_command_line
         if message:
-            print(message)
+            print(f"output: {message}")
             break
 
 if __name__ == "__main__":
