@@ -1,4 +1,3 @@
-import argparse
 from pyfiglet import Figlet
 import random
 import sys
