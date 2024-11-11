@@ -5,7 +5,8 @@ import sys
 from pprint import pprint
 
 class ArgPaser:
-    def __init__(self, param_one, param_two):
+    def __init__(self, **param_one):
+        
         self.param_one = param_one
         self.param_two = param_two
 
@@ -16,7 +17,7 @@ class ArgPaser:
 # Example usage
 parser = ArgPaser('-f', '--font')
 
-parser.display_info(sys.argv[1])
+print(parser.display_info(sys.argv[1]))
 exit()
 
 def main():
