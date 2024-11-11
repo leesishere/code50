@@ -9,7 +9,6 @@ def get_level():
     return input_level
 
 
-
 def generate_integer(level):
     if level == 1:
         return random.randint(0, 9)
@@ -17,6 +16,6 @@ def generate_integer(level):
         return random.randint(10, 19)
     if level == 3:
         return random.randint(20, 29)
-    
+
 if __name__ == "__main__":
     main()
