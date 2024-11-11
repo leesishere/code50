@@ -12,7 +12,7 @@ def main():
 
     while not (input_level := input("Level: ").strip()).isdigit(): pass
     print(input_level)
-andom_index = random.randint(0, end)
+    random_integer = random.randint(2, input_level)
     guess = input("Guess: ")
 
 if __name__ == "__main__":
