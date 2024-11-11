@@ -11,10 +11,9 @@ def main():
     while True:
         input_message = input("Input: ").strip()
         colon_words = re.findall(pattern_colon, input_message)
-        for word in colon_words:
-            word = word.lower()
-            print(word)
-            input_message = input_message.replace(word,emoji[word.lower()])
+        for find_word in colon_words:
+            emoji_text = find_word.lower()
+            input_message = input_message.replace(find_text,emoji[emoji_text])
         print(input_message)
 
     '''
