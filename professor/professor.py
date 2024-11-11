@@ -2,9 +2,17 @@ import random
 
 def main():
     level = get_level()
-    number_math_problems = 10
+    number_of_math_problems = 10
 
-    
+    while number_of_math_problems > 0:
+        first_digit = generate_integer(level)
+        second_digit = generate_integer(level)
+        answer = first_digit + second_digit
+        response  = input()
+
+
+
+
 
 def get_level():
     while not (input_level := input("Level: ").strip()).isdigit() or not (1 <= int(input_level) <= 3): pass
