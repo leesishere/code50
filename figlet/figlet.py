@@ -1,4 +1,5 @@
 import argparse
+import sys
 
 def main():
     parser = argparse.ArgumentParser(description='Process some arguments.')
