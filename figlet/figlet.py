@@ -31,9 +31,8 @@ class ArgParser(Figlet):
         random_index = random.randint(0, end)
         return self.font_list[random_index]
 
-    def is_flag_present(self, argument):
-        print(f"{argument} - {self.flag_list}")
-        return argument in self.flag_list
+    def is_flag_present(self):
+        return self.argv[1] in self.flag_list
 
     def is_font_type_present(self):
         return True if self.font else False
@@ -57,7 +56,7 @@ def main():
 
     requested_string = input("Input: ").strip()
 
-    if (parser.is_flag_present('-f') or parser.is_flag_present('--font')) and (parser.is_font_type_present() and parser.is_font_type_in_Figlet()):
+    if parser.is_flag_present() and (parser.is_font_type_present() and parser.is_font_type_in_Figlet()):
         # Create a pyfiglet object with a specific font
         parser.setFont(font=parser.get_font_name())
 
