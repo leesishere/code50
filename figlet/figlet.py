@@ -12,9 +12,7 @@ class ArgParser(Figlet):
         self.font = self.set_font_name(argv)
         self.font_list = self.getFonts()
         self.argv = argv
-        if len(self.argv) < 2:
-            self.argv.append('') # add blank flag
-            self.argv.append('') # add blank font
+
         if not self.is_comandline_correct():
             sys.exit("Invalid usage")
 
@@ -34,7 +32,10 @@ class ArgParser(Figlet):
         return self.font_list[random_index]
 
     def is_flag_present(self):
-        return self.argv[1] in self.flag_list
+        if len(self.argv) < 2:
+            return False
+        else:
+            return self.argv[1] in self.flag_list
 
     def is_font_type_present(self):
         return True if self.font else False
