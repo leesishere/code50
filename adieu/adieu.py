@@ -4,9 +4,10 @@ def main():
     try:
         while True:
             user_input = input("Name: ").strip()
+            name_list.append(user_input)
             if not user_input:
                 raise EOFError
-            name_list.append(user_input)
+
     except EOFError:
         if name_list[-1] != '\n':
             print()
