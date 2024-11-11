@@ -1,4 +1,4 @@
-import emojil
+import emoji
 
 def main():
 
