@@ -11,8 +11,8 @@ def main():
         input_message = input("Input: ").strip().split()
         message = ''
         for input_command_line in input_message:
-            colon_words = re.search(pattern_colon, input_command_line)
-            print(f"{input_command_line} {colon_words.group()}")
+            colon_words = re.findall(pattern_colon, input_command_line)
+            print(f"{input_command_line} {colon_words[0]}")
 
             '''
             if input_command_line[0] == ':' and input_command_line[-1] == ':':
