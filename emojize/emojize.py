@@ -2,12 +2,7 @@ import emojil
 
 def main():
 
-    # Example usage:
-    thumbs_up_emojis = ["🤚", "👍", "👏"]
-
-    print("Thumbs up emojis:")
-    for emoji in thumbs_up_emojis:
-        print(emoji)
+    print(emoji_dict[':1st_place_medal:'])
 
 
 
