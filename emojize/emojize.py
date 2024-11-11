@@ -10,6 +10,7 @@ def main():
         input_message = input("Input: ").lower().strip().split()
         message = ''
         for input_command_line in input_message:
+            print(input_command_line)
             if input_command_line[0] == ':' and input_command_line[:-1] == ':':
                 message += emoji[input_command_line] + ' '
             else:
