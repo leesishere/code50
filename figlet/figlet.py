@@ -45,6 +45,7 @@ class ArgParser(Figlet):
             return False
         elif(len(self.argv) == 3 and not self.is_font_type_in_Figlet()):
             return False
+        elif()
         else:
             return True
 
