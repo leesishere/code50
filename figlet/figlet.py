@@ -24,8 +24,9 @@ def main():
         font_list = figlet.getFonts()
         # Define the range
         start = 0
-        end = len(font_list) -- 1
-        print(font_list[end])
+        end = len(font_list)
+        print(font_list)
+        print(end)
         # Generate a random number
         random_number = random.randint(start, end)
 
