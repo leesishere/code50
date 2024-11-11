@@ -7,7 +7,7 @@ emoji = emoji_dict
 pattern_colon = r':\w+:'
 
 def main():
-    # :CANdy: or ?:tHumbsUp: ?
+    #  better version :-)
     while True:
         input_message = input("Input: ").strip()
         colon_words = re.findall(pattern_colon, input_message)
