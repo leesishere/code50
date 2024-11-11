@@ -10,6 +10,9 @@ def main():
         input_emoji = input("Input").lower().strip()
     try:
         print(f"Output: {emoji[input_emoji]}")
+        break
+    except
+        pass
 
 
 
