@@ -31,66 +31,32 @@ class ArgParser:
     def is_font_type_in_Figlet(self):
         return self.font in self.font_list
 
-# Example usage
-parser = ArgParser('-f,--font', sys.argv)
-print(parser.is_flag_present('-f'))  # Output: True
-print(parser.is_flag_present('--font'))  # Output: True
-print(parser.is_flag_present('--other'))  # Output: False
-print(parser.is_font_type_present())  # Output: True/False
-
-
-#print(sys.argv[1])
-#print(sys.argv[2])
-
-exit()
 
 def main():
-    # Access individual arguments
-    parser.display_info(sys.argv[1])
-    arg1 = sys.argv[1]
-    arg2 = sys.argv[2]
-
-    # Check if the correct number of arguments is provided
-    if len(sys.argv) < 3:
-        print("Usage: script.py <arg1> <arg2>")
-        sys.exit(1)
+    parser = ArgParser('-f,--font', sys.argv)
+    
+    print(parser.is_flag_present('-f'))  # Output: True
+    print(parser.is_flag_present('--font'))  # Output: True
+    print(parser.is_flag_present('--other'))  # Output: False
+    print(parser.is_font_type_present())  # Output: True/False
 
 
+    #print(sys.argv[1])
+    #print(sys.argv[2])
 
-    # Print the arguments
-    print(f"Argument 1: {arg1}")
-    print(f"Argument 2: {arg2}")
+    exit()
 
-
-    try:
-        args = parser.parse_args()
-    except:
-        pass
 
     figlet = Figlet()
     requested_string = input("Input: ").lower().strip()
+    # Create a pyfiglet object with a specific font
+    figlet.setFont(font=args.font)
 
-    if args.font:
-        # Create a pyfiglet object with a specific font
-        figlet.setFont(font=args.font)
+    # Generate ASCII art
+    ascii_art = figlet.renderText(requested_string)
 
-        # Generate ASCII art
-        ascii_art = figlet.renderText(requested_string)
-
-        # Print the result
-        print(ascii_art)
-    else:
-        font_list = figlet.getFonts()
-        # Define the range
-
-        # Create a pyfiglet object with a specific font
-        figlet.setFont(font=font_list[random_index])
-
-        # Generate ASCII art
-        ascii_art = figlet.renderText(requested_string)
-
-        # Print the result
-        print(ascii_art)
+    # Print the result
+    print(ascii_art)
 
 if __name__ == "__main__":
     main()
