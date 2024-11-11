@@ -13,7 +13,7 @@ def main():
 
     while not (input_level := input("Level: ").strip()).isdigit(): pass
     print(input_level)
-
+andom_index = random.randint(0, end)    
     guess = input("Guess: ")
 
 if __name__ == "__main__":
