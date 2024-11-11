@@ -8,6 +8,8 @@ def main():
                 raise EOFError
             name_list.append(user_input)
     except EOFError:
+        if name_list[-1] != '\n':
+            print()
         # make sure the user entered a name not a space or blank
         name_list = [name for name in name_list if name]
         print("Adieu, adieu, to ",end='')
