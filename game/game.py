@@ -8,11 +8,10 @@
 # If the guess is the same as that integer, the program should output Just right! and exit.
 
 def main():
-    while True:
-        level = input("Level: ")
-        input_value = next(iter(lambda: (s:=input("Level: ").strip()) or None if s else iter(()), None))
 
-        guess = input("Guess: ")
+    input_level = next(iter(lambda: (s:=input("Level: ").strip()) or None if s.isdigit() else iter(()), None))
+
+    guess = input("Guess: ")
 
 if __name__ == "__main__":
     main()
