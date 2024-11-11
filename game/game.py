@@ -6,3 +6,8 @@
 # If the guess is smaller than that integer, the program should output Too small! and prompt the user again.
 # If the guess is larger than that integer, the program should output Too large! and prompt the user again.
 # If the guess is the same as that integer, the program should output Just right! and exit.
+
+def main():
+
+if __name__ == "__main__":
+    main()
