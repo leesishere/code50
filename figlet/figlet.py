@@ -8,7 +8,9 @@ from pprint import pprint
 class ArgParser:
     def __init__(self, flag_one, flag_two, argv):
         self.flag_list = [flag_one, flag_two]
-        
+        if len(argv) = 3
+            print(argv)
+            #self.font = argv[2]
 
     def is_flag_present(self, argument):
         return argument in self.flag_list
