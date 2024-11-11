@@ -12,14 +12,14 @@ def main():
         requested_string = input("Input: ").lower()
 
         # Create a pyfiglet object with a specific font
-        print(args.font)
-        #figlet.setFont(font=args.font)
+        #print(args.font)
+        figlet.setFont(font=args.font)
 
         # Generate ASCII art
-        #ascii_art = figlet.renderText(requested_string)
+        ascii_art = figlet.renderText(requested_string)
 
         # Print the result
-        #print(ascii_art)
+        print(ascii_art)
     else:
         font_list = figlet.getFonts()
         print(font_list)
