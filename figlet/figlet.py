@@ -1,5 +1,4 @@
 import argparse
-import sys
 
 def main():
     parser = argparse.ArgumentParser(description='Process some arguments.')
@@ -8,8 +7,8 @@ def main():
 
     if args.font:
         print(f"Font specified: {args.font}")
-    else:
-        ys.exit("Exiting the program due to an error.")
+    #else:
+    #    ys.exit("Exiting the program due to an error.")
 
 
 
