@@ -3,6 +3,7 @@ import random
 import sys
 from pprint import pprint
 
+# Font names: http://www.figlet.org/fontdb.cgi
 
 class ArgParser(Figlet):
     def __init__(self, flag, argv):
