@@ -12,6 +12,7 @@ def main():
 
         while True:
             input_reponse = input().strip()
+            print(f"{input_reponse}")
             if input_reponse == str(answer):
                 number_of_math_problems += 1
                 count_wrong_answer = 0
