@@ -8,13 +8,13 @@ def main():
         first_digit = generate_integer(level)
         second_digit = generate_integer(level)
 
-        print
-        answer = first_digit + second_digit
+        if int(first_digit):
+            print(int)
+        #answer = first_digit + second_digit
         while not (input_reponse := input().strip()).isdigit(): pass
         input_reponse = int(input_reponse)
         if input_reponse == answer:
             number_of_math_problems -= 1
-
 
 
 
