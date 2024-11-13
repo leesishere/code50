@@ -13,7 +13,8 @@ def main():
         input_reponse = int(input_reponse)
         if input_reponse == answer:
             number_of_math_problems -= 1
-        elif(count_wrong_answer > ):
+        elif(count_wrong_answer > 3):
+             print(f"{first_digit} + {second_digit} = {answer}")
         else:
             print("EEE")
             count_wrong_answer += 1
