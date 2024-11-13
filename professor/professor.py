@@ -4,6 +4,7 @@ def main():
     level = get_level()
     number_of_math_problems = 0
     count_wrong_answer = 0
+    total_wrong = 0
     while number_of_math_problems < 10:
         first_digit = generate_integer(level)
         second_digit = generate_integer(level)
@@ -21,12 +22,14 @@ def main():
             elif(count_wrong_answer > 1):
                 print(f"{first_digit} + {second_digit} = {answer}")
                 count_wrong_answer = 0
+                total_wrong + 1
                 break
             else:
                 print("EEE")
                 print(f"{first_digit} + {second_digit} = ", end='')
                 count_wrong_answer += 1
-
+    score = 10 - total_wrong
+    print(f"Score: {score}")
 
 def get_level():
     while not (input_level := input("Level: ").strip()).isdigit() or not (1 <= int(input_level) <= 3): pass
