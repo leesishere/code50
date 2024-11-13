@@ -21,6 +21,7 @@ def main():
                 break
             else:
                 print("EEE")
+                print(f"{first_digit} + {second_digit} = ", end='')
                 count_wrong_answer += 1
 
 
