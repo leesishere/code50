@@ -5,8 +5,8 @@ from pprint import pprint
 
 # Font names: http://www.figlet.org/fontdb.cgi
 
-class ParserMyCommandLine():
-    def __init__(self, flag, argv):
+class CommandLineParser():
+    def __init__(self):
 
         self.flag_list = flag.split(",")
         self.font = self.set_font_name(argv)
