@@ -22,7 +22,7 @@ def main():
             elif(count_wrong_answer > 1):
                 print(f"{first_digit} + {second_digit} = {answer}")
                 count_wrong_answer = 0
-                total_wrong + 1
+                total_wrong += 1
                 break
             else:
                 print("EEE")
