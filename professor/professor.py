@@ -4,7 +4,7 @@ def main():
     level = get_level()
     number_of_math_problems = 0
     count_wrong_answer = 0
-    while number_of_math_problems > 9:
+    while number_of_math_problems < 9:
         first_digit = generate_integer(level)
         second_digit = generate_integer(level)
         answer = first_digit + second_digit
