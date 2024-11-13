@@ -10,7 +10,7 @@ def main():
 
         #answer = first_digit + second_digit
 
-        print(f"{type(first_digit)} + {type(second_digit)}")
+        print(f"{first_digit} + {second_digit}")
         #print(f"{type(answer)}")
         while not (input_reponse := input().strip()).isdigit(): pass
         input_reponse = int(input_reponse)
