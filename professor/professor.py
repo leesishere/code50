@@ -3,7 +3,7 @@ import random
 def main():
     level = get_level()
     number_of_math_problems = 10
-
+    count_wrong_answer = 0
     while number_of_math_problems > 0:
         first_digit = generate_integer(level)
         second_digit = generate_integer(level)
@@ -13,8 +13,10 @@ def main():
         input_reponse = int(input_reponse)
         if input_reponse == answer:
             number_of_math_problems -= 1
+        elif(count_wrong_answer > ):
         else:
             print("EEE")
+            count_wrong_answer += 1
 
 
 def get_level():
