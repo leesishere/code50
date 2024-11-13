@@ -14,8 +14,10 @@ def main():
             input_reponse = input().strip()
             if input_reponse == str(answer):
                 number_of_math_problems -= 1
+                break
             elif(count_wrong_answer > 3):
                 print(f"{first_digit} + {second_digit} = {answer}")
+                break
             else:
                 print("EEE")
                 count_wrong_answer += 1
