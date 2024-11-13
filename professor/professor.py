@@ -36,7 +36,7 @@ def generate_integer(level):
     if level == 2:
         return int(random.randint(10, 99))
     if level == 3:
-        return int(random.randint(99, 999))
+        return int(random.randint(100, 999))
 
 if __name__ == "__main__":
     main()
