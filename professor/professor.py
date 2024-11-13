@@ -2,9 +2,9 @@ import random
 
 def main():
     level = get_level()
-    number_of_math_problems = 10
+    number_of_math_problems = 0
     count_wrong_answer = 0
-    while number_of_math_problems > 0:
+    while number_of_math_problems > 9:
         first_digit = generate_integer(level)
         second_digit = generate_integer(level)
         answer = first_digit + second_digit
@@ -13,7 +13,7 @@ def main():
         while True
             input_reponse = input().strip()
             if input_reponse == str(answer):
-                number_of_math_problems -= 1
+                number_of_math_problems += 1
                 count_wrong_answer = 0
                 break
             elif(count_wrong_answer > 2):
