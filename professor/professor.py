@@ -34,9 +34,9 @@ def generate_integer(level):
     if level == 1:
         return int(random.randint(0, 9))
     if level == 2:
-        return int(random.randint(10, 19))
+        return int(random.randint(10, 99))
     if level == 3:
-        return int(random.randint(20, 29))
+        return int(random.randint(99, 999))
 
 if __name__ == "__main__":
     main()
