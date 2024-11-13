@@ -13,7 +13,7 @@ def main():
         while True
             input_reponse = input().strip()
             if input_reponse == str(answer):
-                number_of_math_problems += 1
+                number_of_math_problems = 0
                 break
             elif(count_wrong_answer > 3):
                 print(f"{first_digit} + {second_digit} = {answer}")
