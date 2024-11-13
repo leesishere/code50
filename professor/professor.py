@@ -10,7 +10,7 @@ def main():
         answer = first_digit + second_digit
         print(f"{first_digit} + {second_digit} = ", end='')
 
-        while True
+        while True:
             input_reponse = input().strip()
             if input_reponse == str(answer):
                 number_of_math_problems += 1
