@@ -7,14 +7,15 @@ def main():
     while number_of_math_problems > 0:
         first_digit = generate_integer(level)
         second_digit = generate_integer(level)
+
         answer = first_digit + second_digit
-        print(f"{first_digit} + {second_digit}")
-        print(f"{answer}")
+
+        print(f"{type(first_digit)} + {type(second_digit)}")
+        #print(f"{type(answer)}")
         while not (input_reponse := input().strip()).isdigit(): pass
         input_reponse = int(input_reponse)
         if input_reponse == answer:
             number_of_math_problems -= 1
-
 
 
 def get_level():
@@ -24,11 +25,11 @@ def get_level():
 
 def generate_integer(level):
     if level == 1:
-        return random.randint(0, 9)
+        return int(random.randint(0, 9))
     if level == 2:
-        return random.randint(10, 19)
+        return int(random.randint(10, 19))
     if level == 3:
-        return random.randint(20, 29)
+        return int(random.randint(20, 29))
 
 if __name__ == "__main__":
     main()
