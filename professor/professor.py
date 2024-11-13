@@ -7,10 +7,8 @@ def main():
     while number_of_math_problems > 0:
         first_digit = generate_integer(level)
         second_digit = generate_integer(level)
-
         answer = first_digit + second_digit
-
-        print(f"{first_digit} + {second_digit}")
+        print(f"{first_digit} + {second_digit} = ")
         print(f"{answer}")
         while not (input_reponse := input().strip()).isdigit(): pass
         input_reponse = int(input_reponse)
