@@ -8,10 +8,10 @@ def main():
         first_digit = generate_integer(level)
         second_digit = generate_integer(level)
 
-        #answer = first_digit + second_digit
+        answer = first_digit + second_digit
 
         print(f"{first_digit} + {second_digit}")
-        #print(f"{type(answer)}")
+        print(f"{answer}")
         while not (input_reponse := input().strip()).isdigit(): pass
         input_reponse = int(input_reponse)
         if input_reponse == answer:
@@ -20,7 +20,7 @@ def main():
 
 def get_level():
     while not (input_level := input("Level: ").strip()).isdigit() or not (1 <= int(input_level) <= 3): pass
-    return input_level
+    return int(input_level)
 
 
 def generate_integer(level):
