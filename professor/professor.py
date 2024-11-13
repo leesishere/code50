@@ -23,6 +23,7 @@ def main():
                 print(f"{first_digit} + {second_digit} = {answer}")
                 count_wrong_answer = 0
                 total_wrong += 1
+                number_of_math_problems += 1
                 break
             else:
                 print("EEE")
