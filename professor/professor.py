@@ -8,7 +8,7 @@ def main():
         first_digit = generate_integer(level)
         second_digit = generate_integer(level)
 
-        answer = first_digit + second_digit
+        #answer = first_digit + second_digit
 
         print(f"{type(first_digit)} + {type(second_digit)}")
         #print(f"{type(answer)}")
