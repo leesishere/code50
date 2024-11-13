@@ -16,7 +16,7 @@ def main():
                 number_of_math_problems += 1
                 count_wrong_answer = 0
                 break
-            elif(count_wrong_answer > 2):
+            elif(count_wrong_answer > 1):
                 print(f"{first_digit} + {second_digit} = {answer}")
                 break
             else:
