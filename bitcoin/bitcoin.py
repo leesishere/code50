@@ -17,6 +17,8 @@ class CommandLineParser:
         return len(self.argv)
 
     def get_parm_list(self):
+        if len(self.argv) < 1:
+            p.exit("Missing Command-line argument")
         return [l for l in self.argv]
 
     def get_param_float(self):
