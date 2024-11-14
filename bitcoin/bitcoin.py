@@ -1,7 +1,7 @@
 import requests
 import sys
 from pprint import pprint
-
+import register
 class CommandLineParser:
     def __init__(self):
         try:
