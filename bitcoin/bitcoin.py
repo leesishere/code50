@@ -25,17 +25,17 @@ class CommandLineParser:
     def convert_argv():
         try:
             for l in self.argv:
-                
+                i - float(i)
         except:
             self.exit()
-
+        return i
     def exit():
         return self.exit('101')
 
 p = CommandLineParser()
 print(p.get_parm_count())
 print(p.get_parm_list())
-#print(p.convert_argv())
+print(p.convert_argv())
 
 
 
