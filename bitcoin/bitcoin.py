@@ -16,7 +16,7 @@ class CommandLineParser:
         return [l for l in self.argv]
 
     def get_param_float():
-        return [p for p in self.argv if type(p) == type(1.0)]
+        result = any(type(p) == type(1.0) for p in self.argv)
 
 
 try:
