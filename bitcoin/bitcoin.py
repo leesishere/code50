@@ -58,7 +58,7 @@ def main():
         bitcoin_price = float(data['bpi']['USD']['rate'].replace(',',''))
         bitcoin_price *= p.convert_argv()
 
-        formatted_bitcoin_price = "${:,.2f}".format(bitcoin_price)
+        formatted_bitcoin_price = "${:,.4f}".format(bitcoin_price)
         print(formatted_bitcoin_price)
 
     else:
