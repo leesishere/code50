@@ -26,12 +26,12 @@ class CommandLineParser:
         else:
             return False
     def convert_argv(self):
-        
         try:
-            for l in self.argv:
-                l = l.strip()
-                l = float(l)
-            return l
+            if self.get_parm_count():
+                for l in self.argv:
+                    l = l.strip()
+                    l = float(l)
+                return l
         except:
             self.exit("Missing Command-line argument is not a number")
 
