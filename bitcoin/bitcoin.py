@@ -15,7 +15,7 @@ class CommandLineParser(sys):
 
 try:
     p = CommandLineParser()
-    print(p.get_parm_count)
+    print(p.get_parm_count())
 
 except requests.RequestException:
     pass
