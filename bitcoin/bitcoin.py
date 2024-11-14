@@ -42,7 +42,7 @@ class CommandLineParser:
 p = CommandLineParser()
 #print(p.get_parm_count())
 
-print(p.get_parm_list())
+#print(p.get_parm_list())
 print(p.convert_argv())
 
 
@@ -57,13 +57,3 @@ else:
     print("Failed to retrieve data from the API")
 
 
-'''
-if not p.get_param_float():
-    p.exit("Complete failure!")
-else:
-    print("Oh, well!")
-'''
-#except requests.RequestException:
-#    pass
-#except:
-#    pass
