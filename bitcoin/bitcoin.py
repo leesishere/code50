@@ -6,6 +6,7 @@ class CommandLineParser:
     def __init__(self):
         try:
             self.argv = sys.argv[1:]
+            self.exit = sys.exit
         except:
             sys.exit
 
@@ -15,20 +16,22 @@ class CommandLineParser:
     def get_parm_list(self):
         return [l for l in self.argv]
 
-    def get_param_float():
+    def get_param_float(self):
         result = any(type(p) == type(1.0) for p in self.argv)
         if result:
             return True
         else:
             return False
 
-try:
-    p = CommandLineParser()
+p = CommandLineParser()
     #print(p.get_parm_count())
     #print(p.get_parm_list())
-    print(f"{p.get_param_float()}")
+if not p.get_param_float():
+    p.exit("Complete failure!")
+else:
+    print("Oh, well!")
 
-except requests.RequestException:
-    pass
-except:
-    pass
+#except requests.RequestException:
+#    pass
+#except:
+#    pass
