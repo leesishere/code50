@@ -25,7 +25,8 @@ class CommandLineParser:
     def convert_argv():
         try:
             for l in self.argv:
-                i - float(i)
+                i = self.i.strip()
+                i = self.float(i)
         except:
             self.exit()
         return i
