@@ -55,9 +55,8 @@ def main():
     if response.status_code == 200:
         data = response.json()
         bitcoin_price = float(data['bpi']['USD']['rate'])
+        print(f"{bitcoin_price * p.convert_argv()}")
 
-        print(f"Current Bitcoin Price: {data['bpi']['USD']['rate']}")
-        p.convert_argv()
     else:
         print("Failed to retrieve data from the API")
 
