@@ -2,14 +2,13 @@ import requests
 import sys
 from pprint import pprint
 
-
 class CommandLineParser:
     def __init__(self):
         try:
             self.argv = sys.argv[1:]
         except:
             sys.exit
-            
+
     def get_parm_count(self):
         return len(self.argv)
 
