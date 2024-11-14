@@ -16,7 +16,7 @@ class CommandLineParser:
         return [l for l in self.argv]
 
     def get_param():
-        for p in self. 
+        for p in self.
             sys.exit
 
 try:
