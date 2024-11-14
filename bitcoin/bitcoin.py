@@ -1,7 +1,8 @@
 import requests
 import sys
 from pprint import pprint
-import register
+import requests
+
 class CommandLineParser:
     def __init__(self):
         try:
@@ -39,6 +40,16 @@ print(p.get_parm_count())
 print(p.get_parm_list())
 print(p.convert_argv())
 
+
+
+url = "https://api.coindesk.com/v1/bpi/currentprice.json"
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.json()
+    print(f"Current Bitcoin Price: {data['bpi']['USD']['rate']}")
+else:
+    print("Failed to retrieve data from the API")
 
 
 '''
