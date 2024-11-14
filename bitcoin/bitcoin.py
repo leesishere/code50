@@ -3,7 +3,7 @@ import sys
 from pprint import pprint
 import requests
 
-class CommandLineParser:
+class CommandLineBitcoinParser:
     def __init__(self):
         try:
             self.argv = sys.argv[1:]
@@ -46,7 +46,7 @@ class CommandLineParser:
     def exit(self, error_message):
         return self.exit(error_message)
 
-p = CommandLineParser()
+p = CommandLineBitcoinParser()
 #print(p.get_parm_count())
 
 #print(p.get_parm_list())
