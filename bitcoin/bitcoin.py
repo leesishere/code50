@@ -26,11 +26,13 @@ class CommandLineParser:
 p = CommandLineParser()
     #print(p.get_parm_count())
     #print(p.get_parm_list())
+
+'''
 if not p.get_param_float():
     p.exit("Complete failure!")
 else:
     print("Oh, well!")
-
+'''
 #except requests.RequestException:
 #    pass
 #except:
