@@ -5,7 +5,7 @@ from pprint import pprint
 class CommandLineParser:
     def __init__(self):
         try:
-            self.argv = float(sys.argv[1:])
+            self.argv = sys.argv[1:]
             self.exit = sys.exit
         except:
             sys.exit(101)
