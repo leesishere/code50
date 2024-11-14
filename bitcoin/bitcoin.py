@@ -9,10 +9,8 @@ class CommandLineParser(sys):
         def __init__(self):
         super().__init__()
 
-        self.argv
 
-
-    def set_font_name(self, argv):
+    def number(self, argv):
         if len(argv) == 3:  # file_name[0] -flag[1] font_name[2]
             return argv[2]
         else:
