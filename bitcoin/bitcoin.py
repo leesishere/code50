@@ -45,22 +45,20 @@ class CommandLineBitcoinParser:
 
     def exit(self, error_message):
         return self.exit(error_message)
+def main():
 
-p = CommandLineBitcoinParser()
-#print(p.get_parm_count())
+    p = CommandLineBitcoinParser()
 
-#print(p.get_parm_list())
-print(p.convert_argv())
+    url = "https://api.coindesk.com/v1/bpi/currentprice.json"
+    response = requests.get(url)
 
+    if response.status_code == 200:
+        data = response.json()
+        print(f"Current Bitcoin Price: {data['bpi']['USD']['rate']}")
+        p.convert_argv()
+    else:
+        print("Failed to retrieve data from the API")
 
-
-url = "https://api.coindesk.com/v1/bpi/currentprice.json"
-response = requests.get(url)
-
-if response.status_code == 200:
-    data = response.json()
-    print(f"Current Bitcoin Price: {data['bpi']['USD']['rate']}")
-else:
-    print("Failed to retrieve data from the API")
-
+if __name__ == "__main__":
+    main()
 
