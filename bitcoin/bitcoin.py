@@ -15,9 +15,9 @@ class CommandLineParser:
     def get_parm_list(self):
         return [l for l in self.argv]
 
-    def get_param():
-        for p in self.
-            sys.exit
+    def get_param_float():
+        retun [p for p in self.argv
+
 
 try:
     p = CommandLineParser()
