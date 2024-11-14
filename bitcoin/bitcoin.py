@@ -26,6 +26,7 @@ class CommandLineParser:
         else:
             return False
     def convert_argv(self):
+        
         try:
             for l in self.argv:
                 l = l.strip()
@@ -38,9 +39,8 @@ class CommandLineParser:
         return self.exit(error_message)
 
 p = CommandLineParser()
-print(p.get_parm_count())
-#if p.get_parm_count() <1:
-#    p.exit("Missing Command-line argument")
+#print(p.get_parm_count())
+
 print(p.get_parm_list())
 print(p.convert_argv())
 
