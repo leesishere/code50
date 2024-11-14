@@ -29,14 +29,20 @@ class CommandLineParser:
             return False
     def convert_argv(self):
         if self.get_parm_count():
-            print("Yes")
-        #try:
-        #    if self.get_parm_count():
-        #        for l in self.argv:
-        #            l = float(l)
-        #        return l
+            for l in self.argv:
+                l = float(l) if is_float(l)
+                return l
         #except:
         #    self.exit("Command-line argument is not a number")
+
+    def is_float(self, value):
+        try:
+            float(value)
+            return True
+        except ValueError:
+            return False
+
+
 
     def exit(self, error_message):
         return self.exit(error_message)
