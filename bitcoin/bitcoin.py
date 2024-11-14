@@ -24,7 +24,8 @@ class CommandLineParser:
             return False
     def convert_argv():
         try:
-            float_list = [l for l in self.argv]
+            for l in self.argv:
+                
         except:
             self.exit()
 
@@ -34,7 +35,7 @@ class CommandLineParser:
 p = CommandLineParser()
 print(p.get_parm_count())
 print(p.get_parm_list())
-print(p.convert_argv())
+#print(p.convert_argv())
 
 
 
