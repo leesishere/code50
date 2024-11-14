@@ -5,9 +5,9 @@ from pprint import pprint
 
 # Font names: http://www.figlet.org/fontdb.cgi
 
-class CommandLineParser(sys):
+class CommandLineParser:
     def __init__(self):
-        self.sys = sys
+        self.argv = sys.argv
 
     def get_parm_count(self):
         return len(self.argv)
