@@ -22,7 +22,9 @@ class CommandLineParser:
             return True
         else:
             return False
-            
+    def convert_argv():
+        self.get_parm_list()
+
     def exit():
         return self.exit('101')
 
