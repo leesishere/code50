@@ -9,13 +9,8 @@ class CommandLineParser(sys):
         def __init__(self):
         super().__init__()
 
-        self.flag_list = flag.split(",")
-        self.font = self.set_font_name(argv)
-        self.font_list = self.getFonts()
-        self.argv = argv
+        self.argv
 
-        if not self.is_comandline_correct():
-            sys.exit("Invalid usage")
 
     def set_font_name(self, argv):
         if len(argv) == 3:  # file_name[0] -flag[1] font_name[2]
