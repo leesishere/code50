@@ -30,7 +30,7 @@ class CommandLineParser:
                 l = float(l)
             return l
         except:
-            self.exit()
+            self.exit("Missing Command-line argument is not a number")
 
     def exit(self, error_message):
         return self.exit(error_message)
