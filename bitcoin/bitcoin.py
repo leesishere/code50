@@ -23,15 +23,13 @@ class CommandLineParser:
         else:
             return False
     def convert_argv(self):
-        #try:
-        #print(self.argv)
-        for l in self.argv:
-            l = l.strip()
-            l = float(l)
-            print(l)
-        return l
-        #except:
-        #    self.exit()
+        try:
+            for l in self.argv:
+                l = l.strip()
+                l = float(l)
+            return l
+        except:
+            self.exit()
 
     def exit():
         return self.exit('101')
