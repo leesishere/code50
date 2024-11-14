@@ -8,7 +8,7 @@ class CommandLineParser:
             self.argv = sys.argv[1:]
             self.exit = sys.exit
         except:
-            sys.exit(101)
+            self.exit()
 
     def get_parm_count(self):
         return len(self.argv)
@@ -22,6 +22,9 @@ class CommandLineParser:
             return True
         else:
             return False
+            
+    def exit():
+        return self.exit('101')
 
 p = CommandLineParser()
 print(p.get_parm_count())
