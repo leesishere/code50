@@ -7,7 +7,7 @@ from pprint import pprint
 
 class CommandLineParser(sys):
     def __init__(self):
-        super().__init__()
+        self.sys = sys
 
     def get_parm_count(self):
         return len(self.argv)
