@@ -1,7 +1,6 @@
 import requests
 import sys
-from pprint import pprint
-import requests
+
 
 class CommandLineBitcoinParser:
     def __init__(self):
