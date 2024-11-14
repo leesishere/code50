@@ -54,6 +54,8 @@ def main():
 
     if response.status_code == 200:
         data = response.json()
+        bitcoin_price = float(data['bpi']['USD']['rate'])
+
         print(f"Current Bitcoin Price: {data['bpi']['USD']['rate']}")
         p.convert_argv()
     else:
