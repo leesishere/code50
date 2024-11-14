@@ -12,7 +12,6 @@ class CommandLineParser(sys):
     def get_parm_count(self):
         return len(self.argv)
 
-
 try:
     p = CommandLineParser()
     print(p.get_parm_count())
