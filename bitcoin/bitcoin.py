@@ -29,11 +29,10 @@ class CommandLineParser:
         try:
             if self.get_parm_count():
                 for l in self.argv:
-                    l = l.strip()
                     l = float(l)
                 return l
         except:
-            self.exit("Missing Command-line argument is not a number")
+            self.exit("Command-line argument is not a number")
 
     def exit(self, error_message):
         return self.exit(error_message)
