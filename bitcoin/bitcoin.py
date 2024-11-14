@@ -12,7 +12,8 @@ class CommandLineParser:
             self.exit()
 
     def get_parm_count(self):
-        print(len(self.argv))
+        if len(self.argv) < 1:
+            p.exit("Missing Command-line argument")
         return len(self.argv)
 
     def get_parm_list(self):
@@ -37,8 +38,9 @@ class CommandLineParser:
         return self.exit(error_message)
 
 p = CommandLineParser()
-if p.get_parm_count() <1:
-    p.exit("Missing Command-line argument")
+print(p.get_parm_count())
+#if p.get_parm_count() <1:
+#    p.exit("Missing Command-line argument")
 print(p.get_parm_list())
 print(p.convert_argv())
 
