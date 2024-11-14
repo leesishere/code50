@@ -16,14 +16,17 @@ class CommandLineParser:
         return [l for l in self.argv]
 
     def get_param_float():
-        return any(type(p) == type(1.0) for p in self.argv)
-
+        result = any(type(p) == type(1.0) for p in self.argv)
+        if result:
+            return True
+        else:
+            return False
 
 try:
     p = CommandLineParser()
     #print(p.get_parm_count())
     #print(p.get_parm_list())
-    print(p.get_param_float())
+    print(f"{p.get_param_float()}")
 
 except requests.RequestException:
     pass
