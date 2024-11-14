@@ -14,7 +14,7 @@ class CommandLineParser:
         return len(self.argv)
 
     def get_parm_list(self):
-        return [l for l.strip() in self.argv]
+        return [l for l in self.argv]
 
     def get_param_float(self):
         result = any(type(p) == type(1.0) for p in self.argv)
