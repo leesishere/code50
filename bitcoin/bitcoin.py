@@ -1,20 +1,23 @@
 import requests
 import sys
-
 from pprint import pprint
 
-# Font names: http://www.figlet.org/fontdb.cgi
 
 class CommandLineParser:
     def __init__(self):
-        self.argv = sys.argv
+        self.argv = sys.argv[1:]
 
     def get_parm_count(self):
         return len(self.argv)
 
+    def get_parm_list(self):
+        return [l for l in self.argv]
+    
+
 try:
     p = CommandLineParser()
     print(p.get_parm_count())
+    print(p.get_parm_list())
 
 except requests.RequestException:
     pass
