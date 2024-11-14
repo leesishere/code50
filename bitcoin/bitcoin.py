@@ -24,8 +24,9 @@ class CommandLineParser:
             return False
 
 p = CommandLineParser()
-    #print(p.get_parm_count())
-    #print(p.get_parm_list())
+print(p.get_parm_count())
+print(p.get_parm_list())
+
 
 '''
 if not p.get_param_float():
