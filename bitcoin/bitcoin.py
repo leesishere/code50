@@ -6,50 +6,16 @@ from pprint import pprint
 # Font names: http://www.figlet.org/fontdb.cgi
 
 class CommandLineParser(sys):
-        def __init__(self):
+    def __init__(self):
         super().__init__()
 
-
-    def number(self, argv):
-        if len(argv) == 3:  # file_name[0] -flag[1] font_name[2]
-            return argv[2]
-        else:
-            return None
-
-    def get_font_name(self):
-        return self.font
-
-    def get_random_font(self):
-        end = len(self.font_list) - 1
-        # Generate a random number
-        random_index = random.randint(0, end)
-        return self.font_list[random_index]
-
-    def is_flag_present(self):
-        if len(self.argv) < 2:
-            return False
-        else:
-            return self.argv[1] in self.flag_list
-
-    def is_font_type_present(self):
-        return True if self.font else False
-
-    def is_font_type_in_Figlet(self):
-        return self.font in self.font_list
-
-    def is_comandline_correct(self):
-        if len(self.argv) == 2 and not self.is_flag_present():
-            return False
-        elif len(self.argv) == 3 and (
-            not self.is_flag_present() or not self.is_font_type_in_Figlet()
-        ):
-            return False
-        else:
-            return True
+    def get_parm_count(self):
+        return len(self.argv)
 
 
 try:
-    print(argv[1])
+    p = CommandLineParser()
+    print(p.get_parm_count)
 
 except requests.RequestException:
     pass
