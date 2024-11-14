@@ -54,6 +54,7 @@ def main():
 
     if response.status_code == 200:
         data = response.json()
+        formatted_amount = "${:,.2f}".format(amount)
         bitcoin_price = float(data['bpi']['USD']['rate'].replace(',',''))
         print(f"{bitcoin_price * p.convert_argv()}")
 
