@@ -32,11 +32,12 @@ class CommandLineParser:
         except:
             self.exit()
 
-    def exit():
-        return self.exit('101')
+    def exit(self, error_message):
+        return self.exit(error_message)
 
 p = CommandLineParser()
-print(p.get_parm_count())
+if p.get_parm_count() <1:
+    p.exit("Missing Command-line argument")
 print(p.get_parm_list())
 print(p.convert_argv())
 
