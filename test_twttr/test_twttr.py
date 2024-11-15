@@ -7,4 +7,7 @@ from twttr import shorten
 def test_shorten():
     assert shorten("Jamey") == "Jmy"
 
+def test_error():
+    with pytest.raises(TypeError):
+        assert shorten(1)
 
