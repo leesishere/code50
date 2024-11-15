@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/path/to/your/package_directory')
+sys.path.append('/workspaces/21178063')
 
 import shorten from twttr
 def main():
