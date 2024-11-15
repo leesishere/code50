@@ -7,7 +7,8 @@ def main():
     print("hello")
 
 
-#def shorten(word):
+def test_shorten():
+    
 
 if __name__ == "__main__":
     main()
