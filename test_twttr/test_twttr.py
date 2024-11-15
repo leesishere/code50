@@ -7,13 +7,13 @@ from twttr import shorten
 def test_shorten():
     assert shorten("Jamey") == "Jmy"
 
-def without_vowel():
+def test_without_vowel():
     assert shorten("ABCDFG") == "ABCDFG"
 
-def without_capitalized():
+def test_without_capitalized():
     assert shorten("jamey") == "jmy"
 
-def without_lowercase():
+def test_without_lowercase():
      assert shorten("JAMEY") == "JMY"
 
 def test_error():
