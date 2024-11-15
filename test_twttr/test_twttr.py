@@ -1,7 +1,7 @@
 import sys
 sys.path.append('/workspaces/21178063')
 
-import twttr from shorten
+from twttr import shorten
 def main():
     print("hello")
 
