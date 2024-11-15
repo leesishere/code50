@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/workspaces/21178063')
+sys.path.append('/workspaces/21178063/twttr')
 
 from twttr import shorten
 def main():
