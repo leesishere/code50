@@ -11,8 +11,11 @@ def main():
     print("output: ", end="")
     for c in s:
         if c.upper() not in vowels:
-            print(c, end="") 
+            print(c, end="")
     print()
 
+def shorten(word):
+    ...
+    
 if __name__ == "__main__":
     main()
