@@ -7,15 +7,16 @@
 vowels = ['A', 'E', 'I', 'O', 'U']
 
 def main():
-    s = input("Input: ")
-    print("output: ", end="")
-    for c in s:
-        if c.upper() not in vowels:
-            print(c, end="")
-    print()
+    word = input("Input: ")
+    print(f"output: {shorten(word)}")
+
 
 def shorten(word):
-    ...
-    
+    no_vowels_workd = ''
+    for c in word:
+        if c.upper() not in vowels:
+            no_vowels_workd += c
+    return no_vowels_workd
+
 if __name__ == "__main__":
     main()
