@@ -8,7 +8,7 @@ def test_shorten():
     assert shorten("Jamey") == "Jmy"
 
 def test_without_vowel():
-    assert shorten("ABCDFG") == "ABCDFG"
+    assert shorten("BCDFG") == "BCDFG"
 
 def test_without_capitalized():
     assert shorten("jamey") == "jmy"
