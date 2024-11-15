@@ -7,6 +7,7 @@ from twttr import shorten
 def test_shorten():
     assert shorten("Jamey") == "Jmy"
     assert shorten("jamey") == "jmy"
+     assert shorten("JAMEY") == "JMY"
 
 
 def test_error():
