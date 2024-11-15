@@ -7,7 +7,7 @@ from twttr import shorten
 def test_shorten():
     assert shorten("Jamey") == "Jmy"
 
-def_without_vowel():
+def without_vowel():
     assert shorten("ABCDFG") == "ABCDFG"
 
 def without_capitalized():
