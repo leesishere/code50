@@ -8,7 +8,7 @@ def main():
 
 
 def test_shorten():
-    
+    assert shorten("Jamey) == "Jmy"
 
 if __name__ == "__main__":
     main()
