@@ -9,7 +9,6 @@ vowels = ['A', 'E', 'I', 'O', 'U']
 
 def main():
     word = input("Input: ")
-    exit(1) if word.isdigit()
     print(f"output: {shorten(word)}")
 
 
