@@ -16,6 +16,9 @@ def test_without_capitalized():
 def test_without_lowercase():
      assert shorten("JAMEY") == "JMY"
 
+def test_omitting_numbers():
+    assert shorten("1") == "1"
+
 def test_error():
     with pytest.raises(TypeError):
         assert shorten(1)
