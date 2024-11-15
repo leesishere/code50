@@ -5,7 +5,6 @@ sys.path.append('/workspaces/21178063/twttr')
 from twttr import shorten
 
 def test_shorten():
-    assert shorten("Jamey) == "Jmy"
+    assert shorten("Jamey") == "Jmy"
 
-if __name__ == "__main__":
-    main()
+
