@@ -6,8 +6,8 @@ from bank import value
 
 
 def test_shorten():
-    assert shorten("Jamey") == "Jmy"
-    
+    assert value("Jamey") == 0
+
 def main():
     greeting = input("Greating: ").lower().strip()
     pay_up = value(greeting)
