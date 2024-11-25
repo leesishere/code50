@@ -17,6 +17,7 @@ def main():
         print("$100")
 
 def value(greeting):
+    greeting = greeting.lower().strip()
     if 'hello' == greeting[:5]:
         return 0
     elif 'h' == greeting[0]:
