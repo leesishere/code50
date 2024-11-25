@@ -5,7 +5,9 @@ sys.path.append('/workspaces/21178063/bank')
 from bank import value
 
 
-
+def test_shorten():
+    assert shorten("Jamey") == "Jmy"
+    
 def main():
     greeting = input("Greating: ").lower().strip()
     pay_up = value(greeting)
