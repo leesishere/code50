@@ -22,5 +22,10 @@ def test_is_valid_seven_char():
     assert is_valid("SEVEN-7") == False
 
 def test_is_valid_number_middle():
-    assert is_valid("Mid7A") == False
+    assert is_valid("AAA22A") == False
 
+def test_is_valid_number_last():
+    assert is_valid("AAA222") == True
+
+def test_is_valid_number_first():
+    assert is_valid("22AAAA") == False
