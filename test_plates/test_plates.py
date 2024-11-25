@@ -12,6 +12,15 @@ from plates import is_valid
 # CS50P2
 
 
-def is_valid():
-    assert value("Ja") == True
+def test_is_valid_one_char():
+    assert is_valid("J") == False
+
+def test_is_valid_two_char():
+    assert is_valid("Ja") == True
+
+def test_is_valid_seven_char():
+    assert is_valid("SEVEN-7") == False
+
+def test_is_valid_number_middle():
+    assert is_valid("Mid7A") == False
 
