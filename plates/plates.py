@@ -19,7 +19,9 @@ def is_valid(s):
         # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.
         # CS50P2
 
-        print(f"{count_numbers(s[0])} {count_numbers(s[-1])}")
+        # Numbers in the middle of plate
+        if count_numbers(s[0]) == 0 or count_numbers(s[-1]) == 0:
+            return False
         number_cnt = 0
         for i in plate_list:
             if count_numbers(i):
