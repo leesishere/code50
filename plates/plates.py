@@ -20,7 +20,7 @@ def is_valid(s):
         # CS50P2
 
         # Numbers in the middle of plate
-        if count_numbers(s[0]) == 0 or count_numbers(s[-1]) == 0:
+        if count_numbers(s[-1]) == 0:
             return False
         number_cnt = 0
         for i in plate_list:
