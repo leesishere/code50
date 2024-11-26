@@ -29,3 +29,9 @@ def test_is_valid_number_last():
 
 def test_is_invalid_number_first():
     assert is_valid("22AAAA") == False
+
+def test_is_invalid_start_with_zero():
+    assert is_valid("0AAAAA") == False
+
+def test_is_invalid_alphanumeric_characters():
+    assert is_valid(".,?$&*$") == False
