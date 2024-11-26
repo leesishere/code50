@@ -27,7 +27,7 @@ def test_is_valid_number_middle():
 def test_is_valid_number_last():
     assert is_valid("AAA222") == True
 
-def test_is_invalid_number_first():
+def test_without_beginning_alphabetical_checks():
     assert is_valid("22AAAA") == False
 
 def test_is_invalid_start_with_zero():
