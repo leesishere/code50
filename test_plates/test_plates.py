@@ -19,7 +19,7 @@ def test_is_valid_two_char():
     assert is_valid("Ja") == True
 
 def test_is_valid_seven_char():
-    assert is_valid("SEVEN-7") == False
+    assert is_valid("SEVEN77") == False
 
 def test_is_valid_number_middle():
     assert is_valid("AAA22A") == False
@@ -34,4 +34,4 @@ def test_is_invalid_start_with_zero():
     assert is_valid("0AAAAA") == False
 
 def test_is_invalid_alphanumeric_characters():
-    assert is_valid(".,?$&*$") == False
+    assert is_valid("AAAA?A") == False
