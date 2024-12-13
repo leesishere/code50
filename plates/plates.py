@@ -12,7 +12,7 @@ def is_valid(s):
     # “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”#
     if count_letters(s[:2]) != 2 or len(s) > 6:
         return False
-
+    print(count_numbers(s))
     if count_numbers(s):
         plate_list = order_of_things(s)
         # Numbers cannot be used in the middle of a plate; they must come at the end.
