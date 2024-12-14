@@ -37,7 +37,7 @@ def test_is_invalid_alphanumeric_characters():
     assert is_valid("PI3.14") == False
 
 def test_is_without_beginning_alphabetical_checks():
-    assert is_valid("9AAAAA") == False
+    assert is_valid("9AAAA") == False
 
 def test_is_invalid_cs_class():
     assert is_valid("CS05") == False
