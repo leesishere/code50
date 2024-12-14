@@ -65,8 +65,10 @@ def is_valid(s):
 
     # not begining alphabetical
     plate_string = order_of_things(s)
+    letters_count = count_letters(s)
+    print(letters_count)
     alpha = ['A','B','C','D','E','F']
-    if plate_string == alpha[:len(plate_string)]:
+    if plate_string[:letters_count] == alpha[:len(plate_string)]:
         print("The start of alpha is the same as plate entered.")
 
     #print(f"{plate_string}")
