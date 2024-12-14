@@ -30,6 +30,9 @@ def test_is_invalid_seven_char():
 def test_is_invalid_start_with_two_char():
     assert is_valid("H") == False
 
+def test_is_valid_two_char():
+    assert is_valid("Ja") == True
+
 '''
 def test_invalid_without_beginning_alphabetical():
     assert is_valid("12AA") == False
@@ -44,8 +47,7 @@ def test_is_invalid_start_with_two_char():
 
 
 
-def test_is_valid_two_char():
-    assert is_valid("Ja") == True
+
 
 
 
