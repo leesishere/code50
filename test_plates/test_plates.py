@@ -24,9 +24,11 @@ def test_is_invalid_alphanumeric_characters():
     assert is_valid("PI3.14") == False
 
 
-
 def test_is_invalid_seven_char():
     assert is_valid("OUTATIME") == False
+
+def test_invalid_without_beginning_alphabetical():
+    assert is_valid("1AAA") == False
 
 '''
 
@@ -41,8 +43,7 @@ def test_is_invalid_start_with_two_char():
 def test_is_valid_two_char():
     assert is_valid("Ja") == True
 
-def test_invalid_without_beginning_alphabetical():
-    assert is_valid("1AAA") == False
+
 
 def test_invalid_start_with_zero_placement():
     assert is_valid("AAAA01") == False
