@@ -51,7 +51,13 @@ def is_valid(s):
         numbers = pattern.findall(s)
         if len(numbers) > 1:
             return False
-
+        elif len(numbers[0]) > 1:
+            # more than 1 number foud
+            if numbers[0][0] == '0':
+                return False
+            else
+                numbers[0] == '0':
+                return False
 
         # number must be at the end of plate string
         if count_letters(s[-1]) > 0:
