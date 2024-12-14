@@ -37,6 +37,11 @@ def is_valid(s):
         if len(numbers) > 1:
             return False
 
+        # number must not be in the middle
+        if count_letters(s[-1]) > 0:
+            return False
+
+
     return True
 
 def only_letter_or_number(s):
