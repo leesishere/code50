@@ -20,11 +20,9 @@ def is_valid(s):
     if count_letters(s[:2]) != 2:
         return False
 
-
     # nust not be longer that 6 charectors
     if len(s) > 6:
         return False
-
 
     # “No periods, spaces, or punctuation marks are allowed.”
     # Define patterns for characters and numbers
