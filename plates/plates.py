@@ -30,6 +30,9 @@ def is_valid(s):
             return False
 
         # Numbers in the middle of plate
+
+        
+        # Numbers in the middle of plate
         if count_numbers(s[-1]) == 0:
             return False
         number_cnt = 0
