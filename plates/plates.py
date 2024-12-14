@@ -29,8 +29,12 @@ def is_valid(s):
         # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.
         # CS50P2
 
-        # The first number used cannot be a ‘0’.” 
+               # The first number used cannot be a ‘0’.”
         if s[0] == '0':
+            return False
+        
+        # The first number used cannot be a ‘0’.” or start with a number
+        if count_numbers(s[0]):
             return False
 
         # Numbers in the middle of plate
