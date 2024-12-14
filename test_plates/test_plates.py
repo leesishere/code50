@@ -22,7 +22,7 @@ def test_without_beginning_alphabetical():
     assert is_valid("1AAAAA") == False
 
 def test_zero_placement():
-    assert is_valid("0AAAAA") == False
+    assert is_valid("AAAA01") == False
 
 def test_is_valid_seven_char():
     assert is_valid("OUTATIME") == False
