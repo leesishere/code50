@@ -16,7 +16,7 @@ def is_valid(s):
 
     # “No periods, spaces, or punctuation marks are allowed.”
     # Define patterns for characters and numbers
-    if only_letter_or_number(s):
+    if not only_letter_or_number(s):
         return False
 
     if count_numbers(s) > 0:
@@ -40,8 +40,6 @@ def is_valid(s):
             if count_numbers(num):
                 if num[0] == '0':
                     return False
-
-
 
     return True
 
