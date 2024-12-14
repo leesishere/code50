@@ -23,16 +23,16 @@ def test_is_invalid_number_middle():
 def test_is_invalid_alphanumeric_characters():
     assert is_valid("PI3.14") == False
 
-d
+
 
 def test_is_invalid_seven_char():
     assert is_valid("OUTATIME") == False
 
 '''
 
-ef test_is_without_beginning_alphabetical_checks():
+def test_is_without_beginning_alphabetical_checks():
     assert is_valid("ABC") == False
-    
+
 def test_is_invalid_start_with_two_char():
     assert is_valid("H") == False
 
