@@ -43,11 +43,11 @@ def is_valid(s):
     return True
 
 def only_letter_or_number(s):
-    pattern = r'[a-zA-Z]+|\d+'
     # Regular expression pattern to match any lowercase letters
-    pattern = re.compile(r'[a-z]')
-    # List to hold strings without lowercase letters
-    no_lowercase = [s for s in strings if not pattern.search(s)]
+    pattern = re.compile(r'[a-zA-Z]+|\d+')
+
+    # List to hold strings without leters or numbers
+    none_valid_chat = [s for s in strings if not pattern.search(s)]
 
 
     # Use re.split() to find parts of the string that do not match the pattern
