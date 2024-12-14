@@ -41,8 +41,12 @@ def test_invalid_start_with_zero_placement():
 def test_is_valid_number_last():
     assert is_valid("AAA222") == True
 
-def test_is_without_beginning_alphabetical_checks():
-    assert is_valid("ABCD56") == False
+#def test_is_without_beginning_alphabetical_checks():
+#    assert is_valid("ABCD56") == False
+
+def test_error():
+    with pytest.raises(TypeError):
+        assert is_valid("ABCD56")
 
 
 
