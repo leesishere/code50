@@ -19,7 +19,7 @@ def test_is_valid_two_char():
     assert is_valid("Ja") == True
 
 def test_without_beginning_alphabetical():
-    assert is_valid("1AAAAA") == False
+    assert is_valid("1AAA") == False
 
 def test_zero_placement():
     assert is_valid("AAAA01") == False
