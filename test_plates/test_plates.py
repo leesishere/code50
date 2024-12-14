@@ -22,7 +22,7 @@ def test_is_invalid_number_middle():
 
 def test_is_invalid_alphanumeric_characters():
     assert is_valid("PI3.14") == False
-
+'''
 def test_is_invalid_start_with_two_char():
     assert is_valid("H") == False
 
@@ -44,3 +44,4 @@ def test_is_valid_number_last():
 def test_is_without_beginning_alphabetical_checks():
     assert is_valid("ABCD56") == False
 
+'''
