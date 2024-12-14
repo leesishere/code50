@@ -11,35 +11,39 @@ from plates import is_valid
 # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.
 # CS50P2
 
+def test_is_valid_cs_class():
+    assert is_valid("CS50") == True
 
-def test_is_valid_one_char():
-    assert is_valid("H") == False
+def test_is_invalid_zero_position():
+    assert is_valid("CS05") == False
 
-def test_is_valid_two_char():
-    assert is_valid("Ja") == True
-
-def test_without_beginning_alphabetical():
-    assert is_valid("1AAA") == False
-
-def test_zero_placement():
-    assert is_valid("AAAA01") == False
-
-def test_is_valid_seven_char():
-    assert is_valid("OUTATIME") == False
-
-def test_is_valid_number_middle():
-    assert is_valid("AAA22A") == False
-
-def test_is_valid_number_last():
-    assert is_valid("AAA222") == True
+def test_is_invalid_number_middle():
+    assert is_valid("CS50P") == False
 
 def test_is_invalid_alphanumeric_characters():
     assert is_valid("PI3.14") == False
 
+def test_is_invalid_start_with_two_char():
+    assert is_valid("H") == False
+
+def test_is_invalid_seven_char():
+    assert is_valid("OUTATIME") == False
+
+def test_is_valid_two_char():
+    assert is_valid("Ja") == True
+
+def test_invalid_without_beginning_alphabetical():
+    assert is_valid("1AAA") == False
+
+def test_invalid_start_with_zero_placement():
+    assert is_valid("AAAA01") == False
+
+def test_is_valid_number_last():
+    assert is_valid("AAA222") == True
+
 def test_is_without_beginning_alphabetical_checks():
     assert is_valid("ABCD56") == False
 
-def test_is_invalid_cs_class():
-    assert is_valid("CS05") == False
+
 
 
