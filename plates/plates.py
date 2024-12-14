@@ -66,7 +66,7 @@ def is_valid(s):
             return False
 
     # not begining alphabetical
-    if s[:3].upper() == 'AB':
+    if s[:2].upper() == 'AB':
         return False
 
     return True
