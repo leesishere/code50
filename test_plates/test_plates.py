@@ -33,6 +33,9 @@ def test_is_invalid_start_with_two_char():
 def test_is_valid_two_char():
     assert is_valid("Ja") == True
 
+def test_is_valid_number_last():
+    assert is_valid("AAA222") == True
+
 '''
 def test_invalid_without_beginning_alphabetical():
     assert is_valid("12AA") == False
@@ -42,20 +45,12 @@ def test_invalid_without_beginning_alphabetical():
 def test_is_without_beginning_alphabetical_checks():
     assert is_valid("ABC") == False
 
-def test_is_invalid_start_with_two_char():
-    assert is_valid("H") == False
-
-
-
-
-
 
 
 def test_invalid_start_with_zero_placement():
     assert is_valid("AAAA01") == False
 
-def test_is_valid_number_last():
-    assert is_valid("AAA222") == True
+
 
 '''
 
