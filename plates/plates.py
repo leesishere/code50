@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    plate = input("Plate: ").strip()
+    plate = input("Plate: ")
     if is_valid(plate):
         print("Valid")
         sys.exit(0)
