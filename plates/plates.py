@@ -7,11 +7,11 @@ def main():
     if is_valid(plate):
         print("Valid")
         return True
-        #sys.exit(0)
+        sys.exit(0)
     else:
         print("Invalid")
         return False
-        #sys.exit(1)
+        sys.exit(1)
 
 
 def is_valid(s):
