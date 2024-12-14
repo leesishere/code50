@@ -44,12 +44,12 @@ def is_valid(s):
     return True
 
 def only_letter_or_number(s):
-    # Regular expression pattern to match any lowercase letters
-    pattern = re.compile(r'[a-zA-Z]+|\d+')
+    # Regular expression pattern to match any non-alphabetic, non-numeric character
+    pattern = re.compile(r'[^a-zA-Z0-9]')
 
-    # List to hold strings without leters or numbers
-    none_valid_chat = [string for string in s if not pattern.search(s)]
-    print(f"{len(none_valid_chat)}")
+    # Find all matches
+    matches = pattern.findall(s)
+    print(f"{matches}")
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
