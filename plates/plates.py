@@ -6,11 +6,11 @@ def main():
     plate = input("Plate: ")
     if is_valid(plate):
         print("Valid")
-        return 0
+        return True
         #sys.exit(0)
     else:
         print("Invalid")
-        return 1
+        return False
         #sys.exit(1)
 
 
