@@ -43,9 +43,6 @@ def is_valid(s):
         # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.
         # CS50P2
 
-        # The first number used cannot be a ‘0’.”
-        if s[0] == '0':
-            return False
 
         # The vharter can't start with a number
         if count_numbers(s[0]):
@@ -68,7 +65,7 @@ def is_valid(s):
         if count_letters(s[-1]) > 0:
             return False
 
-   # not begining alphabetical
+    # not begining alphabetical
     if s[:3].upper() == 'ABC':
         return False
 
