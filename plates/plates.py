@@ -25,6 +25,7 @@ def is_valid(s):
     if len(s) > 6:
         return False
 
+
     # “No periods, spaces, or punctuation marks are allowed.”
     # Define patterns for characters and numbers
     if not only_letter_or_number(s):
@@ -67,10 +68,10 @@ def is_valid(s):
         if count_letters(s[-1]) > 0:
             return False
 
-    # not begining alphabetical
+   # not begining alphabetical
     if s[:3].upper() == 'ABC':
         return False
-    
+
     return True
 
 def only_letter_or_number(s):
