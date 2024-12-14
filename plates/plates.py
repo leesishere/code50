@@ -20,10 +20,6 @@ def is_valid(s):
     if count_letters(s[:2]) != 2
         return False
 
-    # not begining elphabetical
-    if count_letters(s[:3]).upper() != 'ABC'
-        return False
-
 
     # nust not be longer that 6 charectors
     if len(s) > 6:
@@ -71,7 +67,9 @@ def is_valid(s):
         if count_letters(s[-1]) > 0:
             return False
 
-
+    # not begining elphabetical
+    if count_letters(s[:3]).upper() != 'ABC'
+        return True
     return True
 
 def only_letter_or_number(s):
