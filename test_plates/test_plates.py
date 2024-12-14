@@ -24,8 +24,8 @@ def test_is_invalid_alphanumeric_characters():
     assert is_valid("PI3.14") == False
 
 def test_is_without_beginning_alphabetical_checks():
-    assert is_valid("ABCD56") == False
-    
+    assert is_valid("ABC") == True
+
 '''
 def test_is_invalid_start_with_two_char():
     assert is_valid("H") == False

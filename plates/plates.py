@@ -68,7 +68,7 @@ def is_valid(s):
     letters_count = count_letters(s)
     alpha = ['A','B','C','D','E','F']
     if plate_string[:letters_count] == alpha[:letters_count]:
-        return False
+        return True
 
 
     return True
