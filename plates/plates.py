@@ -45,13 +45,13 @@ def is_valid(s):
         if count_numbers(s[0]):
             return False
 
-        # Numbers in the middle of plate
-
+        # number must not be in the middle
         # Regular expression pattern to find numbers
         pattern = re.compile(r'\d+') # Find all matches
         numbers = pattern.findall(s)
         if len(numbers) > 1:
             return False
+     
 
         # number must not be in the middle
         if count_letters(s[-1]) > 0:
