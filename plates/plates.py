@@ -31,7 +31,11 @@ def is_valid(s):
 
         # Numbers in the middle of plate
 
-        
+        # Regular expression pattern to find numbers
+        pattern = re.compile(r'\d+') # Find all matches
+        numbers = pattern.findall(s)
+        print(numbers)
+
         # Numbers in the middle of plate
         if count_numbers(s[-1]) == 0:
             return False
