@@ -10,7 +10,7 @@ def main():
 
 def is_valid(s):
     # “All vanity plates must start with at least two letters.”
-    # “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”#
+    # “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”
     if count_letters(s[:2]) != 2 or len(s) > 6:
         return False
 
