@@ -49,7 +49,7 @@ def only_letter_or_number(s):
 
     # List to hold strings without leters or numbers
     none_valid_chat = [string for string in s if not pattern.search(s)]
-    print(f"{count(none_valid_chat)}")
+    print(f"{len(none_valid_chat)}")
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
