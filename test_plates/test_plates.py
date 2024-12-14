@@ -31,7 +31,7 @@ def test_is_invalid_start_with_two_char():
     assert is_valid("H") == False
 
 def test_is_valid_two_char():
-    assert is_valid("Ja") == True
+    assert is_valid("JA") == True
 
 def test_is_valid_number_last():
     assert is_valid("AAA222") == True
