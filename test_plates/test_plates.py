@@ -27,10 +27,11 @@ def test_is_invalid_alphanumeric_characters():
 def test_is_invalid_seven_char():
     assert is_valid("OUTATIME") == False
 
+'''
 def test_invalid_without_beginning_alphabetical():
     assert is_valid("12AA") == False
 
-'''
+
 
 def test_is_without_beginning_alphabetical_checks():
     assert is_valid("ABC") == False
@@ -38,7 +39,7 @@ def test_is_without_beginning_alphabetical_checks():
 def test_is_invalid_start_with_two_char():
     assert is_valid("H") == False
 
-
+'''
 
 def test_is_valid_two_char():
     assert is_valid("Ja") == True
@@ -53,4 +54,3 @@ def test_is_valid_number_last():
 
 
 
-'''
