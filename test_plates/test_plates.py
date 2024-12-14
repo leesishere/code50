@@ -36,11 +36,10 @@ def test_is_valid_two_char():
 def test_is_valid_number_last():
     assert is_valid("AAA222") == True
 
-'''
 def test_invalid_without_beginning_alphabetical():
     assert is_valid("12AA") == False
 
-
+'''
 
 def test_is_without_beginning_alphabetical_checks():
     assert is_valid("ABC") == False
