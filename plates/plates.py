@@ -21,7 +21,7 @@ def is_valid(s):
         return False
 
     # not begining elphabetical
-    if count_letters(s[:3]).upper() == 'ABC'
+    if count_letters(s[:3]).upper() != 'ABC'
         return False
 
 
