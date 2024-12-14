@@ -4,7 +4,6 @@ import sys
 
 def main():
     plate = input("Plate: ")
-    plate = plate.upper()
     if is_valid(plate):
         print("Valid")
         #sys.exit(0)
