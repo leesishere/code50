@@ -26,12 +26,14 @@ def test_is_invalid_alphanumeric_characters():
 def test_is_without_beginning_alphabetical_checks():
     assert is_valid("ABC") == True
 
+def test_is_invalid_seven_char():
+    assert is_valid("OUTATIME") == False
+    
 '''
 def test_is_invalid_start_with_two_char():
     assert is_valid("H") == False
 
-def test_is_invalid_seven_char():
-    assert is_valid("OUTATIME") == False
+
 
 def test_is_valid_two_char():
     assert is_valid("Ja") == True
