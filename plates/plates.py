@@ -68,8 +68,8 @@ def is_valid(s):
             return False
 
     # not begining elphabetical
-    if count_letters(s[:3]).upper() != 'ABC'
-        return True
+    if count_letters(s[:3]).upper() == 'ABC'
+        return False
     return True
 
 def only_letter_or_number(s):
