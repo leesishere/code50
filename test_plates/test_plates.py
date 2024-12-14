@@ -39,8 +39,8 @@ def test_is_invalid_start_with_zero():
 def test_is_invalid_alphanumeric_characters():
     assert is_valid("AAAA?A") == False
 
-def test_is_beginning_alphabetical_checks():
-    assert is_valid("AAAAAA") == True
+def test_is_without_beginning_alphabetical_checks():
+    assert is_valid("9AAAAA") == True
 
 def test_is_invalid_cs_class():
     assert is_valid("CS05") == False
