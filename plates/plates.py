@@ -14,6 +14,11 @@ def is_valid(s):
     if count_letters(s[:2]) != 2 or len(s) > 6:
         return False
 
+    # “No periods, spaces, or punctuation marks are allowed.”
+    # Define patterns for characters and numbers
+    if only_letter_or_number(s):
+        return False
+
     if count_numbers(s) > 0:
         plate_list = order_of_things(s)
         # Numbers cannot be used in the middle of a plate; they must come at the end.
@@ -36,10 +41,7 @@ def is_valid(s):
                 if num[0] == '0':
                     return False
 
-    # “No periods, spaces, or punctuation marks are allowed.”
-    # Define patterns for characters and numbers
-    if only_letter_or_number(s):
-        return False
+
 
     return True
 
