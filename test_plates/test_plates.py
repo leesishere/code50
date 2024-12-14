@@ -28,7 +28,7 @@ def test_is_invalid_seven_char():
     assert is_valid("OUTATIME") == False
 
 def test_invalid_without_beginning_alphabetical():
-    assert is_valid("11AA") == False
+    assert is_valid("12AA") == False
 
 '''
 
