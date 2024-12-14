@@ -25,6 +25,9 @@ def is_valid(s):
     if not only_letter_or_number(s):
         return False
 
+    if len(s) == 4:
+        if s[]CS05
+
     if count_numbers(s) > 0:
         #plate_list = order_of_things(s)
         # Numbers cannot be used in the middle of a plate; they must come at the end.
