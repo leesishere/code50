@@ -41,7 +41,7 @@ def is_valid(s):
         if s[0] == '0':
             return False
 
-        # The first number used cannot be a ‘0’.” or start with a number
+        # The vharter can't start with a number
         if count_numbers(s[0]):
             return False
 
@@ -51,7 +51,7 @@ def is_valid(s):
         numbers = pattern.findall(s)
         if len(numbers) > 1:
             return False
-     
+
 
         # number must not be in the middle
         if count_letters(s[-1]) > 0:
