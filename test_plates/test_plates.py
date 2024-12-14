@@ -44,7 +44,9 @@ def test_is_valid_number_last():
 def test_is_without_beginning_alphabetical_checks():
     assert is_valid("ABCD56") == False
 
-
+# Execute the test runner and exit with the captured code
+if __name__ == "__main__":
+    exit_code = run_tests() sys.exit(exit_code)
 
 
 
