@@ -48,7 +48,7 @@ def only_letter_or_number(s):
     pattern = re.compile(r'[a-zA-Z]+|\d+')
 
     # List to hold strings without leters or numbers
-    none_valid_chat = [s for s in s if not pattern.search(s)]
+    none_valid_chat = [string for string in s if not pattern.search(s)]
     print(f"{count(none_valid_chat)}")
 
 def count_letters(s):
