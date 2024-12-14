@@ -26,10 +26,10 @@ def is_valid(s):
         return False
 
     # CS50 class name is incorrectly entered
-    if len(s) == 4:
-        if s[:2].upper() == 'CS':
-            if s[2:] != '50':
-                return False
+    #if len(s) == 4:
+    #     if s[:2].upper() == 'CS':
+    #         if s[2:] != '50':
+    #             return False
 
     if count_numbers(s) > 0:
         #plate_list = order_of_things(s)
