@@ -53,9 +53,9 @@ def is_valid(s):
             return False
 
 
-        # number must not be in the middle
-        # if count_letters(s[-1]) > 0:
-        #    return False
+        # number must be at the end of plate string
+        if count_letters(s[-1]) > 0:
+            return False
 
 
     return True
