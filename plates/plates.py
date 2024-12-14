@@ -62,14 +62,14 @@ def is_valid(s):
         # number must be at the end of plate string
         if count_letters(s[-1]) > 0:
             return False
-
+    '''
     # not begining alphabetical
     plate_string = order_of_things(s)
     letters_count = count_letters(s)
     alpha = ['A','B','C','D','E','F']
     if plate_string[:letters_count] == alpha[:letters_count]:
         return False
-
+    '''
 
     return True
 
