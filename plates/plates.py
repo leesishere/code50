@@ -34,18 +34,8 @@ def is_valid(s):
         # Regular expression pattern to find numbers
         pattern = re.compile(r'\d+') # Find all matches
         numbers = pattern.findall(s)
-        print(numbers)
-
-        # Numbers in the middle of plate
-        if count_numbers(s[-1]) == 0:
+        if len(number) > 1:
             return False
-        number_cnt = 0
-        for i in plate_list:
-            if count_numbers(i):
-                number_cnt += 1
-        if number_cnt > 1:
-            return False
-
 
     return True
 
