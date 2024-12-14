@@ -51,7 +51,7 @@ def only_letter_or_number(s):
     matches = pattern.findall(s)
     if len(matches) == 0:
         return True
-    else
+    else:
         return False
 
 def count_letters(s):
