@@ -49,7 +49,10 @@ def only_letter_or_number(s):
 
     # Find all matches
     matches = pattern.findall(s)
-    print(f"{matches}")
+    if len(matches) == 0:
+        return True
+    else
+        return False
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
