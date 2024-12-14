@@ -16,8 +16,12 @@ def is_valid(s):
     # “All vanity plates must start with at least two letters.”
     # “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”
 
+    # number start with 1 alphebetic charecters
+    if count_letters(s[:2]) != 2
+        return False
 
-    if count_letters(s[:2]) != 2 or len(s) > 6:
+    # nust not be longer that 6 charectors
+    if len(s) > 6:
         return False
 
     # “No periods, spaces, or punctuation marks are allowed.”
