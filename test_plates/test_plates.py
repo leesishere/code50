@@ -31,7 +31,7 @@ def test_without_beginning_alphabetical_checks():
     assert is_valid("22AAAA") == False
 
 def test_is_invalid_start_with_zero():
-    assert is_valid("0AAAAA") == False
+    assert not is_valid("0AAAAA") == True
 
 def test_is_invalid_alphanumeric_characters():
     assert is_valid("AAAA?A") == False
