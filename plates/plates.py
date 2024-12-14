@@ -7,6 +7,7 @@ def main():
     else:
         print("Invalid")
 
+
 def is_valid(s):
     # “All vanity plates must start with at least two letters.”
     # “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”#
@@ -48,16 +49,7 @@ def only_letter_or_number(s):
 
     # List to hold strings without leters or numbers
     none_valid_chat = [s for s in strings if not pattern.search(s)]
-
-
-    # Use re.split() to find parts of the string that do not match the pattern
-    non_matching_parts = re.split(pattern, s)
-
-    # Filter out empty strings from the result
-    non_matching_parts = [part for part in non_matching_parts if part]
-    if not non_matching_parts: # found pariods, commas etc.
-        return False
-    return True
+    print count(none_valid_chat)
 
 def count_letters(s):
     alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
