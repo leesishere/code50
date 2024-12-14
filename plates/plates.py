@@ -66,8 +66,11 @@ def is_valid(s):
             return False
 
     # not begining alphabetical
-    if s[:2].upper() == 'AB':
-        return False
+    plate_string = order_of_things(s)
+    print(f"{plate_string}")
+
+    #if s[:2].upper() == 'AB':
+    #    return False
 
     return True
 
