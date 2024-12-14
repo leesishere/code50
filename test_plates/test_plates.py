@@ -18,6 +18,10 @@ def test_is_valid_one_char():
 def test_is_valid_two_char():
     assert is_valid("Ja") == True
 
+def test_without_beginning_alphabetical():
+    assert is_valid("Ja") == True
+    assert is_valid("01") == False
+
 def test_is_valid_seven_char():
     assert is_valid("SEVEN77") == False
 
