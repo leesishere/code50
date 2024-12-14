@@ -34,7 +34,7 @@ def is_valid(s):
         # Regular expression pattern to find numbers
         pattern = re.compile(r'\d+') # Find all matches
         numbers = pattern.findall(s)
-        if len(number) > 1:
+        if len(numbers) > 1:
             return False
 
     return True
