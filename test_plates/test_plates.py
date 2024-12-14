@@ -46,7 +46,7 @@ def test_is_without_beginning_alphabetical_checks():
 
 # Execute the test runner and exit with the captured code
 if __name__ == "__main__":
-    exit_code = run_tests() sys.exit(exit_code)
+    exit_code = test_is_valid_cs_class() sys.exit(exit_code)
 
 
 
