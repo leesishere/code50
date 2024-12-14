@@ -49,15 +49,14 @@ def is_valid(s):
         # Regular expression pattern to find numbers
         pattern = re.compile(r'\d+') # Find all matches
         numbers = pattern.findall(s)
-        if len(numbers) > 1:
+        if len(numbers) > 1: # Numbers are seperate by alpebetic char via are in the middle
             return False
-        elif len(numbers[0]) > 1:
-            # more than 1 number foud
-            if numbers[0][0] == '0':
+        elif len(numbers[0]) > 1:  # more than 1 number foud
+            if numbers[0][0] == '0': # numbers must not start with zeros
                 return False
-            else
-                numbers[0] == '0':
-                return False
+            else:
+                if numbers[0] == '0': # One number and must not start with zeros
+                    return False
 
         # number must be at the end of plate string
         if count_letters(s[-1]) > 0:
