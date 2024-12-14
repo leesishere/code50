@@ -17,7 +17,7 @@ def is_valid(s):
     # “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”
 
     # number start with 1 alphebetic charecters
-    if count_letters(s[:2]) != 2
+    if count_letters(s[:2]) != 2:
         return False
 
 
