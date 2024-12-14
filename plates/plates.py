@@ -54,8 +54,8 @@ def is_valid(s):
 
 
         # number must not be in the middle
-        if count_letters(s[-1]) > 0:
-            return False
+        # if count_letters(s[-1]) > 0:
+        #    return False
 
 
     return True
