@@ -39,6 +39,9 @@ def test_is_valid_number_last():
 def test_invalid_without_beginning_alphabetical():
     assert is_valid("+AA") == False
 
+def test_invalid_without_beginning_alphabetical_two():
+    assert is_valid("1AA") == False
+
 '''
 
 def test_is_without_beginning_alphabetical_checks():
