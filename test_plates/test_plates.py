@@ -44,7 +44,7 @@ def test_invalid_without_beginning_alphabetical_two():
 
 '''
 
-def test_is_without_beginning_alphabetical_checks():
+def test_is_without_beginning_alphabetical_checks_three():
     assert is_valid("ABC") == False
 
 
