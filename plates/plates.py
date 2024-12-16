@@ -13,7 +13,7 @@ def main():
 
 
 def is_valid(s):
-    s[:1].isdigit()
+    print(s[:1].isalpha())
 
 
 
