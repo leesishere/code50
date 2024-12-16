@@ -15,11 +15,10 @@ def main():
 def is_valid(s):
 
     try:
-        if not s[:1].isalpha()
+        if not s[:1].isalpha():
+            s[:1]/0
     except TypeError as e:
-        print(e) # Output: Non-alphabetic character found: '1'
-
-
+        return
 
 
 
