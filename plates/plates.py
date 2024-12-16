@@ -13,6 +13,9 @@ def main():
 
 
 def is_valid(s):
+    count_letters(s[:1])
+
+
     # “All vanity plates must start with at least two letters.”
     # “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”
 
@@ -62,7 +65,7 @@ def is_valid(s):
         # number must be at the end of plate string
         if count_letters(s[-1]) > 0:
             return False
-    
+
     # not begining alphabetical
     plate_string = order_of_things(s)
     letters_count = count_letters(s)
