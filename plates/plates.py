@@ -13,7 +13,13 @@ def main():
 
 
 def is_valid(s):
-    print(s[:1].isalpha())
+
+    try:
+        if not s[:1].isalpha()
+    except TypeError as e:
+        print(e) # Output: Non-alphabetic character found: '1'
+
+
 
 
 
