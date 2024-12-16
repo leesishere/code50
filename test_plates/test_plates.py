@@ -43,6 +43,10 @@ def test_invalid_without_beginning_alphabetical():
 def test_invalid_without_beginning_alphabetical_two():
     assert is_valid("1AA") == False
 
+def test_error():
+    with pytest.raises(TypeError):
+        assert is_valid("1AA")
+
 '''
 
 def test_is_without_beginning_alphabetical_checks_three():
