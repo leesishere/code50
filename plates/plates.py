@@ -13,8 +13,8 @@ def main():
 
 
 def is_valid(s):
-    count_letters(s[:1]).isdigit()
-    
+    s[:1].isdigit()
+
 
 
     # “All vanity plates must start with at least two letters.”
