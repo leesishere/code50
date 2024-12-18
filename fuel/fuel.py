@@ -2,7 +2,7 @@
 def main():
     while True:
         fract = input("Fraction: ")
-        fract = convert_fraction(fract)
+        fract = convert(fract)
         if type(fract) == type(1.0):
             percentage = fract * 100
             if percentage < 2:
@@ -15,10 +15,8 @@ def main():
             break
     print(f"{print_string}")
 
+
 def convert(f):
-
-
-def convert_fraction(f):
     f = f.replace(" ", "")
     try:
         numerator, denominator = f.split('/')
