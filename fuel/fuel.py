@@ -2,13 +2,9 @@
 def main():
     while True:
         fract = input("Fraction: ")
-        f = f.replace(" ", "")
-
-        numerator, denominator = f.split('/')
-
-        if is_int(numerator) and is_int(denominator):
-            numerator = int(numerator)
-            denominator = int(denominator)
+        if skip(fract):
+            continue
+        fract = convert(fract)
 
         #if type(fract) == type(1.0):
         if type(fract) == type(1):
@@ -18,6 +14,18 @@ def main():
                 break
     if print_string:
         print(f"{print_string}")
+
+def skip(s):
+    f = f.replace(" ", "")
+    numerator, denominator = f.split('/')
+
+    if is_int(numerator) and is_int(denominator):
+        numerator = int(numerator)
+        denominator = int(denominator)
+        if numerator > denominator:
+            return True
+       else:
+        raise ValueError
 
 def gauge(percentage):
     if percentage < 2:
