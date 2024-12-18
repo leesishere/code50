@@ -24,7 +24,8 @@ def convert_fraction(f):
         # force error if numarator is more than denominator
         if numerator > denominator:
             denominator = 0
-        return float(numerator/round(denominator , 2))
+            # round(denominator , 2)
+        return float(numerator/denominator)
     except ValueError:
         pass
     except ZeroDivisionError:
