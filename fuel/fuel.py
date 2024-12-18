@@ -3,7 +3,6 @@ def main():
     while True:
         fract = input("Fraction: ")
         fract = convert(fract)
-        print(fract)
         if type(fract) == type(1.0):
             percentage = gauge(fract)
             if is_percentage(percentage) or ('E' in percentage or 'F' in percentage):
