@@ -11,7 +11,7 @@ def main():
     if print_string:
         print(f"{print_string}")
 
-def gauge_(percentage):
+def gauge(percentage):
     percentage = percentage * 100
     if percentage < 2:
         print_string = f"E"
