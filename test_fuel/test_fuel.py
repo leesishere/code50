@@ -14,7 +14,7 @@ def test_shorten():
     assert convert("1/4") == .25
 
 def test_ValueError():
-    with pytest.raises(ZeroDivisionError):
+    with pytest.raises(ValueError):
         assert convert("6/5")
 
 '''
