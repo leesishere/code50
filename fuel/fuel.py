@@ -46,6 +46,7 @@ def convert(f):
         raise ValueError
 
     #return divide(numerator, denominator)
+    print(divide_(numerator, denominator))
     return divide_(numerator, denominator)
 
 
