@@ -6,18 +6,19 @@ def main():
         if type(fract) == type(1.0):
             percentage = gauge(percentage)
 
-            if percentage < 2:
-                print_string = f"E"
-            elif percentage > 89:
-                print_string = f"F"
-            else:
-                percentage = int(percentage)
-                print_string = f"{percentage}%"
+
             break
     print(f"{print_string}")
 
 def gauge(percentage):
-    percentage * 100
+    percentage = percentage * 100
+    if percentage < 2:
+        print_string = f"E"
+    elif percentage > 89:
+        print_string = f"F"
+    else:
+        percentage = int(percentage)
+        print_string = f"{percentage}%"
 
 def convert(f):
     f = f.replace(" ", "")
