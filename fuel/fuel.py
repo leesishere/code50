@@ -16,15 +16,15 @@ def main():
         print(f"{print_string}")
 
 def skip(s):
-    f = f.replace(" ", "")
-    numerator, denominator = f.split('/')
+    s = s.replace(" ", "")
+    numerator, denominator = s.split('/')
 
     if is_int(numerator) and is_int(denominator):
         numerator = int(numerator)
         denominator = int(denominator)
         if numerator > denominator:
             return True
-       else:
+    else:
         raise ValueError
 
 def gauge(percentage):
