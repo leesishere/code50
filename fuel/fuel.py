@@ -24,15 +24,15 @@ def gauge(percentage):
 
 def convert(f):
     f = f.replace(" ", "")
-    try:
-        numerator, denominator = f.split('/')
+    #try:
+    #    numerator, denominator = f.split('/')
 
     try:
-        is_int():
+        is_int(f.split('/')):
     except ValueError as e:
         print(e) # Output: Cannot convert 'abc' to an integer
 
-    numerator = int(numerator)
+    numerator = is_int(numerator)
     denominator = int(denominator)
     # force error if numarator is more than denominator
     if denominator == 0:
