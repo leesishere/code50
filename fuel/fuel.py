@@ -26,12 +26,16 @@ def convert(f):
     f = f.replace(" ", "")
 
     numerator, denominator = f.split('/')
-    try:
+
+    if is_int(numerator) and is_int(denominator):
         numerator = int(numerator)
-        denominator =int(denominator)
-        return round(float(numerator/denominator),2)
-    except ValueError:
-        pass
+        denominator = int(denominator)
+    else
+        raise ValueError("Cannot divide by zero")
+
+
+    return round(float(numerator/denominator),2)
+
 
 def is_percentage(s):
     # Check if the string ends with '%'
@@ -43,9 +47,14 @@ def is_percentage(s):
 
 def divide(a, b):
     if b == 0:
-        raise ValueError("Cannot divide by zero")
+        raise ZeroDivisionError("Cannot divide by zero")
     return a / b
 
+def is_int(num):
+    if type(num) == type(1):
+        return True
+    else
+        return False
 
 if __name__ == "__main__":
     main()
