@@ -2,10 +2,13 @@
 def main():
     while True:
         fract = input("Fraction: ")
-        if not convert(fract):
-            continue
-        else:
-            fract = convert(fract)
+        f = f.replace(" ", "")
+
+        numerator, denominator = f.split('/')
+
+        if is_int(numerator) and is_int(denominator):
+            numerator = int(numerator)
+            denominator = int(denominator)
 
         #if type(fract) == type(1.0):
         if type(fract) == type(1):
