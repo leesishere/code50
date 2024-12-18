@@ -12,9 +12,11 @@ from fuel import gauge
 
 def test_shorten():
     assert convert("1/4") == .25
+'''
     3/4
     4/4
     0/4
     4/0 ZeroDivisionError
     three/four ValueError
     1.5/3 ValueError
+'''
