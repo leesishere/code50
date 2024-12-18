@@ -33,13 +33,6 @@ def convert(f):
     except ValueError:
         pass
 
-
-def is_int(s):
-    if type(s) != type(1):
-        #raise ValueError(f"Cannot convert '{s}' to an integer")
-        raise ValueError()
-    return True
-
 def is_percentage(s):
     # Check if the string ends with '%'
     if s.endswith('%'):
