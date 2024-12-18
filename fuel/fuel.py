@@ -23,7 +23,6 @@ def gauge(percentage):
     return print_string
 
 def gauge_(percentage):
-    print(percentage)
     if percentage < 2:
         print_string = f"E"
     elif percentage > 89:
