@@ -4,10 +4,10 @@ def main():
         fract = input("Fraction: ")
         fract = convert(fract)
         if type(fract) == type(1.0):
-            percentage = gauge(percentage)
-
-
-            break
+            percentage = gauge(fract)
+            if is_percentage(percentage) or ('E' in percentage or 'F' in percentage):
+                print_string = percentage
+                break
     print(f"{print_string}")
 
 def gauge(percentage):
@@ -19,7 +19,7 @@ def gauge(percentage):
     else:
         percentage = int(percentage)
         print_string = f"{percentage}%"
-    retrun print_string
+    return print_string
 
 def convert(f):
     f = f.replace(" ", "")
