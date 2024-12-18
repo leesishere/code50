@@ -22,7 +22,7 @@ def gauge_(percentage):
         print_string = f"{percentage}%"
     return print_string
 
-def convert_(f):
+def convert(f):
     f = f.replace(" ", "")
 
     numerator, denominator = f.split('/')
@@ -48,7 +48,7 @@ def is_percentage(s):
 def divide(a, b):
     if b == 0:
         raise ZeroDivisionError
-    return round(float(a/b),2)
+    return round(int(a/b),2)
 
 def is_int(num):
     try:
