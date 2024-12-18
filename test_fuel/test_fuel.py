@@ -12,6 +12,11 @@ from fuel import gauge
 
 def test_shorten():
     assert convert("1/4") == .25
+
+def test_ValueError():
+    assertconvert()
+        with pytest.raises(TypeError):
+        assert shorten(1)
 '''
     3/4
     4/4
