@@ -36,7 +36,6 @@ def convert(f):
 
 def is_int(s):
     if type(s) != type(1):
-        print("howdy")
         raise ValueError(f"Cannot convert '{s}' to an integer")
     return int(s)
 
