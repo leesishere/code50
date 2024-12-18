@@ -3,8 +3,9 @@ def main():
     while True:
         fract = input("Fraction: ")
         fract = convert(fract)
-        if type(fract) == type(1.0):
-            percentage = gauge(fract)
+        #if type(fract) == type(1.0):
+        if type(fract) == type(1):
+            percentage = gauge_(fract)
             if is_percentage(percentage) or ('E' in percentage or 'F' in percentage):
                 print_string = percentage
                 break
@@ -22,6 +23,18 @@ def gauge(percentage):
         print_string = f"{percentage}%"
     return print_string
 
+def gauge_(percentage):
+    percentage = percentage * 100
+    if percentage < 2:
+        print_string = f"E"
+    elif percentage > 89:
+        print_string = f"F"
+    else:
+        percentage = int(percentage)
+        print_string = f"{percentage}%"
+    return print_string
+
+
 def convert(f):
     f = f.replace(" ", "")
 
@@ -33,7 +46,8 @@ def convert(f):
     else:
         raise ValueError
 
-    return divide(numerator, denominator)
+    #return divide(numerator, denominator)
+    return divide_(numerator, denominator)
 
 
 def is_percentage(s):
@@ -48,6 +62,11 @@ def divide(a, b):
     if b == 0:
         raise ZeroDivisionError
     return round(float(a/b),2)
+
+def divide_(a, b):
+    if b == 0:
+        raise ZeroDivisionError
+    return int(a/b)
 
 def is_int(num):
     try:
