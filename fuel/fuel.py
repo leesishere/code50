@@ -15,7 +15,9 @@ def main():
             break
     print(f"{print_string}")
 
+def gauge(percentage):
 
+    
 def convert(f):
     f = f.replace(" ", "")
     try:
