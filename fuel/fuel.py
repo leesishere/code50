@@ -2,8 +2,11 @@
 def main():
     while True:
         fract = input("Fraction: ")
-        fract = convert(fract)
-  
+        if not convert(fract):
+            continue
+        else:
+            fract = convert(fract)
+
         #if type(fract) == type(1.0):
         if type(fract) == type(1):
             percentage = gauge_(fract)
@@ -45,7 +48,7 @@ def convert(f):
     else:
         raise ValueError
 
-    #return divide(numerator, denominator)
+    print(divide_(numerator, denominator))
     return divide_(numerator, denominator)
 
 
