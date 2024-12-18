@@ -29,15 +29,16 @@ def convert(f):
     try:
         numerator = is_int(numerator)
         denominator = is_int(denominator)
+        converted_num = round(float(numerator/denominator),2)
     except ValueError as e:
         print(e) # Output
 
-    return round(float(numerator/denominator),2)
+    return converted_num
 
 
 
 def is_int(s):
-    if not s.isdigit():
+    if type(s) != type(1):
         print("howdy")
         raise ValueError(f"Cannot convert '{s}' to an integer")
     return int(s)
