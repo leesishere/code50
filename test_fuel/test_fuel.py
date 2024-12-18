@@ -10,8 +10,10 @@ from fuel import gauge
 # If X and/or Y is not an integer, or if X is greater than Y, then convert should raise a ValueError.
 # If Y is 0, then convert should raise a ZeroDivisionError.
 
-def test_shorten():
+def test_convert():
     assert convert("1/4") == .25
+    assert convert("3/4") == .75
+    assert convert("4/4") == 1
 
 def test_ValueError():
     with pytest.raises(ValueError):
