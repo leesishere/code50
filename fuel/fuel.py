@@ -31,7 +31,7 @@ def convert(f):
         numerator = int(numerator)
         denominator = int(denominator)
     else:
-        raise ValueError
+        raise ValueError()
 
     return divide(numerator/denominator)
 
