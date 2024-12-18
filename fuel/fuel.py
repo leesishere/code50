@@ -24,16 +24,12 @@ def gauge(percentage):
 
 def convert(f):
     f = f.replace(" ", "")
-    try:
+    
         numerator, denominator = f.split('/')
         numerator = is_int(numerator)
         denominator = is_int(denominator)
         # force error if numarator is more than denominator
 
-    if denominator == 0:
-        raise ZeroDivisionError
-    if numerator > denominator:
-        raise ValueError
 
     return round(float(numerator/denominator),2)
 
