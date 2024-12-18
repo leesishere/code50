@@ -3,6 +3,7 @@ def main():
     while True:
         fract = input("Fraction: ")
         fract = convert(fract)
+  
         #if type(fract) == type(1.0):
         if type(fract) == type(1):
             percentage = gauge_(fract)
