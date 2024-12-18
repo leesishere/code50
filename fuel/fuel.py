@@ -38,6 +38,7 @@ def convert(f):
 
 def is_int(s):
     if not s.isdigit():
+        print("howdy")
         raise ValueError(f"Cannot convert '{s}' to an integer")
     return int(s)
 
