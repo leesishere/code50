@@ -13,7 +13,6 @@ def main():
         print(f"{print_string}")
 
 def gauge(percentage):
-    percentage = percentage * 100
     if percentage < 2:
         print_string = f"E"
     elif percentage > 89:
@@ -66,7 +65,7 @@ def divide(a, b):
 def divide_(a, b):
     if b == 0:
         raise ZeroDivisionError
-    return int(a/b)
+    return round(float(a/b),2) * 100
 
 def is_int(num):
     try:
