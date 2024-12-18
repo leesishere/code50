@@ -36,7 +36,8 @@ def convert(f):
 
 def is_int(s):
     if type(s) != type(1):
-        raise ValueError(f"Cannot convert '{s}' to an integer")
+        #raise ValueError(f"Cannot convert '{s}' to an integer")
+        raise ValueError()
     return int(s)
 
 def is_percentage(s):
