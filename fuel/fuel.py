@@ -19,7 +19,8 @@ def gauge(percentage):
     else:
         percentage = int(percentage)
         print_string = f"{percentage}%"
-
+    retrun print_string
+    
 def convert(f):
     f = f.replace(" ", "")
     try:
