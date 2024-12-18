@@ -15,6 +15,9 @@ def main():
             break
     print(f"{print_string}")
 
+def convert(f):
+
+
 def convert_fraction(f):
     f = f.replace(" ", "")
     try:
