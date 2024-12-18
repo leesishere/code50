@@ -27,12 +27,12 @@ def convert(f):
 
     numerator, denominator = f.split('/')
     try:
-        is_int(numerator)
-        is_int(denominator)
-    except ValueError as e:
-        print(e) # Output
+        numerator = int(numerator)
+        denominator =int(denominator)
+        return round(float(numerator/denominator),2)
+    except ValueError:
+        pass
 
-    return round(float(int(numerator)/int(denominator)),2)
 
 def is_int(s):
     if type(s) != type(1):
