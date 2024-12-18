@@ -20,7 +20,7 @@ def gauge(percentage):
         percentage = int(percentage)
         print_string = f"{percentage}%"
     retrun print_string
-    
+
 def convert(f):
     f = f.replace(" ", "")
     try:
@@ -36,6 +36,14 @@ def convert(f):
         pass
     except ZeroDivisionError:
         pass
+
+def is_percentage(s):
+    # Check if the string ends with '%'
+    if s.endswith('%'):
+        # Remove the '%' sign and check if the remaining part is a digit
+        number_part = s[:-1]
+        return number_part.replace('.', '', 1).isdigit()
+    return False
 
 
 if __name__ == "__main__":
