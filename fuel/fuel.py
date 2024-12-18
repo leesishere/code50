@@ -4,8 +4,8 @@ def main():
         fract = input("Fraction: ")
         fract = convert(fract)
         if type(fract) == type(1.0):
-            
-            percentage = fract * 100
+            percentage = gauge(percentage)
+
             if percentage < 2:
                 print_string = f"E"
             elif percentage > 89:
@@ -17,7 +17,7 @@ def main():
     print(f"{print_string}")
 
 def gauge(percentage):
-
+    percentage * 100
 
 def convert(f):
     f = f.replace(" ", "")
