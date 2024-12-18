@@ -31,10 +31,10 @@ def convert(f):
     if is_int(numerator) and is_int(denominator):
         numerator = int(numerator)
         denominator = int(denominator)
-    #else:
-        #raise ValueError("Cannot divide by zero")
+    else:
+        raise ValueError("Cannot divide by zero")
 
-    #return divide(numerator/denominator)
+    return divide(numerator/denominator)
 
 
 def is_percentage(s):
@@ -55,6 +55,7 @@ def is_int(num):
         num = int(num)
     except:
         pass
+
     if type(num) == type(1):
         return True
     else:
