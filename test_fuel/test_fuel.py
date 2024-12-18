@@ -15,7 +15,7 @@ def test_shorten():
 
 def test_ValueError():
     with pytest.raises(ValueError, match="Cannot divide by zero"):
-    convert("three/four")
+        convert("three/four")
 
 '''
     3/4
