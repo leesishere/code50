@@ -11,7 +11,7 @@ def main():
     if print_string:
         print(f"{print_string}")
 
-def gauge(percentage):
+def gauge_(percentage):
     percentage = percentage * 100
     if percentage < 2:
         print_string = f"E"
@@ -22,7 +22,7 @@ def gauge(percentage):
         print_string = f"{percentage}%"
     return print_string
 
-def convert(f):
+def convert_(f):
     f = f.replace(" ", "")
 
     numerator, denominator = f.split('/')
