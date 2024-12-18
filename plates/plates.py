@@ -8,8 +8,8 @@ def main():
         print("Valid")
         sys.exit(0)
     else:
-        print("Invalid")
-        sys.exit(1)
+        raise Exception("Invalid")
+        #sys.exit(1)
 
 
 def is_valid(s):
