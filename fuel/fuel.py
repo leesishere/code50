@@ -26,20 +26,32 @@ def convert(f):
     f = f.replace(" ", "")
     try:
         numerator, denominator = f.split('/')
-        numerator = int(numerator)
-        denominator = int(denominator)
-        # force error if numarator is more than denominator
-        if denominator == 0:
-            raise ZeroDivisionError
-        if numerator > denominator:
-            raise ValueError
 
-        return round(float(numerator/denominator),2)
-        
+    try:
+        is_int():
+    except ValueError as e:
+        print(e) # Output: Cannot convert 'abc' to an integer
+
+    numerator = int(numerator)
+    denominator = int(denominator)
+    # force error if numarator is more than denominator
+    if denominator == 0:
+        raise ZeroDivisionError
+    if numerator > denominator:
+        raise ValueError
+
+    return round(float(numerator/denominator),2)
+
     except ValueError:
         pass
     except ZeroDivisionError:
         pass
+
+
+def is_int(s):
+    if not s.isdigit():
+        raise ValueError(f"Cannot convert '{s}' to an integer")
+    return int(s)
 
 def is_percentage(s):
     # Check if the string ends with '%'
