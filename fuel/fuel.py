@@ -33,10 +33,6 @@ def convert(f):
 
     return round(float(numerator/denominator),2)
 
-    except ValueError:
-        pass
-    except ZeroDivisionError:
-        pass
 
 
 def is_int(s):
