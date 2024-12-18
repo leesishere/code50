@@ -51,6 +51,10 @@ def divide(a, b):
     return round(float(a/b),2)
 
 def is_int(num):
+    try:
+        num = int(num)
+    except:
+        pass
     if type(num) == type(1):
         return True
     else:
