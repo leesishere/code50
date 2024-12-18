@@ -66,7 +66,7 @@ def divide(a, b):
 def divide_(a, b):
     if b == 0:
         raise ZeroDivisionError
-    return round(float(a/b),2) * 100
+    return int(round(float(a/b),2) * 100)
 
 def is_int(num):
     try:
