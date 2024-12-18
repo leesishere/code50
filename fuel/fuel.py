@@ -27,7 +27,6 @@ def convert(f):
 
     numerator, denominator = f.split('/')
 
-    print(f"{is_int(numerator)} and {is_int(denominator):}")
     if is_int(numerator) and is_int(denominator):
         numerator = int(numerator)
         denominator = int(denominator)
