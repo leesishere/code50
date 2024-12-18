@@ -15,7 +15,7 @@ def test_shorten():
 
 def test_ValueError():
     with pytest.raises(ValueError):
-        assert convert("6/5")
+        assert convert("three/four")
 
 '''
     3/4
