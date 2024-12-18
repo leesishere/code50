@@ -16,6 +16,12 @@ def test_shorten():
 def test_ValueError():
     with pytest.raises(ValueError):
         assert convert("three/four")
+        assert convert("1.5/3")
+
+def test_ZeroDivisionError():
+    with pytest.raises(ZeroDivisionError):
+        assert convert("4/0")
+
 
 '''
     3/4
