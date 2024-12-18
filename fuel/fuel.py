@@ -31,8 +31,8 @@ def convert(f):
     if is_int(numerator) and is_int(denominator):
         numerator = int(numerator)
         denominator = int(denominator)
-    else:
-        raise ValueError("Cannot divide by zero")
+    #else:
+        #raise ValueError("Cannot divide by zero")
 
     return divide(numerator/denominator)
 
