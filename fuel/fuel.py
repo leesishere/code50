@@ -41,6 +41,11 @@ def is_percentage(s):
         return number_part.replace('.', '', 1).isdigit()
     return False
 
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
+
 
 if __name__ == "__main__":
     main()
