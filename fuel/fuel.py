@@ -34,7 +34,7 @@ def convert(f):
     else:
         raise ValueError("Cannot divide by zero")
 
-    return divide(numerator/denominator)
+    return divide(numerator, denominator)
 
 
 def is_percentage(s):
