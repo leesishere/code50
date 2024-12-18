@@ -9,7 +9,7 @@ def main():
                 print_string = percentage
                 break
     if print_string:
-        print(f"{print_string}") 
+        print(f"{print_string}")
 
 def gauge(percentage):
     percentage = percentage * 100
@@ -27,18 +27,18 @@ def convert(f):
 
     numerator, denominator = f.split('/')
     try:
-        numerator = is_int(numerator)
-        denominator = is_int(denominator)
-        return round(float(numerator/denominator),2)
+        is_int(numerator)
+        is_int(denominator)
     except ValueError as e:
         print(e) # Output
 
+    return round(float(int(numerator)/int(denominator)),2)
 
 def is_int(s):
     if type(s) != type(1):
         #raise ValueError(f"Cannot convert '{s}' to an integer")
         raise ValueError()
-    return int(s)
+    return True
 
 def is_percentage(s):
     # Check if the string ends with '%'
