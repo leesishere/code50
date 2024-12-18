@@ -30,6 +30,7 @@ def convert(f):
         denominator = int(denominator)
         # force error if numarator is more than denominator
         if numerator > denominator:
+            raise ValueError
             denominator = 0
             # round(denominator , 2)
         return round(float(numerator/denominator),2)
