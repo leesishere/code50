@@ -26,10 +26,11 @@ def convert(f):
     f = f.replace(" ", "")
 
     numerator, denominator = f.split('/')
-
-    numerator = is_int(numerator)
-    denominator = is_int(denominator)
-
+    try:
+        numerator = is_int(numerator)
+        denominator = is_int(denominator)
+    except ValueError as e:
+        print(e) # Output
 
     return round(float(numerator/denominator),2)
 
