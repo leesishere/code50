@@ -48,7 +48,7 @@ def is_percentage(s):
 def divide(a, b):
     if b == 0:
         raise ZeroDivisionError
-    return round(int(a/b),2)
+    return round(float(a/b),2)
 
 def is_int(num):
     try:

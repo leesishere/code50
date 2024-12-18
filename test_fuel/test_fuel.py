@@ -11,8 +11,8 @@ from fuel import gauge
 # If Y is 0, then convert should raise a ZeroDivisionError.
 
 def test_convert():
-    assert convert("1/4") == 25
-    assert convert("3/4") == 75
+    assert convert("1/4") == .25
+    assert convert("3/4") == .75
     assert convert("4/4") == 1
     assert convert("0/4") == 0
 
