@@ -8,7 +8,8 @@ def main():
             if is_percentage(percentage) or ('E' in percentage or 'F' in percentage):
                 print_string = percentage
                 break
-    print(f"{print_string}")
+    if print_string:
+        print(f"{print_string}") 
 
 def gauge(percentage):
     percentage = percentage * 100
