@@ -29,11 +29,13 @@ def convert(f):
         numerator = int(numerator)
         denominator = int(denominator)
         # force error if numarator is more than denominator
+        if denominator == 0:
+            raise ZeroDivisionError
         if numerator > denominator:
             raise ValueError
-            denominator = 0
-            # round(denominator , 2)
+
         return round(float(numerator/denominator),2)
+        
     except ValueError:
         pass
     except ZeroDivisionError:
