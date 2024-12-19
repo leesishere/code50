@@ -7,6 +7,7 @@ def main():
 
 
 def check_arguments(params):
+    print(params)
     if len(params) == 2:
         print("Too few command-line arguments")
         sys.exit()
