@@ -17,8 +17,9 @@ def count_code_lines(file_path):
             line_count = content.split("\n")
             print(len(line_count))
             print("*" * 10)
-            results_count = remove_hash_comments(content).split("\n")
-            print(results_count)
+            results = remove_hash_comments(content)
+            results_count = results.split("\n")
+            print()
             print(len(results_count))
 
     except FileNotFoundError:
@@ -26,7 +27,7 @@ def count_code_lines(file_path):
 
 def remove_blank_lines(test):
     cleaned_list = [item for item in sample_list if item.strip()]
-    
+
 def remove_hash_comments(text):
     # Define the pattern to match lines with whitespace followed by #
     pattern = r'^\s+#.*$'
