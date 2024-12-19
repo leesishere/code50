@@ -2,16 +2,17 @@ import sys
 import os
 
 def main(file_path):
-    print(file_path)
+    print(file_exists(file_path))
 
+
+
+def file_exists(file_name):
 
     # Check if the file exists
-
     if os.path.isfile(file_path):
-        print("File exists")
+        return True
     else:
-        print("File does not exist")
-
+        return False
 
 
 if __name__ == "__main__":
