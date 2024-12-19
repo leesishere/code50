@@ -21,7 +21,7 @@ def count_code_lines(file_path):
         with open(file_path, 'r') as file:
             # Read the entire content of the file
             content = file.read()
-            print(f"{len(content.split("\n"))}")
+            #print(f"{len(content.split("\n"))}")
 
             results = remove_blank_lines(remove_hash_comments(content))
             '''
