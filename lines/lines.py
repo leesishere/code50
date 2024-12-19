@@ -37,6 +37,7 @@ def find_triple_quote_lines(text):
     # Regular expression to find lines that start and end with triple quotes
     pattern = r"^'''(.*?)'''$"
     matches = re.findall(pattern, text, re.MULTILINE)
+    "\n".join([line for line in text.splitlines() if line.strip()])
 
     return matches
 
