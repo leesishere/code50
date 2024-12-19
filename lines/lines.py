@@ -6,8 +6,7 @@ def main(file_path):
 
 
 
-def file_exists(file_name):
-
+def file_exists(file_path):
     # Check if the file exists
     if os.path.isfile(file_path):
         return True
