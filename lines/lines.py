@@ -6,7 +6,7 @@ def main(file_path):
 
 
     # Check if the file exists
-   
+
     if os.path.isfile(file_path):
         print("File exists")
     else:
@@ -15,4 +15,4 @@ def main(file_path):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main(sys.argv[1])
