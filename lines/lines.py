@@ -23,7 +23,7 @@ def count_code_lines(file_path):
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
 
-def remove_hash_comments_(text):
+def remove_hash_comments_blank_lines(text):
     # Define the pattern to match lines with whitespace followed by #
     pattern = r'^\s+#.*$'
 
