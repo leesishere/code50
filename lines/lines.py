@@ -30,7 +30,7 @@ def count_code_lines(file_path):
             print(results)
             print("*" * 10)
             # Find the lines with triple quotes
-            result = find_triple_quote_lines(results)
+            result = remove_DocString(results)
             print("Lines with triple quotes:")
             for match in result:
                 print(f"'''{match}'''")
