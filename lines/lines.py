@@ -18,6 +18,7 @@ def count_code_lines(file_path):
             print(len(line_count))
             print("*" * 10)
             results_count = remove_hash_comments_blank_lines(content).split("\n")
+            print(results_count)
             print(len(results_count))
 
     except FileNotFoundError:
