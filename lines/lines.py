@@ -14,13 +14,21 @@ def count_code_lines(file_path):
             content = file.read()
             print("File content:")
             print(content)
-
+            print("*" * 10)
+            print(remove_hash_comments(content))
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
 
-def remove_hash_comments():
-# Define the pattern to match lines with whitespace followed by #
-pattern = r'^\s+#.*$'
+def remove_hash_comments(text):
+    # Define the pattern to match lines with whitespace followed by #
+    pattern = r'^\s+#.*$'
+
+    # Use re.sub() to remove matching lines
+    result = re.sub(pattern, '', text, flags=re.MULTILINE)
+
+    # Optionally, strip leading/trailing whitespace
+    result = result.strip()
+    return result
 
 def check_arguments(params):
     if len(params) == 1:
