@@ -25,7 +25,7 @@ def count_code_lines(file_path):
             print("*" * 10)
             results = remove_blank_lines(results)
             print(f"remove_blank_lines = {len(results.split("\n"))}")
-
+            print(results)
 
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
