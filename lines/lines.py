@@ -8,6 +8,9 @@ This program counts all python code by:
     3. remvong DocString lines such as this one
 
 '''
+
+   # test this comment line? 
+
 def main():
     file_path = check_arguments(sys.argv)
     if py_file_exists(file_path):
