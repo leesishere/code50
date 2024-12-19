@@ -24,5 +24,8 @@ def py_extension(file_path):
         return False
 
 if __name__ == "__main__":
-    Too few command-line arguments
-    main(sys.argv[1])
+    try:
+        main(sys.argv[1])
+    except:
+        print("Too few command-line arguments")
+        sys.exit(1)
