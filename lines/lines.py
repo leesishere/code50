@@ -12,13 +12,10 @@ def count_code_lines(file_path):
         with open(file_path, 'r') as file:
             # Read the entire content of the file
             content = file.read()
-            print("File content:")
-            #print(content)
-            line_count = content.split("\n")
-            print(len(line_count))
+            print(len(content.split("\n")))
             print("*" * 10)
             results = remove_hash_comments(content)
-            results_count = results.split("\n")
+            print(len(results.split("\n")))
             print()
             print(len(results_count))
 
@@ -27,7 +24,7 @@ def count_code_lines(file_path):
 
 def remove_blank_lines(text):
     # Split the string into lines, filter out blank lines, and join the remaining lines
-    cleaned_text = "\n".join([line for line in text.splitlines() if line.strip()])
+    return "\n".join([line for line in text.splitlines() if line.strip()])
 
 
 def remove_hash_comments(text):
