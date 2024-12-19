@@ -26,36 +26,21 @@ def count_code_lines(file_path):
             results = remove_blank_lines(results)
             print(f"remove_blank_lines = {len(results.split("\n"))}")
             print("*" * 10)
+            results = remove_DocString(results)
+            print(f"remove_DocString = {len(results.split("\n"))}")
+            print("*" * 10)
             print(results)
+
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
 
 def remove_DocString(text):
-import re
-
-def find_triple_quote_lines(text):
     # Regular expression to find lines that start and end with triple quotes
     pattern = r"^'''(.*?)'''$"
     matches = re.findall(pattern, text, re.MULTILINE)
-    "\n".join([line for line in text.splitlines() if line.strip()])
+    result = "\n".join([line for line in text.splitlines() if matches])
 
-    return matches
-
-# Sample multi-line string
-text = """
-This is a line with text
-'''This is a line with triple quotes'''
-This line should stay
-'''Another triple quoted line'''
-And this line should stay as well
-"""
-
-# Find the lines with triple quotes
-result = find_triple_quote_lines(text)
-
-print("Lines with triple quotes:")
-for match in result:
-    print(f"'''{match}'''")
+    return result
 
 
 def remove_blank_lines(text):
