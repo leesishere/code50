@@ -18,8 +18,7 @@ def file_exists(file_path):
 
 def py_extension(file_path):
     file_extension = os.path.splitext(file_path)[1]
-    
-    if file_extension.upper() == 'PY':
+    if file_extension == '.py':
         return True
     else:
         return False
