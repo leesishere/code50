@@ -21,7 +21,9 @@ def count_code_lines(file_path):
             print(f"{len(content.split("\n"))}")
 
             results = remove_blank_lines(remove_hash_comments(content))
-            print(f"{len(results.split("\n"))}")
+            for line in results.split("\n"):
+                print(f"{line}")
+            #print(f"{len(results.split("\n"))}")
 
 
     except FileNotFoundError:
