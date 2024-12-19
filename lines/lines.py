@@ -19,6 +19,8 @@ def check_arguments(params):
 def file_exists(file_path):
     # Check if the file extension is .py
     if not py_extension(file_path):
+        print("Not a Python file")
+        sys.exit()
         return False
     # Check if the file exists
     if os.path.isfile(file_path):
