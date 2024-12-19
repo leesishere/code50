@@ -30,6 +30,18 @@ def count_code_lines(file_path):
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
 
+def remove_DocString(text):
+    # Define the pattern to match lines with DocString
+    pattern = r'^\s+\'\'\'.*$'
+
+    # Use re.sub() to remove matching lines
+    result = re.sub(pattern, '', text, flags=re.MULTILINE)
+
+    # Optionally, strip leading/trailing whitespace
+    result = result.strip()
+
+    return result
+
 def remove_blank_lines(text):
     # Split the string into lines, filter out blank lines, and join the remaining lines
     return "\n".join([line for line in text.splitlines() if line.strip()])
