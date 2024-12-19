@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 
 def main():
     file_path = check_arguments(sys.argv)
@@ -13,10 +14,13 @@ def count_code_lines(file_path):
             content = file.read()
             print("File content:")
             print(content)
-            
+
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
 
+def remove_hash_comments():
+# Define the pattern to match lines with whitespace followed by #
+pattern = r'^\s+#.*$'
 
 def check_arguments(params):
     if len(params) == 1:
