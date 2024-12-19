@@ -33,6 +33,7 @@ def remove_hash_comments(text):
 
     # Optionally, strip leading/trailing whitespace
     result = result.strip()
+    
     return result
 
 def check_arguments(params):
