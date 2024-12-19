@@ -2,19 +2,19 @@ import sys
 import os
 
 def main():
-    check_arguments()
+    file_path = check_arguments(sys.argv)
     print(file_exists(file_path))
 
 
-def check_arguments():
-    if len(sys.argv) == 2:
+def check_arguments(params):
+    if len(params) == 2:
         print("Too few command-line arguments")
         sys.exit()
-    elif: len(sys.argv) > 3:
+    if len(params) > 3:
         print("Too many command-line arguments")
         sys.exit()
     else:
-        return True
+        return params[1]
 
 def file_exists(file_path):
     # Check if the file extension is .py
