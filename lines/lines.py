@@ -45,10 +45,11 @@ def remove_blank_lines(text):
     # Regular expression to find blank lines with special characters
     pattern = r'^\s*$'
     # Find and print all blank lines
-    blank_lines = [line for line in text.splitlines() if re.match(pattern, line)]
+    #blank_lines = [line for line in text.splitlines() if re.match(pattern, line)]
     # Optionally, remove all blank lines with special characters
     cleaned_text = "\n".join([line for line in text.splitlines() if not re.match(pattern, line)])
-
+    return cleaned_text
+    
 def remove_hash_comments(text):
     # Define the pattern to match lines with whitespace followed by #
     pattern = r'^\s+#.*$'
