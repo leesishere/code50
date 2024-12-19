@@ -1,7 +1,13 @@
 import sys
 import os
 import re
+'''
+This program counts all python code by:
+    1. removing the blank lines
+    2. removing # comments lines
+    3. remvong DocString lines such as this one
 
+'''
 def main():
     file_path = check_arguments(sys.argv)
     if py_file_exists(file_path):
@@ -17,8 +23,10 @@ def count_code_lines(file_path):
             results = remove_hash_comments(content)
             print(f"remove_hash_comments = {len(results.split("\n"))}")
             print("*" * 10)
-            print(len(results_count))
-
+            results = remove_blank_lines(results)
+            print(f"remove_blank_lines = {len(results.split("\n"))}")
+            print("*" * 10)
+            print(results)
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
 
