@@ -13,9 +13,13 @@ def count_code_lines(file_path):
             # Read the entire content of the file
             content = file.read()
             print("File content:")
-            print(content)
+            #print(content)
+            line_count = content.split("\n")
+            print(len(line_count))
             print("*" * 10)
-            print(remove_hash_comments(content))
+            results = remove_hash_comments(content)
+            print(len(results))
+
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
 
