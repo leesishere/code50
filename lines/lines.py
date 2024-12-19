@@ -25,7 +25,7 @@ def count_code_lines(file_path):
             for line in results.split("\n"):
                 x +=1
                 print(f"{x} - {line}")
-            #print(f"{len(results.split("\n"))}")
+            print(f"{len(results.split("\n"))}")
 
 
     except FileNotFoundError:
