@@ -38,9 +38,10 @@ def remove_DocString(text):
     # Regular expression to find lines that start and end with triple quotes
     pattern = r"^'''(.*?)'''$"
     matches = re.findall(pattern, text, re.MULTILINE)
-    result = "\n".join([line for line in text.splitlines() if matches])
-
-    return result
+    #result = "\n".join([line for line in text.splitlines() if matches])
+    for match in result:
+        print(f"'''{match}'''")
+    #return result
 
 
 def remove_blank_lines(text):
