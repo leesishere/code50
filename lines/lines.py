@@ -25,8 +25,10 @@ def count_code_lines(file_path):
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
 
-def remove_blank_lines(test):
-    cleaned_list = [item for item in sample_list if item.strip()]
+def remove_blank_lines(text):
+    # Split the string into lines, filter out blank lines, and join the remaining lines
+    cleaned_text = "\n".join([line for line in text.splitlines() if line.strip()])
+
 
 def remove_hash_comments(text):
     # Define the pattern to match lines with whitespace followed by #
