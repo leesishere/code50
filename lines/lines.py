@@ -2,7 +2,9 @@ import sys
 import os
 
 def main():
+    check_arguments()
     print(file_exists(file_path))
+
 
 def check_arguments():
     if len(sys.argv) == 2:
@@ -33,4 +35,4 @@ def py_extension(file_path):
 
 if __name__ == "__main__":
       main()
-      check_arguments()
+
