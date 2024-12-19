@@ -3,8 +3,11 @@ import os
 
 def main():
     file_path = check_arguments(sys.argv)
-    print(file_exists(file_path))
+    if pyfile_exists(file_path):
+        count_code_lines(file_path)
 
+def count_code_lines(file):
+    open 
 
 def check_arguments(params):
     if len(params) == 1:
@@ -16,7 +19,7 @@ def check_arguments(params):
     else:
         return params[1]
 
-def file_exists(file_path):
+def py_file_exists(file_path):
     # Check if the file extension is .py
     if not py_extension(file_path):
         print("Not a Python file")
