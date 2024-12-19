@@ -6,13 +6,14 @@ def main():
     if py_file_exists(file_path):
         count_code_lines(file_path)
 
-def count_code_lines(file):
+def count_code_lines(file_path):
     try:
         with open(file_path, 'r') as file:
             # Read the entire content of the file
             content = file.read()
             print("File content:")
             print(content)
+            
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
 
