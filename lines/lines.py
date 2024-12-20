@@ -17,7 +17,9 @@ def main():
         count_code_lines(file_path)
         # Use the cp command to copy the file
         try:
-            command = f"cp {file_path} {destination_file}"
+            # Get the file name with directory
+            cop_file_name = os.path.basename(file_path)
+            command = f"cp {file_path} {cop_file_name}.txt"
             os.system(command)
             print(f"File successfully copied to {destination_file}")
         except
