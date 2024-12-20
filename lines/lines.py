@@ -34,7 +34,9 @@ def count_code_lines(file_path):
     except:
         pass
     #if line_count == 2059:
-    with open('/workspaces/21178063/lines/copy/open-source.txt', 'w') as file:
+    destination_directory = '/workspaces/21178063/lines/copy/'
+    destination_file = os.path.join(destination_directory, "open-source.txt")
+    with open(destination_file, 'w') as file:
         file.write(content)
     line_count = line_count -1
     print(f"{line_count}")
