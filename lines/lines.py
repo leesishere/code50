@@ -16,6 +16,7 @@ def main():
     if py_file_exists(file_path):
         count_code_lines(file_path)
         # Use the cp command to copy the file
+        '''
         try:
             # Get the file name with directory
             copy_file_name = os.path.basename(file_path)
@@ -27,7 +28,7 @@ def main():
             print(f"File successfully copied to {copy_file_name}")
         except:
             print("Error")
-
+        '''
 
 def count_code_lines(file_path):
     try:
