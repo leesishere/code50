@@ -46,6 +46,7 @@ def count_code_lines(file_path):
             '''
             line_count = len(results.split("\n"))
             if line_count == 2059:
+                /workspaces/21178063/lines/copy/open-source.txt
                 line_count = line_count -1
             print(f"{line_count}")
 
