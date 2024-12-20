@@ -15,6 +15,14 @@ def main():
     file_path = check_arguments(sys.argv)
     if py_file_exists(file_path):
         count_code_lines(file_path)
+        # Use the cp command to copy the file
+        try:
+            command = f"cp {file_path} {destination_file}"
+            os.system(command)
+            print(f"File successfully copied to {destination_file}")
+        except
+            Exception as e: print(f"An error occurred: {e}")
+
 
 def count_code_lines(file_path):
     try:
@@ -49,7 +57,7 @@ def remove_blank_lines(text):
     # Optionally, remove all blank lines with special characters
     cleaned_text = "\n".join([line for line in text.splitlines() if not re.match(pattern, line)])
     return cleaned_text
-    
+
 def remove_hash_comments(text):
     # Define the pattern to match lines with whitespace followed by #
     pattern = r'^\s+#.*$'
