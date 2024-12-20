@@ -19,7 +19,7 @@ def main():
         try:
             # Get the file name with directory
             cop_file_name = os.path.basename(file_path)
-            command = f"cp {file_path} {cop_file_name}.txt"
+            command = f"cp {file_path} /workspaces/21178063/lines/copy/{cop_file_name}.txt"
             os.system(command)
             print(f"File successfully copied to {destination_file}")
         except
