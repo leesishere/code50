@@ -21,7 +21,12 @@ def file_exists(file_path):
     else:
         return False
 
-
+def csv_extension(file_path):
+    file_extension = os.path.splitext(file_path)[1]
+    if file_extension == '.csv':
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
       main()
