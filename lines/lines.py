@@ -58,8 +58,8 @@ def remove_blank_lines(text):
 
 def remove_hash_comments(text):
     # Define the pattern to match lines with whitespace followed by #
-    ## pattern = r'^\s+#.*$'
-    pattern = r'^\s+#.*\n'
+    pattern = r'^\s+#.*$'
+    #pattern = r'^\s+#.*\n'
 
     # Use re.sub() to remove matching lines
     result = re.sub(pattern, '', text, flags=re.MULTILINE)
