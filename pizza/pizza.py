@@ -1,8 +1,7 @@
 def main():
     file_path = check_arguments(sys.argv)
-    if py_file_exists(file_path):
-        count_code_lines(file_path)
-
+    if not file_exists(file_path):
+        sys.exit(1)
 
 
 def check_arguments(params):
@@ -16,17 +15,13 @@ def check_arguments(params):
         return params[1]
 
 def file_exists(file_path):
-    # Check if the file extension is .py
-    if not extension(file_path):
-        print("Not a Python file")
-        sys.exit(1)
-
     # Check if the file exists
     if os.path.isfile(file_path):
         return True
     else:
-        print("File does not exist")
-        sys.exit(1)
+        return False
+
+
 
 if __name__ == "__main__":
       main()
