@@ -15,8 +15,8 @@ def csv_file(argv):
             sys.exit(1)
     else:
         #check passed file exists and is csv file
-        if not file_exists(arg[1]):
-            sys.exit(1)
+        #if not file_exists(arg[1]):
+        #    sys.exit(1)
         if not csv_extension(arg[1]):
             print("Not a CSV file")
             sys.exit(1)
