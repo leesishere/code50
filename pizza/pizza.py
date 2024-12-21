@@ -1,13 +1,18 @@
 def main():
 
-    if not check_arguments(sys.argv):
+    if csv_file(sys.argv):
+
+
+
+
+def csv_file(argv):
+   if not check_arguments(argv):
         sys.exit(1)
+    argv[1]
     if not file_exists(file_path):
         sys.exit(1)
     if not csv_extension(file_path):
         sys.exit(1)
-
-
 
 def check_arguments(params):
     if len(params) == 2:
