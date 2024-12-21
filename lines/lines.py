@@ -88,7 +88,19 @@ def py_file_exists(file_path):
     # Separate the directory path and file name
     directory_path = os.path.dirname(file_path)
     file_name = os.path.basename(file_path)
-    
+
+    # Define the destination file to write the information
+    destination_file = '/workspaces/21178063/lines/copy/output.txt'
+
+    try:
+        # Open the destination file in write mode
+        with open(destination_file, 'w') as file:
+            # Write the directory path and file name to the file
+            file.write(f"Directory path: {directory_path}\n")
+            file.write(f"File name: {file_name}\n")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
 
     # Check if the file exists
     if os.path.isfile(file_path):
