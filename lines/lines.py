@@ -53,7 +53,8 @@ def remove_blank_lines(text):
     #return "\n".join([line for line in text.splitlines() if line.strip()])
 
     # Regular expression to find blank lines with special characters
-    pattern = r'^\s*$'
+    ##pattern = r'^\s*$'
+    pattern = r'^\s*\n'
     # Find and print all blank lines
     #blank_lines = [line for line in text.splitlines() if re.match(pattern, line)]
     # Optionally, remove all blank lines with special characters
