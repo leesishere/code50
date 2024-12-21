@@ -1,18 +1,19 @@
 def main():
-    file_path = check_arguments(sys.argv)
+
+    if not check_arguments(sys.argv):
+        sys.exit(1)
     if not file_exists(file_path):
         sys.exit(1)
+    if not csv_extension(file_path):
+        sys.exit(1)
+
 
 
 def check_arguments(params):
-    if len(params) == 1:
-        print("Too few command-line arguments")
-        sys.exit(1)
-    if len(params) > 2:
-        print("Too many command-line arguments")
-        sys.exit(1)
+    if len(params) == 2:
+        return True
     else:
-        return params[1]
+        return False
 
 def file_exists(file_path):
     # Check if the file exists
