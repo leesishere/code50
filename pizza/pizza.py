@@ -6,10 +6,17 @@ def main():
 
 
 def csv_file(argv):
+    if len(params) == 1:
+        print("Too few command-line arguments")
+        sys.exit(1)
+    if len(params) > 2:
+        print("Too many command-line arguments")
+        sys.exit(1)
+
    if not check_arguments(argv):
         sys.exit(1)
     else:
-        #check passed file exists and is csv file 
+        #check passed file exists and is csv file
         if not file_exists(arg[1]):
             sys.exit(1)
         if not csv_extension(arg[1]):
