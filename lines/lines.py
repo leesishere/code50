@@ -39,7 +39,7 @@ def count_code_lines(file_path):
         #destination_file = os.path.join(destination_directory, "open-source.txt")
         #with open(destination_file, 'w') as file:
         #    file.write(copy_content)
-        line_count = line_count -1
+       # line_count = line_count -1
     print(f"{line_count}")
 
 
@@ -54,7 +54,7 @@ def remove_blank_lines(text):
 
     # Regular expression to find blank lines with special characters
     pattern = r'^\s*$'
-   
+
     # Find and print all blank lines
     #blank_lines = [line for line in text.splitlines() if re.match(pattern, line)]
     # Optionally, remove all blank lines with special characters
