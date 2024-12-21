@@ -84,6 +84,12 @@ def py_file_exists(file_path):
     if not py_extension(file_path):
         print("Not a Python file")
         sys.exit(1)
+
+    # Separate the directory path and file name
+    directory_path = os.path.dirname(file_path)
+    file_name = os.path.basename(file_path)
+    
+
     # Check if the file exists
     if os.path.isfile(file_path):
         return True
