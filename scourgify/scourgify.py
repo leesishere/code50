@@ -28,7 +28,9 @@ def main():
         with open(csv_file_path, 'r') as file:
             reader = csv.DictReader(file)
             for row in reader:
-                print(row)
+                first_name, last_name = row['name']
+                #{first: } row['name']
+                print(f"{first_name} {last_name}")
                 data.append(row)
     except FileNotFoundError:
         print(f"The file {csv_file_path} does not exist.")
