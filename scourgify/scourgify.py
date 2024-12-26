@@ -44,7 +44,7 @@ def main():
         print(f"The file {csv_file_path} does not exist.")
         sys.exit(1)
         data = []
-
+'''
     # Use tabulate to format the data into a table
     if data:
         # New field names (must match the number of existing field names)
@@ -55,7 +55,7 @@ def main():
     else:
         print("No data to display.")
         sys.exit(1)
-
+'''
 
 def check_arguments(params):
     if len(params) == 3:
