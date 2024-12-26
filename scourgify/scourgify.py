@@ -5,14 +5,17 @@ import sys, os
 def main():
     # csv checks
     if not check_arguments(sys.argv):
-        if len(sys.argv) < 3:
+        if len(sys.argv) < 2:
             print("Too few command-line arguments")
             sys.exit(1)
-        if len(sys.argv) > 3:
+        if len(sys.argv) > 2:
             print("Too many command-line arguments")
             sys.exit(1)
     else:
         if not csv_extension(sys.argv[1]):
+            print("Not a CSV file")
+            sys.exit(1)
+        if not csv_extension(sys.argv[2]):
             print("Not a CSV file")
             sys.exit(1)
 
