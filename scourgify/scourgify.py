@@ -3,6 +3,7 @@ from tabulate import tabulate
 import sys, os
 
 def main():
+    print(sys.argv)
     # csv checks
     if not check_arguments(sys.argv):
         if len(sys.argv) < 2:
