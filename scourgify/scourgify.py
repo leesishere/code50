@@ -6,10 +6,10 @@ def main():
     print(f"{len(sys.argv)}")
     # csv checks
     if not check_arguments(sys.argv):
-        if len(sys.argv) < 2:
+        if len(sys.argv) < 3:
             print("Too few command-line arguments")
             sys.exit(1)
-        if len(sys.argv) > 2:
+        if len(sys.argv) > 3:
             print("Too many command-line arguments")
             sys.exit(1)
     else:
