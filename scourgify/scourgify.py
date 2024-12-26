@@ -38,6 +38,7 @@ def main():
         print(table)
     else:
         print("No data to display.")
+        sys.exit(1)
 
 
 def check_arguments(params):
