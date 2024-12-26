@@ -29,10 +29,8 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 last_name, first_name = row['name'].split(",")
-                row {'first': first_name,
-                     'last': last_name,
-                       }
-                print(f"{first_name} {last_name}")
+                row = {'first': first_name,'last': last_name,'house' : row['house'] }
+                #print(f"{first_name} {last_name}")
                 data.append(row)
     except FileNotFoundError:
         print(f"The file {csv_file_path} does not exist.")
@@ -43,7 +41,7 @@ def main():
     if data:
         table = tabulate(data, headers="keys", tablefmt="grid")
         # print("Formatted Table:")
-        # print(table)
+        print(table)
     else:
         print("No data to display.")
         sys.exit(1)
