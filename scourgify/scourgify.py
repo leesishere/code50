@@ -20,18 +20,26 @@ def main():
             sys.exit(1)
 
     # Define the CSV file path
-    csv_file_path = sys.argv[1]
+    csv_in_file_path = sys.argv[1]
+    csv_out_file_path = sys.argv[2]
 
     # Read the CSV file into a list of dictionaries
     data = []
     try:
-        with open(csv_file_path, 'r') as file:
+        with open(csv_in_file_path, 'r') as file:
             reader = csv.DictReader(file)
             for row in reader:
                 last_name, first_name = row['name'].split(",")
                 row = {'first': first_name,'last': last_name,'house' : row['house'] }
                 #print(f"{first_name} {last_name}")
                 data.append(row)
+        fieldnames = ["first", "last", "house"]
+        # Write the list of dictionaries to another CSV file
+        with open(csv_out_file_path, 'w', newline='') as outfile:
+            writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(data)
+
     except FileNotFoundError:
         print(f"The file {csv_file_path} does not exist.")
         sys.exit(1)
