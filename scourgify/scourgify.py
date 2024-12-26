@@ -28,7 +28,7 @@ def main():
         with open(csv_file_path, 'r') as file:
             reader = csv.DictReader(file)
             for row in reader:
-                first_name, last_name = row['name']
+                first_name, last_name = row['name'].split(",")
                 #{first: } row['name']
                 print(f"{first_name} {last_name}")
                 data.append(row)
