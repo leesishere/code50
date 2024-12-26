@@ -28,6 +28,7 @@ def main():
         with open(csv_file_path, 'r') as file:
             reader = csv.DictReader(file)
             for row in reader:
+                print(row)
                 data.append(row)
     except FileNotFoundError:
         print(f"The file {csv_file_path} does not exist.")
@@ -38,7 +39,7 @@ def main():
     if data:
         table = tabulate(data, headers="keys", tablefmt="grid")
         # print("Formatted Table:")
-        print(table)
+        # print(table)
     else:
         print("No data to display.")
         sys.exit(1)
