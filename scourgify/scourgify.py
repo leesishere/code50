@@ -30,6 +30,8 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 last_name, first_name = row['name'].split(",")
+                last_name = last_name.strip()
+                first_name = first_name.strip()
                 row = {'first': first_name,'last': last_name,'house' : row['house'] }
                 #print(f"{first_name} {last_name}")
                 data.append(row)
