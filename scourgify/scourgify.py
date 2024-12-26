@@ -46,7 +46,7 @@ def main():
 
 
 def check_arguments(params):
-    if len(params) == 2:
+    if len(params) == 3:
         return True
     else:
         return False
