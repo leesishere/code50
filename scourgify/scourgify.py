@@ -39,6 +39,8 @@ def main():
 
     # Use tabulate to format the data into a table
     if data:
+        # New field names (must match the number of existing field names)
+        fieldnames = ["first", "last", "house"]
         table = tabulate(data, headers="keys", tablefmt="grid")
         # print("Formatted Table:")
         print(table)
