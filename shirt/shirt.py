@@ -17,11 +17,14 @@ def main():
         if not jpg_extension(sys.argv[2]):
             print("Invalid output")
             sys.exit(1)
+
     # Open an image file
-    # Open an image file
-    with open('before1.jpg', 'rb') as file:
-        image = Image.open(file)
+    image = Image.open('before1.jpg')
+
+    # Display the image
     image.show()
+
+
     '''
     in_image = Image.open(sys.argv[1])
     out_image = Image.open(sys.argv[2])
