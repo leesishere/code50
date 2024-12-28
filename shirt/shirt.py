@@ -21,17 +21,11 @@ def main():
             sys.exit(1)
 
     # Open an image file
-    image = Image.open('before1.jpg')
 
-    # Display the image
-    image.show()
-
-
-    '''
     in_image = Image.open(sys.argv[1])
-    out_image = Image.open(sys.argv[2])
-    #print(size.in_image)
-'''
+    out_image = sys.argv[2]
+    print(size.in_image)
+
 def check_arguments(params):
     if len(params) == 3:
         return True
