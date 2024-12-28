@@ -22,6 +22,7 @@ def main():
     in_image = Image.open(sys.argv[1])
     out_image = Image.open(sys.argv[2])
 
+
 def check_arguments(params):
     if len(params) == 3:
         return True
