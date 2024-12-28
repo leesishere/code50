@@ -26,7 +26,9 @@ def main():
     out_image = sys.argv[2]
     width, height = in_image.size
     print(f"Image size: {width} x {height} pixels")
-
+    resized_image = image.resize((600, 600))
+# Save the resized image
+    resized_image.save('resized_' + image_path)
 
 def check_arguments(params):
     if len(params) == 3:
