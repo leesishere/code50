@@ -21,7 +21,7 @@ def main():
             sys.exit(1)
     # Open an image file
     # Open an image file
-    with open(, 'rb') as file:
+    with open('before1.jpg', 'rb') as file:
         image = Image.open(file)
     image.show()
     '''
