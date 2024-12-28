@@ -13,10 +13,10 @@ def main():
             print("Too many command-line arguments")
             sys.exit(1)
     else:
-        if not jpg_extension(sys.argv[1]):
+        if not extension(sys.argv[1]):
             print("Input and output have different extensions")
             sys.exit(1)
-        if not jpg_extension(sys.argv[2]):
+        if not extension(sys.argv[2]):
             print("Invalid output")
             sys.exit(1)
 
@@ -41,9 +41,9 @@ def file_exists(file_path):
     else:
         return False
 
-def jpg_extension(file_path):
+def extension(file_path):
     file_extension = os.path.splitext(file_path)[1]
-    if file_extension == '.jpg' or file_extension == '.jpg':
+    if file_extension == '.jpg' or file_extension == '.png':
         return True
     else:
         return False
