@@ -19,9 +19,10 @@ def main():
         if not jpg_extension(sys.argv[2]):
             print("Invalid output")
             sys.exit(1)
+
     in_image = Image.open(sys.argv[1])
     out_image = Image.open(sys.argv[2])
-    print(size.in_image)
+    #print(size.in_image)
 
 def check_arguments(params):
     if len(params) == 3:
