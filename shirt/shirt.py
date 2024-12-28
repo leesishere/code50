@@ -1,5 +1,4 @@
 # -*- coding: Non-UTF-8 -*-
-from tabulate import tabulate
 import sys, os
 import PIL from Image
 
