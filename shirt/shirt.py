@@ -1,9 +1,10 @@
 import csv
 from tabulate import tabulate
 import sys, os
+import PIL from Image
 
 def main():
-    # csv checks
+    # check image file args...
     if not check_arguments(sys.argv):
         if len(sys.argv) < 3:
             print("Too few command-line arguments")
@@ -18,7 +19,8 @@ def main():
         if not jpg_extension(sys.argv[2]):
             print("Invalid output")
             sys.exit(1)
-
+    in_image = Image.open(sys.argv[1])
+    out_image = Image.open(sys.argv[2])
 
 def check_arguments(params):
     if len(params) == 3:
