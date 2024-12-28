@@ -24,7 +24,9 @@ def main():
 
     in_image = Image.open(sys.argv[1])
     out_image = sys.argv[2]
-    print(size.in_image)
+    width, height = in_image.size
+    print(f"Image size: {width} x {height} pixels")
+
 
 def check_arguments(params):
     if len(params) == 3:
@@ -41,7 +43,7 @@ def file_exists(file_path):
 
 def jpg_extension(file_path):
     file_extension = os.path.splitext(file_path)[1]
-    if file_extension == '.jpg':
+    if file_extension == '.jpg' or file_extension == '.jpg':
         return True
     else:
         return False
