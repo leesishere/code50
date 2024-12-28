@@ -1,6 +1,5 @@
-# -*- coding: Non-UTF-8 -*-
+from PIL import Image
 import sys, os
-import PIL from Image
 
 def main():
     # check image file args...
