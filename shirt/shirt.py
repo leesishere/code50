@@ -1,5 +1,7 @@
 from PIL import Image
-import sys, os
+import sys
+import os
+
 
 def main():
     # check image file args...
