@@ -29,6 +29,7 @@ def main():
     resized_image = image.resize((600, 600))
 # Save the resized image
     resized_image.save('resized_' + image_path)
+    resized_image.save(new_file_name)
 
 def check_arguments(params):
     if len(params) == 3:
