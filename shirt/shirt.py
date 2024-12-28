@@ -20,8 +20,9 @@ def main():
             print("Invalid output")
             sys.exit(1)
     # Open an image file
-    image = Image.open(sys.argv[1])
-    # Display the image
+    # Open an image file
+    with open(, 'rb') as file:
+        image = Image.open(file)
     image.show()
     '''
     in_image = Image.open(sys.argv[1])
