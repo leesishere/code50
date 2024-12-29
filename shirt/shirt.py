@@ -37,7 +37,7 @@ def main():
     # Define the crop box (left, upper, right, lower)
     top_pixels = 0
     if "1" in background_image_path:
-        crop_box = (0, top_pixels + 70, width + 0, height - 70)
+        crop_box = (0, top_pixels + 71, width + 0, height - 71)
     else:
         crop_box = (0, top_pixels + 200, width + 0, height - 200)
     # Crop the image
