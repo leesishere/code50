@@ -31,11 +31,16 @@ def main():
     background = Image.open(background_image_path)
     background = ImageOps.fit(600, 600)
 
+
+    image = Image.open(image_path)
+    # Resize and crop the image to fit 600 x 600 pixels
+    fitted_image = ImageOps.fit(image, (600
+
     #with Image.open(background_image_path) as im:
     #    ImageOps.fit(im, size).save("imageops_fit.webp")
 
 
-    
+
     '''
     # Image size: 1200 x 1600 pixels
 
