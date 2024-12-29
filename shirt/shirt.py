@@ -29,12 +29,8 @@ def main():
     # Open the overlay and background images
     overlay = Image.open(overlay_path)
     background = Image.open(background_image_path)
-    background = ImageOps.fit(600, 600)
+    background = ImageOps.fit(background, (600,600))
 
-
-    image = Image.open(image_path)
-    # Resize and crop the image to fit 600 x 600 pixels
-    fitted_image = ImageOps.fit(image, (600
 
     #with Image.open(background_image_path) as im:
     #    ImageOps.fit(im, size).save("imageops_fit.webp")
