@@ -29,8 +29,13 @@ def main():
     # Open the overlay and background images
     overlay = Image.open(overlay_path)
     background = Image.open(background_image_path)
+    background = ImageOps.fit(600, 600)
 
-    ImageOps.fit(im, size).save("imageops_fit.webp")
+    #with Image.open(background_image_path) as im:
+    #    ImageOps.fit(im, size).save("imageops_fit.webp")
+
+
+    
     '''
     # Image size: 1200 x 1600 pixels
 
