@@ -1,6 +1,6 @@
 import sys
 import os
-from PIL import Image, ImageOps
+from PIL import Image
 
 
 def main():
@@ -23,8 +23,6 @@ def main():
     # Open an image file
 
     background_image_path = sys.argv[1]
-    output_path = sys.argv[2]
-
     overlay_path = 'shirt.png'
 
     try:
@@ -32,29 +30,30 @@ def main():
         overlay = Image.open(overlay_path)
         background = Image.open(background_image_path)
 
-        # Resize and crop the input image with default values for method, bleed, and centering
+
         output_size = (600, 600)
-        aspect_ratio = output_size[0] / output_size[1]
-        width, height = background.size
+        aspect_ratio_output=background.size[0] /output_size[1]
 
-        if aspect_ratio > height/width:
-            new_width = int((height * aspect_ratio))
-            new_height= height
-            crop_box=(int(new_width - (new_width-width)/2), 0, int(new_width+(new_width-width)/2) , new_height)
+        if aspect_ratio_output > output_size[0]/output_size[1]:
+            new_height=int(output_size*aspect_ratio_output )
+
+            resize_image= background.resize((int(new_height), int(1600)), Image.LANCZOS)
+
         else:
-           new_width = width
-           new_height= int(height*aspect_ratio )
-           crop_box=( 0, int((height-new_height)/2), width , int((height-new_height)+new_height/2))
+            #crop the image
+            crop_box=( (int((background.size[0] - output_size[0])/2)) ,  (output_size[1], background.size[1]))
+            resize_image = background.crop(crop_box)
 
-        background = ImageOps.fit(background, output_size, Image.LANCZOS)
 
         # Overlay the image with transparency handling
-        background.paste(overlay, (crop_box[1], crop_box[0]))
+        overlay_paste=overlay.resize(output_size, Image.LANCZOS)
+        resized_image=resize_image.paste(overlay_paste,(0, 0))
 
-        # Save the result
-        background.save(output_path)
+         # Save the result
+        resized_image.save(sys.argv[2])
     except Exception as e:
        print(str(e))
+
 def check_arguments(params):
     if len(params) == 3:
         return True
@@ -76,12 +75,13 @@ def validate_extension(file_extension):
         return False
 
 def extension(file_path_one, file_path_two):
-    file_extension_one = os.path.splitext(file_path_one)[1].lower()
+    file_extension_one = "."+file_path_one.split(".")[1].lower()
     file_extension_two = "."+file_path_two.split(".")[1]
-    if file_extension_one == file_extension_two:
+    if (file_extension_one==file_extension_two):
         return True
     else:
         return False
+
 
 if __name__ == "__main__":
       main()
