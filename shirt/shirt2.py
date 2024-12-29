@@ -1,6 +1,6 @@
-from PIL import Image, ImageOps
 import sys
 import os
+from PIL import Image, ImageOps
 
 
 def main():
@@ -26,40 +26,35 @@ def main():
     output_path = sys.argv[2]
 
     overlay_path = 'shirt.png'
-    # Open the overlay and background images
-    overlay = Image.open(overlay_path)
-    background = Image.open(background_image_path)
 
+    try:
+        # Open the overlay and background images
+        overlay = Image.open(overlay_path)
+        background = Image.open(background_image_path)
 
-    # Image size: 1200 x 1600 pixels
+        # Resize and crop the input image with default values for method, bleed, and centering
+        output_size = (600, 600)
+        aspect_ratio = output_size[0] / output_size[1]
+        width, height = background.size
 
-    # Get the dimensions of the background image
-    width, height = background.size
-    # Define the crop box (left, upper, right, lower)
-    top_pixels = 0
-    if "1" in background_image_path:
-        crop_box = (0, top_pixels + 75, width, height - 76)
-        crop_box = (0, top_pixels + 72, width, height - 72)
-    else:
-        crop_box = (0, top_pixels + 200, width + 0, height - 200)
-    # Crop the image
-    background = background.crop(crop_box)
+        if aspect_ratio > height/width:
+            new_width = int((height * aspect_ratio))
+            new_height= height
+            crop_box=(int(new_width - (new_width-width)/2), 0, int(new_width+(new_width-width)/2) , new_height)
+        else:
+           new_width = width
+           new_height= int(height*aspect_ratio )
+           crop_box=( 0, int((height-new_height)/2), width , int((height-new_height)+new_height/2))
 
-    # Resize the background image to fit the overlay size
-    #overlay = overlay.resize(background.size, Image.LANCZOS)
-    background = background.resize(overlay.size, Image.LANCZOS)
+        background = ImageOps.fit(background, output_size, Image.LANCZOS)
 
+        # Overlay the image with transparency handling
+        background.paste(overlay, (crop_box[1], crop_box[0]))
 
-    # Set the position for the overlay (e.g., center it on the background)
-    position = (0, -40)
-    position = (0, 0)
-
-    # Top-left corner
-    # # Overlay the image with transparency handling
-    background.paste(overlay, position, overlay)
-    # Save the result
-    background.save(output_path)
-
+        # Save the result
+        background.save(output_path)
+    except Exception as e:
+       print(str(e))
 def check_arguments(params):
     if len(params) == 3:
         return True
@@ -72,6 +67,7 @@ def file_exists(file_path):
         return True
     else:
         return False
+
 def validate_extension(file_extension):
     extension = os.path.splitext(file_extension)[1]
     if (extension == '.jpg' or extension == '.png'):
@@ -80,9 +76,8 @@ def validate_extension(file_extension):
         return False
 
 def extension(file_path_one, file_path_two):
-    file_extension_one = os.path.splitext(file_path_one)[1]
-    file_extension_two = file_path_two.split(".")[1]
-    file_extension_two = "." + file_extension_two
+    file_extension_one = os.path.splitext(file_path_one)[1].lower()
+    file_extension_two = "."+file_path_two.split(".")[1]
     if file_extension_one == file_extension_two:
         return True
     else:
