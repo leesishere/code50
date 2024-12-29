@@ -55,7 +55,7 @@ def main():
 
     # Resize the background image to fit the overlay size
     #overlay = overlay.resize(background.size, Image.LANCZOS)
-    background = background.resize(overlay.size, Image.LANCZOS)
+    #background = background.resize(overlay.size, Image.LANCZOS)
 
 
     # Set the position for the overlay (e.g., center it on the background)
