@@ -40,16 +40,21 @@ def main():
             resize_image= background.resize((int(new_height), int(1600)), Image.LANCZOS)
 
         else:
-            #crop the image
-            crop_box=( (int((background.size[0] - output_size[0])/2)) ,  (output_size[1], background.size[1]))
-            resize_image = background.crop(crop_box)
+          #crop the image
+          crop_box=( (int((background.size[0] - output_size[0])/2)) ,  (output_size[1], background.size[1]))
 
+          resize_image = background.crop(crop_box)
 
-        # Overlay the image with transparency handling
-        overlay_paste=overlay.resize(output_size, Image.LANCZOS)
-        resized_image=resize_image.paste(overlay_paste,(0, 0))
+          if resize_image.size == output_size: # added this condition
+            overlay_paste=overlay.resize(output_size, Image.LANCZOS)
+            resized_image=resize_image.paste(overlay_paste,(0, 0))
 
-         # Save the result
+        else:
+           resize_image = background.resize((output_size[0], output_size[1]), Image.LANCZOS) # added this line
+          overlay_paste=overlay.resize(output_size, Image.LANCZOS)
+            resized_image=resize_image.paste(overlay_paste,(0, 0))
+
+        # Save the result
         resized_image.save(sys.argv[2])
     except Exception as e:
        print(str(e))
