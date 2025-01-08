@@ -34,13 +34,13 @@ def main():
 
 
     # Calculate the coordinates for placing img in the center of rectangle
-    x = (height_of_background - overlay.width) // 2
+    x = (width_of_background - overlay.width) // 2
     y = (height_of_background - overlay.height) // 2
 
     # Place img at those coordinates on rectangle using fit method with box parameter set to None and border value as 0.
     ImageOps.fit(img, bg_img, x=x , y=y)
 
-
+    
     # Image size: 1200 x 1600 pixels
 
     # Get the dimensions of the background image
