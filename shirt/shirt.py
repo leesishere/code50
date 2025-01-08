@@ -31,13 +31,13 @@ def main():
     background = Image.open(background_image_path)
 
     # Get the size of the image in bytes
-    size = img.size
+    overlay_size = overlay.size
 
     # Get the size of the image in pixels
-    width, height = img.size
+    overlay_width, overlay_height = overlay.size
 
-    print(f"Image Size: {size[0]}x{size[1]} bytes")
-    print(f"Image Size: {width}x{height} pixels")
+    print(f"Image Size: {overlay_size[0]}x{overlay_size[1]} bytes")
+    print(f"Image Size: {overlay_width}x{overlay_height} pixels")
 
     '''
     # Calculate the coordinates for placing overlay in center of background
