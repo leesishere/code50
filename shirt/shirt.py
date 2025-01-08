@@ -40,7 +40,10 @@ def main():
     # Place img at those coordinates on rectangle using fit method with box parameter set to None and border value as 0.
     ImageOps.fit(img, bg_img, x=x , y=y)
 
-    
+    background.save(output_path)
+
+    '''
+
     # Image size: 1200 x 1600 pixels
 
     # Get the dimensions of the background image
@@ -103,6 +106,6 @@ def extension(file_path_one, file_path_two):
         return True
     else:
         return False
-
+'''
 if __name__ == "__main__":
       main()
