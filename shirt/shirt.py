@@ -54,8 +54,6 @@ def main():
 
 #############
 
-from PIL import Image
-
 # Open two images (one is the larger one)
 img = Image.open('large_image.jpg')
 bg_img = Image.new("RGB", (800,600), color=(73,109,137))
