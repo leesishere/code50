@@ -66,9 +66,6 @@ def main():
     #background = ImageOps.fit(background, (600,600))
 
 
-
-
-
     # Set the position for the overlay (e.g., center it on the background)
     position = (0, -40)
     position = (0, 0)
