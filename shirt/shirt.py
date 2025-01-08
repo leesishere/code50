@@ -29,16 +29,18 @@ def main():
     # Open the overlay and background images
     overlay = Image.open(overlay_path)
     background = Image.open(background_image_path)
-    width_of_background= background.width
-    height_of_background=  background.height
 
 
-    # Calculate the coordinates for placing img in the center of rectangle
-    x = (width_of_background - overlay.width) // 2
-    y = (height_of_background - overlay.height) // 2
+    # Calculate the coordinates for placing overlay in center of background
+    x = ((background.width - overlay.width) / 2) + int((background.width - overlay.width) / 2 % 1 * (background.width // 2))
+    y = ((background.height - overlay.height) / 2) + int((background.height - overlay.height) / 2 % 1 * (background.height // 2))
 
-    # Place img at those coordinates on rectangle using fit method with box parameter set to None and border value as 0.
-    background = ImageOps.fit(background, overlay, x=x , y=y)
+    # Fit the image to fit within the background
+    ImageOps.fit(overlay, background, x=x , y=y)
+
+    # display the output
+    background.show()
+
 
     background.save(output_path)
 
