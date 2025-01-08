@@ -78,6 +78,7 @@ def main():
     background.paste(overlay, position, overlay)
     # Save the result
     background.save(output_path)
+'''
 
 def check_arguments(params):
     if len(params) == 3:
