@@ -30,7 +30,16 @@ def main():
     overlay = Image.open(overlay_path)
     background = Image.open(background_image_path)
 
+    # Get the size of the image in bytes
+    size = img.size
 
+    # Get the size of the image in pixels
+    width, height = img.size
+
+    print(f"Image Size: {size[0]}x{size[1]} bytes")
+    print(f"Image Size: {width}x{height} pixels")
+
+    '''
     # Calculate the coordinates for placing overlay in center of background
     x = ((background.width - overlay.width) / 2) + int((background.width - overlay.width) / 2 % 1 * (background.width // 2))
     y = ((background.height - overlay.height) / 2) + int((background.height - overlay.height) / 2 % 1 * (background.height // 2))
@@ -43,7 +52,7 @@ def main():
 
 
     background.save(output_path)
-
+    '''
     '''
 
     # Image size: 1200 x 1600 pixels
