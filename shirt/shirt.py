@@ -38,7 +38,7 @@ def main():
     y = (height_of_background - overlay.height) // 2
 
     # Place img at those coordinates on rectangle using fit method with box parameter set to None and border value as 0.
-    ImageOps.fit(background, overlay, x=x , y=y)
+    background = ImageOps.fit(background, overlay, x=x , y=y)
 
     background.save(output_path)
 
