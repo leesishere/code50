@@ -29,6 +29,16 @@ def main():
     # Open the overlay and background images
     overlay = Image.open(overlay_path)
     background = Image.open(background_image_path)
+    width_of_rectangle= background.width
+    height_of_rectangle=  background.height
+
+
+    # Calculate the coordinates for placing img in the center of rectangle
+    x = (width_of_rectangle - overlay.width) // 2
+    y = (height_of_rectangle - overlay.height) // 2
+
+    # Place img at those coordinates on rectangle using fit method with box parameter set to None and border value as 0.
+    ImageOps.fit(img, bg_img, x=x , y=y)
 
 
     # Image size: 1200 x 1600 pixels
@@ -51,27 +61,6 @@ def main():
     overlay = overlay.resize(background.size, Image.LANCZOS)
     #background = background.resize(overlay.size, Image.LANCZOS)
     #background = ImageOps.fit(background, (600,600))
-
-#############
-
-# Open two images (one is the larger one)
-img = Image.open('large_image.jpg')
-bg_img = Image.new("RGB", (800,600), color=(73,109,137))
-width_of_rectangle= bg_img.width
-height_of_rectangle=  bg_img.height
-
-# Calculate the coordinates for placing img in the center of rectangle
-x = (width_of_rectangle - img.width) // 2
-y = (height_of_rectangle - img.height) // 2
-
- # Place img at those coordinates on rectangle using fit method with box parameter set to None and border value as 0.
-ImageOps.fit(img, bg_img, x=x , y=y)
-
-# display the output
-img.show()
-
-
-############
 
 
 
