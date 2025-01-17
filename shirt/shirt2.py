@@ -19,8 +19,9 @@ def main():
         if not extension(sys.argv[1], sys.argv[2]):
             print("Input and output have different extensions")
             sys.exit(1)
-            
-            Input does not exist
+        if not os.path.isfile(sys.argv[1]):
+            print("Input does not exist")
+            sys.exit(1)
 
 
 
