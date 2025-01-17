@@ -13,11 +13,11 @@ def main():
             print("Too many command-line arguments")
             sys.exit(1)
     else:
-        if not extension(sys.argv[1], sys.argv[2]):
-            print("Input and output have different extensions")
-            sys.exit(1)
         if not validate_extension(sys.argv[2]):
             print("Invalid output")
+            sys.exit(1)
+        if not extension(sys.argv[1], sys.argv[2]):
+            print("Input and output have different extensions")
             sys.exit(1)
 
     # Open an image file
