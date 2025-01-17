@@ -77,7 +77,7 @@ def file_exists(file_path):
         return False
 def validate_extension(file_extension):
     extension = os.path.splitext(file_extension)[1]
-    if (extension == '.jpg' or extension == '.png'):
+    if (extension == '.jpg' or extension == '.jpeg' or extension == '.png'):
         return True
     else:
         return False
