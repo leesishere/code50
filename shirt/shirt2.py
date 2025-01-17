@@ -44,7 +44,7 @@ def main():
         sys.exit("Input does not exist")
 
     # Open shirt
-    shirtfile = Image.open ("shirt.png")ls
+    shirtfile = Image.open ("shirt.png")
 
     # Get the size of the shirt
     size = shirtfile.size
