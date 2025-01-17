@@ -9,36 +9,23 @@ shirt_img = Image.open("shirt.png")
 resized_img = img.copy()
 width, height = resized_img.size
 cropped_width, cropped_height = 1000, 600
-cropped_rect = (height // 3, width // 3, cropped_height + height // 6 * 2, cropped_width + width // 6 * 2)
-resized_cropped = img.crop(cropped_rect)
+overlaid_shirt_size= shirt_img.size
 
 # Overlay the shirt image
-shirt_scaled = shirt_img.resize(resized_cropped.size)
-overlayed_shirt = ImageOps.fit(shirt_scaled, resized_cropped.size, method=Image.FIT proportionally
+overlayed_shirt = Image.new('RGBA', overlaid_shirt_size)
 
+shirt_scaled=shirt_img.resize((resized_cropped.width*0.8,resized_cropped.height*0.8))
+overlayed_shirt.paste(shirt_scaled,(20, 50), mask=None)
 # Create a new image to hold the composition
 composing_img = Image.new('RGB', (cropped_width, cropped_height), color=(255, 255, 255))
 
-# Paste the overlaid shirt onto the composinimg
-for x in range(cropped_width):
-    for y in range(cropped_height):
-        pixel_value = overlayed_shirt.getpixel((x % resized_cropped.size[0], y % resized_cropped.size[1]))
+for x in range(composed.width):
+    for y in range(composed.height):
+        pixel_value= overlayed_shirt.getpixel((x % overlaid_shirt_size[0],y% overlaid_shirt_size[1]))
         composing_img.putpixel((x + cropped_rect[0], y + cropped_rect[1]), (int(pixel_value[0]),
                                                                 int(pixel_value[1]),
                                                                 int(pixel_value[2]),
                                                                 255))
-
-# Save the resulting image
-shirt_scaled = shirt_img.resize(resized_cropped.size)
-overlayed_shirt = ImageOps.fit(shirt_scaled, resized_cropped.size, method=Image.FIT
-                                proportionally)
-composing_img.paste(overlaid_shirt, mask=None)
-
-# Overlaying a color so the transparency of overlaidshirt is visible in  after.png
-for x in range(composing_img.size[0]):
-    for y in range(composing_img.size[1]):
-        pixel_value = (255, 255, 255)
-        composing_img.putpixel((x ,y), pixel_value)
 
 # Save the resulting image
 composing_img.save("after.png")
