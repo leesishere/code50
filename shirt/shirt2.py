@@ -19,6 +19,10 @@ def main():
         if not extension(sys.argv[1], sys.argv[2]):
             print("Input and output have different extensions")
             sys.exit(1)
+            
+            Input does not exist
+
+
 
     # Open an image file
 
