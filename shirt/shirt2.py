@@ -38,14 +38,26 @@ def main():
     muppet.paste(overlay, overlay)
     muppet.save(output_path)
     '''
+    try:
+        imagefile = Image.open(sys.argv[1])
+    except FileNotFoundError:
+        sys.exit("Input does not exist")
 
-    shirtfile = Image.open ("shirt.png")
+    # Open shirt
+    shirtfile = Image.open ("shirt.png")ls
 
+    # Get the size of the shirt
     size = shirtfile.size
 
+    # Resize muppet image to fit shirt
     muppet = ImageOps. fit(imagefile, size)
+
+    # Paste shirt in muppet
     muppet.paste(shirtfile, shirtfile)
-    muppet.save(sys.argv[2]
+
+    # Create output image
+    muppet. save(sys.argv[2])
+
 
 
     '''
