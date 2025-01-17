@@ -14,8 +14,7 @@ resized_cropped = img.crop(cropped_rect)
 
 # Overlay the shirt image
 shirt_scaled = shirt_img.resize(resized_cropped.size)
-overlayed_shirt = ImageOps.fit(shirt_scaled, resized_cropped.size, method=2, bleed=(0.20), centering=(0.50))
-overlaid_shirt = overlayed_shirt.convert('RGBA')
+overlayed_shirt = ImageOps.fit(shirt_scaled, resized_cropped.size, method=Image.FIT proportionally
 
 # Create a new image to hold the composition
 composing_img = Image.new('RGB', (cropped_width, cropped_height), color=(255, 255, 255))
@@ -23,11 +22,23 @@ composing_img = Image.new('RGB', (cropped_width, cropped_height), color=(255, 25
 # Paste the overlaid shirt onto the composinimg
 for x in range(cropped_width):
     for y in range(cropped_height):
-        pixel_value = overlayed_shirt.getpixel((x, y))
+        pixel_value = overlayed_shirt.getpixel((x % resized_cropped.size[0], y % resized_cropped.size[1]))
         composing_img.putpixel((x + cropped_rect[0], y + cropped_rect[1]), (int(pixel_value[0]),
                                                                 int(pixel_value[1]),
                                                                 int(pixel_value[2]),
                                                                 255))
 
 # Save the resulting image
-overlaid_shirt.save("after1.png")
+shirt_scaled = shirt_img.resize(resized_cropped.size)
+overlayed_shirt = ImageOps.fit(shirt_scaled, resized_cropped.size, method=Image.FIT
+                                proportionally)
+composing_img.paste(overlaid_shirt, mask=None)
+
+# Overlaying a color so the transparency of overlaidshirt is visible in  after.png
+for x in range(composing_img.size[0]):
+    for y in range(composing_img.size[1]):
+        pixel_value = (255, 255, 255)
+        composing_img.putpixel((x ,y), pixel_value)
+
+# Save the resulting image
+composing_img.save("after.png")
