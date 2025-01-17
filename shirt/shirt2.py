@@ -23,8 +23,6 @@ def main():
             print("Input does not exist")
             sys.exit(1)
 
-
-
     # Open an image file
 
     background_image_path = sys.argv[1]
@@ -39,7 +37,17 @@ def main():
     muppet = ImageOps.fit(background,size)
     muppet.paste(overlay, overlay)
     muppet.save(output_path)
-    
+
+
+shirtfile = Image.open ("shirt.png")
+
+size = shirtfile.size
+
+muppet = ImageOps. fit(imagefile, size)
+muppet.paste(shirtfile, shirtfile)
+muppet.save(sys.argv[2]5
+
+
     '''
     # Get the dimensions of the background image
     width, height = background.size
