@@ -13,12 +13,17 @@ def main():
             print("Too many command-line arguments")
             sys.exit(1)
     else:
-        if not extension(sys.argv[1], sys.argv[2]):
-            print("Input and output have different extensions")
-            sys.exit(1)
         if not validate_extension(sys.argv[2]):
             print("Invalid output")
             sys.exit(1)
+        if not extension(sys.argv[1], sys.argv[2]):
+            print("Input and output have different extensions")
+            sys.exit(1)
+        if not os.path.isfile(sys.argv[1]):
+            print("Input does not exist")
+            sys.exit(1)
+
+
 
     # Open an image file
 
@@ -37,7 +42,8 @@ def main():
     # Define the crop box (left, upper, right, lower)
     top_pixels = 0
     if "1" in background_image_path:
-        crop_box = (0+10, top_pixels + 75, width + 10, height - 75)
+        #crop_box = (0+10, top_pixels + 75, width + 10, height - 75)
+        crop_box = (0+10, top_pixels + 75, width + 0, height - 75)
     else:
         crop_box = (0+10, top_pixels + 200, width + 10, height - 200)
     # Crop the image
