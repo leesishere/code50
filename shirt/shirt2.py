@@ -35,8 +35,8 @@ def main():
     overlay = Image.open(overlay_path)
     background = Image.open(background_image_path)
 
-
-
+    
+    '''
     # Get the dimensions of the background image
     width, height = background.size
     # Define the crop box (left, upper, right, lower)
@@ -62,7 +62,7 @@ def main():
     background.paste(overlay, position, overlay)
     # Save the result
     background.save(output_path)
-
+    '''
 def check_arguments(params):
     if len(params) == 3:
         return True
