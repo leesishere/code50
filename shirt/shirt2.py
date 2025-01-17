@@ -24,7 +24,7 @@ def main():
             sys.exit(1)
 
     # Open an image file
-
+    '''
     background_image_path = sys.argv[1]
     output_path = sys.argv[2]
 
@@ -37,15 +37,15 @@ def main():
     muppet = ImageOps.fit(background,size)
     muppet.paste(overlay, overlay)
     muppet.save(output_path)
+    '''
 
+    shirtfile = Image.open ("shirt.png")
 
-shirtfile = Image.open ("shirt.png")
+    size = shirtfile.size
 
-size = shirtfile.size
-
-muppet = ImageOps. fit(imagefile, size)
-muppet.paste(shirtfile, shirtfile)
-muppet.save(sys.argv[2]5
+    muppet = ImageOps. fit(imagefile, size)
+    muppet.paste(shirtfile, shirtfile)
+    muppet.save(sys.argv[2]
 
 
     '''
