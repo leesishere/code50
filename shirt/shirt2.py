@@ -1,6 +1,6 @@
+from PIL import Image, ImageOps
 import sys
 import os
-from PIL import Image
 
 
 def main():
@@ -23,41 +23,39 @@ def main():
     # Open an image file
 
     background_image_path = sys.argv[1]
+    output_path = sys.argv[2]
+
     overlay_path = 'shirt.png'
-
-    try:
-        # Open the overlay and background images
-        overlay = Image.open(overlay_path)
-        background = Image.open(background_image_path)
+    # Open the overlay and background images
+    overlay = Image.open(overlay_path)
+    background = Image.open(background_image_path)
 
 
-        output_size = (600, 600)
-        aspect_ratio_output=background.size[0] /output_size[1]
 
-        if aspect_ratio_output > output_size[0]/output_size[1]:
-            new_height=int(output_size*aspect_ratio_output )
+    # Get the dimensions of the background image
+    width, height = background.size
+    # Define the crop box (left, upper, right, lower)
+    top_pixels = 0
+    if "1" in background_image_path:
+        crop_box = (0+10, top_pixels + 75, width + 10, height - 75)
+    else:
+        crop_box = (0+10, top_pixels + 200, width + 10, height - 200)
+    # Crop the image
+    background = background.crop(crop_box)
 
-            resize_image= background.resize((int(new_height), int(1600)), Image.LANCZOS)
+    # Resize the background image to fit the overlay size
+    background = background.resize(overlay.size, Image.LANCZOS)
 
-        else:
-          #crop the image
-          crop_box=( (int((background.size[0] - output_size[0])/2)) ,  (output_size[1], background.size[1]))
 
-          resize_image = background.crop(crop_box)
+    # Set the position for the overlay (e.g., center it on the background)
+    position = (0, -40)
+    position = (0, 0)
 
-          if resize_image.size == output_size: # added this condition
-            overlay_paste=overlay.resize(output_size, Image.LANCZOS)
-            resized_image=resize_image.paste(overlay_paste,(0, 0))
-
-        else:
-           resize_image = background.resize((output_size[0], output_size[1]), Image.LANCZOS) # added this line
-          overlay_paste=overlay.resize(output_size, Image.LANCZOS)
-            resized_image=resize_image.paste(overlay_paste,(0, 0))
-
-        # Save the result
-        resized_image.save(sys.argv[2])
-    except Exception as e:
-       print(str(e))
+    # Top-left corner
+    # # Overlay the image with transparency handling
+    background.paste(overlay, position, overlay)
+    # Save the result
+    background.save(output_path)
 
 def check_arguments(params):
     if len(params) == 3:
@@ -71,7 +69,6 @@ def file_exists(file_path):
         return True
     else:
         return False
-
 def validate_extension(file_extension):
     extension = os.path.splitext(file_extension)[1]
     if (extension == '.jpg' or extension == '.png'):
@@ -80,13 +77,13 @@ def validate_extension(file_extension):
         return False
 
 def extension(file_path_one, file_path_two):
-    file_extension_one = "."+file_path_one.split(".")[1].lower()
-    file_extension_two = "."+file_path_two.split(".")[1]
-    if (file_extension_one==file_extension_two):
+    file_extension_one = os.path.splitext(file_path_one)[1]
+    file_extension_two = file_path_two.split(".")[1]
+    file_extension_two = "." + file_extension_two
+    if file_extension_one == file_extension_two:
         return True
     else:
         return False
-
 
 if __name__ == "__main__":
       main()
