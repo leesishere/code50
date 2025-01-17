@@ -35,6 +35,8 @@ def main():
     overlay = Image.open(overlay_path)
     background = Image.open(background_image_path)
 
+    size = overlay.size
+
     
     '''
     # Get the dimensions of the background image
