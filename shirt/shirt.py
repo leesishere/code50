@@ -23,20 +23,29 @@ def main():
             print("Input does not exist")
             sys.exit(1)
 
-
-
     # Open an image file
+    try:
+        imageFileBefore = Image.open(sys.argv[1])
+    except FileNotFoundError:
+        sys.exit("Input does not exist")
 
-    background_image_path = sys.argv[1]
-    output_path = sys.argv[2]
+    # Open shirt
+    shirtfile = Image.open ("shirt.png")
 
-    overlay_path = 'shirt.png'
-    # Open the overlay and background images
-    overlay = Image.open(overlay_path)
-    background = Image.open(background_image_path)
+    # Get the size of the shirt
+    size = shirtfile.size
+
+    # Resize muppet image to fit shirt
+    muppet = ImageOps.fit(imageFileBefore, size)
+
+    # Paste shirt in muppet
+    muppet.paste(shirtfile, shirtfile)
+
+    # Create output image
+    muppet. save(sys.argv[2])
 
 
-
+    '''
     # Get the dimensions of the background image
     width, height = background.size
     # Define the crop box (left, upper, right, lower)
@@ -62,7 +71,7 @@ def main():
     background.paste(overlay, position, overlay)
     # Save the result
     background.save(output_path)
-
+    '''
 def check_arguments(params):
     if len(params) == 3:
         return True
@@ -77,7 +86,7 @@ def file_exists(file_path):
         return False
 def validate_extension(file_extension):
     extension = os.path.splitext(file_extension)[1]
-    if (extension == '.jpg' or extension == '.png'):
+    if (extension == '.jpg' or extension == '.jpeg' or extension == '.png'):
         return True
     else:
         return False
