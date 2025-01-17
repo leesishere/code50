@@ -24,22 +24,8 @@ def main():
             sys.exit(1)
 
     # Open an image file
-    '''
-    background_image_path = sys.argv[1]
-    output_path = sys.argv[2]
-
-    overlay_path = 'shirt.png'
-    # Open the overlay and background images
-    overlay = Image.open(overlay_path)
-    background = Image.open(background_image_path)
-
-    size = overlay.size
-    muppet = ImageOps.fit(background,size)
-    muppet.paste(overlay, overlay)
-    muppet.save(output_path)
-    '''
     try:
-        imagefile = Image.open(sys.argv[1])
+        imagefilebe = Image.open(sys.argv[1])
     except FileNotFoundError:
         sys.exit("Input does not exist")
 
