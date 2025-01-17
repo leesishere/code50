@@ -15,7 +15,7 @@ shirt_scaled=shirt_img.resize(resized_cropped)
 
 # Overlay the shirt image
 overlayed_shirt = Image.new('RGBA', overlaid_shirt_size)
- overlayed_shirt.paste(shirt_scaled,(20, 50), mask=None)
+overlayed_shirt.paste(shirt_scaled,(20, 50), mask=None)
 
 # Create a new image to hold the composition
 composing_img = Image.new('RGB', (cropped_width, cropped_height), color=(0,0,0))
