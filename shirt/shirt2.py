@@ -37,7 +37,9 @@ def main():
 
     size = overlay.size
     muppet = ImageOps.fit(background,size)
-
+    muppet.paste(overlay, overlay)
+    muppet.save(output_path)
+    
     '''
     # Get the dimensions of the background image
     width, height = background.size
