@@ -30,57 +30,21 @@ def main():
     overlay = Image.open(overlay_path)
     background = Image.open(background_image_path)
 
-    # Get the size of the image in bytes
-    overlay_size = overlay.size
-    background_size = background.size
 
-    # Get the size of the image in pixels
-    overlay_width, overlay_height = overlay.size
-    background_width, background_height = background.size
-
-
-    print(f"overlay Size: {overlay_size[0]*overlay_size[1]} bytes")
-    print(f"overlay Size: {overlay_width}x{overlay_height} pixels")
-
-    print(f"background Size: {background_size[0]*background_size[1]} bytes")
-    print(f"background Size: {background_width}x{background_height} pixels")
-
-    '''
-    # Calculate the coordinates for placing overlay in center of background
-    x = ((background.width - overlay.width) / 2) + int((background.width - overlay.width) / 2 % 1 * (background.width // 2))
-    y = ((background.height - overlay.height) / 2) + int((background.height - overlay.height) / 2 % 1 * (background.height // 2))
-
-    # Fit the image to fit within the background
-    ImageOps.fit(overlay, background, x=x , y=y)
-
-    # display the output
-    background.show()
-
-
-    background.save(output_path)
-    '''
-    '''
-
-    # Image size: 1200 x 1600 pixels
 
     # Get the dimensions of the background image
     width, height = background.size
     # Define the crop box (left, upper, right, lower)
     top_pixels = 0
     if "1" in background_image_path:
-        crop_box = (0, top_pixels + 0, width, height - 0)
-        #crop_box = (0, top_pixels + 72, width, height - 72)
+        crop_box = (0+10, top_pixels + 75, width + 10, height - 75)
     else:
-        crop_box = (0, top_pixels + 200, width + 0, height - 200)
+        crop_box = (0+10, top_pixels + 200, width + 10, height - 200)
     # Crop the image
     background = background.crop(crop_box)
 
-
-
     # Resize the background image to fit the overlay size
-    overlay = overlay.resize(background.size, Image.LANCZOS)
-    #background = background.resize(overlay.size, Image.LANCZOS)
-    #background = ImageOps.fit(background, (600,600))
+    background = background.resize(overlay.size, Image.LANCZOS)
 
 
     # Set the position for the overlay (e.g., center it on the background)
@@ -92,7 +56,6 @@ def main():
     background.paste(overlay, position, overlay)
     # Save the result
     background.save(output_path)
-'''
 
 def check_arguments(params):
     if len(params) == 3:
