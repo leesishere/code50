@@ -9,14 +9,10 @@ def main():
     print(validate(input("IPv4 Address: ")))
 
 
-def validate(ip):
-
-
-
-def validIP(IP: str) -> str:
+def validate(IP: str) -> str:
     try:
         ip = ip_address(IP)
-        return "IPv4" if ip.version == 4 else "IPv6"
+        return True if ip.version == 4 else return False
     except ValueError:
         return "Invalid"
 
