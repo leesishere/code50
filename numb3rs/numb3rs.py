@@ -12,7 +12,10 @@ def main():
 def validate(IP: str) -> str:
     try:
         ip = ip_address(IP)
-        return True if ip.version == 4 else return False
+        if ip.version == 4:
+            return True
+        else:
+            return False
     except ValueError:
         return "Invalid"
 
