@@ -18,7 +18,9 @@ def parse(s):
 
     if match:
         url = match.group(1)
-        print(f"\n\n {url}")
+        pattern = r'\/(.+)$'
+        match = re.search(pattern, url)
+        print(match.group(1))
 
 if __name__ == "__main__":
     main()
