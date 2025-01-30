@@ -13,7 +13,7 @@ def main():
 
 
 def parse(s):
-    pattern = r"^<iframe (?:.+) src=\"(.+)\"(?:>)"
+    pattern = r"^<iframe (?:.+) src=\"(.+)\"(?:> ?</iframe>"
     match = re.search(pattern, s)
 
 
