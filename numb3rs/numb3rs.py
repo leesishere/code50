@@ -19,11 +19,16 @@ def validate(ip):
         num_groups = match.lastindex
         print("Number of groups:", num_groups)
 
-        # Loop through the groups and print each one
+        # Loop through the groups to validate 0-255
         for i in range(1, num_groups + 1):
             print(f"Group {i}: {match.group(i)}")
+            if not (int(match.group(i)) >= 0 and int(match.group(i)) <= 255):
+                return False
+        return True
+
     else:
-        Return False
+        # Does not match pattern of 127.0.0.1
+        return False
 
 '''
 # To use the ipaddress package to validate if we have a IPv4
