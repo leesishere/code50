@@ -13,18 +13,6 @@ def validate(ip):
     pattern_IPv4 = r"\b^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\b(?!\.)"
     match = re.search(pattern_IPv4, ip)
 
-    pattern_nonIPv4 = r"\b^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\b(?!\.)"
-    match_non = re.search(pattern_nonIPv4, ip)
-
-    # verify there are only 4 octial
-    if match_non:
-        # Get the number of groups
-        num_groups = match_non.lastindex
-        print("Number of groups:", num_groups)
-
-        # Loop through the groups and print each one
-        for i in range(1, num_groups + 1):
-            print(f"Group {i}: {match_non.group(i)}")
 
     if match:
         # Get the number of groups
@@ -34,7 +22,8 @@ def validate(ip):
         # Loop through the groups and print each one
         for i in range(1, num_groups + 1):
             print(f"Group {i}: {match.group(i)}")
-
+    else:
+        Return False
 
 '''
 def validate(IP: str) -> str:
