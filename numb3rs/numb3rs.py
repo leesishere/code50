@@ -21,8 +21,6 @@ def validate(ip):
         # Get the number of groups
         num_groups = match_non.lastindex
         print("Number of groups:", num_groups)
-        if int(num_groups) > 4:
-            print("Oh No!")
 
         # Loop through the groups and print each one
         for i in range(1, num_groups + 1):
@@ -37,7 +35,7 @@ def validate(ip):
         for i in range(1, num_groups + 1):
             print(f"Group {i}: {match.group(i)}")
 
-'''
+
 '''
 def validate(IP: str) -> str:
     try:
