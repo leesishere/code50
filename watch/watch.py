@@ -20,7 +20,7 @@ def parse(s):
         url = match.group(1)
         pattern = r'https?:\/\/(www\.)?youtube\.com\/(embed/)?'
         page = re.sub(pattern, "", url)
-        print(f"{page}")
+        print(f"t https://youtu.be/{page}")
 
 if __name__ == "__main__":
     main()
