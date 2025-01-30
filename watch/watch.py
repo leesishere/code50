@@ -16,10 +16,9 @@ def parse(s):
     pattern = r'src="([^"]+)"'
     match = re.search(pattern, s)
 
-
     if match:
-        print(match.group(1))
-
+        url = match.group(1)
+        print(f"\n\n {url}")
 
 if __name__ == "__main__":
     main()
