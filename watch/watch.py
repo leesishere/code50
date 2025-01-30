@@ -18,9 +18,9 @@ def parse(s):
 
     if match:
         url = match.group(1)
-        pattern = r'https?:\/\/(www\.)?youtube.com/embed/'
-        match = re.search(pattern, url)
-        print(match.group(1))
+        pattern = r'https?:\/\/(www\.)?youtube\.com\/(embed/)?'
+        page = re.sub(pattern, "", url)
+        print(f"{page}")
 
 if __name__ == "__main__":
     main()
