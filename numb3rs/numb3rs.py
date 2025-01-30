@@ -22,7 +22,7 @@ def validate(ip):
         num_groups = match_non.lastindex
         print("Number of groups:", num_groups)
         if int(num_groups) > 4:
-            print("False")
+            print("Oh No!")
 
         # Loop through the groups and print each one
         for i in range(1, num_groups + 1):
