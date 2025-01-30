@@ -13,7 +13,7 @@ def main():
 
 
 def parse(s):
-    pattern = r"\bsrc="(.+)"\b"
+    pattern = r"\bsrc=\"(.+)\"\b"
     match = re.search(pattern, ip)
 
 
