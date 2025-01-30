@@ -13,10 +13,12 @@ def main():
 
 
 def parse(s):
-    ...
+    pattern = r"\bsrc="(.+)"\b"
+    match = re.search(pattern, ip)
 
 
-...
+    if match:
+        print(match.group(1))
 
 
 if __name__ == "__main__":
