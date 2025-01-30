@@ -26,6 +26,7 @@ def validate(ip):
         Return False
 
 '''
+# To use the ipaddress package to validate if we have a IPv4
 def validate(IP: str) -> str:
     try:
         ip = ip_address(IP)
