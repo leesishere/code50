@@ -2,7 +2,7 @@ import sys
 import pytest
 sys.path.append('/workspaces/21178063/numb3rs')
 
-from validate import numb3rs
+from numb3rs import validate 
 
 
 def test_True():
