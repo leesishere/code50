@@ -13,7 +13,11 @@ def main():
 
 
 def parse(s):
-    pattern = r'src="([^"]+)"'
+    if 'youtube.com' not in s or '<iframe' not in s:
+        return None
+    pattern = r'src="(http(?:s)?[^"]+)"'
+
+    #pattern = r'http(?:s):\/\/(?:www\.)?youtube\.com\/(?:embed/)?'
     match = re.search(pattern, s)
 
     # <iframe src="https://cs50.harvard.edu/python"></iframe>
@@ -22,7 +26,11 @@ def parse(s):
         url = match.group(1)
         pattern = r'https?:\/\/(www\.)?youtube\.com\/(embed/)?'
         page = re.sub(pattern, "", url)
-        return f"https://youtu.be/{page}"
+
+        if url != page:
+            return f"https://youtu.be/{page}"
+        else:
+            return None
 
 if __name__ == "__main__":
     main()
