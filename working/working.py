@@ -14,7 +14,7 @@ def main():
 def convert(s):
     s = s.strip()
     pattern = r'^(\d{1,2}[:\d{1,2}|])\s([AM|PM])\sto\s((\d{1,2}[:\d{1,2}|]))([AM|PM])$'
-    pattern = r'^(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm])'
+    pattern = r'^(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm])\s+]Tt][Oo]\s+(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm])$'
 
     #pattern = r'http(?:s):\/\/(?:www\.)?youtube\.com\/(?:embed/)?'
     match = re.search(pattern, s)
@@ -23,10 +23,14 @@ def convert(s):
         firstHour = match.group(1)
         firstMinute = match.group(2)
         firstMeridieme = match.group(3)
+        secondHour = match.group(4)
+        secondMinute = match.group(5)
+        secondMeridieme = match.group(6)
     except:
         pass
 
     print(f"{firstHour} {firstMinute} {firstMeridieme}")
+    print(f"{secondHour} {secondMinute} {secondMeridieme}")
 
 
 if __name__ == "__main__":
