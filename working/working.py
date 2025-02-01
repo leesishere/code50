@@ -14,10 +14,11 @@ def main():
 def convert(s):
     s = s.strip()
     pattern = r'^(\d{1,2}[:\d{1,2}|])\s([AM|PM])\sto\s((\d{1,2}[:\d{1,2}|]))([AM|PM])$'
+    pattern = r'^(\d{1,2}[:\d{1,2}|])'
 
     #pattern = r'http(?:s):\/\/(?:www\.)?youtube\.com\/(?:embed/)?'
     match = re.search(pattern, s)
-    print(match)
+    print(match.group(1))
 
 
 if __name__ == "__main__":
