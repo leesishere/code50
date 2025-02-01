@@ -12,7 +12,8 @@ def main():
 #  9 AM to 5:00 PM
 
 def convert(s):
-
+    s = s.split()
+    
 
 if __name__ == "__main__":
     main()
