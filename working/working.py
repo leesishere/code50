@@ -17,8 +17,8 @@ def convert(s):
 
     #pattern = r'http(?:s):\/\/(?:www\.)?youtube\.com\/(?:embed/)?'
     match = re.search(pattern, s)
-    time = match.group(1)
-    print(time)
+    #time = match.group(1)
+
 
 if __name__ == "__main__":
     main()
