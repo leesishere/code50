@@ -31,6 +31,8 @@ def convert(s):
     except:
         pass
 
+if value < 0:
+    raise ValueError("The value cannot be negative.")
 
 
 
