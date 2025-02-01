@@ -12,12 +12,12 @@ def main():
 #  9 AM to 5:00 PM
 
 def convert(s):
-    s = s.split()
-    pattern = r'^(.+)([AM|PM])\s+to\s+(.+)([AM|PM])$'
+    s = s.strip()
+    pattern = r'^(\d{1,2})\s([AM|PM])\s+to\s+(.+)([AM|PM])$'
 
     #pattern = r'http(?:s):\/\/(?:www\.)?youtube\.com\/(?:embed/)?'
     match = re.search(pattern, s)
-    #time = match.group(1)
+    print(match.group(1))
 
 
 if __name__ == "__main__":
