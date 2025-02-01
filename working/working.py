@@ -13,8 +13,8 @@ def main():
 
 def convert(s):
     s = s.strip()
-    pattern = r'^(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm])\s+]Tt][Oo]\s+(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm])$'
-    pattern = r'(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm]\sto\s(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm]))'
+    pattern = r'^(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm])\s+[Tt][Oo]\s+(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm])$'
+    pattern = r'(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm]\s[Tt][Oo]\s(1[0-2]|0?[1-9]):?([0-5][0-9])? ?([AaPp][Mm]))'
 
     #pattern = r'http(?:s):\/\/(?:www\.)?youtube\.com\/(?:embed/)?'
     match = re.search(pattern, s)
