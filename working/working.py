@@ -18,8 +18,15 @@ def convert(s):
 
     #pattern = r'http(?:s):\/\/(?:www\.)?youtube\.com\/(?:embed/)?'
     match = re.search(pattern, s)
-    print(match)
-    #.group(1)
+
+    try:
+        firstHour = match.group(1)
+        firstMinute = match.group(2)
+        firstMeridieme = match.group(3)
+    except:
+        continue
+
+    print(f"{firstHour} {firstMinute} {firstMeridieme}")
 
 
 if __name__ == "__main__":
