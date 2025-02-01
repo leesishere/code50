@@ -13,7 +13,10 @@ def main():
 
 def convert(s):
     s = s.split()
-    
+    pattern = r''
+
+    #pattern = r'http(?:s):\/\/(?:www\.)?youtube\.com\/(?:embed/)?'
+    match = re.search(pattern, s)
 
 if __name__ == "__main__":
     main()
