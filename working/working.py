@@ -24,7 +24,7 @@ def convert(s):
         firstMinute = match.group(2)
         firstMeridieme = match.group(3)
     except:
-        continue
+        pass
 
     print(f"{firstHour} {firstMinute} {firstMeridieme}")
 
