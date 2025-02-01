@@ -26,11 +26,12 @@ def convert(s):
         secondHour = match.group(4)
         secondMinute = match.group(5)
         secondMeridieme = match.group(6)
+        print(f"{firstHour} {firstMinute} {firstMeridieme}")
+        print(f"{secondHour} {secondMinute} {secondMeridieme}")
     except:
         pass
 
-    print(f"{firstHour} {firstMinute} {firstMeridieme}")
-    print(f"{secondHour} {secondMinute} {secondMeridieme}")
+
 
 
 if __name__ == "__main__":
