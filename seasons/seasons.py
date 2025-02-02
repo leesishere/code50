@@ -5,6 +5,8 @@ import math
 from num2words import num2words
 from datetime import date
 
+# ignoramus
+
 class Minutes(date):
     def __init__(self, name, house):
         super().__init__(name)
