@@ -5,7 +5,10 @@ import math
 from num2words import num2words
 from datetime import date
 
-class Minute()
+class Minutes(date):
+    def __init__(self, name, house):
+        super().__init__(name)
+        self.house = house
 
 def main():
     # expect (YYYY-MM-DD)
