@@ -11,15 +11,13 @@ def main():
 
 def age_in_minutes(s):
     try:
-        age = date.today() - date.fromisoformat(s)
+        #age = date.today() - date.fromisoformat(s)
         age = date.fromisoformat('2000-01-01') - date.fromisoformat(s)
+        # Get the total minutes
+        minutes = age.total_seconds() / 60
+        return num2words(math.ceil(minutes))
     except ValueError:
         print("Invalid Date")
-
-    # Get the total minutes
-    minutes = age.total_seconds() / 60
-    return num2words(math.ceil(minutes))
-
 
 if __name__ == "__main__":
     main()
