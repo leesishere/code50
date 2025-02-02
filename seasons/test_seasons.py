@@ -8,7 +8,6 @@ def test_incorrect():
     assert age_in_minutes('Jamuary 1, 1999') == 'Invalid Date'
 
 
-
 @freeze_time("2000-01-01")
 def test_correct_2000_01_01():
     assert age_in_minutes('1999-01-01') == 'five hundred and twenty-five thousand, six hundred'
