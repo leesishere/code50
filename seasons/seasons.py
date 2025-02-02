@@ -16,6 +16,8 @@ def age_in_minutes(s):
     minutes = age.total_seconds() / 60
 
     
+    29,092,320
+
     return math.ceil(minutes)
 
 
