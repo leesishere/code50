@@ -22,7 +22,7 @@ def age_in_minutes(s):
         minutes = age.total_seconds() / 60
         return num2words(math.ceil(minutes))
     except ValueError:
-        raise ValueError("Invalid Date")
+        print("Invalid Date")
 
 if __name__ == "__main__":
     main()
