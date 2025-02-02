@@ -3,7 +3,9 @@ sys.path.append('/workspaces/21178063/seasons/')
 from seasons import age_in_minutes
 
 def test_correct():
-    assert age_in_minutes('Jamuary 1, 1999') == 'Invalid Date'
+    with pytest.raises(ValueError):
+        assert age_in_minutes('Jamuary 1, 1999') == 'Invalid Date'
+
 
 def test_incorrect():
     assert age_in_minutes('1999-01-01') == 'five hundred and twenty-five thousand, six hundred'
