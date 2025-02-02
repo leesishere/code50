@@ -8,8 +8,7 @@ def main():
 
 
 def age_in_minutes(s):
- return date.fromisoformat(s)
- #return date.today()
+    date.fromisoformat(s) - date.today()
 
 # Calculate the difference
 difference = date2 - date1
