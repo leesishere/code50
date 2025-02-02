@@ -1,6 +1,8 @@
 import sys
 sys.path.append('/workspaces/21178063/seasons/')
 import re
+import math
+
 from datetime import date
 
 
@@ -12,7 +14,9 @@ def age_in_minutes(s):
     age = date.today() - date.fromisoformat(s)
     # Get the total minutes
     minutes = age.total_seconds() / 60
-    return minutes
+
+    
+    return math.ceil(minutes)
 
 
 if __name__ == "__main__":
