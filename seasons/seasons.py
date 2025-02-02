@@ -8,7 +8,8 @@ def main():
 
 
 def age_in_minutes(s):
- return date.today()
+ return date.fromisoformat(s)
+ #return date.today()
 
 
 if __name__ == "__main__":
