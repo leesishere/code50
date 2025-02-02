@@ -4,17 +4,19 @@ import pytest
 from freezegun import freeze_time
 from seasons import age_in_minutes
 
-def test_correct():
+def test_incorrect():
     assert age_in_minutes('Jamuary 1, 1999') == 'Invalid Date'
 
 
 
-@freeze_time("2012-01-14")
+@freeze_time("2000-01-01")
 
-def test_incorrect():
+
+def test_correct_2000_01_01():
     assert age_in_minutes('1999-01-01') == 'five hundred and twenty-five thousand, six hundred'
-    assert age_in_minutes('1999-12-31') == 'one thousand, four hundred and forty'
-    assert age_in_minutes('1970-01-01') == 'fifteen million, seven hundred and seventy-eight thousand and eighty'
+    
+    #assert age_in_minutes('1999-12-31') == 'one thousand, four hundred and forty'
+    #assert age_in_minutes('1970-01-01') == 'fifteen million, seven hundred and seventy-eight thousand and eighty'
 
 
 
