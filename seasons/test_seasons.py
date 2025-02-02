@@ -1,5 +1,6 @@
 import sys
 sys.path.append('/workspaces/21178063/seasons/')
+import pytest
 from seasons import age_in_minutes
 
 def test_correct():
