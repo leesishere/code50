@@ -14,12 +14,8 @@ def age_in_minutes(s):
     age = date.today() - date.fromisoformat(s)
     # Get the total minutes
     minutes = age.total_seconds() / 60
-
-
-
     #29,092,320
-
-    return math.ceil(minutes)
+    return num2words(math.ceil(minutes))
 
 
 if __name__ == "__main__":
