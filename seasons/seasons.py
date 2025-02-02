@@ -8,15 +8,11 @@ def main():
 
 
 def age_in_minutes(s):
-    date.fromisoformat(s) - date.today()
+    age = date.today() - date.fromisoformat(s)
+    # Get the total minutes
+    minutes = age.total_seconds() / 60
+    return minutes
 
-# Calculate the difference
-difference = date2 - date1
-
-# Get the total minutes
-minutes = difference.total_seconds() / 60
-
-print(f"Minutes between dates: {minutes}")
 
 if __name__ == "__main__":
     main()
