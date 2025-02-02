@@ -9,8 +9,9 @@ def main():
     print(age_in_minutes(input("Date of borth (YYYY-MM-DD):  ")))
 
 
-def age_in_minutes(s='2000-01-01'):
+def age_in_minutes(s):
     try:
+        s='2000-01-01'
         age = date.today() - date.fromisoformat(s)
         # Get the total minutes
         minutes = age.total_seconds() / 60
