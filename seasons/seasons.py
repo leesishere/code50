@@ -14,7 +14,7 @@ def age_in_minutes(s):
         age = date.today() - date.fromisoformat(s)
         age = date.fromisoformat('2000-01-01') - date.fromisoformat(s)
     except ValueError:
-        sys.exit("Invalid Date")
+        print("Invalid Date")
 
     # Get the total minutes
     minutes = age.total_seconds() / 60
