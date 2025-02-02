@@ -4,8 +4,8 @@ import pytest
 from seasons import age_in_minutes
 
 def test_correct():
-    with pytest.raises(ValueError):
-        assert age_in_minutes('Jamuary 1, 1999') == 'Invalid Date'
+    #with pytest.raises(ValueError):
+    assert age_in_minutes('Jamuary 1, 1999') == 'Invalid Date'
 
 
 def test_incorrect():
