@@ -7,7 +7,7 @@ from datetime import date
 
 
 def main():
-    print(age_in_minutes(input("Date of borth (YYYY-MM-DD):  ")))
+    age_in_minutes(input("Date of borth (YYYY-MM-DD):  "))
 
 
 def age_in_minutes(s):
@@ -27,10 +27,10 @@ def age_in_minutes(s):
         minutes = age.total_seconds() / 60
         words = num2words(math.ceil(minutes))
         words_no_and = words.replace("and ","")
-        return words_no_and
+        print(words_no_and)
 
     except ValueError:
-        return "Invalid Date"
+        print()"Invalid Date")
 
 if __name__ == "__main__":
     main()
