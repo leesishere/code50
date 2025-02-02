@@ -5,10 +5,12 @@ import math
 from num2words import num2words
 from datetime import date
 
+class Minute()
 
 def main():
-    age_in_minutes(input("Date of borth (YYYY-MM-DD):  "))
-
+    # expect (YYYY-MM-DD)
+    birthDate = input("Date of Birth: ")
+    age_in_minutes(birthDate)
 
 def age_in_minutes(s):
     try:
@@ -27,7 +29,7 @@ def age_in_minutes(s):
         minutes = age.total_seconds() / 60
         words = num2words(math.ceil(minutes))
         words_no_and = words.replace("and ","")
-        print(words_no_and)
+        return words_no_and
 
     except ValueError:
         print()"Invalid Date")
