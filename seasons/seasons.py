@@ -2,7 +2,7 @@ import sys
 sys.path.append('/workspaces/21178063/seasons/')
 import re
 import math
-
+from num2words import num2words
 from datetime import date
 
 
@@ -18,7 +18,7 @@ def age_in_minutes(s):
     1 One
     2 Two
     3 three
-    
+
     29,092,320
 
     return math.ceil(minutes)
