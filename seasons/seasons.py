@@ -25,7 +25,10 @@ def age_in_minutes(s):
 
         # Get the total minutes
         minutes = age.total_seconds() / 60
-        return num2words(math.ceil(minutes))
+        words = num2words(math.ceil(minutes))
+        words_no_and = works.replace("and ","")
+        return words_no_and
+    
     except ValueError:
         return "Invalid Date"
 
