@@ -15,7 +15,7 @@ def age_in_minutes(s):
     # Get the total minutes
     minutes = age.total_seconds() / 60
     #29,092,320
-    return num2words(math.ceil(minutes), lang='fr')
+    return num2words(math.ceil(minutes))
 
 
 if __name__ == "__main__":
