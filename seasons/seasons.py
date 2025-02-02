@@ -4,7 +4,7 @@ from datetime import date
 
 
 def main():
-    ...
+    print(age_in_minutes)
 
 
 ...
