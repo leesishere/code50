@@ -11,7 +11,10 @@ def main():
 
 
 def age_in_minutes(s):
-    age = date.today() - date.fromisoformat(s)
+    try:
+        age = date.today() - date.fromisoformat(s)
+    except:
+        raise 
     # Get the total minutes
     minutes = age.total_seconds() / 60
     #29,092,320
