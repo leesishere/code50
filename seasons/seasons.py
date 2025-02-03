@@ -27,11 +27,11 @@ class Minutes:
         return minutes
 
     @property
-    def birthday():
+    def birthday(self):
         return self._birthday
 
     @birthday.setter
-    def birthday(s):
+    def birthday(self, s):
         try:
             self._birthday = self.date.fromisoformat(s)
         except ValueError:
