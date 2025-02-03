@@ -38,9 +38,9 @@ class Minutes(datetime, num2words, birthday):
 
 def main():
     # expect (YYYY-MM-DD)
-    birthDate = input("Date of Birth: ")
-    #age_in_minutes(birthDate)
-    mydate = Minutes()
+    birthday = input("Date of Birth: ")
+
+    mydate = Minutes(birthday)
     print(mydate.today())
 
 def age_in_minutes(s):
