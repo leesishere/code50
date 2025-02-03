@@ -23,7 +23,8 @@ class Minutes:
     @classmethod
     def minutes(self):
         age = self.date.today() - self._birthday
-        return cls.today()
+        minutes = age.total_seconds() / 60
+        return minutes
 
     @property
     def birthday():
