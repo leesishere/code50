@@ -7,18 +7,41 @@ from datetime import date
 
 # ignoramus
 
-class Minutes(date, num2words):
-    def __init__(self):
-        super().__init__()
+class Minutes(datetime, num2words, birthday):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.birthday = birthday
 
-    def 
+    def __str__(self):
+        age = cls.today() - self.birthday
+        # Get the total minutes
+        minutes = age.total_seconds() / 60
+        words = num2words(math.ceil(minutes))
+        words_no_and = words.replace("and ","")
+        return words_no_and
 
+    @classmethod
+    def minutes(self:
+        date.fromisoformat(today) - self._birthday
+        return cls.today()
 
+    @classmethod
+    def birthday():
+        return self._birthday
+
+    @birthday.setter
+    def birthday(s)
+        try:
+            self._birthday = cls.fromisoformat(s)
+        except ValueError:
+            print("Invalid Date")
 
 def main():
     # expect (YYYY-MM-DD)
     birthDate = input("Date of Birth: ")
-    age_in_minutes(birthDate)
+    #age_in_minutes(birthDate)
+    mydate = Minutes()
+    print(mydate.today())
 
 def age_in_minutes(s):
     try:
@@ -40,7 +63,7 @@ def age_in_minutes(s):
         return words_no_and
 
     except ValueError:
-        print()"Invalid Date")
+        print("Invalid Date")
 
 if __name__ == "__main__":
     main()
