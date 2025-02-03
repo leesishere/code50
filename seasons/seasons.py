@@ -7,12 +7,12 @@ from datetime import date
 
 # ignoramus
 
-class Minutes(date, num2words):
+class Minutes:
     def __init__(self, birthday):
         self.birthday = birthday
 
     def __str__(self):
-        age = cls.today() - self.birthday
+        age = date.today() - self.birthday
         # Get the total minutes
         minutes = age.total_seconds() / 60
         words = num2words(math.ceil(minutes))
@@ -21,9 +21,13 @@ class Minutes(date, num2words):
 
     @classmethod
     def minutes(self):
-        age = self.date.today() - self._birthday
+        age = date.today() - self._birthday
         minutes = age.total_seconds() / 60
         return minutes
+
+    @property
+    def today(self):
+        return date.today()
 
     @property
     def birthday(self):
@@ -32,7 +36,7 @@ class Minutes(date, num2words):
     @birthday.setter
     def birthday(self,s):
         try:
-            self._birthday = self.date.fromisoformat(s)
+            self._birthday = date.fromisoformat(s)
         except ValueError:
             print("Invalid Date")
 
