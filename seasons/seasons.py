@@ -7,7 +7,7 @@ from datetime import date
 
 # ignoramus
 
-class Minutes(date, num2words, birthday):
+class Minutes(date, num2words):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.birthday = birthday
