@@ -7,15 +7,11 @@ from datetime import date
 
 # ignoramus
 
-class Minutes(date, num2words):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.birthday = birthday
 class Minutes:
-    def __init__(self, year, month, day, birthday):
+    def __init__(self, birthday):
         self.date = date(year, month, day)
-        self.birthday
-        
+        self.birthday = birthday
+
     def __str__(self):
         age = cls.today() - self.birthday
         # Get the total minutes
