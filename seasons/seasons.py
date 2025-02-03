@@ -7,10 +7,13 @@ from datetime import date
 
 # ignoramus
 
-class Minutes(date):
-    def __init__(self, name, house):
-        super().__init__(name)
-        self.house = house
+class Minutes(date, num2words):
+    def __init__(self):
+        super().__init__()
+
+    def 
+
+
 
 def main():
     # expect (YYYY-MM-DD)
