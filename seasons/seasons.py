@@ -22,7 +22,7 @@ class Minutes:
 
     @classmethod
     def minutes(self):
-        date.fromisoformat(today) - self._birthday
+        age = self.date.today() - self._birthday
         return cls.today()
 
     @property
