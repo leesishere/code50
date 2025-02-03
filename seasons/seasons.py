@@ -7,7 +7,7 @@ from datetime import date
 
 # ignoramus
 
-class Minutes(datetime, num2words, birthday):
+class Minutes(date, num2words, birthday):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.birthday = birthday
@@ -21,7 +21,7 @@ class Minutes(datetime, num2words, birthday):
         return words_no_and
 
     @classmethod
-    def minutes(self:
+    def minutes(self):
         date.fromisoformat(today) - self._birthday
         return cls.today()
 
@@ -30,7 +30,7 @@ class Minutes(datetime, num2words, birthday):
         return self._birthday
 
     @birthday.setter
-    def birthday(s)
+    def birthday(s):
         try:
             self._birthday = cls.fromisoformat(s)
         except ValueError:
