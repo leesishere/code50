@@ -32,7 +32,7 @@ class Minutes:
     @birthday.setter
     def birthday(s):
         try:
-            self._birthday = cls.fromisoformat(s)
+            self._birthday = self.date.fromisoformat(s)
         except ValueError:
             print("Invalid Date")
 
