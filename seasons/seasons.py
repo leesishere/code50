@@ -25,7 +25,7 @@ class Minutes(datetime, num2words, birthday):
         date.fromisoformat(today) - self._birthday
         return cls.today()
 
-    @classmethod
+    @property
     def birthday():
         return self._birthday
 
