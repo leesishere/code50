@@ -28,8 +28,8 @@ class Minutes:
     def birthday(self, s: str):
         try:
             # Corrected usage of date.fromisoformat()
-            if not isinstance(s, str):  # Input must be a string
-                raise TypeError("Invalid input. Please provide an ISO-formatted date.")
+            #if not isinstance(s, str):  # Input must be a string
+            #    raise TypeError("Invalid input. Please provide an ISO-formatted date.")
             self._birthday = date.fromisoformat(s)
         except ValueError as e:
             print(f"Invalid Date (Error): {e}")
@@ -53,6 +53,7 @@ class Minutes:
 def main():
     # expect (YYYY-MM-DD)
     birthday = input("Date of Birth: ")
+    print
 
     mydate = Minutes(birthday)
 
