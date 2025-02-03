@@ -7,9 +7,8 @@ from datetime import date
 
 # ignoramus
 
-class Minutes:
+class Minutes(date, num2words):
     def __init__(self, birthday):
-        self.date = date(year, month, day)
         self.birthday = birthday
 
     def __str__(self):
@@ -31,7 +30,7 @@ class Minutes:
         return self._birthday
 
     @birthday.setter
-    def birthday(self, s):
+    def birthday(self,s):
         try:
             self._birthday = self.date.fromisoformat(s)
         except ValueError:
