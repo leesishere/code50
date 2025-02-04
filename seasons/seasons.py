@@ -57,8 +57,7 @@ def get_birthday():
 def main():
     print(get_minutes(input("Date of Birth: ")))
 
-def get_minutes(date_input):
-    today_date = date.today()
+def get_minutes(date_input, today_date=date.today()):
 
     try:
         year, month, day = str(date_input).split("-")
