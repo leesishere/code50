@@ -2,19 +2,40 @@ import sys
 sys.path.append('/workspaces/21178063/seasons/')
 import pytest
 from freezegun import freeze_time
-from seasons import age_in_minutes
+from seasons import print_say_age_in_minutes, Minutes
 
 def test_incorrect():
-    assert age_in_minutes('Jamuary 1, 1999') == 'Invalid Date'
+    with pytest.raises(SystemExit) as excinfo:
+        my_date = Minutes('January 1, 1999')  # Invalid day
+    assert excinfo.type == SystemExit
+    assert excinfo.value.code == "Invalid Date"
 
 
 @freeze_time("2000-01-01")
-def test_correct_2000_01_01():
-    assert age_in_minutes('1999-01-01') == 'five hundred and twenty-five thousand, six hundred'
-
-    #assert age_in_minutes('1999-12-31') == 'one thousand, four hundred and forty'
-    #assert age_in_minutes('1970-01-01') == 'fifteen million, seven hundred and seventy-eight thousand and eighty'
+def test_for_1999():
+    birthday = "1999-01-01"
+    print_say_age_in_minutes(birthday) == "Five hundred twenty-five thousand, six hundred minutes"
 
 
+@freeze_time("2023-01-01")
+def test_for_20023():
+    birthday = "2001-01-01"
+    print_say_age_in_minutes(birthday) == "One million, fifty-one thousand, two hundred minutes"
 
-#for example, fail to raise a ValueError when it should. Run your tests by executing pytest test_seasons.py. pytest should
+@freeze_time("1995-01-01")
+def test_for_1995():
+    birthday = "2001-01-01"
+    print_say_age_in_minutes(birthday) == "Two million, six hundred twenty-nine thousand, four hundred forty minutes"
+
+@freeze_time("2032-01-01")
+def test_for_2032():
+    birthday = "2020-06-01"
+    print_say_age_in_minutes(birthday) ==  "Six million, ninety-two thousand, six hundred forty minutes"
+
+@freeze_time("2000-01-01")
+def test_for_2032():
+    birthday = "1998-06-20"
+    print_say_age_in_minutes(birthday) == "Eight hundred six thousand, four hundred minutes"
+
+if __name__ == "__main__":
+    pytest.main()

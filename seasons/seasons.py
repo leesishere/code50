@@ -1,73 +1,84 @@
 import sys
 import os
-sys.path.append('/workspaces/21178063/seasons/')
 import math
-from num2words import num2words
 from datetime import date
+import num2words
+import inflect
 
-# ignoramus
+p = inflect.engine()
+# Corrected path appending:
+sys.path.append(os.path.abspath('/workspaces/21178063/seasons'))
 
 class Minutes:
-    def __init__(self, birthday):
+    def __init__(self, birthday: str):
         self.birthday = birthday
 
-    def __str__(self):
-        age = date.today() - self.birthday
-        # Get the total minutes
-        minutes = age.total_seconds() / 60
-        words = num2words(math.ceil(minutes))
-        words_no_and = words.replace("and ","")
-        return words_no_and
-
-    @classmethod
-    def minutes(self):
-        age = date.today() - self._birthday
-        minutes = age.total_seconds() / 60
-        return minutes
-
     @property
-    def today(self):
+    def today(self) -> date:
+        #return date.fromisoformat('2000-01-01')
         return date.today()
 
     @property
-    def birthday(self):
+    def birthday(self) -> date:
         return self._birthday
 
     @birthday.setter
-    def birthday(self,s):
+    def birthday(self, s: str):
         try:
             self._birthday = date.fromisoformat(s)
         except ValueError:
-            print("Invalid Date")
+            sys.exit("Invalid Date")
 
-def main():
-    # expect (YYYY-MM-DD)
-    birthday = input("Date of Birth: ")
+    def say_age_in_minutes(self):
+        try:
+            date_difference = date.__sub__(self.today, self.birthday)
+            minutes = int(date_difference.total_seconds()/60)
+            #age = self.today - self.birthday
+            #minutes = age.total_seconds() / 60
 
+            #words = num2words.num2words(math.ceil(minutes))
+            #words_no_and = words.replace(" and", "")
+            #return f"{words_no_and.capitalize()} minutes"
+
+            print(f"{p.number_to_words(math.ceil(minutes), andword="").capitalize()} minutes")
+
+        except ValueError:
+            sys.exit("Invalid Date")
+
+def print_say_age_in_minutes(birthday):
     mydate = Minutes(birthday)
-    print(mydate.today())
+    mydate.say_age_in_minutes()
 
-def age_in_minutes(s):
+def get_birthday():
+    # expect (YYYY-MM-DD)
+    return input("Date of Birth: ")
+
+# ignoramus code
+def main():
+    print(get_minutes(input("Date of Birth: ")))
+
+def get_minutes(date_input):
+    today_date = date.today()
+
     try:
-        #if "PYTEST_CURRENT_TEST" in os.environ:
-        #    today='2000-01-01'
-        #    age = date.fromisoformat(today) - date.fromisoformat(s)
-        #else:
-        #    age = date.today() - date.fromisoformat(s)
+        year, month, day = str(date_input).split("-")
+        birth_date = date(int(year), int(month), int(day))
+        date_difference = self.today - self.birthday
+        #date_difference = date.__sub__(today_date, birth_date)
+        seconds = int(date_difference.total_seconds()/60)
+        words = p.number_to_words(seconds)
+        words = words.capitalize()
 
-        today='2000-01-01'
-        age = date.fromisoformat(today) - date.fromisoformat(s)
-
-        #age = date.today() - date.fromisoformat(s)
-
-        # Get the total minutes
-        minutes = age.total_seconds() / 60
-        words = num2words(math.ceil(minutes))
-        words_no_and = words.replace("and ","")
-        return words_no_and
+        return f"{words.replace(" and "," ")} minutes"
 
     except ValueError:
-        print("Invalid Date")
+        sys.exit("Invalid date")
+
+# The cs50 check50 v3.3.11 does not like having this code in a class :-(
+#def main():
+#    birthday = get_birthday()
+#    print_say_age_in_minutes(birthday)
+
 
 if __name__ == "__main__":
     main()
