@@ -4,6 +4,7 @@ import pytest
 from freezegun import freeze_time
 #from seasons import print_say_age_in_minutes, Minutes, get_minutes
 from seasons import get_minutes
+from datetime import date
 
 
 #def test_incorrect():
@@ -19,8 +20,9 @@ def test_get_incorrect_format():
 #@freeze_time("2000-01-01")
 def test_for_1999():
     birthday = "1999-01-01"
+    when_today_is = date.fromisoformat('2000-01-01')
     #print_say_age_in_minutes(birthday) == "Five hundred twenty-five thousand, six hundred minutes"
-    get_minutes(birthday)   == "Five hundred twenty-five thousand, six hundred minutes"
+    get_minutes(birthday, when_today_is)   == "Five hundred twenty-five thousand, six hundred minutes"
 
 
 #@freeze_time("2023-01-01")
