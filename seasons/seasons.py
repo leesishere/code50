@@ -63,7 +63,7 @@ def get_minutes(date_input):
     try:
         year, month, day = str(date_input).split("-")
         birth_date = date(int(year), int(month), int(day))
-        date_difference = self.today - self.birthday
+        date_difference = today_date - birth_date
         #date_difference = date.__sub__(today_date, birth_date)
         seconds = int(date_difference.total_seconds()/60)
         words = p.number_to_words(seconds)
