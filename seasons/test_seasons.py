@@ -2,7 +2,7 @@ import sys
 sys.path.append('/workspaces/21178063/seasons/')
 import pytest
 from freezegun import freeze_time
-from seasons import print_say_age_in_minutes, Minutes
+from seasons import print_say_age_in_minutes, Minutes, get_minutes
 
 #def test_incorrect():
 #    with pytest.raises(SystemExit) as excinfo:
@@ -18,13 +18,14 @@ def test_get_incorrect_format():
 def test_for_1999():
     birthday = "1999-01-01"
     print_say_age_in_minutes(birthday) == "Five hundred twenty-five thousand, six hundred minutes"
+    get_minutes(birthday)   == "Five hundred twenty-five thousand, six hundred minutes"
 
 
 @freeze_time("2023-01-01")
 def test_for_20023():
     birthday = "2001-01-01"
     print_say_age_in_minutes(birthday) == "One million, fifty-one thousand, two hundred minutes"
-
+    get_minutes(birthday) == "One million, fifty-one thousand, two hundred minutes"
 @freeze_time("1995-01-01")
 def test_for_1995():
     birthday = "2001-01-01"
