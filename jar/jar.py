@@ -18,7 +18,7 @@ class Jar:
         if self.cookies + n > self.ccapacity:
             raise ValueError("Jar is full!")
         else:
-            self.cookies += n
+            self.cookies -= n
 
     @property
     def capacity(self):
@@ -26,4 +26,4 @@ class Jar:
 
     @property
     def size(self):
-        ...
+        return self.cookies
