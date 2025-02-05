@@ -6,10 +6,7 @@ class Jar:
         self.cookies = 0
 
     def __str__(self):
-        🍪
-
-    def __str__(self):
-        return f"{self.name} from {self.house}"
+        return f"🍪 * {self.cookies}"
 
     def deposit(self, n):
         if self.cookies + n > self.ccapacity:
