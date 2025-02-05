@@ -2,7 +2,7 @@ class Jar:
     def __init__(self, capacity=12):
         #if capacity :
         #    raise ValueError("Invalid name")
-        self.ccapacity = capacity
+        self.capacity = capacity
         self.cookies = 0
 
     def __str__(self):
@@ -22,7 +22,7 @@ class Jar:
 
     @property
     def capacity(self):
-        return self.ccapacity
+        return self.capacity
 
     @property
     def size(self):
