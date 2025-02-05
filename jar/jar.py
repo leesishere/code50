@@ -1,7 +1,5 @@
 class Jar:
     def __init__(self, capacity=12):
-        #if capacity :
-        #    raise ValueError("Invalid name")
         self.capacity = capacity
         self.cookies = 0
 
