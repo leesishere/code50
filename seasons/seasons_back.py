@@ -81,3 +81,4 @@ def get_minutes(date_input, today_date=date.today()):
 
 if __name__ == "__main__":
     main()
+    sys.exit(0)
