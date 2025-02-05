@@ -8,6 +8,9 @@ class Jar:
     def __str__(self):
         🍪
 
+    def __str__(self):
+        return f"{self.name} from {self.house}"
+
     def deposit(self, n):
         if self.cookies + n > self.ccapacity:
             raise ValueError("Jar is full!")
