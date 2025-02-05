@@ -27,3 +27,10 @@ class Jar:
     @property
     def size(self):
         return self.cookies
+
+def main():
+    my = Jar(0)
+
+
+if __name__ == "__main__":
+    main()
