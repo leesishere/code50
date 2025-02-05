@@ -15,8 +15,8 @@ class Jar:
             self.cookies += n
 
     def withdraw(self, n):
-        if self.cookies + n > self.ccapacity:
-            raise ValueError("Jar is full!")
+        if self.cookies - n < 0:
+            raise ValueError("No more Cookies left!")
         else:
             self.cookies -= n
 
