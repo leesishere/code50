@@ -10,12 +10,15 @@ class Jar:
 
     def deposit(self, n):
         if self.cookies + n > self.ccapacity:
-            raise ValueError("Inva")
+            raise ValueError("Jar is full!")
         else:
             self.cookies += n
 
     def withdraw(self, n):
-        ...
+        if self.cookies + n > self.ccapacity:
+            raise ValueError("Jar is full!")
+        else:
+            self.cookies += n
 
     @property
     def capacity(self):
