@@ -9,10 +9,10 @@ class Jar:
         🍪
 
     def deposit(self, n):
-        try:
-            if type(n) != int:
-                raise ValueError("Invalid name")
-        self.cookies += n
+        if self.cookies + n > self.ccapacity:
+            raise ValueError("Inva")
+        else:
+            self.cookies += n
 
     def withdraw(self, n):
         ...
