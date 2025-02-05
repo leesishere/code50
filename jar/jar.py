@@ -1,6 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
-        if not name:
+        if capacity :
             raise ValueError("Invalid name")
         self.name = name
         self.house = house
