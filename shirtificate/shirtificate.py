@@ -1,3 +1,7 @@
+import sys
+sys.path.append('/workspaces/21178063/shirtificate')
+_PATH = '/workspaces/21178063/shirtificate'
+
 '''
 from fpdf import FPDF
 # 210mm wide by 297mm tall.
@@ -38,16 +42,30 @@ pdf.output("markdown-styled.pdf")
 pdf.output("style.pdf")
 '''
 
+
+
 from fpdf import FPDF
 
-pdf = FPDF()
-pdf.add_page()
-pdf.set_font("Times", size=50)
+class PDF(FPDF):
+    def header(self):
+        self.set_font('Times', 'B', 12)
+        self.cell(0, 10, 'PDF with Markdown-styled Text', 0, 1, 'C')
 
-# Add styled text manually
-pdf.cell(0, 10, '**Lorem** __Ipsum__ --dolor--', ln=True)
+pdf = PDF()
+pdf.add_page()
+pdf.set_font("Times", size=12)
+pdf.set_text_color(0, 0, 0)  # Set text color to black
+
+# Manually styled text
+pdf.multi_cell(0, 10, '**Lorem** __Ipsum__ --dolor--')
 
 # Escape characters in the text
-pdf.cell(0, 10, '\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--', ln=True)
+pdf.multi_cell(0, 10, '\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--')
 
-pdf.output("fin")
+# Debugging print statements
+print("Page count:", pdf.page_no())
+print("Text color:", pdf.text_color)
+
+pdf.output(f"{_PATH}/styled-text.pdf")
+
+print(f"{_PATH}/styled-text.pdf")
