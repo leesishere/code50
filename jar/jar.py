@@ -36,6 +36,7 @@ def main():
     my = Jar(0)
     print(my.capacity)
     my.deposit(1)
+    #print(my.size)
 
 
 if __name__ == "__main__":
