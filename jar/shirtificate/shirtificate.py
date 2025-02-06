@@ -1,8 +1,8 @@
 from fpdf import FPDF
 
-pdf = fpdf.FPDF(orientation="landscape", format="A4",(210, 297))
-pdf = FPDF('P', 'mm', (100, 150))
-fpdf = FPDF(orientation = 'P', unit = 'mm', format='A4')
+#pdf = fpdf.FPDF(orientation="landscape", format="A4",(210, 297))
+#pdf = FPDF('P', 'mm', (100, 150))
+fpdf = FPDF(orientation = 'landscape', 'mm', (210, 297), format='A4')
 
 # 210mm wide by 297mm tall.
 
