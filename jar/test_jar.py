@@ -15,5 +15,6 @@ def test_action_without_fixtures():
 def test_whatever():
     try:
         my = Jar()
+        my.withdraw(100)
     except ValueError as exc:
         pytest.fail(exc, pytrace=True)
