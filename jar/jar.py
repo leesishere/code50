@@ -35,7 +35,7 @@ class Jar:
 def main():
     my = Jar(0)
     print(my.capacity)
-    my.deposit(1)
+    #my.deposit(1)
     #print(my.size)
 
 
