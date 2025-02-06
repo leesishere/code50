@@ -9,13 +9,13 @@ class Jar:
         return f"🍪 * {self.cookies}"
 
     def deposit(self, n):
-        if self.cookies + n > self.capacity:
+        if (self.cookies + n) > self.capacity:
             raise ValueError("Jar is full!")
         else:
             self.cookies += n
 
     def withdraw(self, n):
-        if self.cookies - n < 0:
+        if (self.cookies - n) < 0:
             raise ValueError("No more Cookies left!")
         else:
             self.cookies -= n
