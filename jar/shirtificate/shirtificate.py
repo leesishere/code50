@@ -48,6 +48,7 @@ class PDF(FPDF):
 pdf = PDF()
 pdf.add_page()
 pdf.set_font("Times", size=12)
+pdf.set_text_color(0, 0, 0)  # Set text color to black
 
 # Manually styled text
 pdf.multi_cell(0, 10, '**Lorem** __Ipsum__ --dolor--')
@@ -55,5 +56,10 @@ pdf.multi_cell(0, 10, '**Lorem** __Ipsum__ --dolor--')
 # Escape characters in the text
 pdf.multi_cell(0, 10, '\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--')
 
+# Debugging print statements
+print("Page count:", pdf.page_no())
+print("Text color:", pdf.text_color)
+
 pdf.output("styled-text.pdf")
+
 
