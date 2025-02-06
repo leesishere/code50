@@ -40,14 +40,20 @@ pdf.output("style.pdf")
 
 from fpdf import FPDF
 
-pdf = FPDF()
-pdf.add_page()
-pdf.set_font("Times", size=50)
+class PDF(FPDF):
+    def header(self):
+        self.set_font('Times', 'B', 12)
+        self.cell(0, 10, 'PDF with Markdown-styled Text', 0, 1, 'C')
 
-# Add styled text manually
-pdf.cell(0, 10, '**Lorem** __Ipsum__ --dolor--', ln=True)
+pdf = PDF()
+pdf.add_page()
+pdf.set_font("Times", size=12)
+
+# Manually styled text
+pdf.multi_cell(0, 10, '**Lorem** __Ipsum__ --dolor--')
 
 # Escape characters in the text
-pdf.cell(0, 10, '\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--', ln=True)
+pdf.multi_cell(0, 10, '\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--')
 
-pdf.output("styled-text.pdf"
+pdf.output("styled-text.pdf")
+
