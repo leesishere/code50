@@ -35,8 +35,11 @@ class Jar:
 def main():
     my = Jar()
     print(my.capacity)
-    my.deposit(1)
-    #print(my.size)
+    my.deposit(12)
+    print(my.size)
+    my.withdraw(10)
+    print(my.size)
+
 
 
 if __name__ == "__main__":
