@@ -36,6 +36,7 @@ def main():
     my = Jar()
     print(my.capacity)
     my.deposit(12)
+    print(my)
     print(my.size)
     my.withdraw(10)
     print(my.size)
