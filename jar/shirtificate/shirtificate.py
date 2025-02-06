@@ -1,3 +1,4 @@
+'''
 from fpdf import FPDF
 # 210mm wide by 297mm tall.
 
@@ -23,3 +24,18 @@ pdf.cell(text="PDF")
 pdf.output("style.pdf")
 
 #pdf.output("shirtificate.pdf")
+'''
+
+from fpdf import FPDF
+
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font("Times", size=36)
+pdf.cell(text="This")
+pdf.set_font(style="B")
+pdf.cell(text="is")
+pdf.set_font(style="I")
+pdf.cell(text="a")
+pdf.set_font(style="U")
+pdf.cell(text="PDF")
+pdf.output("style.pdf")
