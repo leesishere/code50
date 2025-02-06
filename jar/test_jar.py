@@ -18,3 +18,7 @@ def test_whatever():
         my.withdraw(100)
     except ValueError as exc:
         pytest.fail(exc, pytrace=True)
+
+def test_bad_timestamp_fails():
+    with pytest.raises(ValueError, match=r"foobar must be in the format `%Y%m%d_%H"):
+                       validate_timestamp("foobar")
