@@ -12,6 +12,11 @@ def test_action_without_fixtures():
     my.withdraw(10)
     my.size == 2
 
+def test_how_many_cookies():
+    my = Jar()
+    my.capacity == 12
+    my == "🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪"
+
 
 def test_withdraw_too_much():
     with pytest.raises(ValueError, match="No more Cookies left!"):
