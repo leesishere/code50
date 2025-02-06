@@ -2,6 +2,7 @@ from fpdf import FPDF
 
 pdf = fpdf.FPDF(orientation="landscape", format="A5")
 
+pdf = fpdf.FPDF(orientation="landscape", format="A4")
 
 pdf = FPDF()
 pdf.add_page()
