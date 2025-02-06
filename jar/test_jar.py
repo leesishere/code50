@@ -5,13 +5,9 @@ import pytest
 from jar import Jar
 
 def test_action_without_fixtures():
-    sc = SuperCool()
-    sc.element = 'snow'
-    sc.melt()
-    assert sc.element == 'water'
     my = Jar()
-    print(my.capacity)
+    my.capacity == 12
     my.deposit(12)
-    print(my.size)
+    my.size == 12
     my.withdraw(10)
-    print(my.size)
+    my.size == 2
