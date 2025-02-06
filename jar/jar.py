@@ -33,9 +33,9 @@ class Jar:
         return self.cookies
 
 def main():
-    my = Jar(0)
+    my = Jar()
     print(my.capacity)
-    #my.deposit(1)
+    my.deposit(1)
     #print(my.size)
 
 
