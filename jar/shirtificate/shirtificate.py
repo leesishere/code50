@@ -1,3 +1,6 @@
+import sys
+sys.path.append('/workspaces/21178063/shirtificate')
+
 '''
 from fpdf import FPDF
 # 210mm wide by 297mm tall.
@@ -37,6 +40,8 @@ pdf.output("markdown-styled.pdf")
 
 pdf.output("style.pdf")
 '''
+
+
 
 from fpdf import FPDF
 
