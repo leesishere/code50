@@ -6,11 +6,19 @@ pdf.image("shirtificate.png", x=20, y=60)
 pdf.set_font("Helvetica", size=8)
 pdf.set_fill_color(255, 255, 255) # White
 
-pdf.multi_cell(w=50, text=LOREM_IPSUM[:100], new_x="LEFT", fill=True)
+#pdf.multi_cell(w=50, text=LOREM_IPSUM[:100], new_x="LEFT", fill=True)
 pdf.ln()
-pdf.set_stretching(150)
-pdf.multi_cell(w=50, text=LOREM_IPSUM[:100], new_x="LEFT", fill=True)
+#pdf.set_stretching(150)
+#pdf.multi_cell(w=50, text=LOREM_IPSUM[:100], new_x="LEFT", fill=True)
 
 
+pdf.cell(text="This")
+pdf.set_font(style="B")
+pdf.cell(text="is")
+pdf.set_font(style="I")
+pdf.cell(text="a")
+pdf.set_font(style="U")
+pdf.cell(text="PDF")
+pdf.output("style.pdf")
 
-pdf.output("shirtificate.pdf")
+#pdf.output("shirtificate.pdf")
