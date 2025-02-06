@@ -12,8 +12,5 @@ pdf.set_stretching(150)
 pdf.multi_cell(w=50, text=LOREM_IPSUM[:100], new_x="LEFT", fill=True)
 
 
-from fpdf import FPDF
 
-pdf = FPDF()
-
-pdf.output("pdf-with-image.pdf")
+pdf.output("shirtificate.pdf")
