@@ -30,12 +30,9 @@ from fpdf import FPDF
 
 pdf = FPDF()
 pdf.add_page()
-pdf.set_font("Times", size=36)
-pdf.cell(text="This")
-pdf.set_font(style="B")
-pdf.cell(text="is")
-pdf.set_font(style="I")
-pdf.cell(text="a")
-pdf.set_font(style="U")
-pdf.cell(text="PDF")
+pdf.write_html("""<B>bold</B>
+                  <I>italic</I>
+                  <U>underlined</U>
+                  <B><I><U>all at once!</U></I></B>"""
+)
 pdf.output("style.pdf")
