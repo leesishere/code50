@@ -43,6 +43,11 @@ from fpdf import FPDF
 pdf = FPDF()
 pdf.add_page()
 pdf.set_font("Times", size=50)
-pdf.cell(text="**Lorem** __Ipsum__ --dolor--", markdown=True, new_x='LEFT', new_y='NEXT')
-pdf.cell(text="\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--", markdown=True)
-pdf.output("markdown-styled.pdf")
+
+# Add styled text manually
+pdf.cell(0, 10, '**Lorem** __Ipsum__ --dolor--', ln=True)
+
+# Escape characters in the text
+pdf.cell(0, 10, '\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--', ln=True)
+
+pdf.output("styled-text.pdf")
