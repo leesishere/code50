@@ -11,3 +11,9 @@ def test_action_without_fixtures():
     my.size == 12
     my.withdraw(10)
     my.size == 2
+
+def test_whatever():
+    try:
+        my = Jar()
+    except ZeroDivisionError as exc:
+        pytest.fail(exc, pytrace=True)
