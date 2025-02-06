@@ -4,6 +4,14 @@ import pytest
 
 from jar import Jar
 
-def test_get_incorrect_format():
-    with pytest.raises(SystemExit):
-        assert get_minutes('January 1, 1999')
+def test_action_without_fixtures():
+    sc = SuperCool()
+    sc.element = 'snow'
+    sc.melt()
+    assert sc.element == 'water'
+    my = Jar()
+    print(my.capacity)
+    my.deposit(12)
+    print(my.size)
+    my.withdraw(10)
+    print(my.size)
