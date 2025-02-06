@@ -12,13 +12,14 @@ def test_action_without_fixtures():
     my.withdraw(10)
     my.size == 2
 
-def test_whatever():
-    try:
+
+def test_withdraw_too_much():
+    with pytest.raises(ValueError, match="No more Cookies left!"):
         my = Jar()
         my.withdraw(100)
-    except ValueError as exc:
-        pytest.fail(exc, pytrace=True)
 
-def test_bad_timestamp_fails():
-    with pytest.raises(ValueError, match=r"foobar must be in the format `%Y%m%d_%H"):
-                       validate_timestamp("foobar")
+def test_deposit_too_much():
+    with pytest.raises(ValueError, match="Jar is full!"):
+        my = Jar()
+        my.deposit(100)
+
