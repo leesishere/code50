@@ -1,6 +1,7 @@
 from fpdf import FPDF
 # 210mm wide by 297mm tall.
-pdf = fpdf.FPDF(orientation="landscape", format="A4")
+
+pdf = FPDF(orientation="landscape", format="A4")
 pdf.add_page()
 pdf.image("shirtificate.png", x=20, y=60)
 pdf.set_font("Helvetica", size=8)
