@@ -25,7 +25,7 @@ pdf.output("style.pdf")
 
 #pdf.output("shirtificate.pdf")
 '''
-
+'''
 from fpdf import FPDF
 
 pdf = FPDF()
@@ -36,3 +36,13 @@ pdf.cell(text="\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--", markdown=True)
 pdf.output("markdown-styled.pdf")
 
 pdf.output("style.pdf")
+'''
+
+from fpdf import FPDF
+
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font("Times", size=50)
+pdf.cell(text="**Lorem** __Ipsum__ --dolor--", markdown=True, new_x='LEFT', new_y='NEXT')
+pdf.cell(text="\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--", markdown=True)
+pdf.output("markdown-styled.pdf")
