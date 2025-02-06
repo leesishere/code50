@@ -1,5 +1,6 @@
 import sys
 sys.path.append('/workspaces/21178063/shirtificate')
+_PATH = /workspaces/21178063/shirtificate
 
 '''
 from fpdf import FPDF
@@ -65,6 +66,6 @@ pdf.multi_cell(0, 10, '\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--')
 print("Page count:", pdf.page_no())
 print("Text color:", pdf.text_color)
 
-pdf.output("styled-text.pdf")
+pdf.output(f"{_PATH}/styled-text.pdf")
 
-
+print(f"{_PATH}/styled-text.pdf")
