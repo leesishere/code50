@@ -30,9 +30,9 @@ from fpdf import FPDF
 
 pdf = FPDF()
 pdf.add_page()
-pdf.write_html("""<B>bold</B>
-                  <I>italic</I>
-                  <U>underlined</U>
-                  <B><I><U>all at once!</U></I></B>"""
-)
+pdf.set_font("Times", size=50)
+pdf.cell(text="**Lorem** __Ipsum__ --dolor--", markdown=True, new_x='LEFT', new_y='NEXT')
+pdf.cell(text="\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--", markdown=True)
+pdf.output("markdown-styled.pdf")
+
 pdf.output("style.pdf")
