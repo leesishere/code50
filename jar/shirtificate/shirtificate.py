@@ -50,4 +50,4 @@ pdf.cell(0, 10, '**Lorem** __Ipsum__ --dolor--', ln=True)
 # Escape characters in the text
 pdf.cell(0, 10, '\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--', ln=True)
 
-pdf.output("styled-text.pdf")
+pdf.output("styled-text.pdf"
