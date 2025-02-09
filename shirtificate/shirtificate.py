@@ -37,8 +37,8 @@ class PDF:
         self._pdf.set_text_color(255, 255, 255)
         self._pdf.text(x=47.5, y=140, text=f"{name} took CS50")
 
-    def output(self, filename):
-        self._pdf.output(filename)
+    #def output(self, filename):
+    #    self._pdf.output(filename)
 
 name = input("Name: ")
 pdf = PDF(name)
