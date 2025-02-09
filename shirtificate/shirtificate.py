@@ -11,7 +11,7 @@ class PDF(FPDF):
         self._name = name
         self.add_page()
         self.set_font('Helvetica', 'B', 50)
-        self.set_text_color(0, 0, 0)  # Set text color to black
+        #self.set_text_color(0, 0, 0)  # Set text color to black
         self.cell(0, 60, "CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", align='C')
         self.image('shirtificate.png',w=self.w)
         self.set_font_size(30)
