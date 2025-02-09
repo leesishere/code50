@@ -4,12 +4,12 @@ _PATH = '/workspaces/21178063/shirtificate'
 image_path = f"{_PATH}/shirtificate.png"
 
 from fpdf import FPDF
-class PDF():
+class PDF(name):
     def _init_(self, name):
         self._pdf = FPDF()
         self._pdf. add_page()
         self._pdf.set_font("helvetica", "B", 50)
-        self._pdf.cell(0, 60, 'CS50 Shirtificate', new_x="LMARGIN", new_y="NEXT", align='C*)
+        self._pdf.cell(0, 60, 'CS50 Shirtificate', new_x="LMARGIN", new_y="NEXT", align='C')
         self._pdf.image("shirtificate.png", w=self._pdf.epw)
         self._pdf.set_font_size(30)
         self._pdf.set_text_color (255, 255, 255)
@@ -35,21 +35,10 @@ class PDF(FPDF):
 '''
 name = input("Name: ")
 pdf = PDF(name)
-pdf.set_font_size(30)
-pdf.set_text_color(255, 255, 255)
-pdf.text(x=47.4,y=140, text=f"{pdf.name} took CS50")
+#pdf.set_font_size(30)
+#pdf.set_text_color(255, 255, 255)
+#pdf.text(x=47.4,y=140, text=f"{pdf.name} took CS50")
 
 
 # Output PDF
 pdf.output('shirtificate.pdf')
-
-class PDF():
-    def _init_(self, name):
-        self._pdf = FPDF()
-        self._pdf. add_page()
-        self._pdf.set_font("helvetica", "B", 50)
-        self._pdf.cell(0, 60, 'CS50 Shirtificate', new_x="LMARGIN", new_y="NEXT", align='C*)
-        self._pdf.image("shirtificate.png", w=self._pdf.epw)
-        self._pdf.set_font_size(30)
-        self._pdf.set_text_color (255, 255, 255)
-        self._pdf.text(x=47.5, y=140, txt=f" (name) took CS50")
