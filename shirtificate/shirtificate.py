@@ -6,8 +6,7 @@ image_path = f"{_PATH}/shirtificate.png"
 from fpdf import FPDF
 
 class PDF(FPDF):
-    def __init__(self, name, orientation='P', format='A4'):
-        pdf = fpdf.FPDF(orientation="landscape", format="A5")
+    def __init__(self, name, orientation='Portrait', format='A4'):
         super().__init__(orientation=orientation, format=format)
         self._name = name
         self.add_page()
