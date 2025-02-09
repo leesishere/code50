@@ -17,9 +17,13 @@ class PDF(FPDF):
         self.cell(0, 60, "CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", align='c')
         self.image('shirtificate.png',w=self.w/2)
 
+    @property
+    def name(self):
+        return self._name
+
     @name.setter
-    def name(self,name):
-        self._name = name
+    def name(self, myname):
+        self._name = myname
 
 
 pdf = PDF(input("Name: "))
