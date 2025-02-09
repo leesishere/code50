@@ -4,7 +4,7 @@ _PATH = '/workspaces/21178063/shirtificate'
 image_path = f"{_PATH}/shirtificate.png"
 
 from fpdf import FPDF
-class PDF(name):
+class PDF():
     def _init_(self, name):
         self._pdf = FPDF()
         self._pdf. add_page()
@@ -13,7 +13,7 @@ class PDF(name):
         self._pdf.image("shirtificate.png", w=self._pdf.epw)
         self._pdf.set_font_size(30)
         self._pdf.set_text_color (255, 255, 255)
-        self._pdf.text(x=47.5, y=140, txt=f" (name) took CS50")
+        self._pdf.text(x=47.5, y=140, txt=f" {name} took CS50")
 '''
 class PDF(FPDF):
     def __init__(self, name, orientation='P', format='A4'):
