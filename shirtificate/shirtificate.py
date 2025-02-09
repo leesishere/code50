@@ -5,10 +5,10 @@ image_path = f"{_PATH}/shirtificate.png"
 
 from fpdf import FPDF
 
-class PDF(FPDF):
+class PDF(FPDF,self, name):
     def __init__(self, orientation='landscape', format='A4'):
         super().__init__(orientation=orientation, format=format)
-        self._name = ""
+        self._name = name
         self.add_page()
 
     def header(self):
@@ -22,8 +22,8 @@ class PDF(FPDF):
         self._name = myname
 
 
-pdf = PDF()
-pdf.name = input("Name: ")
+pdf = PDF(input("Name: "))
+
 
 pdf.set_font_size(30)
 pdf.set_text_color(0, 0, 0)
