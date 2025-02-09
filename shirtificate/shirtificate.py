@@ -18,8 +18,8 @@ class PDF(FPDF):
         self.image('shirtificate.png',w=self.w/2)
 
     @name.setter
-    def name(self,myname):
-        self._name = myname
+    def name(self,name):
+        self._name = name
 
 
 pdf = PDF(input("Name: "))
