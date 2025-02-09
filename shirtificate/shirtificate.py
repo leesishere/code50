@@ -4,7 +4,7 @@ _PATH = '/workspaces/21178063/shirtificate'
 image_path = f"{_PATH}/shirtificate.png"
 
 from fpdf import FPDF
-'''
+
 class PDF(FPDF):
     def __init__(self, name, orientation='Portrait', format='A4'):
         super().__init__(orientation=orientation, format=format)
@@ -17,6 +17,9 @@ class PDF(FPDF):
         self.set_font_size(30)
         self.set_text_color(255, 255, 255)
         self.text(x=47.5, y=140, text=f"{name} took CS50")
+
+    #def output(self, filename):
+    #    self.output(filename)
 
     @property
     def name(self):
@@ -37,9 +40,9 @@ class PDF:
         self._pdf.set_text_color(255, 255, 255)
         self._pdf.text(x=47.5, y=140, text=f"{name} took CS50")
 
-    #def output(self, filename):
-    #    self._pdf.output(filename)
-
+    def output(self, filename):
+        self._pdf.output(filename)
+'''
 name = input("Name: ")
 pdf = PDF(name)
 
