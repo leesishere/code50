@@ -7,8 +7,9 @@ from fpdf import FPDF
 
 class PDF(FPDF):
     #def __init__(self, name, orientation='P', format='A4'):
-    def __init__(self):
-        super().__init__(orientation=orientation, format=format)
+    def __init__(self, name):
+        #super().__init__(orientation=orientation, format=format)
+        super().__init__()
         self._name = name
         self.add_page()
         self.set_font('Helvetica', 'B', 50)
