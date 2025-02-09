@@ -25,12 +25,9 @@ class PDF(FPDF):
 
 
 pdf = PDF(input("Name: "))
-
-
 pdf.set_font_size(30)
-pdf.set_text_color(0, 0, 0)
+pdf.set_text_color(255, 255, 255)
 pdf.text(x=47.4,y=140, text=f"{pdf.name} took CS50")
-
 
 
 # Output PDF
