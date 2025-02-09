@@ -40,14 +40,19 @@ class PDF:
         self._pdf.set_font_size(30)
         self._pdf.set_text_color(255, 255, 255)
 
-    def text(self, text):
-        self._pdf.text(x=47.5, y=140, text=f"{name} took CS50")
+    def write_message(self):
+        self._pdf.text(x=47.5, y=140, text=f"{self._pdf.name} took CS50")
 
     def output(self, filename):
         self._pdf.output(filename)
 
+    @property
+    def name(self):
+        return self._pdf._name
+
+
 name = input("Name: ")
 pdf = PDF(name)
-
+pdf.write_message()
 pdf.output('shirtificate.pdf')
 
