@@ -6,7 +6,8 @@ image_path = f"{_PATH}/shirtificate.png"
 from fpdf import FPDF
 
 class PDF(FPDF):
-    def __init__(self, name, orientation='P', format='A4'):
+    #def __init__(self, name, orientation='P', format='A4'):
+    def __init__(self):
         super().__init__(orientation=orientation, format=format)
         self._name = name
         self.add_page()
@@ -22,7 +23,7 @@ class PDF(FPDF):
     @name.setter
     def name(self, myname):
         self._name = myname
-
+'''
 class PDF:
     def __init__(self, name):
         self._pdf = FPDF()
@@ -36,8 +37,12 @@ class PDF:
 
     def output(self, filename):
         self._pdf.output(filename)
+'''
 
 name = input("Name: ")
 pdf = PDF(name)
+pdf.set_font_size(30)
+pdf.set_text_color(255, 255, 255)
+pdf.text(x=47.5, y=140, text=f"{name} took CS50")
 pdf.output('shirtificate.pdf')
 
