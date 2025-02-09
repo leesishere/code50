@@ -15,6 +15,7 @@ class PDF(FPDF):
         self.set_font('Helvetica', 'B', 50)
         self.set_text_color(0, 0, 0)  # Set text color to black
         self.cell(0, 60, "CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", align='c')
+        self.image('shirtificate.png',w=self.w/2)
 
     @name.setter
     def name(self,myname):
@@ -28,7 +29,7 @@ pdf.set_font_size(30)
 pdf.set_text_color(0, 0, 0)
 pdf.text(x=47.4,y=140, text=f"{pdf.name} took CS50")
 
-pdf.image('shirtificate.png',w=pdf.w/2)
+
 
 # Output PDF
 pdf.output('shirtificate.pdf')
