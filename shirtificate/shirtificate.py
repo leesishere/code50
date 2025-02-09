@@ -4,7 +4,7 @@ _PATH = '/workspaces/21178063/shirtificate'
 image_path = f"{_PATH}/shirtificate.png"
 
 from fpdf import FPDF
-class PDF():
+class PDF:
     def _init_(self, name):
         self._pdf = FPDF()
         self._pdf. add_page()
