@@ -1,71 +1,35 @@
 import sys
 sys.path.append('/workspaces/21178063/shirtificate')
 _PATH = '/workspaces/21178063/shirtificate'
-
-'''
-from fpdf import FPDF
-# 210mm wide by 297mm tall.
-
-pdf = FPDF(orientation="landscape", format="A4")
-pdf.add_page()
-pdf.image("shirtificate.png", x=20, y=60)
-pdf.set_font("Helvetica", size=8)
-pdf.set_fill_color(255, 255, 255) # White
-
-#pdf.multi_cell(w=50, text=LOREM_IPSUM[:100], new_x="LEFT", fill=True)
-pdf.ln()
-#pdf.set_stretching(150)
-#pdf.multi_cell(w=50, text=LOREM_IPSUM[:100], new_x="LEFT", fill=True)
-
-
-pdf.cell(text="This")
-pdf.set_font(style="B")
-pdf.cell(text="is")
-pdf.set_font(style="I")
-pdf.cell(text="a")
-pdf.set_font(style="U")
-pdf.cell(text="PDF")
-pdf.output("style.pdf")
-
-#pdf.output("shirtificate.pdf")
-'''
-'''
-from fpdf import FPDF
-
-pdf = FPDF()
-pdf.add_page()
-pdf.set_font("Times", size=50)
-pdf.cell(text="**Lorem** __Ipsum__ --dolor--", markdown=True, new_x='LEFT', new_y='NEXT')
-pdf.cell(text="\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--", markdown=True)
-pdf.output("markdown-styled.pdf")
-
-pdf.output("style.pdf")
-'''
-
-
+image_path = f"{_PATH}/shirtificate.png"
 
 from fpdf import FPDF
 
 class PDF(FPDF):
+    def __init__(self, orientation='landscape', format='A4'):
+        super().__init__(orientation=orientation, format=format)
+        self._name = ""
+        self.add_page()
+
     def header(self):
-        self.set_font('Times', 'B', 12)
-        self.cell(0, 10, 'PDF with Markdown-styled Text', 0, 1, 'C')
+        self.set_font('Helvetica', 'B', 50)
+        self.set_text_color(0, 0, 0)  # Set text color to black
+        self.cell(0, 60, "CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", align='c')
+
+    @name.setter
+    def name(self,myname):
+        self._name = myname
+
 
 pdf = PDF()
-pdf.add_page()
-pdf.set_font("Times", size=12)
-pdf.set_text_color(0, 0, 0)  # Set text color to black
+pdf.name = input("Name: ")
 
-# Manually styled text
-pdf.multi_cell(0, 10, '**Lorem** __Ipsum__ --dolor--')
+pdf.set_font_size(30)
+pdf.set_text_color(0, 0, 0)
+pdf.text(x=47.4,y=140, text=f"{pdf.name} took CS50")
 
-# Escape characters in the text
-pdf.multi_cell(0, 10, '\\**Lorem\\** \\\\__Ipsum\\\\__ --dolor--')
+pdf.image('shirtificate.png',w=pdf.w/2)
 
-# Debugging print statements
-print("Page count:", pdf.page_no())
-print("Text color:", pdf.text_color)
+# Output PDF
+pdf.output('shirtificate.pdf')
 
-pdf.output(f"{_PATH}/styled-text.pdf")
-
-print(f"{_PATH}/styled-text.pdf")

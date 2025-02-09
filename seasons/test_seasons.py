@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/workspaces/21178063/seasons/')
 import pytest
 #from freezegun import freeze_time
 #from seasons import print_say_age_in_minutes, Minutes, get_minutes
