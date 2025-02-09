@@ -6,10 +6,8 @@ image_path = f"{_PATH}/shirtificate.png"
 from fpdf import FPDF
 
 class PDF(FPDF):
-    #def __init__(self, name, orientation='P', format='A4'):
-    def __init__(self, name):
-        #super().__init__(orientation=orientation, format=format)
-        super().__init__()
+    def __init__(self, name, orientation='P', format='A4'):
+        super().__init__(orientation=orientation, format=format)
         self._name = name
         self.add_page()
         self.set_font('Helvetica', 'B', 50)
