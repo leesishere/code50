@@ -32,7 +32,7 @@ class PDF(FPDF):
 class PDF:
     def __init__(self, name):
         self._pdf = FPDF()
-        self._pdf = name
+        self._pdf._name = name
         self._pdf.add_page()
         self._pdf.set_font("helvetica", "B", 50)
         self._pdf.cell(0, 60, 'CS50 Shirtificate', new_x="LMARGIN", new_y="NEXT", align='C')
@@ -41,7 +41,7 @@ class PDF:
         self._pdf.set_text_color(255, 255, 255)
 
     def write_message(self):
-        self._pdf.text(x=47.5, y=140, text=f"{self._pdf.name} took CS50")
+        self._pdf.text(x=47.5, y=140, text=f"{self._pdf._name} took CS50")
 
     def output(self, filename):
         self._pdf.output(filename)
