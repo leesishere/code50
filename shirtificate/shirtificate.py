@@ -10,8 +10,6 @@ class PDF(FPDF):
         super().__init__(orientation=orientation, format=format)
         self._name = name
         self.add_page()
-
-    def header(self):
         self.set_font('Helvetica', 'B', 50)
         self.set_text_color(0, 0, 0)  # Set text color to black
         self.cell(0, 60, "CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", align='c')
