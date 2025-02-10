@@ -103,8 +103,16 @@ def start_json(filename):
     with open(filename, 'w') as file:
         file.write('[\n')  # Ensure each record is on a new line
 def end_json(filename):
+    remove_last_comma(filename)
     with open(filename, 'a') as file:
         file.write(']')  # Ensure each record is on a new line
+
+def remove_last_comma(filename):
+    with open(filename, "r+") as file:
+        content = file.read()
+        file.seek(0)
+        file.write(content[:-1])
+        file.truncate()
 
 
 
