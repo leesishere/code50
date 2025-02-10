@@ -80,11 +80,11 @@ def open_and_parse_file(filename,out_filename, cnt):
     with open(filename, 'r') as rfile:
         lines = rfile.readlines()
         for word in lines:
-            how_to_say = get_howtosay(word)
-            print(get_howtosay(word_record))
+            word_record = get_word(word.strip())
+            how_to_say = get_howtosay(word_record)
+            print(how_to_say)
             if how_to_say:
-                word_record = get_word(word.strip())
-                word_complexities.update(analyze_word_complexity(word.strip(),get_howtosay(word_record)))
+                word_complexities.update(analyze_word_complexity(word.strip(),how_to_say))
                 append_to_json(word_complexities,out_filename)
                 if count > cnt:
                     end_json(out_filename)
