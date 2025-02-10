@@ -19,11 +19,18 @@ def get_word(word):
         return None
 
 def get_howtosay(data):
-        try:
-            audio = data['phonetics'][0]['audio']
-        except:
-            audio = False
-        return audio
+    try:
+        audio = data['phonetics'][0]['audio']
+    except:
+        audio = False
+    return audio
+
+def get_meaning(data):
+    try:
+        audio = data['phonetics'][0]['audio']
+    except:
+        audio = False
+    return audio
 
 def count_letters(word):
     return len(word)
@@ -65,7 +72,8 @@ def analyze_word_complexity(word, word_record):
     complexities = {
         'word': word,
         'how_to_say': get_howtosay(word_record),
-        meanings
+        'meanings' : get_meaning(word_record)
+
         'letter_count': count_letters(word),
         'syllable_count': count_syllables(word),
         'phonetic_complexity': is_phonetically_complex(word),
