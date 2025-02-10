@@ -1,5 +1,3 @@
-import json
-
 
 def load_dict_from_txt(filename):
     with open(filename, 'r') as file:
@@ -8,17 +6,13 @@ def load_dict_from_txt(filename):
         word_dict = eval(data)
     return word_dict
 
-def load_word_dictionary(filename):
-    with open(filename, 'r') as file:
-        word_dict = json.load(file)
-    return word_dict
 
 def search_word(word, word_dict):
     return word_dict.get(word, 'Word not found in the dictionary.')
 
 # Usage
 filename = 'word_dict.json'
-word_dict = load_word_dictionary(filename)
+word_dict = load_dict_from_txt(filename)
 
 # Example searches
 print(search_word('alibi', word_dict))
