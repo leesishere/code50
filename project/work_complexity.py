@@ -110,7 +110,7 @@ def end_json(filename):
 def remove_last_comma(filename):
     with open(filename, "r+") as file:
         content = file.read()
-        file.seek(0)
+        # file.seek(0)
         file.write(content[:-1])
         file.truncate()
 
