@@ -110,9 +110,15 @@ def end_json(filename):
 def remove_last_comma(filename):
     with open(filename, "r+") as file:
         content = file.read()
-        # file.seek(0)
-        file.write(content[:-1])
-        file.truncate()
+        # Find the position of the last comma
+        last_comma_index = content.rfind(',')
+        if last_comma_index != -1:
+            # Remove the last comma
+            content = content[:last_comma_index] + content[last_comma_index + 1:]
+            # Write the modified content back to the file
+            file.seek(0)
+            file.write(content)
+            file.truncate()
 
 
 
