@@ -65,6 +65,7 @@ def analyze_word_complexity(word, word_record):
     complexities = {
         'word': word,
         'how_to_say': get_howtosay(word_record),
+        meanings
         'letter_count': count_letters(word),
         'syllable_count': count_syllables(word),
         'phonetic_complexity': is_phonetically_complex(word),
