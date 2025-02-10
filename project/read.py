@@ -1,5 +1,13 @@
 import json
 
+
+def load_dict_from_txt(filename):
+    with open(filename, 'r') as file:
+        data = file.read().strip()
+        # Convert string representation of dictionary to actual dictionary
+        word_dict = eval(data)
+    return word_dict
+
 def load_word_dictionary(filename):
     with open(filename, 'r') as file:
         word_dict = json.load(file)
