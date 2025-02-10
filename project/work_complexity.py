@@ -81,6 +81,7 @@ def open_and_parse_file(filename,out_filename, cnt):
         lines = rfile.readlines()
         for word in lines:
             how_to_say = get_howtosay(word)
+            print(get_howtosay(word_record))
             if how_to_say:
                 word_record = get_word(word.strip())
                 word_complexities.update(analyze_word_complexity(word.strip(),get_howtosay(word_record)))
