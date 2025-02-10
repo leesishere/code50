@@ -24,8 +24,6 @@ def get_howtosay(data):
         except:
             audio = False
         return audio
-    else:
-        return None
 
 def count_letters(word):
     return len(word)
@@ -84,7 +82,8 @@ def open_and_parse_file(filename,out_filename, cnt):
         for word in lines:
             how_to_say = get_howtosay(word)
             if how_to_say:
-                word_complexities.update(analyze_word_complexity(word.strip(),how_to_say))
+                word_record = get_word(word.strip())
+                word_complexities.update(analyze_word_complexity(word.strip(),get_howtosay(word_record)))
                 append_to_json(word_complexities,out_filename)
                 if count > cnt:
                     end_json(out_filename)
