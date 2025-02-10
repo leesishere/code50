@@ -82,7 +82,6 @@ def open_and_parse_file(filename,out_filename, cnt):
         for word in lines:
             word_record = get_word(word.strip())
             how_to_say = get_howtosay(word_record)
-            print(how_to_say)
             if how_to_say:
                 word_complexities.update(analyze_word_complexity(word.strip(),how_to_say))
                 append_to_json(word_complexities,out_filename)
@@ -96,7 +95,7 @@ def open_and_parse_file(filename,out_filename, cnt):
 def append_to_json(record, filename):
     with open(filename, 'a') as file:
         json.dump(record, file)
-        file.write('\n')  # Ensure each record is on a new line
+        file.write(',\n')  # Ensure each record is on a new line
 
     print(f"Record added: {record}")
 
