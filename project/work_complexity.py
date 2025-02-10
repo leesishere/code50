@@ -78,6 +78,7 @@ def analyze_word_complexity(word, how_to_say):
 def open_and_parse_file(filename,out_filename, cnt):
     global count
     word_complexities = {}
+    start_json(out_filename)
     with open(filename, 'r') as rfile:
         lines = rfile.readlines()
         for word in lines:
@@ -86,10 +87,11 @@ def open_and_parse_file(filename,out_filename, cnt):
                 word_complexities.update(analyze_word_complexity(word.strip(),how_to_say))
                 append_to_json(word_complexities,out_filename)
                 if count > cnt:
+                    end_json(out_filename)
                     exit()
                 else:
                     count += 1
-
+    end_json(out_filename)
 
 def append_to_json(record, filename):
     with open(filename, 'a') as file:
@@ -97,6 +99,13 @@ def append_to_json(record, filename):
         file.write('\n')  # Ensure each record is on a new line
 
     print(f"Record added: {record}")
+
+def start_json(filename):
+    with open(filename, 'w') as file:
+        file.write('[')  # Ensure each record is on a new line
+def end_json(filename):
+    with open(filename, 'a') as file:
+        file.write(']')  # Ensure each record is on a new line
 
 
 
