@@ -61,10 +61,10 @@ def has_morphological_complexity(word):
             return True
     return False
 
-def analyze_word_complexity(word, how_to_say):
+def analyze_word_complexity(word, word_record):
     complexities = {
         'word': word,
-        'how_to_say': how_to_say,
+        'how_to_say': get_howtosay(word_record),
         'letter_count': count_letters(word),
         'syllable_count': count_syllables(word),
         'phonetic_complexity': is_phonetically_complex(word),
@@ -81,9 +81,8 @@ def open_and_parse_file(filename,out_filename, cnt):
         lines = rfile.readlines()
         for word in lines:
             word_record = get_word(word.strip())
-            how_to_say = get_howtosay(word_record)
             if how_to_say:
-                word_complexities.update(analyze_word_complexity(word.strip(),how_to_say))
+                word_complexities.update(analyze_word_complexity(word.strip(),word_record))
                 append_to_json(word_complexities,out_filename)
                 if count > cnt:
                     end_json(out_filename)
