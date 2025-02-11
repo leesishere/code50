@@ -96,8 +96,8 @@ def open_and_parse_file(filename,out_filename, cnt):
     with open(filename, 'r') as rfile:
         lines = rfile.readlines()
         for word in lines:
-            audio = get_word(word.strip())
-            if audio:
+            word_record = get_word(word.strip())
+            if get_audio(word_record):
                 word_complexities.update(analyze_word_complexity(word.strip(),word_record))
                 append_to_json(word_complexities,out_filename)
                 if count > cnt:
