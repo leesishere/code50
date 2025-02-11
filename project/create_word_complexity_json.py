@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import prettyjson
 
 # Define the global count variable
 count = 0
@@ -34,10 +35,10 @@ def get_text(data):
 
 def get_meaning(data):
     try:
-        meaning = data['meaning']
+        meanings = data['meanings']
     except:
-        meaning = False
-    return meaning
+        meanings = False
+    return meanings
 
 def count_letters(word):
     return len(word)
@@ -89,7 +90,7 @@ def analyze_word_complexity(word, word_record):
     return complexities
 
 
-def open_and_parse_file(filename,out_filename, cnt):
+def open_and_parse_file(filename,out_filename, cnt=0):
     global count
     word_complexities = {}
     start_json(out_filename)
@@ -100,12 +101,14 @@ def open_and_parse_file(filename,out_filename, cnt):
             if get_audio(word_record):
                 word_complexities.update(analyze_word_complexity(word.strip(),word_record))
                 append_to_json(word_complexities,out_filename)
-                if count > cnt:
-                    end_json(out_filename)
-                    exit()
-                else:
-                    count += 1
+                if cnt != 0:
+                    if count > cnt:
+                        end_json(out_filename)
+                        exit()
+                    else:
+                        count += 1
     end_json(out_filename)
+    format_json_file(out_filename)
 
 def append_to_json(record, filename):
     with open(filename, 'a') as file:
@@ -117,6 +120,7 @@ def append_to_json(record, filename):
 def start_json(filename):
     with open(filename, 'w') as file:
         file.write('[\n')  # Ensure each record is on a new line
+
 def end_json(filename):
     remove_last_comma(filename)
     with open(filename, 'a') as file:
@@ -126,7 +130,7 @@ def remove_last_comma(filename):
     with open(filename, "r+") as file:
         content = file.read()
         # Find the position of the last comma
-        last_comma_index = content.rfind(',\n')
+        last_comma_index = content.rfind(',')
         if last_comma_index != -1:
             # Remove the last comma
             content = content[:last_comma_index] + content[last_comma_index + 1:]
@@ -135,9 +139,16 @@ def remove_last_comma(filename):
             file.write(content)
             file.truncate()
 
+def format_json_file(filename, indent=4):
+    with open(filename, "r") as file:
+        content = json.load(file)
 
+    pretty_content = prettyjson.dumps(content, indent=indent)
 
-open_and_parse_file('word.txt','word_dict.json',5)
+    with open(filename, "w") as file:
+        file.write(pretty_content)
+
+open_and_parse_file('word.txt','word_dict.json')
 
 
 
