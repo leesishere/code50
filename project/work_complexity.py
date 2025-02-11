@@ -126,7 +126,7 @@ def remove_last_comma(filename):
     with open(filename, "r+") as file:
         content = file.read()
         # Find the position of the last comma
-        last_comma_index = content.rfind(',')
+        last_comma_index = content.rfind(',\n')
         if last_comma_index != -1:
             # Remove the last comma
             content = content[:last_comma_index] + content[last_comma_index + 1:]
