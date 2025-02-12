@@ -10,6 +10,7 @@ def get_word(word):
     # Define the API endpoint
     url = f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
 
+
     # Send a GET request to the API
     response = requests.get(url)
     time.sleep(5)  # Sleep for 5 seconds
