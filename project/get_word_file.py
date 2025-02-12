@@ -15,5 +15,6 @@ def save_response_to_text(url, filename='.txt'):
 
 # Define the API endpoint
 url = "https://raw.githubusercontent.com/dwyl/english-words/refs/heads/master/words_alpha.txt"
+# https://github.com/first20hours/google-10000-english/blob/master/google-10000-english-no-swears.txt
 url = " https://raw.githubusercontent.com/first20hours/google-10000-english/refs/heads/master/google-10000-english-no-swears.txt"
 save_response_to_text(url, 'google-10000-english-no-swears.txt')
