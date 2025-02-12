@@ -13,7 +13,7 @@ def get_word(word):
 
     # Send a GET request to the API
     response = requests.get(url)
-    time.sleep(5)  # Sleep for 5 seconds
+    time.sleep(10)  # Sleep for 5 seconds
    # Check if the request was successful
     if response.status_code == 200:
         data = response.json()
@@ -150,7 +150,7 @@ def format_json_file(filename, indent=4):
     with open(filename, "w") as file:
         file.write(pretty_content)
 
-open_and_parse_file('word.txt','word_dict.json')
+open_and_parse_file('google-10000-english-no-swears.txt','word_dict.json')
 
 
 
