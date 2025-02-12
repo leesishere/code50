@@ -1,6 +1,6 @@
 import requests
 import json
-import os
+import time
 import prettyjson
 
 # Define the global count variable
@@ -12,6 +12,7 @@ def get_word(word):
 
     # Send a GET request to the API
     response = requests.get(url)
+    time.sleep(5)  # Sleep for 5 seconds
    # Check if the request was successful
     if response.status_code == 200:
         data = response.json()
