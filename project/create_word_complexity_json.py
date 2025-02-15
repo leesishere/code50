@@ -92,7 +92,7 @@ def analyze_word_complexity(word, word_record):
     return complexities
 
 
-def open_and_parse_file(filename,out_filename, start_word=True):
+def open_and_parse_file(filename,out_filename, word=True):
     global interval
     found_word = False
     word_count = 0
