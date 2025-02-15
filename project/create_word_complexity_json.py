@@ -4,7 +4,7 @@ import time
 import prettyjson
 
 # Define the global count variable
-count = 0
+interval = 250
 
 def get_word(word):
     # Define the API endpoint
@@ -13,7 +13,7 @@ def get_word(word):
 
     # Send a GET request to the API
     response = requests.get(url)
-    time.sleep(10)  # Sleep for 5 seconds
+    #time.sleep(10)  # Sleep for 5 seconds
    # Check if the request was successful
     if response.status_code == 200:
         data = response.json()
@@ -92,32 +92,39 @@ def analyze_word_complexity(word, word_record):
     return complexities
 
 
-def open_and_parse_file(filename,out_filename, cnt=0):
-    global count
+def open_and_parse_file(filename,out_filename, start_word=''):
+    global interval
+    found_word = False
+    word_count = 0
     word_complexities = {}
     start_json(out_filename)
     with open(filename, 'r') as rfile:
         lines = rfile.readlines()
         for word in lines:
+            print(word)
+            if word == 'marsh':
+                found_word = True
+            if not found_word:
+                next
+            word_count += 1
             word_record = get_word(word.strip())
             if get_audio(word_record):
                 word_complexities.update(analyze_word_complexity(word.strip(),word_record))
                 append_to_json(word_complexities,out_filename)
-                if cnt != 0:
-                    if count > cnt:
-                        end_json(out_filename)
-                        exit()
-                    else:
-                        count += 1
+                if word_count > interval:
+                    # pause 10 minutes
+                    time.sleep(600)
+                    interval += 250
     end_json(out_filename)
-    format_json_file(out_filename)
+
+
 
 def append_to_json(record, filename):
     with open(filename, 'a') as file:
         json.dump(record, file)
         file.write(',\n')  # Ensure each record is on a new line
 
-    print(f"Record added: {record}")
+    #print(f"Record added: {record}")
 
 def start_json(filename):
     with open(filename, 'w') as file:
@@ -141,16 +148,19 @@ def remove_last_comma(filename):
             file.write(content)
             file.truncate()
 
+
+
 def format_json_file(filename, indent=4):
     with open(filename, "r") as file:
+        # Load the content of the file
         content = json.load(file)
 
-    pretty_content = prettyjson.dumps(content, indent=indent)
-
     with open(filename, "w") as file:
-        file.write(pretty_content)
-
-open_and_parse_file('google-10000-english-no-swears.txt','word_dict.json')
-
+        # Write the formatted JSON content with specified indentation
+        json.dump(content, file, indent=indent, separators=(", ", ": "))
 
 
+out_filename = "word_dict.json"
+open_and_parse_file('google-10000-english-no-swears.txt',out_filename, 'marsh')
+
+format_json_file(out_filename, indent=4)
