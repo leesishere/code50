@@ -92,9 +92,9 @@ def analyze_word_complexity(word, word_record):
     return complexities
 
 
-def open_and_parse_file(filename,out_filename, word=True):
+def open_and_parse_file(filename,out_filename, start_word=''):
     global interval
-    found_word = False
+    found_word = True
     word_count = 0
     word_complexities = {}
     start_json(out_filename)
@@ -102,7 +102,7 @@ def open_and_parse_file(filename,out_filename, word=True):
         lines = rfile.readlines()
         for word in lines:
             print(word)
-            if word == 'marsh':
+            if word == start_word:
                 found_word = True
             if not found_word:
                 next
