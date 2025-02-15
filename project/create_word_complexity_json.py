@@ -102,10 +102,10 @@ def open_and_parse_file(filename,out_filename, start_word=''):
         lines = rfile.readlines()
         for word in lines:
             print(word)
-            if word == 'marsh':
-                found_word = True
-            if not found_word:
-                next
+            #if word == 'marsh':
+            #    found_word = True
+            #if not found_word:
+            #    next
             word_count += 1
             word_record = get_word(word.strip())
             if get_audio(word_record):
