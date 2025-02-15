@@ -92,23 +92,25 @@ def analyze_word_complexity(word, word_record):
     return complexities
 
 
-def open_and_parse_file(filename,out_filename, start_word=''):
+def open_and_parse_file(filename,out_filename, start_word=None):
     global interval
-    if start_word:
-        found_word = False
-    else:
-        found_word = True
     word_count = 0
     word_complexities = {}
-    start_json(out_filename)
+    found_word = False
+    if start_word is None:
+        start_json(out_filename)
+        found_word = True
+
     with open(filename, 'r') as rfile:
         lines = rfile.readlines()
         for word in lines:
-            print(word)
+            word = word.strip()
             if word == start_word:
                 found_word = True
+                continue
             if not found_word:
-                next
+                continue
+            print(f"{word}")
             word_count += 1
             word_record = get_word(word.strip())
             #if get_audio(word_record):
@@ -157,8 +159,6 @@ def remove_last_comma(filename):
             file.write(content)
             file.truncate()
 
-
-
 def format_json_file(filename, indent=4):
     with open(filename, "r") as file:
         # Load the content of the file
@@ -170,6 +170,6 @@ def format_json_file(filename, indent=4):
 
 
 out_filename = "word_dict_new.json"
-open_and_parse_file('google-10000-english-no-swears.txt',out_filename)
+open_and_parse_file('google-10000-english-no-swears.txt',out_filename, 'date')
 
 format_json_file(out_filename, indent=4)
