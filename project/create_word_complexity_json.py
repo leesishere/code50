@@ -94,7 +94,10 @@ def analyze_word_complexity(word, word_record):
 
 def open_and_parse_file(filename,out_filename, start_word=''):
     global interval
-    found_word = True
+    if start_word:
+        found_word = False
+    else:
+        found_word = True
     word_count = 0
     word_complexities = {}
     start_json(out_filename)
