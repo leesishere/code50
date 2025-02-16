@@ -170,6 +170,6 @@ def format_json_file(filename, indent=4):
 
 
 out_filename = "word_dict_new.json"
-open_and_parse_file('google-10000-english-no-swears.txt',out_filename, 'solar')
+open_and_parse_file('google-10000-english-no-swears.txt',out_filename, 'apparently')
 
 format_json_file(out_filename, indent=4)
