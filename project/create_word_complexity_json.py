@@ -10,7 +10,7 @@ def get_word(word):
     # Define the API endpoint
     url = f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
 
-    time.sleep(5)
+    time.sleep(0)
     # Send a GET request to the API
     response = requests.get(url)
     #time.sleep(10)  # Sleep for 5 seconds
@@ -124,7 +124,9 @@ def open_and_parse_file(filename,out_filename, start_word=None):
             append_to_json(word_complexities,out_filename)
             if word_count > interval:
                 # pause 10 minutes
-                time.sleep(600)
+                #time.sleep(600)
+                # 10 seconds
+                time.sleep(10)
                 interval += 250
     end_json(out_filename)
 
@@ -170,6 +172,6 @@ def format_json_file(filename, indent=4):
 
 
 out_filename = "word_dict_new.json"
-open_and_parse_file('google-10000-english-no-swears.txt',out_filename, 'apparently')
+open_and_parse_file('google-10000-english-no-swears.txt',out_filename, 'caps')
 
 format_json_file(out_filename, indent=4)
