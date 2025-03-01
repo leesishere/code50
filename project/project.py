@@ -1,6 +1,3 @@
-
-
-
 from menu import main_menu
 from menu import is_no
 import user
