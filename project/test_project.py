@@ -1,0 +1,119 @@
+import pytest
+from project import load_data, select_word, replace, replace, display_word
+import os, json
+
+def load_data_test(file_name)->json:
+    """
+
+    Description
+    ----------
+    This function load_data loads the data type JSON for the pytest.
+
+    Parameters
+    ----------
+    load_data_test(str) : Jason
+
+    User input
+    ----------
+    None
+
+    Returns
+    -------
+    json
+
+    """
+
+    if os.path.isfile(file_name):
+        with open(file_name, 'r') as json_file:
+            return json.load(json_file)
+
+def test_load_data():
+    """
+
+    Description
+    ----------
+    This function compares the load_data loads the data type JSON.
+
+    Parameters
+    ----------
+    test_load_data(None) : bool
+
+    User input
+    ----------
+    None
+
+    Returns
+    -------
+    bool
+
+    """
+    user_level = 1
+    file_name = f"word_level_{user_level}.json"
+    assert load_data(file_name) == load_data_test(file_name)
+
+def test_replace_fail():
+    """
+
+    Description
+    ----------
+    This function validate the replace and validates the test fails
+
+    Parameters
+    ----------
+    test_replace_fail(None) : bool
+
+    User input
+    ----------
+    None
+
+    Returns
+    -------
+    bool
+
+    """
+    # word is july
+    assert replace('_ _ _ _ ','j',0) != 'j u l y '
+
+def test_replace_pass():
+    """
+
+    Description
+    ----------
+    This function validate the replace and validates the test for pass
+
+    Parameters
+    ----------
+    test_replace_pass(None) : bool
+
+    User input
+    ----------
+    None
+
+    Returns
+    -------
+    bool
+
+    """
+    assert replace('_ _ _ _ ','j',0) == 'j _ _ _ '
+
+def test_display_word():
+    """
+
+    Description
+    ----------
+    This function validate the display of the word J in index zero is replaced correctly for the display. This test expect a pass.
+    Parameters
+    ----------
+    def test_display_word(None) : bool
+
+    User input
+    ----------
+    None
+
+    Returns
+    -------
+    bool
+
+    """
+
+    assert display_word('j u l y ','j', '_ _ _ _ ') == 'j _ _ _ '
