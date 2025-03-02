@@ -30,6 +30,7 @@ def set_user()->str:
         os.system('clear')
         print("Username? ", end='')
         user_name = input()
+        user_name = user_name.rstrip()
         if is_one_word(user_name):
             verify_and_add_user(user_name)
             break
@@ -83,7 +84,7 @@ def is_one_word(input_string)->bool:
     True if the username is one work
     False if the username is more than one word
     """
-    input_string = input_string.rstrip()
+
     return " " not in input_string
 
 def add_score(user_name, additional_score)->None:
