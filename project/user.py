@@ -3,7 +3,7 @@ import os
 import time
 import menu
 
-file_name = 'data/user_scores.json'
+file_name = 'user_scores.json'
 
 def set_user()->str:
     """
