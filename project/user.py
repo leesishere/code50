@@ -83,8 +83,8 @@ def is_one_word(input_string)->bool:
     True if the username is one work
     False if the username is more than one word
     """
-    input_string = input_string.rstrip(" ")
-    return " " not in input_string
+    input_string_remove_space = input_string.rstrip(" ")
+    return " " not in input_string_remove_space
 
 def add_score(user_name, additional_score)->None:
     """
