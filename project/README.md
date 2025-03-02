@@ -31,8 +31,8 @@ The word list was retrieved from github [first20hours/google-10000-english](http
 - The cheater! If player enters qwerty to guess the word, player wins every time:-)
 ---
 # **Python Code files**
-- [project.py](data/project.md)
-- [menu.py](data/menu.md)
-- [user.py](data/user.md)
-- [test_project.py](data/test_project.md)
+- [project.py](project.md)
+- [menu.py](menu.md)
+- [user.py](user.md)
+- [test_project.py](test_project.md)
 
