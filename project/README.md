@@ -10,9 +10,9 @@ The Guessing Word Game aims for the player to guess the word within the lowest n
 
 **There are five different levels:**
 - 1  Easier Than Easy
-    - Words with one syllable with a letter countvless than 5.
+    - Words with one syllable with a letter count less than 5.
 - 2  Easy
-    - Words with one syllable with a letter countvbetween  5 and 7.
+    - Words with one syllable with a letter count between  5 and 7.
 - 3  Normal
     - Words with two syllables with a letter count between 8 and 11.
 - 4  Hard
