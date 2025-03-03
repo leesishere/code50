@@ -28,7 +28,7 @@ None
 Returns
 -------
 str
-## Function
+## Function 
 ### get_score(s, guess_count=0) -> int
 
 Description
