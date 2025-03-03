@@ -27,6 +27,7 @@ None
 
 Returns
 str
+
 ---
 ## Function
 ### get_score(s, guess_count=0) -> int
@@ -49,7 +50,6 @@ User input
 None
 
 Returns
--------
 int as the score
 
 ## Function
@@ -70,7 +70,6 @@ User input
 str as letter guessed or (y/n) to continue or not to continue gameplay.
 
 Returns
--------
 none
 
 ## Function
@@ -89,7 +88,6 @@ User input
 None
 
 Returns
--------
 json
 
 ## Function
@@ -112,7 +110,7 @@ User input
 Any key to continue
 
 Returns
--------
+
 None
 
 ## Function
@@ -132,7 +130,7 @@ User input
 None
 
 Returns
--------
+
 str
 
 ## Function
@@ -151,7 +149,7 @@ User input
 None
 
 Returns
--------
+
 str
 
 ### Data
