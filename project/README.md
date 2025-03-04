@@ -31,10 +31,11 @@ Please select the game level 1-5
     4  Hard
     5  Difficult
     ------------------------------
-    Please select your level (1-5):
+    Please select your level (1-5): 4
 ```
-The word list was retrieved from github [first20hours/google-10000-english](https://github.com/first20hours/google-10000-english). The word file used for this game: [google-10000-english-no-swears.txt](https://raw.githubusercontent.com/first20hours/google-10000-english/refs/heads/master/google-10000-english-no-swears.txt)
 #
+The word list was retrieved from github [first20hours/google-10000-english](https://github.com/first20hours/google-10000-english). The word file used for this game: [google-10000-english-no-swears.txt](https://raw.githubusercontent.com/first20hours/google-10000-english/refs/heads/master/google-10000-english-no-swears.txt)
+
 #### **Easter eggs**
 - Instead of selecting 1-5 levels from the menu, enter qq and enter to quit the game.
     - A random farewell message will be displayed, and player will be asked if player want to hear a joke before player leave the game. It makes an api call to a free programmer [joke server](https://official-joke-api.appspot.com/jokes/programming/random), no joke.
