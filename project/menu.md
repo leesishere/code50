@@ -1,20 +1,23 @@
 # menu.py
 
 ## Modules
+
 os
 random
 requests
 sys
 
+---
 
 ## Functions
 
-### fairwell() -> str
-Description
-----------
+fairwell() -> str
+
+### Description
+
 This function takes no params and returns a fairwell phrase at random.
 
-Parameters
+### Parameters
 ----------
 fairwell(None) : str
 No parameters
