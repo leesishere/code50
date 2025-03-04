@@ -18,129 +18,143 @@ fairwell() -> str
 This function takes no params and returns a fairwell phrase at random.
 
 ### Parameters
-----------
+
 fairwell(None) : str
 No parameters
 
-User input
-----------
+### User input
+
 None
 
-Returns
--------
+### Return
+
 fairwell phrase as string
-## Function
-### get_joke() -> str
-Description
+
 ----------
+
+## Function
+get_joke() -> str
+### Description
+
 This function takes no params, performs api to https://official-joke-api.appspot.com/jokes/programming/random and returns a programming joke as string
 
-Parameters
-----------
+### Parameters
+
 get_joke(None): str
 No parameters
 
-User input
-----------
+### User input
+
 None
 
-Returns
--------
+### Return
+
 returns a programming joke as string
-## Function
-### i_quite() -> None
-Description
+
 ----------
+
+## Function
+i_quite() -> None
+### Description
+
 This function takes no params, calls fairwell() with an option to call get_joke() before exiting the program.
 
-Parameters
-----------
+### Parameters
+
 i_quite(None) : None
 No parameters
 
-User input
-----------
+### User input
+
 How about a joke before you go (y/n)
 
-Returns
--------
+### Return
+
 None
 ## Function
-### is_no() -> bool
-Description
-----------
+is_no() -> bool
+### Description
+
 This function takes no params and validate user input entered y or n and exit program after 5 or more failed attempts.
 
-Parameters
-----------
+### Parameters
+
 i_quite(None) : True/False
 No parameters
 
-User input
-----------
+### User input
+
 How about a joke before you go (y/n)
 
-Returns
--------
+### Return
+
 True for n
 False for y
-## Function
-### main_menu() -> str
-Description
+
 ----------
+
+## Function
+main_menu() -> str
+### Description
+
 Displays the game levels from 1-5 and retrieves from the user their selection of difficulty in the game levels and returns the level selected.
 If the player enters qq, the game will print a farewell and ask the player if they would like to hear a programmer's joke before they exit the game.
 The game will end if the player clicks any key besides 1-5 more than 5 times.
 
-Parameters
-----------
+### Parameters
+
 main_menu(None) : str
 No parameters
 
-User input
-----------
+### User input
+
 User Level
 Enter key more than 5 will call fairwell()
 qq to exit game
 
-Returns
--------
+### Return
+
 User level 1-5 or exists game
-## Function
-### menu_level(typer=True) -> None
-Description
+
 ----------
+
+## Function
+menu_level(typer=True) -> None
+### Description
+
 This function takes True/False to determine whether the user-level menu is displayed on the screen in typewriter mode.
 
 Parameters
-----------
+
 menu_level(bool): None
 
 User input
-----------
+
 Select leve 1-5
 
-Returns
--------
-None
-## Function
-### processing() -> str
+### Return
 
-Description
+None
+
 ----------
+
+## Function
+processing() -> str
+
+### Description
+
 This function takes no params and prints a progress chart.
 
-Parameters
-----------
-processing(None) : str
-No parameters
+### Parameters
 
-User input
-----------
+processing(None) : str
+
+### User input
+
 None
 
-Returns
--------
+### Return
+```
 prints a progress chart:
 [*                   ] 5%
 [***                 ] 15%
@@ -153,29 +167,30 @@ prints a progress chart:
 [****************    ] 80%
 [******************* ] 95%
 [********************] 100%
-sleep(...)
-sleep(seconds)
+```
 
-Delay execution for a given number of seconds.  The argument may be
-a floating-point number for subsecond precision.
-## Function
-### type_writer(line) -> None
-
-Description
 ----------
+
+## Function
+type_writer(line) -> None
+
+### Description
+
 This function takes string and memics a typewriter mode
 
-Parameters
-----------
+### Parameters
+
 type_writer(str): None
 
-User input
-----------
+### User input
+
 None
 
-Returns
--------
+### Return
+
 None
+
+----------
 
 ### Data
 error_count = 0
