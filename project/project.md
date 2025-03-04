@@ -1,18 +1,19 @@
 # project.py
 
 ## Modules
+
 json
 os
 random
 sys
 time
 user
----
+
 ## Function
 
-### display_word(word, guess='', display='') -> str
+display_word(word, guess='', display='') -> str
 
-Description
+## Description
 
 This function receives the word, guessed letter, and current display and loops through each letter of the word to determine if the guessed letter is in the word.
 If the guessed letter is in the word, this function will call the replace function to replace the _ in the display variable with the guessed letter.
