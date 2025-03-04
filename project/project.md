@@ -18,7 +18,7 @@ display_word(word, guess='', display='') -> str
 This function receives the word, guessed letter, and current display and loops through each letter of the word to determine if the guessed letter is in the word.
 If the guessed letter is in the word, this function will call the replace function to replace the _ in the display variable with the guessed letter.
 
-Parameters
+## Parameters
 
 display_word(str, str,str)->str
 
