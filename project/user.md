@@ -216,6 +216,7 @@ None
 
 None
 
+---
 
 ### Data
 file_name = 'data/user_scores.json'
