@@ -21,7 +21,7 @@ The Guessing Word Game aims for the player to guess the word within the lowest n
     - Words with more than four syllables with a letter count more than 15.
 
 ## Sample Output:
-```
+\
 Please select the game level 1-5
 
     ------------------------------
@@ -32,7 +32,7 @@ Please select the game level 1-5
     5  Difficult
     ------------------------------
     Please select your level (1-5): 4
-```
+
 #
 The word list was retrieved from github [first20hours/google-10000-english](https://github.com/first20hours/google-10000-english). The word file used for this game: [google-10000-english-no-swears.txt](https://raw.githubusercontent.com/first20hours/google-10000-english/refs/heads/master/google-10000-english-no-swears.txt)
 
