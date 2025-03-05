@@ -52,7 +52,7 @@ A cursor!
 ```
 
 - At any time, clicking the enter key six times or entering qq will end the game.
-- While playing the game, player can enter a whole word when asked to enter a letter. If player guesses the correct word, player will get a higher score with zero rounds count on the first try, and if incorrect, this will only cost the player 1 round of play.
+- While playing the game, player can enter a whole word when asked to enter a letter. If player guesses the correct word, player will get a higher score with zero rounds counted on the first try, and if incorrect, this will only cost the player 1 round of play.
 - A litter cheater: If player enters the same number of letters as the word, the game will search to see how many letters match in the word and only count this turn as a round. Be careful if player enters more than the number of letters of the word, this will give player a cheater alarm and add to player overall rounds the number of letters entered without searching for any matches in the word:-(
 - The cheater! If player enters qwerty to guess the word, player wins every time:-)
 ---
