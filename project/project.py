@@ -72,7 +72,7 @@ def get_score(s, guess_count=0)->int:
     if guess_count <= 10:
         score = 12 * letter_count
     if guess_count == 0:
-        letter_count
+        score = letter_count
     return score
 
 

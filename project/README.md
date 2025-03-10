@@ -1,10 +1,16 @@
 # The Guessing Word Game
 #### Video Demo:  <URL HERE>
-#
-#### **Description**
+
+## **Description**
 The Guessing Word Game aims for the player to guess the word within the lowest number of rounds possible.
 
-#### **Game Background**
+## License
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)
+
+## **Game Background**
 
 **Single player game** and the player is asked for their usernames. If this is the players first time playing, the game will create a username to keep track of each players score.
 
@@ -37,9 +43,9 @@ Please select the game level 1-5
 The word list was retrieved from github [first20hours/google-10000-english](https://github.com/first20hours/google-10000-english). The word file used for this game: [google-10000-english-no-swears.txt](https://raw.githubusercontent.com/first20hours/google-10000-english/refs/heads/master/google-10000-english-no-swears.txt)
 
 
-#### **Easter eggs**
+## **Easter eggs**
 - Instead of selecting 1-5 levels from the menu, enter qq and enter to quit the game.
-    - A random farewell message will be displayed, and player will be asked if player want to hear a joke before player leave the game. It makes an api call to a free programmer [joke server](https://official-joke-api.appspot.com/jokes/programming/random), no joke.
+    - A random farewell message will be displayed, and player will be asked if player wants to hear a joke before player leaves the game. It makes an api call to a free programmer [joke server](https://official-joke-api.appspot.com/jokes/programming/random), no joke.
 ```
     Please select your level (1-5): qq
 
@@ -51,8 +57,8 @@ What do you call a computer mouse that swears a lot?
 A cursor!
 ```
 
-- At any time, clicking the enter key six times or entering qq will end the game.
-- While playing the game, player can enter a whole word when asked to enter a letter. If player guesses the correct word, player will get a higher score with zero rounds counted on the first try, and if incorrect, this will only cost the player 1 round of play.
+- At any time, clicking the enter (return) key six times or entering qq will end the game.
+- While playing the game, player can enter a whole word when asked to enter a letter. If player guesses the correct word, player will receieve a higher score with zero rounds counted on the first try, and if incorrect, this will only cost the player 1 round of play.
 - A litter cheater: If player enters the same number of letters as the word, the game will search to see how many letters match in the word and only count this turn as a round. Be careful if player enters more than the number of letters of the word, this will give player a cheater alarm and add to player overall rounds the number of letters entered without searching for any matches in the word:-(
 - The cheat code is qwerty! If player enters qwerty to guess the word, player wins every time:-)
 ---

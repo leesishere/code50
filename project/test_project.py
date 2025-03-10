@@ -1,5 +1,5 @@
 import pytest
-from project import load_data, select_word, replace, replace, display_word
+from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu, display_word
 import os, json
 
 def load_data_test(file_name)->json:
@@ -74,7 +74,7 @@ def test_replace_fail():
     # word is july
     assert replace('_ _ _ _ ','j',0) != 'j u l y '
 
-def test_replace_pass():
+def test_replace():
     """
 
     Description
@@ -117,3 +117,16 @@ def test_display_word():
     """
 
     assert display_word('j u l y ','j', '_ _ _ _ ') == 'j _ _ _ '
+
+
+def test_get_score():
+    assert get_score('abcd') == 4
+
+
+
+#def guess_menu(user_level, user_name)->None:
+
+#def display_word(word, guess="", display="")->str:
+
+#def select_word(user_level)->str:
+
