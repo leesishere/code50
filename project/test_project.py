@@ -141,10 +141,8 @@ def test_get_score():
 
 
 def test_select_word():
-    
-#def select_word(user_level)->str:
-file_name = f"word_level_{user_level}.json"
- assert get_score('abcd') == 4
+
+    assert select_word(5) == 4
 
 # def test_ main()
 #    user_name = user.set_user()
