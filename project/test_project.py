@@ -188,7 +188,7 @@ def test_main(monkeypatch, capsys):
 #    def guess_menu(user_level, user_name)->None
 
     # Simulating user input
-    inputs = iter(["James", "30"])
+    inputs = iter(["gameboy", ""])
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
     # Running the main function
