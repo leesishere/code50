@@ -1,5 +1,5 @@
 import pytest
-from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu, display_word
+from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu
 import os, json
 
 def load_data_test(file_name)->json:
@@ -140,9 +140,9 @@ def test_get_score():
 
 
 
-#def display_word(word, guess="", display="")->str:
-
 #def select_word(user_level)->str:
+file_name = f"word_level_{user_level}.json"
+
 
 # def test_ main()
 #    user_name = user.set_user()
