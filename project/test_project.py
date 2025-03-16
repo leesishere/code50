@@ -198,10 +198,8 @@ def test_main():
         assert output == 'Clear'
 
     child.expect(re.compile(r"High Scores:"))
-    #if output == 'Press any key to continue' and not any([exception in line for line in output.split('\n')]):
-    assert output == 'new'
-    #high_scores = get_output(child, re.compile(r'High Scores:'))
-    #assert len(high_scores) > 0
+    high_scores = get_output(child, re.compile(r'High Scores:'))
+    assert len(high_scores) > 0
 
     #child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
     #any_key = get_output(child, re.compile(r'Press any key to continue'))
