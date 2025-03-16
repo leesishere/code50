@@ -1,6 +1,8 @@
 import pytest
 from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu, main
 import os, json
+from unittest.mock import patch
+
 
 def load_data_test(file_name)->json:
     """
@@ -190,6 +192,6 @@ def test_main(monkeypatch, capsys):
     captured = capsys.readouterr()
     output = captured.out
     output_lines = output.splitlines()  # Splitting output into lines for line-by-line validation
-   
+
     # Assertions
     assert "Username?" in output_lines, "Prompt for username is missing."
