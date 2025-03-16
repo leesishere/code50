@@ -195,7 +195,7 @@ def test_main():
     child.sendline("gameboy")
 
     while True:
-        line = child.readline().decode('utf-8').strip()
+        line = child.readlines().decode('utf-8').strip()
         if not line:
             break
 
