@@ -2,9 +2,18 @@
 
 ## Modules
 
+pytest
 json
 os
-pytest
+pexpect
+re
+project.load_data
+project.select_word
+project.replace
+project.display_word
+project.get_score
+project.guess_menu
+project.main
 
 ---
 
