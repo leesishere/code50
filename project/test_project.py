@@ -118,10 +118,25 @@ def test_display_word():
 
     assert display_word('j u l y ','j', '_ _ _ _ ') == 'j _ _ _ '
 
-
 def test_get_score():
-    assert get_score('abcd') == 4
+    """
 
+    Description
+    ----------
+    This function gets the score of the word in the game
+    ----------
+    def test_get_score(None) : bool
+
+    User input
+    ----------
+    None
+
+    Returns
+    -------
+    bool
+
+    """
+    assert get_score('abcd') == 4
 
 
 #def guess_menu(user_level, user_name)->None:
@@ -131,3 +146,8 @@ def test_get_score():
 #def select_word(user_level)->str:
 
 # def test_ main()
+#    user_name = user.set_user()
+#    user.high_score()
+#    input()
+#    user_level = main_menu()
+#    guess_menu(user_level, user_name)
