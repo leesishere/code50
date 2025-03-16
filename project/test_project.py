@@ -181,23 +181,20 @@ def test_select_word():
     assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
 def test_main(monkeypatch, capsys):
-    # Simulating user inputs
-    inputs = iter(["gameboy", "", "", "", "", "", ""])  # Simulated inputs
-    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+   # Start the program as a subprocess
+    child = pexpect.spawn("python project.py")
 
-    # Mock the time.sleep function to avoid delays during tests
-    with patch("time.sleep", return_value=None):
-        # Run the main function
-        main()
+    # Simulate interactions
+    child.expect("Username?")
+    child.sendline("gameboy")
+    child.expect("High Scores:")
+    child.expect("Press any key to continue")
+    child.sendline("")  # Pressing any key
+    child.expect("Please select the game level 1-5")
+    child.sendline("5")
+    child.expect("Playing level 5")
+    child.expect("Enter letter:")
 
-    # Capture the output
-    captured = capsys.readouterr()
-    output = captured.out
-
-    # Validate the output
-    assert "Enter your username: " in output, "Username prompt is missing."
-    assert "Welcome, gameboy!" in output, "Welcome message is incorrect."
-    assert "Please select a game level (1-5): " in output, "Game level selection prompt is missing."
-    assert "Starting game at level 5!" in output, "Game level start message is incorrect."
-    assert "Press any key to continue..." in output, "Prompt to continue is missing."
-    assert "Loading the next stage..." in output, "Next stage loading message is missing."
+    # Check output
+    assert "High Scores:" in child.before.decode()
+    assert "Playing level 5" in child.before.decode()
