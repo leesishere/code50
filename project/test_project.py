@@ -195,6 +195,8 @@ def test_main():
     child.sendline("5")
     child.expect(re.compile(r"Playing level 5"))  # Match "Playing level 5"
     child.expect(re.compile(r"Enter letter:"))  # Match "Enter letter:"
+    for i in range(1, 6):
+        child.sendline("")
 
     # Check output for a phrase
     assert re.search(r"High Scores:", child.before.decode()), "High Scores not found in output"
