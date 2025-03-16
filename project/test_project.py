@@ -1,7 +1,7 @@
 import pytest
 from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu, main
 import os, json
-import pexpect
+import pexpect, re
 
 
 def load_data_test(file_name)->json:
@@ -180,21 +180,21 @@ def test_select_word():
     """
     assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
-def test_main(monkeypatch, capsys):
-   # Start the program as a subprocess
+def test_main():
+    # Start the program as a subprocess
     child = pexpect.spawn("python project.py")
 
-    # Simulate interactions
-    child.expect("Username?")
+    # Simulate interactions with partial phrase matching
+    child.expect(re.compile(r"Username\?"))  # Match the "Username?" prompt
     child.sendline("gameboy")
-    child.expect("High Scores:")
-    child.expect("Press any key to continue")
+    child.expect(re.compile(r"High Scores:"))  # Match "High Scores:"
+    child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
     child.sendline("")  # Pressing any key
-    child.expect("Please select the game level 1-5")
+    child.expect(re.compile(r"Please select the game level 1-5"))  # Match game level selection prompt
     child.sendline("5")
-    child.expect("Playing level 5")
-    child.expect("Enter letter:")
+    child.expect(re.compile(r"Playing level 5"))  # Match "Playing level 5"
+    child.expect(re.compile(r"Enter letter:"))  # Match "Enter letter:"
 
-    # Check output
-    assert "High Scores:" in child.before.decode()
-    assert "Playing level 5" in child.before.decode()
+    # Check output for a phrase
+    assert re.search(r"High Scores:", child.before.decode()), "High Scores not found in output"
+    assert re.search(r"Playing level 5", child.before.decode()), "Playing level 5 confirmation not found in output"
