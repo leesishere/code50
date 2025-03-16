@@ -194,6 +194,7 @@ def test_main():
     child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
     child.sendline("")  # Pressing any key
 
+    # this kills the game when a user clicks the return key more that 5 times
     child.sendline("")
     child.sendline("")
     child.sendline("")
@@ -201,11 +202,6 @@ def test_main():
     child.sendline("")
     child.sendline("")
 
-    #child.expect(re.compile(r"Please select the game level 1-5"))  # Match game level selection prompt
-    #child.sendline("5")
-    #child.expect(re.compile(r"Playing level 5"))  # Match "Playing level 5"
-    #child.expect(re.compile(r"Enter letter:"))  # Match "Enter letter:"
-    #child.sendline("")
 
     # Check output for a phrase
     assert re.search(r"High Scores:", child.before.decode()), "High Scores not found in output"
