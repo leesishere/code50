@@ -203,6 +203,7 @@ def test_main(monkeypatch, capsys):
     assert "2 - jamey:      324" in output, "High score 2 is missing."
     assert "3 - gameboy:    252" in output, "High score 3 is missing."
     assert "Press any key to continue" in output, "Prompt to continue is missing."
+    
     assert "\033[H\033[J" in output_lines, "Clear screen sequence not found in printed output."
     assert "Please select the game level 1-5" in output, "Game level selection prompt is missing."
     assert "1  Easier Than Easy" in output, "Game level options are missing."
