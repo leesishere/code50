@@ -103,7 +103,7 @@ def test_display_word():
 
     Description
     ----------
-    This function validate the display of the word J in index zero is replaced correctly for the display. This test expect a pass.
+    This function validate the display of the letter J in index zero is replaced correctly for the display for the work july This test expect a pass.
     Parameters
     ----------
     def test_display_word(None) : bool
