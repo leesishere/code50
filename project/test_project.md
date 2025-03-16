@@ -112,3 +112,21 @@ None
 ### Return
 
 bool
+
+## Function
+test_replace_pass()
+### Description
+
+This function validate the replace and validates the test for pass
+
+### Parameters
+
+test_replace_pass(None) : bool
+
+### User input
+
+None
+
+### Return
+
+bool
