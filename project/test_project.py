@@ -1,8 +1,7 @@
 import pytest
 from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu, main
 import os, json
-from unittest.mock import patch
-import io
+import pexpect
 
 
 def load_data_test(file_name)->json:
