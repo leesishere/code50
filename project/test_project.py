@@ -192,7 +192,7 @@ def test_main(monkeypatch, capsys):
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
     # Running the main function
-    main.main()
+    main()
 
     # Capturing printed output
     captured = capsys.readouterr()
