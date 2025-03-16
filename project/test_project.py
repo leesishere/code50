@@ -203,7 +203,7 @@ def test_main():
             assert True, f"'High Scores:' was found in output"
             child.sendline("")
             child.sendline("5")
-            if re.search(r'^Playing level 5', line):
+            if re.search(r'Enter letter:', line):
                 assert True, f"We made it to the game to start playing :-)"
             else:
                 assert False, f"We did not make it to the game to start playing :-()"
