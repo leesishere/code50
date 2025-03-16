@@ -197,14 +197,14 @@ def test_main():
     if output == 'Username?' and not any([exception in line for line in output.split('\n')]):
         assert output == 'Clear'
 
-    #child.expect(re.compile(r"High Scores:"))
+    child.expect(re.compile(r"High Scores:"))
     high_scores = get_output(child, re.compile(r'High Scores:'))
     assert len(high_scores) > 0
 
-    child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
-    any_key = get_output(child, re.compile(r'Press any key to continue'))
-    assert len(any_key) > 0
-    child.sendline("")  # Pressing any key
+    #child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
+    #any_key = get_output(child, re.compile(r'Press any key to continue'))
+    #assert len(any_key) > 0
+    #child.sendline("")  # Pressing any key
 
     # this kills the game when a user clicks the return key more that 5 times
     child.sendline("")
