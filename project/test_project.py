@@ -199,5 +199,9 @@ def test_main(monkeypatch, capsys):
 
     # Asserting the output
     assert "3 - gameboy:    252" in captured.out  # Check high score is printed
+    assert "\033[H\033[J" in output_lines, "Clear screen sequence not found in printed output."
+
+    # Assert that the menu or level output is displayed after clearing the screen
+    assert "Level 1" in output_lines[-1], "Menu level output is missing or not displayed correctly."
     assert "Please select your level (1-5):" in captured.out  # Check user_level is printed
     assert "Playing level 5   Total score: 252" in captured.out  # start to play the game screen
