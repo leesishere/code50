@@ -129,6 +129,8 @@ None
 ### Returns
 bool
 
+## Function
+test_replace_pass()
 ### Description
 This function validate the replace and validates the test for pass
 
@@ -138,6 +140,28 @@ test_replace_pass(None) : bool
 ### User input
 None
 
+### Returns
+bool
+
+## Function
+test_display_word():
+### Description
+This function validate the display of the word J in index zero is replaced correctly for the display. This test expect a pass.
+### Parameters
+def test_display_word(None) : bool
+### User input
+None
+### Returns
+bool
+
+## Function
+test_get_score()
+### Description
+This function gets the score of the word for the game
+### Parameters
+def test_get_score(None) : bool
+### User input
+None
 ### Returns
 bool
 
