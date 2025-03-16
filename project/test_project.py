@@ -203,16 +203,12 @@ def test_main():
             assert True, f"'High Scores:' was found in output"
             child.sendline("\n")
 
-            line = child.readline().decode('utf-8').strip()
-
             if re.search(r'Please select your level (1-5):', line):
                 assert True, f"We made it to select game level :-)"
             else:
                 assert True, f"We did not make it to select game level :-()"
 
-            child.sendline("5\n")
-
-            line = child.readline().decode('utf-8').strip()
+            child.sendline("5")
 
             if re.search(r'Enter letter:', line):
                 assert True, f"We made it to the game to start playing :-)"
