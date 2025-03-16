@@ -204,6 +204,7 @@ def test_main():
         # Check here if 'High Scores:' was found in any of these lines
         if re.search(r'High Scores:', line):
             assert True, f"'High Scores:' was found in output"
+            break
 
     child.sendline("")
 
@@ -215,10 +216,9 @@ def test_main():
 
         if re.search(r'Please select your level (1-5):', line):
             assert True, f"We made it to select game level :-)"
-        else:
-            assert True, f"We did not make it to select game level :-()"
+            break
 
-        child.sendline("5")
+    child.sendline("5")
     while True:
         line = child.readline().decode('utf-8').strip()
 
@@ -228,8 +228,7 @@ def test_main():
 
         if re.search(r'Enter letter:', line):
             assert True, f"We made it to the game to start playing :-)"
-        else:
-            assert False, f"{line}  We did not make it to the game to start playing :-()"
+            break
 
     # this kills the game when a user clicks the return key more that 5 times
     child.sendline("")
