@@ -184,9 +184,21 @@ def test_select_word():
 def test_main(monkeypatch, capsys):
     # Simulating user inputs
     inputs = iter(["gameboy", "", "", "", "", "", ""])  # Simulated inputs
-    with patch("builtins.input", side_effect=inputs), patch("sys.stdout", new_callable=io.StringIO) as mock_stdout:
-        main()
-    output = mock_stdout.getvalue()
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
-    # Assertions
-    assert "Username?" in output, "Prompt for username is missing."
+    # Mock the time.sleep function to avoid delays during tests
+    with patch("time.sleep", return_value=None):
+        # Run the main function
+        main()
+
+    # Capture the output
+    captured = capsys.readouterr()
+    output = captured.out
+
+    # Validate the output
+    assert "Enter your username: " in output, "Username prompt is missing."
+    assert "Welcome, gameboy!" in output, "Welcome message is incorrect."
+    assert "Please select a game level (1-5): " in output, "Game level selection prompt is missing."
+    assert "Starting game at level 5!" in output, "Game level start message is incorrect."
+    assert "Press any key to continue..." in output, "Prompt to continue is missing."
+    assert "Loading the next stage..." in output, "Next stage loading message is missing."
