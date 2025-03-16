@@ -123,7 +123,7 @@ def test_get_score():
 
     Description
     ----------
-    This function gets the score of the word in the game
+    This function gets the score of the word for the game
     ----------
     def test_get_score(None) : bool
 
@@ -159,7 +159,23 @@ def is_alpha_and_spaces_with_spaces_between(string):
         return all(char.isalpha() or char.isspace() for char in string)
 
 def test_select_word():
+    """
 
+    Description
+    ----------
+    This function tests the test_select_word(int)->str receive game level 1-5 and returns a randon word seperated by space between characters
+    ----------
+    def test_select_word(None) : bool
+
+    User input
+    ----------
+    None
+
+    Returns
+    -------
+    bool
+
+    """
         assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
 # def test_ main()
