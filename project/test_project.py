@@ -198,8 +198,8 @@ def test_main():
         assert output == 'Clear'
 
     child.expect(re.compile(r"High Scores:"))
-    if 'High Scores:' in output and not any([exception in line for line in output.split('\n')]):
-        assert output == 'new'
+    #if output == 'Press any key to continue' and not any([exception in line for line in output.split('\n')]):
+    assert output == 'new'
     #high_scores = get_output(child, re.compile(r'High Scores:'))
     #assert len(high_scores) > 0
 
