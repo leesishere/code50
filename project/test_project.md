@@ -165,4 +165,24 @@ None
 ### Returns
 bool
 
+## Function
+test_select_word()
+### Description
+This function tests the test_select_word(int)->str receive game level 1-5 and returns a randon word seperated by space between characters
+### Parameters
+def test_select_word(None) : bool
+### User input
+None
+### Returns
+bool
 
+## Function
+test_main():
+### Description
+This function tests the test_main()->none. The test consist of validating the user menuser to enter thier name, printingthe core baord, selecting the game level and starting the game
+### Parameters
+def test_main() : non
+### User input
+None
+### Returns
+none
