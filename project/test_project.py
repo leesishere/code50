@@ -1,5 +1,6 @@
 import pytest
 from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu
+import project.main
 import os, json
 
 def load_data_test(file_name)->json:
@@ -188,15 +189,16 @@ def test_main(monkeypatch, capsys):
 
 #    def guess_menu(user_level, user_name)->None
 
-    inputs = iter(["gameboy", ""])  # First input for `user_name`, second for `input()`
+    inputs = iter(["gameboy", "", "5"])  # First input for `user_name`, second for `input()`, third game level
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
     # Running the main function
-    main.main()
+    project.main()
 
     # Capturing printed output
     captured = capsys.readouterr()
 
     # Asserting the output
     assert "3 - gameboy:    252" in captured.out  # Check high score is printed
-    assert "Level 1" in captured.out  # Check user_level is printed
+    assert "Please select your level (1-5):" in captured.out  # Check user_level is printed
+    assert "Playing level 5   Total score: 252" in captured.out  # start to play the game screen
