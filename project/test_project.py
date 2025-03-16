@@ -1,6 +1,5 @@
 import pytest
-from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu
-import project.main
+from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu, main
 import os, json
 
 def load_data_test(file_name)->json:
@@ -193,7 +192,7 @@ def test_main(monkeypatch, capsys):
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
     # Running the main function
-    project.main()
+    main.main()
 
     # Capturing printed output
     captured = capsys.readouterr()
