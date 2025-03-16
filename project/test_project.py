@@ -187,7 +187,7 @@ def test_main():
     # Simulate interactions with partial phrase matching
     child.expect(re.compile(r"Username\?"))  # Match the "Username?" prompt
     child.sendline("gameboy")
-    child.expect("\033[H\033[J")
+    child.expect(re.compile(r"\033\"
     child.expect(re.compile(r"High Scores:"))  # Match "High Scores:"
     child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
     child.sendline("")  # Pressing any key
