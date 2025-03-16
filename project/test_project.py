@@ -139,7 +139,6 @@ def test_get_score():
     assert get_score('abcd') == 4
 
 
-#def guess_menu(user_level, user_name)->None:
 
 #def display_word(word, guess="", display="")->str:
 
@@ -150,4 +149,4 @@ def test_get_score():
 #    user.high_score()
 #    input()
 #    user_level = main_menu()
-#    guess_menu(user_level, user_name)
+#    def guess_menu(user_level, user_name)->None
