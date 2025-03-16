@@ -181,7 +181,7 @@ def test_select_word():
     assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
 def get_output(output, pattern):
-    #output = child.readlines()
+    output = child.readlines()
     for line in output:
         if re.search(pattern, line):
             return line
