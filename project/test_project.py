@@ -180,8 +180,8 @@ def test_select_word():
     """
     assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
-def get_output(child, pattern):
-    output = child.readlines()
+def get_output(output, pattern):
+    #output = child.readlines()
     for line in output:
         if re.search(pattern, line):
             return line
@@ -198,7 +198,8 @@ def test_main():
         assert output == 'Clear'
 
     child.expect(re.compile(r"High Scores:"))
-    high_scores = get_output(child, re.compile(r'High Scores:'))
+    output = child.readlines()
+    high_scores = get_output(output, re.compile(r'High Scores:'))
     #assert len(high_scores) > 0
 
     #child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
