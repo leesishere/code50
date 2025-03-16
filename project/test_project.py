@@ -194,8 +194,8 @@ def test_main(monkeypatch, capsys):
     # Running the main function
     main()
 
-    # Capturing printed output
     captured = capsys.readouterr()
+    output = captured.out
 
     assert "Username?" in output, "Prompt for username is missing."
 
