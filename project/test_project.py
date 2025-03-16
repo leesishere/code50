@@ -181,14 +181,10 @@ def test_select_word():
     assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
 def get_output(child, pattern):
-    output = []
-    while True:
-        line = child.readline().decode('utf-8').strip()
-        if not line:
-            break
+    output = child.readlines()
+    for line in output:
         if re.search(pattern, line):
-            output.append(line)
-    return '\n'.join(output)
+            return line
 
 def test_main():
     # Start the program as a subprocess
