@@ -143,9 +143,9 @@ def is_alpha_and_spaces_with_spaces_between(string):
 
     Description
     ----------
-    This function receive a random word and validates there are spaces bewteen each charactors
+    This function receive a random word and validates there are spaces bewteen each characters
     ----------
-    def test_get_score(None) : bool
+    def is_alpha_and_spaces_with_spaces_between(None) : bool
 
     User input
     ----------
