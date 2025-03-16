@@ -197,7 +197,7 @@ def test_main():
 
     line = child.readline().decode('utf-8').strip()
 
-    if re.search(r'gameboy:', line):
+    if re.search(r'High Scores:', line):
         assert True, f"'High Scores:' was found in output"
         child.sendline("\n")
 
