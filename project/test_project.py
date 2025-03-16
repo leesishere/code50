@@ -190,8 +190,9 @@ def test_main():
     output = child.readline().decode('utf-8').strip()
     if output == 'Username?' and not any([exception in line for line in output.split('\n')]):
         assert output == 'Clear'
-
-    child.expect(re.compile(r"High Scores:"))  # Match "High Scores:"
+    
+    child.expect(re.compile(r"High Scores:"))
+    assert output == r"High Scores:"
     child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
     child.sendline("")  # Pressing any key
 
