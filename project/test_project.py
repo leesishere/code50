@@ -178,7 +178,7 @@ def test_select_word():
     """
     assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
-def test_main():
+def test_main(monkeypatch, capsys):
 
 # def test_ main()
 #    user_name = user.set_user()
@@ -186,7 +186,7 @@ def test_main():
 #    input()
 #    user_level = main_menu()
 #    def guess_menu(user_level, user_name)->None
-def test_main(monkeypatch, capsys):
+
     # Simulating user input
     inputs = iter(["James", "30"])
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
