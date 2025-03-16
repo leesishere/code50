@@ -183,7 +183,7 @@ def test_select_word():
 
 def test_main(monkeypatch, capsys):
     # Simulating user inputs
-    inputs = iter(["gameboy", "", "", "", "", "", "", ""])  # Simulated inputs
+    inputs = iter(["gameboy", "", "", "", "", "", ""])  # Simulated inputs
     with patch("builtins.input", side_effect=inputs), patch("sys.stdout", new_callable=io.StringIO) as mock_stdout:
         main()
     output = mock_stdout.getvalue()
