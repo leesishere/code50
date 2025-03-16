@@ -195,19 +195,24 @@ def test_main():
     child.sendline("gameboy")
 
     while True:
-        line = child.readlines().decode('utf-8').strip()
+        line = child.readline().decode('utf-8').strip()
         if not line:
             break
 
         if re.search(r'gameboy:', line):
             assert True, f"'High Scores:' was found in output"
             child.sendline("\n")
+
+            line = child.readline().decode('utf-8').strip()
+
             if re.search(r'Please select your level (1-5):', line):
                 assert True, f"We made it to select game level :-)"
             else:
                 assert True, f"We did not make it to select game level :-()"
 
             child.sendline("5")
+
+            line = child.readline().decode('utf-8').strip()
 
             if re.search(r'Enter letter:', line):
                 assert True, f"We made it to the game to start playing :-)"
