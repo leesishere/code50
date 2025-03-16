@@ -193,14 +193,14 @@ def test_main():
     # Simulate interactions with partial phrase matching
     child.expect(re.compile(r"Username\?"))  # Match the "Username?" prompt
     child.sendline("gameboy")
-    output = child.readline().decode('utf-8').strip()
-    if output == 'Username?' and not any([exception in line for line in output.split('\n')]):
-        assert output == 'Clear'
+    #output = child.readline().decode('utf-8').strip()
+    #if output == 'Username?' and not any([exception in line for line in output.split('\n')]):
+    #    assert output == 'Clear'
 
     #child.expect(re.compile(r"High Scores:"))
     output = child.readlines()
     high_scores = get_output(output, re.compile(r'High Scores:'))
-    #assert len(high_scores) > 0
+    assert len(high_scores) > 0
 
     #child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
     #any_key = get_output(child, re.compile(r'Press any key to continue'))
