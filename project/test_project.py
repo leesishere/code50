@@ -138,11 +138,29 @@ def test_get_score():
     """
     assert get_score('abcd') == 4
 
+def is_alpha_and_spaces_with_spaces_between(string):
+    """
 
+    Description
+    ----------
+    This function receive a random word and validates there are spaces bewteen each charactors
+    ----------
+    def test_get_score(None) : bool
+
+    User input
+    ----------
+    None
+
+    Returns
+    -------
+    bool
+
+    """
+        return all(char.isalpha() or char.isspace() for char in string)
 
 def test_select_word():
 
-    assert select_word(5) == 4
+        assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
 # def test_ main()
 #    user_name = user.set_user()
