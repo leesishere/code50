@@ -2,6 +2,7 @@ import pytest
 from project import load_data, select_word, replace, replace, display_word, get_score, guess_menu, main
 import os, json
 from unittest.mock import patch
+import io
 
 
 def load_data_test(file_name)->json:
@@ -183,15 +184,9 @@ def test_select_word():
 def test_main(monkeypatch, capsys):
     # Simulating user inputs
     inputs = iter(["gameboy", "", "", "", "", "", "", ""])  # Simulated inputs
-    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
-
-    # Running the main function
-    main()  # Assuming `main()` is defined in your project
-
-    # Capturing the output
-    captured = capsys.readouterr()
-    output = captured.out
-    output_lines = output.splitlines()  # Splitting output into lines for line-by-line validation
+    with patch("builtins.input", side_effect=inputs), patch("sys.stdout", new_callable=io.StringIO) as mock_stdout:
+        main()
+    output = mock_stdout.getvalue()
 
     # Assertions
-    assert "Username?" in output_lines, "Prompt for username is missing."
+    assert "Username?" in output, "Prompt for username is missing."
