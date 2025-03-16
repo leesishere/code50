@@ -156,7 +156,7 @@ def is_alpha_and_spaces_with_spaces_between(string):
     bool
 
     """
-        return all(char.isalpha() or char.isspace() for char in string)
+    return all(char.isalpha() or char.isspace() for char in string)
 
 def test_select_word():
     """
@@ -176,7 +176,7 @@ def test_select_word():
     bool
 
     """
-        assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
+    assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
 # def test_ main()
 #    user_name = user.set_user()
