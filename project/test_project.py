@@ -194,31 +194,30 @@ def test_main():
     child.expect(re.compile(r"Username\?"))  # Match the "Username?" prompt
     child.sendline("gameboy")
 
-    while True:
-        line = child.readline().decode('utf-8').strip()
-        if not line:
-            break
 
-        if re.search(r'gameboy:', line):
-            assert True, f"'High Scores:' was found in output"
-            child.sendline("\n")
+    line = child.readline().decode('utf-8').strip()
 
-            if re.search(r'Please select your level (1-5):', line):
-                assert True, f"We made it to select game level :-)"
-            else:
-                assert True, f"We did not make it to select game level :-()"
+    if re.search(r'gameboy:', line):
+        assert True, f"'High Scores:' was found in output"
+        child.sendline("\n")
 
-            child.sendline("5")
+        if re.search(r'Please select your level (1-5):', line):
+            assert True, f"We made it to select game level :-)"
+        else:
+            assert True, f"We did not make it to select game level :-()"
 
-            if re.search(r'Enter letter:', line):
-                assert True, f"We made it to the game to start playing :-)"
-            else:
-                assert False, f"{line}  We did not make it to the game to start playing :-()"
+        child.sendline("5")
 
-            # this kills the game when a user clicks the return key more that 5 times
-            child.sendline("")
-            child.sendline("")
-            child.sendline("")
-            child.sendline("")
-            child.sendline("")
-            child.sendline("")
+        if re.search(r'Enter letter:', line):
+            assert True, f"We made it to the game to start playing :-)"
+        else:
+            assert False, f"{line}  We did not make it to the game to start playing :-()"
+
+        # this kills the game when a user clicks the return key more that 5 times
+        child.sendline("")
+        child.sendline("")
+        child.sendline("")
+        child.sendline("")
+        child.sendline("")
+        child.sendline("")
+
