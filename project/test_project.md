@@ -114,19 +114,31 @@ None
 bool
 
 ## Function
-test_replace_pass()
+test_replace_fail()
 ### Description
 
-This function validate the replace and validates the test for pass
+This function validate the replace and validates the test fails
 
 ### Parameters
-
-test_replace_pass(None) : bool
+test_replace_fail(None) : bool
 
 ### User input
 
 None
 
-### Return
-
+### Returns
 bool
+
+### Description
+This function validate the replace and validates the test for pass
+
+### Parameters
+test_replace_pass(None) : bool
+
+### User input
+None
+
+### Returns
+bool
+
+
