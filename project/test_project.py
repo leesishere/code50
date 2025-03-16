@@ -180,6 +180,16 @@ def test_select_word():
     """
     assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
+def get_output(child, pattern):
+    output = []
+    while True:
+        line = child.readline().decode('utf-8').strip()
+        if not line:
+            break
+        if re.search(pattern, line):
+            output.append(line)
+    return '\n'.join(output)
+
 def test_main():
     # Start the program as a subprocess
     child = pexpect.spawn("python project.py")
@@ -190,7 +200,7 @@ def test_main():
     output = child.readline().decode('utf-8').strip()
     if output == 'Username?' and not any([exception in line for line in output.split('\n')]):
         assert output == 'Clear'
-    
+
     child.expect(re.compile(r"High Scores:"))
     assert output == r"High Scores:"
     child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
