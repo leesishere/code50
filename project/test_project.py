@@ -204,9 +204,9 @@ def test_main():
             child.sendline("")
             child.sendline("5")
             if re.search(r'Playing level 5', line)
-                assert True, f"'We made it to the game to start playing"
+                assert True, f"'We made it to the game to start playing :-)"
             else:
-                assert False, f"'We did not make it to the game to start playing"
+                assert False, f"'We did not make it to the game to start playing :-()"
             # this kills the game when a user clicks the return key more that 5 times
             child.sendline("")
             child.sendline("")
