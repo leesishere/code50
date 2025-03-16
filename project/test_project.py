@@ -201,7 +201,7 @@ def test_main():
 
         if re.search(r'gameboy:', line):
             assert True, f"'High Scores:' was found in output"
-            child.sendline("")
+            child.sendline("\n")
             child.sendline("5")
             if re.search(r'Enter letter:', line):
                 assert True, f"We made it to the game to start playing :-)"
