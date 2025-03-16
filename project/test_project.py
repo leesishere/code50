@@ -188,8 +188,7 @@ def test_main(monkeypatch, capsys):
 
 #    def guess_menu(user_level, user_name)->None
 
-    # Simulating user input
-    inputs = iter(["gameboy", ""])
+    inputs = iter(["gameboy", ""])  # First input for `user_name`, second for `input()`
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
     # Running the main function
@@ -199,4 +198,5 @@ def test_main(monkeypatch, capsys):
     captured = capsys.readouterr()
 
     # Asserting the output
-    assert "Hello, James! You are 30 years old." in captured.out
+    assert "252" in captured.out  # Check high score is printed
+    assert "Level 1" in captured.out  # Check user_level is printed
