@@ -191,7 +191,7 @@ def test_main():
 
     Description
     ----------
-    This function tests the test_main()->none. The test consist of validating the user menuser to enter thier name, printingthe core baord, selecting the game level and starting the game
+    This function tests the test_main()->none. The test consist of validating the user menu in entering thier username, printing the score baord, selecting the game level and starting the game
     ----------
     def test_main() : non
 
