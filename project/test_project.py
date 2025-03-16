@@ -180,10 +180,10 @@ def test_select_word():
     """
     assert is_alpha_and_spaces_with_spaces_between(select_word(5)) == True
 
-def get_output(child, pattern):
+def get_output(self, pattern):
     output = []
     while True:
-        line = child.readline().decode('utf-8').strip()
+        line = self.child.readline().decode('utf-8').strip()
         if not line:
             break
         if re.search(pattern, line):
