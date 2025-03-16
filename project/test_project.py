@@ -198,5 +198,5 @@ def test_main(monkeypatch, capsys):
     captured = capsys.readouterr()
 
     # Asserting the output
-    assert "252" in captured.out  # Check high score is printed
+    assert "3 - gameboy:    252" in captured.out  # Check high score is printed
     assert "Level 1" in captured.out  # Check user_level is printed
