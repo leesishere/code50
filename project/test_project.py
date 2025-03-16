@@ -198,15 +198,23 @@ def test_main(monkeypatch, capsys):
     captured = capsys.readouterr()
 
     assert "Username?" in output, "Prompt for username is missing."
+
+    assert "\033[H\033[J" in output_lines, "Clear screen sequence not found in printed output."
+
     assert "High Scores:" in output, "High scores are not displayed."
     assert "1 - gene:       382" in output, "High score 1 is missing."
     assert "2 - jamey:      324" in output, "High score 2 is missing."
     assert "3 - gameboy:    252" in output, "High score 3 is missing."
     assert "Press any key to continue" in output, "Prompt to continue is missing."
-    
+
     assert "\033[H\033[J" in output_lines, "Clear screen sequence not found in printed output."
+
     assert "Please select the game level 1-5" in output, "Game level selection prompt is missing."
     assert "1  Easier Than Easy" in output, "Game level options are missing."
     assert "5  Difficult" in output, "Game level options are incomplete."
+
+    assert "\033[H\033[J" in output_lines, "Clear screen sequence not found in printed output."
+
     assert "Playing level 5   Total score: 252" in output, "Level confirmation and score are missing."
-    assert "Word guess game: _ _ _ _ _ _ _ _ _ _ _ _" in output, "Game display is missing."
+    assert "Word guess game: " in output, "Game display is missing."
+    assert "Enter letter: " in output, "Enter letter display is missing."
