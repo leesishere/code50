@@ -195,11 +195,23 @@ def test_main():
     child.sendline("gameboy")
 
 
-    line = child.readline().decode('utf-8').strip()
+    while True:
+        line = child.readline().decode('utf-8').strip()
 
-    if re.search(r'High Scores:', line):
-        assert True, f"'High Scores:' was found in output"
-        child.sendline("\n")
+        if not line:  # If no more lines to read, exit the loop
+            break
+
+        # Check here if 'High Scores:' was found in any of these lines
+        if re.search(r'High Scores:', line):
+            assert True, f"'High Scores:' was found in output"
+
+    child.sendline("")
+
+    while True:
+        line = child.readline().decode('utf-8').strip()
+
+        if not line:  # If no more lines to read, exit the loop
+            break
 
         if re.search(r'Please select your level (1-5):', line):
             assert True, f"We made it to select game level :-)"
@@ -207,17 +219,23 @@ def test_main():
             assert True, f"We did not make it to select game level :-()"
 
         child.sendline("5")
+    while True:
+        line = child.readline().decode('utf-8').strip()
+
+        if not line:  # If no more lines to read, exit the loop
+            break
+
 
         if re.search(r'Enter letter:', line):
             assert True, f"We made it to the game to start playing :-)"
         else:
             assert False, f"{line}  We did not make it to the game to start playing :-()"
 
-        # this kills the game when a user clicks the return key more that 5 times
-        child.sendline("")
-        child.sendline("")
-        child.sendline("")
-        child.sendline("")
-        child.sendline("")
-        child.sendline("")
+    # this kills the game when a user clicks the return key more that 5 times
+    child.sendline("")
+    child.sendline("")
+    child.sendline("")
+    child.sendline("")
+    child.sendline("")
+    child.sendline("")
 
