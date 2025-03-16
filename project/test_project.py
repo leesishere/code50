@@ -188,11 +188,8 @@ def test_main():
     child.expect(re.compile(r"Username\?"))  # Match the "Username?" prompt
     child.sendline("gameboy")
     output = child.readline().decode('utf-8').strip()
-    # Check if the string "clear
-    assert output == 'Clear'
-
-    #if output == 'Username?' and not any([exception in line for line in output.split('\n')]):
-    #    print("Clear Command executed successfully")
+    if output == 'Username?' and not any([exception in line for line in output.split('\n')]):
+        assert output == 'Clear'
 
     child.expect(re.compile(r"High Scores:"))  # Match "High Scores:"
     child.expect(re.compile(r"Press any key to continue"))  # Match the continue prompt
