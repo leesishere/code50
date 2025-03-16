@@ -198,6 +198,14 @@ def test_main():
         assert output == 'Clear'
 
     child.expect(re.compile(r"Press any key to continue"))
+    # this kills the game when a user clicks the return key more that 5 times
+    child.sendline("")
+    child.sendline("")
+    child.sendline("")
+    child.sendline("")
+    child.sendline("")
+    child.sendline("")
+
     high_scores = get_output(child, re.compile(r'Press any key to continue'))
     assert len(high_scores) > 0
 
@@ -206,10 +214,4 @@ def test_main():
     #assert len(any_key) > 0
     #child.sendline("")  # Pressing any key
 
-    # this kills the game when a user clicks the return key more that 5 times
-    child.sendline("")
-    child.sendline("")
-    child.sendline("")
-    child.sendline("")
-    child.sendline("")
-    child.sendline("")
+
