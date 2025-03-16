@@ -187,13 +187,29 @@ def get_output(output, pattern):
             return line
 
 def test_main():
+    """
+
+    Description
+    ----------
+    This function tests the test_main()->none. The test consist of validating the user menuser to enter thier name, printingthe core baord, selecting the game level and starting the game
+    ----------
+    def test_main() : non
+
+    User input
+    ----------
+    None
+
+    Returns
+    -------
+    none
+
+    """
     # Start the program as a subprocess
     child = pexpect.spawn("python project.py")
 
     # Simulate interactions with partial phrase matching
     child.expect(re.compile(r"Username\?"))  # Match the "Username?" prompt
     child.sendline("gameboy")
-
 
     while True:
         line = child.readline().decode('utf-8').strip()
