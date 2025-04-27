@@ -16,6 +16,7 @@ word_dict = load_word_dictionary(filename)
 
 # Example searches
 #print(word('accursed', word_dict)['meanings'][0]['definitions'][0]['definition'])
-print(word('the', word_dict)['meanings'][0]['definitions'][0]['definition'])
+#print(word('the', word_dict)['meanings'][0]['definitions'][0]['definition'])
+print(word('the', word_dict)['letter_count'])
+print(word('the', word_dict)['syllable_count'])
 
-letter_count
