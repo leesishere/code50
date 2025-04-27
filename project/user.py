@@ -61,7 +61,7 @@ def get_user_score(user_name)->int:
     data = load_data(file_name)
     for user in data:
         if user.get("user") == user_name:
-            return user["score"]
+            return f"{user["score"]:,}"
 
 
 def is_one_word(input_string)->bool:
@@ -267,7 +267,7 @@ def high_score(typer=True)->None:
     score_rank = "\nHigh Scores:\n"
     rank = 1
     for user in sorted_data:
-        score_rank += f"{bold(rank)} - {user['user']}:\t{user['score']}\n"
+        score_rank += f"{bold(rank)} - {user['user']}:\t{user['score']:,}\n"
         rank += 1
     if typer:
         menu.type_writer(score_rank)

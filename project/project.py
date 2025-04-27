@@ -174,7 +174,12 @@ def guess_menu(user_level, user_name)->None:
                 word_guess_display = display_word(word, letter[i], word_guess_display)
             letter = letter[-1]
         elif letter not in quess_letters:
-            quess_letters += letter + " "
+            # sorting letters and spaces
+            # help see letters already picked in the list
+            quess_letters += letter
+            quess_letters = quess_letters.strip()
+            quess_letters = " ".join(sorted(quess_letters))
+            quess_letters = quess_letters.lstrip()
             guess_count += 1
 
 
