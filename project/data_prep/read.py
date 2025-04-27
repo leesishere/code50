@@ -20,5 +20,5 @@ word_dict = load_word_dictionary(filename)
 #print(word('the', word_dict)['letter_count'])
 #print(word('the', word_dict)['syllable_count'])
 
-foreach word_line in word_dict:
+for word_line in word_dict:
     print(word_line['letter_count'])
