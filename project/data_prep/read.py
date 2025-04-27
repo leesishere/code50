@@ -18,4 +18,4 @@ word_dict = load_word_dictionary(filename)
 #print(word('accursed', word_dict)['meanings'][0]['definitions'][0]['definition'])
 print(word('the', word_dict)['meanings'][0]['definitions'][0]['definition'])
 
-
+letter_count
