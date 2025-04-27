@@ -25,5 +25,8 @@ with open(filename, 'r') as file:
 #print(word('the', word_dict)['letter_count'])
 #print(word('the', word_dict)['syllable_count'])
 
+# Words with three or four syllables with a letter count between 12 and 15.
+
 for word in data:
-    print(f"{word['word']} {word['letter_count']} {word['syllable_count']}")
+    if (word['letter_count'] >= 12 and word['letter_count'] <= 15) and (word['syllable_count'] == 3 or word['syllable_count'] == 4):
+        print(f"{word['word']} {word['letter_count']} {word['syllable_count']}")
