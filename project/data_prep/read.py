@@ -16,6 +16,6 @@ word_dict = load_word_dictionary(filename)
 
 # Example searches
 #print(word('accursed', word_dict)['meanings'][0]['definitions'][0]['definition'])
-print(word('accursed', word_dict))
+print(word('the', word_dict)['meanings'][0]['definitions'][0]['definition'])
 
 
