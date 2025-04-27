@@ -25,5 +25,5 @@ with open(filename, 'r') as file:
 #print(word('the', word_dict)['letter_count'])
 #print(word('the', word_dict)['syllable_count'])
 
-for word_line in data:
-    print(word_line['letter_count'])
+for word in data:
+    print(f"{word['word']} {word['letter_count']} {word['syllable_count']}")
