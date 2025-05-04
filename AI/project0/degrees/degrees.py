@@ -62,14 +62,24 @@ def main():
     load_data(directory)
     print("Data loaded.")
 
+    '''
     source = person_id_for_name(input("Name: "))
     if source is None:
         sys.exit("Person not found.")
     target = person_id_for_name(input("Name: "))
     if target is None:
         sys.exit("Person not found.")
+    path = shortest_path(source, target)
+    '''
+    source = 'Kevin Bacon'
+    source = person_id_for_name(source)
+    print(source)
+    target = 'Tom Cruise'
+    target = person_id_for_name(target)
+    print(target)
 
     path = shortest_path(source, target)
+    exit()
 
     if path is None:
         print("Not connected.")
@@ -103,6 +113,34 @@ def shortest_path(source, target):
     """
 
     # TODO
+
+    for key, value in people.items():
+        print(f"{key}: {value.get('name', '')}, born: {value.get('birth', '')}", end=', ')
+        for movie_id in value.get('movies', ''):
+            print(f"{movie_id}", end=', ' )
+        print()
+    exit()
+
+    for key, value in people.items():
+
+        print(f"ID: {key}")
+
+        # Print name
+        if isinstance(value, dict):
+            for k, v in value.items():
+                if k == 'name':
+                    print(f"\nName: {v}")
+
+        # Print birth and movies
+        else:
+            if isinstance(value, str):  # Birth is a string
+                print(f"Birth: {value}")
+            elif isinstance(value, set):  # Movies are in a set (unordered)
+                print("Movies:")
+                for movie_id in value:
+                    print(movie_id)
+
+    return [(1, 2), (3, 4)]
     raise NotImplementedError
 
 
