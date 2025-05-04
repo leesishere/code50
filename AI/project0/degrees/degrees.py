@@ -76,7 +76,7 @@ def main():
     source = person_id_for_name(source)
 
     target = 'Tom Cruise'
-    'Kevin Bacon'
+    target = 'Kevin Bacon'
     target = person_id_for_name(target)
 
 
