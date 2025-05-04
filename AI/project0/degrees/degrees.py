@@ -120,26 +120,6 @@ def shortest_path(source, target):
             print(f"{movie_id}", end=', ' )
         print()
     exit()
-
-    for key, value in people.items():
-
-        print(f"ID: {key}")
-
-        # Print name
-        if isinstance(value, dict):
-            for k, v in value.items():
-                if k == 'name':
-                    print(f"\nName: {v}")
-
-        # Print birth and movies
-        else:
-            if isinstance(value, str):  # Birth is a string
-                print(f"Birth: {value}")
-            elif isinstance(value, set):  # Movies are in a set (unordered)
-                print("Movies:")
-                for movie_id in value:
-                    print(movie_id)
-
     return [(1, 2), (3, 4)]
     raise NotImplementedError
 
