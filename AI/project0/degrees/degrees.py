@@ -115,13 +115,10 @@ def shortest_path(source, target):
     # TODO
 
     for key, value in people.items():
-        print(f"{key}: {value.get('name', '')}, born: {value.get('birth', '')}, {len(value.get('movies', ''))}")
-
-
-        #print(f"{key}: {value.get('name', '')}, born: {value.get('birth', '')}", end=', ')
-        #for movie_id in value.get('movies', ''):
-        #    print(f"{movie_id}", end=', ' )
-        #print()
+        print(f"{key},{value.get('name', '')},{len(value.get('movies', ''))}", end=', ')
+        for movie_id in value.get('movies', ''):
+            print(f"{movie_id}", end=', ' )
+        print()
     exit()
 
     for key, value in people.items():
