@@ -133,7 +133,7 @@ def shortest_path(source, target):
 
 def sort_and_print_data(data):
     # Sort the data by movie_count in descending order
-    sorted_data = sorted(data, key=lambda x: x['movie_count'], reverse=True)
+    sorted_data = sorted(data, key=lambda x: int(x['movie_count']), reverse=True)
 
     # Print each row with index ID
     for i in range(len(sorted_data)):
