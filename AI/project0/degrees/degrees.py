@@ -79,7 +79,7 @@ def main():
 
 
     path = shortest_path(source, target)
-    exit()
+    #exit()
 
     if path is None:
         print("Not connected.")
