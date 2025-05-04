@@ -76,7 +76,7 @@ def main():
     source = person_id_for_name(source)
 
     target = 'Tom Cruise'
-    target = 'Kevin Bacon'
+    #target = 'Kevin Bacon'
     target = person_id_for_name(target)
 
 
@@ -110,6 +110,10 @@ def shortest_path(source, target):
             return [(m, source), (m, target)]
 
 
+    source = 'Tom Hanks'
+    source = person_id_for_name(source)
+
+    target = 'Tom Cruise'
     exit()
     # create an actor list to be able to sort and search actors
     actors  = []
