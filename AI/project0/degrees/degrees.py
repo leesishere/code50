@@ -102,6 +102,12 @@ def shortest_path(source, target):
     If no possible path, returns None.
 
     """
+    for m in people[source]['movies']:
+        if m in people[target]['movies']:
+            print("Oh Yah!")
+
+
+    exit()
     # create an actor list to be able to sort and search actors
     actors  = []
     # Store the number of movies count the actors has been in.
