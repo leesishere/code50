@@ -113,7 +113,7 @@ def shortest_path(source, target):
     for m in people[source]['movies']:
         print(people[source])
 
-    print(movies)
+    print(movies[m])
     #[row["movie_id"]]["stars"].add(row["person_id"])
 
     exit()
