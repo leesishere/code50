@@ -119,6 +119,8 @@ def shortest_path(source, target):
         for movie_id in value.get('movies', ''):
             print(f"{movie_id}", end=', ' )
         print()
+
+        
     exit()
     return [(1, 2), (3, 4)]
     raise NotImplementedError
