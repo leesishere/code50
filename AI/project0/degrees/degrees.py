@@ -100,16 +100,7 @@ def shortest_path(source, target):
     that connect the source to the target.
 
     If no possible path, returns None.
-    people[row["id"]] = {
-                "name": row["name"],
-                "birth": row["birth"],
-                "movies": set()
-            }
-    movies[row["id"]] = {
-                "title": row["title"],
-                "year": row["year"],
-                "stars": set()
-            }
+
     """
 
     # TODO
@@ -120,7 +111,7 @@ def shortest_path(source, target):
             print(f"{movie_id}", end=', ' )
         print()
 
-        
+
     exit()
     return [(1, 2), (3, 4)]
     raise NotImplementedError
