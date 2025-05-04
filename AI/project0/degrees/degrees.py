@@ -110,8 +110,10 @@ def shortest_path(source, target):
             return [(m, source), (m, target)]
 
     # 'Tom Hanks' & 'Tom Cruise' approach
-    for m in people[source]['movies']
-    
+    for m in people[source]['movies']:
+        print(people)
+
+    exit()
 
     # create an actor list to be able to sort and search actors
     actors  = []
