@@ -72,9 +72,11 @@ def main():
     path = shortest_path(source, target)
     '''
     source = 'Kevin Bacon'
+    source = 'Tom Hanks'
     source = person_id_for_name(source)
 
     target = 'Tom Cruise'
+    'Kevin Bacon'
     target = person_id_for_name(target)
 
 
