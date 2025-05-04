@@ -120,20 +120,24 @@ def shortest_path(source, target):
         actors.append(person)
         movies = []
 
-    sort_and_print_data(actors, source, target)
+    sort_by_movie_count(actors)
 
-    exit()
-    return [(1, 2), (3, 4)]
-    raise NotImplementedError
-
-def sort_and_print_data(data, source, target):
-    # Sort the data by movie_count in descending order
-    sorted_data = sorted(data, key=lambda x: int(x['movie_count']), reverse=True)
 
     # Print each row with index ID
     for i in range(len(sorted_data)):
         if source == sorted_data[i]['id'] or target == sorted_data[i]['id']:
             print(f"Record {i+1}: id - {sorted_data[i]['id']}, Name: {sorted_data[i]['name']}, {sorted_data[i]['movie_count']}, {sorted_data[i]['movie_ids']}")
+
+
+
+    exit()
+    return [(1, 2), (3, 4)]
+    raise NotImplementedError
+
+def sort_by_movie_count(data):
+    # Sort the data by movie_count in descending order
+    return sorted(data, key=lambda x: int(x['movie_count']), reverse=True)
+
 
 
 def person_id_for_name(name):
