@@ -109,11 +109,8 @@ def shortest_path(source, target):
         if m in people[target]['movies']:
             return [(m, source), (m, target)]
 
+    # 'Tom Hanks' & 'Tom Cruise' approach
 
-    source = 'Tom Hanks'
-    source = person_id_for_name(source)
-
-    target = 'Tom Cruise'
     exit()
     # create an actor list to be able to sort and search actors
     actors  = []
