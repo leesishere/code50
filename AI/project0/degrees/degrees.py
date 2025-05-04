@@ -119,8 +119,8 @@ def shortest_path(source, target):
     source_matches = set()
     connections = set()
     target_matches = set()
-    people[source]['movies']
-    people[target]['movies']
+    print(people[source]['movies'])
+    print(people[target]['movies'])
 
    # for m in people[source]['movies']:
    #     for star in movies[m]['stars']:
