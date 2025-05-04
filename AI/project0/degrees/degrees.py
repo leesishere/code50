@@ -123,8 +123,6 @@ def shortest_path(source, target):
     print(actors[0])
     sort_and_print_data(actors)
 
-
-
     exit()
     return [(1, 2), (3, 4)]
     raise NotImplementedError
