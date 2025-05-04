@@ -95,7 +95,9 @@ def main():
             movie = movies[path[i + 1][0]]["title"]
             print(f"{i + 1}: {person1} and {person2} starred in {movie}")
 
-def Kevin_Bacon()
+def Kevin_Bacon(source, target):
+
+
 def shortest_path(source, target):
     """
     Returns the shortest list of (movie_id, person_id) pairs
