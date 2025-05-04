@@ -119,12 +119,14 @@ def shortest_path(source, target):
     source_matches = set()
     connections = set()
     target_matches = set()
+    people[source]['movies']
+    people[target]['movies']
 
-    for m in people[source]['movies']:
-        for star in movies[m]['stars']:
-            star_power = same_movie(star,target)
-            if star_power:
-                print(f"C is in the same movie as B - {star_power}")
+   # for m in people[source]['movies']:
+   #     for star in movies[m]['stars']:
+   #         star_power = same_movie(star,target)
+   #         if star_power:
+   #             print(f"C is in the same movie as B - {star_power}")
     print()
 
 
