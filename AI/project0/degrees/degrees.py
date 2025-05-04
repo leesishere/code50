@@ -111,11 +111,11 @@ def shortest_path(source, target):
 
     # 'Tom Hanks' & 'Tom Cruise' approach
     for m in people[source]['movies']:
-        
+        print(movies[m]['stars'])
         #print(people[source])
-        print("hi")
+        #print("hi")
 
-    print(movies[m])
+    #print(movies[m])
     #[row["movie_id"]]["stars"].add(row["person_id"])
 
     exit()
