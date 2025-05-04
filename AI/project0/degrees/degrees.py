@@ -109,6 +109,13 @@ def shortest_path(source, target):
         print(f"{key},{value.get('name', '')},{len(value.get('movies', ''))}", end=', ')
         for movie_id in value.get('movies', ''):
             print(f"{movie_id}", end=', ' )
+        person = {
+            "name": names[i],
+            "age": ages[i],
+            "money": money[i],
+        }
+        people.append(person)
+
         print()
 
 
