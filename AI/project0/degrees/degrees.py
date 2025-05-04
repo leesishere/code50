@@ -112,7 +112,8 @@ def shortest_path(source, target):
     """
     degrees = []
     actor_movie = set()
-
+    source_matches 
+    target_matches
     # Source and target starred in the same movie
     star_power = same_movie(source,target)
     if star_power:
