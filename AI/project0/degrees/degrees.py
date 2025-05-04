@@ -71,7 +71,7 @@ def main():
         sys.exit("Person not found.")
     path = shortest_path(source, target)
     '''
-    source = 'Kevin Bacon'
+    #source = 'Kevin Bacon'
     source = 'Tom Hanks'
     source = person_id_for_name(source)
 
