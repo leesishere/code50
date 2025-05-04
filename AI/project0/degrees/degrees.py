@@ -105,7 +105,7 @@ def shortest_path(source, target):
     for m in people[source]['movies']:
         if m in people[target]['movies']:
             print("Oh Yah!")
-            print(f"({m},{people[source]['person_id'}),({m},{people[target]['person_id'})")
+            print(f"({m},{people[source]['person_id']}),({m},{people[target]['person_id'})")
             [Source = (Movie_id, Person_id), Target = (Movie_id, Person_id)]
 
             #return [(1, 2), (3, 4)]
