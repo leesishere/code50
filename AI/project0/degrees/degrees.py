@@ -133,7 +133,7 @@ def sort_and_print_data(data):
 
     # Print each row with index ID
     for i in range(len(sorted_data)):
-        print(f"Record {i+1}: id - {sorted_data[i]['id']}, Name: {sorted_data[i]['name']}, Movie Count: {sorted_data[i]['movie_count']}")
+        print(f"Record {i+1}: id - {sorted_data[i]['id']}, Name: {sorted_data[i]['name']}, Movie Count:{sorted_data[i]['movie_count']}")
 
 
 def person_id_for_name(name):
