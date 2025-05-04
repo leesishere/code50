@@ -120,8 +120,7 @@ def shortest_path(source, target):
         actors.append(person)
         movies = []
 
-    sort_by_movie_count(actors)
-
+    sorted_data = sort_by_movie_count(actors)
 
     # Print each row with index ID
     for i in range(len(sorted_data)):
