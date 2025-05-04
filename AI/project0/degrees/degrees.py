@@ -105,18 +105,24 @@ def shortest_path(source, target):
 
     # TODO
 
+    actors = []
+    movies = []
     for key, value in people.items():
-        print(f"{key},{value.get('name', '')},{len(value.get('movies', ''))}", end=', ')
+        #print(f"{key},{value.get('name', '')},{len(value.get('movies', ''))}", end=', ')
         for movie_id in value.get('movies', ''):
-            print(f"{movie_id}", end=', ' )
-        person = {
-            "name": names[i],
-            "age": ages[i],
-            "money": money[i],
-        }
-        people.append(person)
-
+            #print(f"{movie_id}", end=', ' )
+            movies.append(movie_id)
         print()
+        
+        person = {
+            "id": key,
+            "name": value.get('name', ''),
+            "movie_count": len(value.get('movies', '')),
+            "movie_ids": movies
+        }
+        actors.append(person)
+        movies = []
+
 
 
     exit()
