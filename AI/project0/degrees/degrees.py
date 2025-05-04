@@ -113,7 +113,7 @@ def shortest_path(source, target):
             #print(f"{movie_id}", end=', ' )
             movies.append(movie_id)
         print()
-        
+
         person = {
             "id": key,
             "name": value.get('name', ''),
@@ -123,6 +123,8 @@ def shortest_path(source, target):
         actors.append(person)
         movies = []
 
+        print(person)
+        
 
 
     exit()
