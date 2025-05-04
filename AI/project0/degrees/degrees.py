@@ -122,7 +122,7 @@ def shortest_path(source, target):
     actors  = []
     # Store the number of movies count the actors has been in.
     # The higher the number the higher likelihood they have been in the same movie as another actor
-    movies = []
+    moviez = []
     for key, value in people.items():
         for movie_id in value.get('movies', ''):
             movies.append(movie_id)
@@ -131,10 +131,10 @@ def shortest_path(source, target):
             "id": key,
             "name": value.get('name', ''),
             "movie_count": len(value.get('movies', '')), # the count of movies
-            "movie_ids": movies
+            "movie_ids": moviez
         }
         actors.append(person)
-        movies = []
+        moviez = []
 
     sorted_data = sort_by_movie_count(actors)
 
