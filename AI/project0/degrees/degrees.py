@@ -95,7 +95,7 @@ def main():
             movie = movies[path[i + 1][0]]["title"]
             print(f"{i + 1}: {person1} and {person2} starred in {movie}")
 
-def Kevin_Bacon(source, target):
+def same_movie(source, target):
    # Source and target starred in the same movie
     for m in people[source]['movies']:
         if m in people[target]['movies']:
@@ -111,9 +111,7 @@ def shortest_path(source, target):
 
     """
     # Source and target starred in the same movie
-    for m in people[source]['movies']:
-        if m in people[target]['movies']:
-            return [(m, source), (m, target)]
+    same_movie(sorce,target)
 
     # 'Tom Hanks' & 'Tom Cruise' approach
     for m in people[source]['movies']:
