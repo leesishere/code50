@@ -114,7 +114,7 @@ def shortest_path(source, target):
         person = {
             "id": key,
             "name": value.get('name', ''),
-            "movie_count": len(value.get('movies', '')), 
+            "movie_count": len(value.get('movies', '')), # the count of movies
             "movie_ids": movies
         }
         actors.append(person)
