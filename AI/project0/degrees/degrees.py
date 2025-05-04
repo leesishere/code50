@@ -73,10 +73,10 @@ def main():
     '''
     source = 'Kevin Bacon'
     source = person_id_for_name(source)
-    print(source)
+
     target = 'Tom Cruise'
     target = person_id_for_name(target)
-    print(target)
+
 
     path = shortest_path(source, target)
     exit()
