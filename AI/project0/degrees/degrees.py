@@ -102,10 +102,10 @@ def shortest_path(source, target):
     If no possible path, returns None.
 
     """
-    # create an actor list to be able to sort and search actors to moviees
+    # create an actor list to be able to sort and search actors
     actors  = []
-    # Store the number of movie count the actors has been in.
-    # A larger number the the higher likelyhood they have been in the same movire as another actor
+    # Store the number of movies count the actors has been in.
+    # The higher the number the higher likelihood they have been in the same movie as another actor
     movies = []
     for key, value in people.items():
         for movie_id in value.get('movies', ''):
@@ -114,7 +114,7 @@ def shortest_path(source, target):
         person = {
             "id": key,
             "name": value.get('name', ''),
-            "movie_count": len(value.get('movies', '')),
+            "movie_count": len(value.get('movies', '')), 
             "movie_ids": movies
         }
         actors.append(person)
