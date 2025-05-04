@@ -111,7 +111,7 @@ def shortest_path(source, target):
 
     """
     # Source and target starred in the same movie
-    same_movie(sorce,target)
+    same_movie(source,target)
 
     # 'Tom Hanks' & 'Tom Cruise' approach
     for m in people[source]['movies']:
