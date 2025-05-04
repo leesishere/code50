@@ -123,8 +123,8 @@ def shortest_path(source, target):
         actors.append(person)
         movies = []
 
-        print(actors[1])
-        #sort_and_print_data(person)
+    print(actors[0])
+    sort_and_print_data(actors)
 
 
 
