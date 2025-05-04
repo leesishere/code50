@@ -118,8 +118,9 @@ def shortest_path(source, target):
     # 'Tom Hanks' & 'Tom Cruise' approach
     for m in people[source]['movies']:
         for star in movies[m]['stars']:
-            
-            print(star, end=', ')
+            star_power = same_movie(target,star)
+            if star_power:
+                print("C is in the same movie as B")
     print()
 
 
