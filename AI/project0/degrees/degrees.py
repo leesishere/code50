@@ -96,7 +96,11 @@ def main():
             print(f"{i + 1}: {person1} and {person2} starred in {movie}")
 
 def Kevin_Bacon(source, target):
-
+   # Source and target starred in the same movie
+    for m in people[source]['movies']:
+        if m in people[target]['movies']:
+            return [(m, source), (m, target)]
+    return False
 
 def shortest_path(source, target):
     """
