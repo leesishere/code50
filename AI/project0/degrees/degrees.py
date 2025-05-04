@@ -132,7 +132,7 @@ def sort_and_print_data(data, source, target):
 
     # Print each row with index ID
     for i in range(len(sorted_data)):
-        if source == sorted_data[i]['id']:
+        if source == sorted_data[i]['id'] or target == sorted_data[i]['id']:
             print(f"Record {i+1}: id - {sorted_data[i]['id']}, Name: {sorted_data[i]['name']}, {sorted_data[i]['movie_count']}, {sorted_data[i]['movie_ids']}")
 
 
