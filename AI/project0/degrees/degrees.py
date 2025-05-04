@@ -105,6 +105,7 @@ def shortest_path(source, target):
     for m in people[source]['movies']:
         if m in people[target]['movies']:
             print("Oh Yah!")
+            return [(1, 2), (3, 4)]
 
 
     exit()
