@@ -104,9 +104,9 @@ def shortest_path(source, target):
     If no possible path, returns None.
 
     """
+    # Source and target starred in the same movie
     for m in people[source]['movies']:
         if m in people[target]['movies']:
-            print("Oh Yah!")
             return [(m, source), (m, target)]
 
 
