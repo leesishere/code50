@@ -111,7 +111,7 @@ def shortest_path(source, target):
 
     # 'Tom Hanks' & 'Tom Cruise' approach
 
-    exit()
+
     # create an actor list to be able to sort and search actors
     actors  = []
     # Store the number of movies count the actors has been in.
