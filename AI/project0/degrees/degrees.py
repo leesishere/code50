@@ -110,16 +110,16 @@ def shortest_path(source, target):
     If no possible path, returns None.
 
     """
-    degrees = []
-    actor_movie = set()
-    source_matches 
-    target_matches
     # Source and target starred in the same movie
     star_power = same_movie(source,target)
     if star_power:
         return star_power
-
+    
     # 'Tom Hanks' & 'Tom Cruise' approach
+    source_matches = set()
+    connections = set()
+    target_matches = set()
+
     for m in people[source]['movies']:
         for star in movies[m]['stars']:
             star_power = same_movie(target,star)
