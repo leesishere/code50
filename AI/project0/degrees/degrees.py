@@ -119,8 +119,7 @@ def shortest_path(source, target):
     source_matches = set()
     connections = set()
     target_matches = set()
-    print(f"{people[source]} - {people[source]['movies']}")
-    print(f"{people[target]} - {people[source]['movies']}")
+    #print(f"{people[source]} - {people[source]['movies']}")
 
     for m in people[source]['movies']:
         for star in movies[m]['stars']:
@@ -129,6 +128,7 @@ def shortest_path(source, target):
                 print(f"C is in the same movie as B - {star_power}")
     print()
 
+    # return [(m, source), (m, target)]
 
     #print(movies[m])
     #[row["movie_id"]]["stars"].add(row["person_id"])
