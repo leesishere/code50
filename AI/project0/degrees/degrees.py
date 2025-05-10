@@ -119,8 +119,16 @@ def shortest_path(source, target):
     """
     degrees = []
     movie_neighbors = neighbors_for_person(source)
-    if target in movie_neighbors:
-        
+    # Find first values for '705' and '398'
+    first_value_705 = next((first for first, second in data if second == '705'), None)
+    first_value_398 = next((first for first, second in data if second == '398'), None)
+    
+    # Check if they are the same
+    if first_value_705 and first_value_398 and first_value_705 == first_value_398:
+        print(f"Yes, '{first_value_705}' is the same first value for both '705' and '398'.")
+    else:
+        print("No, they have different first values.")
+
 
     if in_same_movie(movie_neighbors,source,target):
 
