@@ -180,6 +180,7 @@ def shortest_path(source, target):
     cursor.executemany("INSERT INTO actor_movies (degree, actor_id, movie_id) VALUES (:degree, :actor_id, :movie_id)", sorted_actor_data)
     conn.commit()
 
+row_count = cursor.fetchone()[0] 
 
     _sql = "SELECT movie_id, actor_id\n"
     _sql += "FROM actor_movies \n"
