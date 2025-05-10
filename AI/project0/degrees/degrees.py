@@ -119,6 +119,9 @@ def shortest_path(source, target):
     """
     degrees = []
     movie_neighbors = neighbors_for_person(source)
+    if target in movie_neighbors:
+        
+
     if in_same_movie(movie_neighbors,source,target):
 
     degree = 1
