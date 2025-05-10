@@ -153,6 +153,7 @@ def shortest_path(source, target):
     for actor_row in sorted_actor_data:
         if degree == 1:
             source_movie.append(movie_id)
+        
     exit()
     # Sample dictionary
 
