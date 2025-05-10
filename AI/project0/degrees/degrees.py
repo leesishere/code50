@@ -193,6 +193,8 @@ def shortest_path(source, target):
         # Commit changes
         conn.commit()
 
+
+
     _sql = "SELECT degree, movie_id, actor_id\n"
     _sql += "FROM actor_movies \n"
 
