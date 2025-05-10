@@ -95,9 +95,9 @@ def main():
             movie = movies[path[i + 1][0]]["title"]
             print(f"{i + 1}: {person1} and {person2} starred in {movie}")
 
-def in_same_movie(actors_in_movie,node, target):
+def in_same_movie(movie_neighbors,actors_in_movie, target):
     # Source and target starred in the same movie
-    matching_values = [second for first, second in data if first == '109830']
+    matching_values = [second for m, second in movie_neighbors if m == actors_in_movie[0]]
     for m in people[source]['movies']:
         if target in movies[m]['stars']:
             return True
@@ -137,14 +137,12 @@ def shortest_path(source, target):
     while True:
         for actors_in_movie in movie_neighbors:
             if source == actors_in_movie[1]:
-                    continue
+                continue
             print(actors_in_movie)
             exit()
-          
 
-                print(f"{node}")
-                if in_same_movie(actors,node, target):
-                    print(f" degree={degree}  {people[actors[1]]['name']} {people[target]['name']}")
+            if in_same_movie(movie_neighbors,actors_in_movie, target):
+                print(f" degree={degree}  {people[actors[1]]['name']} {people[target]['name']}")
 
         actors_in_same_movie = neighbors_for_person(source)
         degree += 1
