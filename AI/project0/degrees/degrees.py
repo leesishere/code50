@@ -186,8 +186,9 @@ def shortest_path(source, target):
     _sql += "WHERE degree = 1;\n"
 
     cursor.execute(_sql)
-    rows = cursor.fetchall()
-    for row in rows:
+    #rows = cursor.fetchall()
+
+    for row in cursor.fetchall():
         print(row[0])
 
     exit()
