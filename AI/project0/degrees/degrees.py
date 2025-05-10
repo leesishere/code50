@@ -149,8 +149,9 @@ def shortest_path(source, target):
 
     sorted_actor_data = sorted(actor_data, key=lambda x: x['degree'], reverse=True)
 
+
     for actor_row in sorted_actor_data:
-        print(actor_row)
+        
     exit()
     # Sample dictionary
 
