@@ -98,7 +98,7 @@ def main():
 def same_movie(source, target):
    # Source and target starred in the same movie
     for m in people[source]['movies']:
-        if m in people[target]['movies']:
+        if target in movies[m]['stars']:
             return [(m, source), (m, target)]
     return False
 
@@ -119,15 +119,27 @@ def shortest_path(source, target):
     source_matches = set()
     connections = set()
     target_matches = set()
-    print(f"{people[source]} - {people[source]['movies']}")
+    people_count = len(people)
+    movie_count = len(movies)
+    degrees = []
+    print(movie_count)
 
-    for m in people[source]['movies']:
+    for source_movie in people[source]['movies']:
         for star in movies[m]['stars']:
+            degrees[0] = (source_movie, source)
+            star_power = same_movie(star,target)
+
+            for star_movie in people[star]['movies']:
+
             star_power = same_movie(star,target)
             if star_power:
-                return [(m, source), (m, target)]
+                #return [(m, source), (star),(m, target)]
                 print(f"C is in the same movie as B - {star_power}")
+            print(f"{movies[m]['stars']}")
     print()
+
+    #people[row["person_id"]]["movies"].add(row["movie_id"])
+    #movies[row["movie_id"]]["stars"].add(row["person_id"])
 
     # return [(m, source), (m, target)]
 
