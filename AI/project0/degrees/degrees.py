@@ -174,10 +174,20 @@ def shortest_path(source, target):
     cursor.executemany("INSERT INTO actor_movies (degree, actor_id, movie_id) VALUES (:degree, :actor_id, :movie_id)", sorted_actor_data)
     conn.commit()
 
-    _sql = "SELECT b.degree, b.movie_id, b.actor_id "
+    _sql  = "WITH RECURSIVE actor_paths AS ( "
+    _sql += "-- Base case: Start from actors with degree = 1 "
+    _sql += "SELECT actor_id, movie_id, degree, actor_id AS path "
+    _sql += "FROM actor_movies "
+    _sql += "WHERE degree = 1 "
+    _sql += " "
+    _sql += "UNION ALL "
+    _sql += " "
+    _sql += "-- Recursive case: Join on the same movie_id to find connections "
+    _sql += "SELECT a.actor_id, a.movie_id, a.degree, p.path || \' -> \' || a.actor_id "
     _sql += "FROM actor_movies AS a "
-    _sql += "JOIN actor_movies AS b ON a.movie_id = b.movie_id "
-    _sql += "WHERE a.degree = 1; "
+    _sql += "JOIN actor_paths AS p ON a.movie_id = p.movie_id "
+    _sql += "WHERE a.degree = -1 "
+    _sql += ")"
 
     cursor.execute(_sql)
     rows = cursor.fetchall()
