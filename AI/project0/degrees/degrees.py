@@ -177,7 +177,7 @@ def shortest_path(source, target):
 
     _sql = "SELECT movie_id, actor_id\n"
     _sql += "FROM actor_movies \n"
-    _sql += "WHERE degree = -1; \n"
+    #_sql += "WHERE degree = -1; \n"
 
     cursor.execute(_sql)
     rows = cursor.fetchall()
