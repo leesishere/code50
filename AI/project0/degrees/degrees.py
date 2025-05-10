@@ -159,34 +159,27 @@ def shortest_path(source, target):
     for actor_id in people:
         for movie_id in people[actor_id]['movies']:
             if source == actor_id:
-                actor_data.append({"degree": 1, "actor_id": int(actor_id, "movie_id": movie_id})
+                actor_data.append({"degree": 1, "actor_id": int(actor_id), "movie_id": int(movie_id)})
             elif target == actor_id:
-                actor_data.append({"degree": -1, "actor_id": actor_id, "movie_id": movie_id})
+                actor_data.append({"degree": -1, "actor_id": int(actor_id), "movie_id": int(movie_id)})
             else:
-                actor_data.append({"degree": 0, "actor_id": actor_id, "movie_id": movie_id})
+                actor_data.append({"degree": 0, "actor_id": int(actor_id), "movie_id": int(movie_id)})
 
     sorted_actor_data = sorted(actor_data, key=lambda x: x['degree'], reverse=True)
 
     source_movie = []
     count = sum(1 for row in sorted_actor_data if row['degree'] == 1)
 
+    
 
 
 
     exit()
-    # Sample dictionary
-
-    actor_datq = {"actor_id": "James", "movie_id": 30},
 
 
-    # Define CSV file path
-    file_path = "data.csv"
 
-    # Write to CSV file
-    with open(file_path, "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=data[0].keys())  # Use keys as column headers
-        writer.writeheader()  # Write headers
-        writer.writerows(data)  # Write row data
+
+
 
 
     degree = 1
