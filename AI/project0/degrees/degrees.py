@@ -98,10 +98,12 @@ def main():
 def in_same_movie(movie_neighbors,source, target):
     source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
     target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
-    if source_movie and target_movie:
-        matching_movie = source_movie.intersection(target_movie)
-        if matching_movie:
-            return True
+    if source_movie and source_movie:
+        if isinstance(source_movie, set) and isinstance(source_movie, set):
+            matching_movie = source_movie.intersection(target_movie)
+            if matching_movie:
+                return True
+            return False
     else:
         return False
 
@@ -109,9 +111,12 @@ def get_movie_id(movie_neighbors,source, target):
     source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
     target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
     if source_movie and target_movie:
-        matching_movie = source_movie.intersection(target_movie)
-        if matching_movie:
-            return matching_movie
+        if isinstance(source_movie, set) and isinstance(source_movie, set):
+            matching_movie = source_movie.intersection(target_movie)
+            if matching_movie:
+                return matching_movie
+            else:
+                None
     else:
         None
 
