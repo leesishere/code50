@@ -145,6 +145,7 @@ def shortest_path(source, target):
     # Create table (if it doesn't exist)
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS actor_movies (
+        degree INTEGER,
         actor_id INTEGER,
         movie_id INTEGER
     )
