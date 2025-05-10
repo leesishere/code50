@@ -140,8 +140,8 @@ def shortest_path(source, target):
     CREATE TABLE IF NOT EXISTS actor_movies (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         degree INTEGER,
-        actor_id TEXT,
-        movie_id TEXT
+        actor_id INTEGER,
+        movie_id INTEGER
     )
     """)
     conn.commit()
@@ -159,7 +159,7 @@ def shortest_path(source, target):
     for actor_id in people:
         for movie_id in people[actor_id]['movies']:
             if source == actor_id:
-                actor_data.append({"degree": 1, "actor_id": actor_id, "movie_id": movie_id})
+                actor_data.append({"degree": 1, "actor_id": int(actor_id, "movie_id": movie_id})
             elif target == actor_id:
                 actor_data.append({"degree": -1, "actor_id": actor_id, "movie_id": movie_id})
             else:
@@ -170,7 +170,7 @@ def shortest_path(source, target):
     source_movie = []
     count = sum(1 for row in sorted_actor_data if row['degree'] == 1)
 
- 
+
 
 
     exit()
