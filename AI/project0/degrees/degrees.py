@@ -190,7 +190,7 @@ def shortest_path(source, target):
 
     for row in cursor.fetchall():
         print(row[0])
-        update_cursor.execute("UPDATE actor_movies SET degree = 2 WHERE movie_id = 112384")
+        update_cursor.execute(f"UPDATE actor_movies SET degree = 2 WHERE movie_id = {row[0]}")
         # Commit changes
         update_cursor.commit()
 
