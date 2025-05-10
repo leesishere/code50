@@ -98,7 +98,8 @@ def main():
 def in_same_movie(movie_neighbors,source, target):
     source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
     target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
-    matching_movie = source_movie & target_movie
+    if source_movie and target_movie:
+        matching_movie = source_movie & target_movie
     if matching_movie:
         return True
     else:
@@ -107,9 +108,10 @@ def in_same_movie(movie_neighbors,source, target):
 def get_movie_id(movie_neighbors,source, target):
     source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
     target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
-    matching_movie = source_movie & target_movie
-    if matching_movie:
-        return matching_movie
+    if source_movie and target_movie:
+        matching_movie = source_movie & target_movie
+        if matching_movie:
+            return matching_movie
     else:
         None
 
