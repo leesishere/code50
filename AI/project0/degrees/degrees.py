@@ -97,10 +97,9 @@ def main():
 
 def in_same_movie(movie_neighbors,actors_in_movie, target):
     # Source and target starred in the same movie
-    matching_values = [second for m, second in movie_neighbors if m == actors_in_movie[0]]
-    for m in people[source]['movies']:
-        if target in movies[m]['stars']:
-            return True
+    all_actors = [a for m, a in movie_neighbors if m == actors_in_movie[0]]
+    for actors_in_movie in actors_in_movie and target in actors_in_movie:
+        return True
     return False
 
 
