@@ -174,7 +174,12 @@ def shortest_path(source, target):
     cursor.executemany("INSERT INTO actor_movies (degree, actor_id, movie_id) VALUES (:degree, :actor_id, :movie_id)", sorted_actor_data)
     conn.commit()
 
-    cursor.execute("SELECT * FROM actor_movies")
+    _sql = "SELECT a.actor_id, a.movie_id, b.actor_id AS other_actor "
+    _sql += "FROM actor_movies AS a "
+    _sql += "JOIN actor_movies AS b ON a.movie_id = b.movie_id "
+    _sql += "WHERE a.degree = 1; "
+
+    cursor.execute(_sql)
     rows = cursor.fetchall()
     for row in rows:
         print(row)
