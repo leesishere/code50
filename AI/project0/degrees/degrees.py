@@ -129,8 +129,6 @@ def shortest_path(source, target):
         movie_id = get_movie_id(movie_neighbors,source, target)
         return [(movie_id, target)]
 
-    exit()
-
     degree = 1
     while True:
         for actors_in_movie in movie_neighbors:
