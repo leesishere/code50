@@ -150,8 +150,9 @@ def shortest_path(source, target):
     sorted_actor_data = sorted(actor_data, key=lambda x: x['degree'], reverse=True)
 
     source_movie = []
-    sorted_actor_data
-    for actor_row in sorted_actor_data:
+    count = sum(1 for row in sorted_actor_data if row['degree'] == 1)
+    
+    for actor_row in sorted_actor_datacount[count:]:
 
 
     exit()
