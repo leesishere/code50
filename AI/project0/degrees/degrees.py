@@ -98,7 +98,8 @@ def main():
 def in_same_movie(movie_neighbors,source, target):
     source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
     target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
-    if source_movie and target_movie:
+    matching_movie = source_movie & target_movie
+    if matching_movie:
         return True
     else:
         return False
@@ -106,8 +107,9 @@ def in_same_movie(movie_neighbors,source, target):
 def get_movie_id(movie_neighbors,source, target):
     source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
     target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
-    if source_movie and target_movie:
-        return target_movie
+    matching_movie = source_movie & target_movie
+    if matching_movie:
+        return matching_movie
     else:
         None
 
@@ -121,9 +123,9 @@ def shortest_path(source, target):
     """
     degrees = []
     movie_neighbors = neighbors_for_person(source)
-
-
-
+    if in_same_movie(movie_neighbors,source, target):
+        movie_id = get_movie_id(movie_neighbors,source, target)
+        return [(movie_id, target)]
 
     exit()
 
