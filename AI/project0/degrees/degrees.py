@@ -119,10 +119,9 @@ def shortest_path(source, target):
     """
     degrees = []
     movie_neighbors = neighbors_for_person(source)
-    # Find first values for '705' and '398'
-    first_value_705 = next((first for first, second in data if second == '705'), None)
-    first_value_398 = next((first for first, second in data if second == '398'), None)
-    
+    source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
+    target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
+
     # Check if they are the same
     if first_value_705 and first_value_398 and first_value_705 == first_value_398:
         print(f"Yes, '{first_value_705}' is the same first value for both '705' and '398'.")
