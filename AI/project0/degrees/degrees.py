@@ -170,9 +170,14 @@ def shortest_path(source, target):
     source_movie = []
     count = sum(1 for row in sorted_actor_data if row['degree'] == 1)
 
-    
+    # Insert data into the database
+    cursor.executemany("INSERT INTO actor_movies (degree, actor_id, movie_id) VALUES (:degree, :actor_id, :movie_id)", sorted_actor_data)
+    conn.commit()
 
-
+    cursor.execute("SELECT * FROM actor_movies")
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
 
     exit()
 
