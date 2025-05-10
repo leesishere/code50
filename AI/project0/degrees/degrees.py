@@ -136,6 +136,22 @@ def shortest_path(source, target):
 
     print(people[source]["movies"])
 
+# Sample dictionary
+data = [
+    {"name": "James", "age": 30, "location": "Reston, VA"},
+    {"name": "Emily", "age": 25, "location": "New York, NY"},
+    {"name": "Michael", "age": 35, "location": "San Francisco, CA"}
+]
+
+# Define CSV file path
+file_path = "data.csv"
+
+# Write to CSV file
+with open(file_path, "w", newline="") as f:
+    writer = csv.DictWriter(f, fieldnames=data[0].keys())  # Use keys as column headers
+    writer.writeheader()  # Write headers
+    writer.writerows(data)  # Write row data
+    
     exit()
     degree = 1
     while True:
