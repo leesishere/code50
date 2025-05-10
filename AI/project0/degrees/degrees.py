@@ -140,7 +140,8 @@ def shortest_path(source, target):
     #{'name': 'Tom Hanks', 'birth': '1956', 'movies': {'109830', '112384'}}
     for actor in people:
         for m in movies:
-            actor_row.append({"actor_id": "James", "movie_id": 30}
+            print(person_id_for_name['name'])
+            #actor_row.append({"actor_id": "James", "movie_id": 30}
     exit()
     # Sample dictionary
 
