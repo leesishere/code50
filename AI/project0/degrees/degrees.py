@@ -1,5 +1,6 @@
 import csv
 import sys
+import sqlite3
 
 from util import Node, StackFrontier, QueueFrontier
 
@@ -128,6 +129,23 @@ def shortest_path(source, target):
     If no possible path, returns None.
 
     """
+    # Connect to SQLite database (or create it if it doesn't exist)
+    conn = sqlite3.connect("actors_movies.db")
+
+    # Create a cursor object
+    cursor = conn.cursor()
+
+    # Create table (if it doesn't exist)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS actor_movies (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        degree INTEGER,
+        actor_id TEXT,
+        movie_id TEXT
+    )
+    """)
+    conn.commit()
+
     degrees = []
     movie_neighbors = neighbors_for_person(source)
     if in_same_movie(movie_neighbors,source, target):
@@ -152,8 +170,8 @@ def shortest_path(source, target):
     source_movie = []
     count = sum(1 for row in sorted_actor_data if row['degree'] == 1)
 
-    for actor_row in sorted_actor_datacount:
-        
+ 
+
 
     exit()
     # Sample dictionary
