@@ -151,9 +151,9 @@ def shortest_path(source, target):
 
     source_movie = []
     count = sum(1 for row in sorted_actor_data if row['degree'] == 1)
-    
-    for actor_row in sorted_actor_datacount[count:]:
 
+    for actor_row in sorted_actor_datacount:
+        
 
     exit()
     # Sample dictionary
