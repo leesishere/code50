@@ -185,6 +185,27 @@ def shortest_path(source, target):
     _sql += "FROM actor_movies \n"
     _sql += "ORDER BY actor_id;\n"
 
+    _sql = "WITH RECURSIVE actor_paths AS ( \n"
+    _sql = "-- Base case: Start from actors with degree = 1 \n"
+    _sql = "SELECT actor_id, movie_id, degree, actor_id AS path \n"
+    _sql = "FROM actor_movies \n"
+    _sql = "WHERE degree = 1 \n"
+    _sql = " \n"
+    _sql = "UNION ALL \n"
+    _sql = " \n"
+    _sql = "-- Recursive case: Join on the same movie_id to find connections \n"
+    _sql = "SELECT a.actor_id, a.movie_id, a.degree, p.path || \' -> \' || a.actor_id \n"
+    _sql = "FROM actor_movies AS a \n"
+    _sql = "JOIN actor_paths AS p ON a.movie_id = p.movie_id \n"
+    _sql = "WHERE a.degree != 1 \n"
+    _sql = ") \n"
+
+    _sql = "-- Return only paths leading to degree = -1 and order by actor_id \n"
+    _sql = "SELECT movie_id, actor_id, path \n"
+    _sql = "FROM actor_paths \n"
+    _sql = "WHERE degree = -1 \n"
+    _sql = "ORDER BY actor_id; \n"
+
     cursor.execute(_sql)
     rows = cursor.fetchall()
     for row in rows:
