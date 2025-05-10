@@ -136,7 +136,7 @@ def shortest_path(source, target):
                 continue
             this_actors_movie_neighbors = neighbors_for_person(actors_in_movie[1])
             for for_this_actor in this_actors_movie_neighbors:
-                print(for_this_actor)
+                print(f"{for_this_actor} {actors_in_movie[1]}")
                 exit()
                 if in_same_movie(movie_neighbors,actors_in_movie[1],target):
                     print(f" degree={degree}  {people[actors_in_movie[1]]['name']} {people[target]['name']}")
