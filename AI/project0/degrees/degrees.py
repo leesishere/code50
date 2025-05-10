@@ -117,19 +117,7 @@ def shortest_path(source, target):
     If no possible path, returns None.
 
     """
-
-    # 'Tom Hanks' & 'Tom Cruise' approach
-    source_matches = set()
-    connections = set()
-    target_matches = set()
-    people_count = len(people)
-    movie_count = len(movies)
     degrees = []
-
-
-    # neighbors.add((movie_id, person_id))
-    #list_of_lists.append(new_element)
-    #last_element = list_of_lists.pop()
     movie_neighbors = neighbors_for_person(source)
 
     degree = 1
@@ -146,60 +134,6 @@ def shortest_path(source, target):
             movie_neighbors = neighbors_for_person(actors_in_movie[1])
         degree += 1
         break
-            #{movies[actors[0]]['title']}}
-            #people[row["person_id"]]["movies"].add(row["movie_id"])
-            #movies[row["movie_id"]]["stars"].add(row["person_id"])
-
-    exit()
-    for source_movie in people[source]['movies']:
-        degrees[0] = (source_movie, source)
-        for i in range(people_count):
-            for star in movies[m]['stars']:
-                star_power = same_movie(star,target)
-                #degrees[0] = (source_movie, source)
-
-    print()
-
-    #people[row["person_id"]]["movies"].add(row["movie_id"])
-    #movies[row["movie_id"]]["stars"].add(row["person_id"])
-
-    # return [(m, source), (m, target)]
-
-    #print(movies[m])
-    #[row["movie_id"]]["stars"].add(row["person_id"])
-
-    exit()
-
-    # create an actor list to be able to sort and search actors
-    actors  = []
-    # Store the number of movies count the actors has been in.
-    # The higher the number the higher likelihood they have been in the same movie as another actor
-    moviez = []
-    for key, value in people.items():
-        for movie_id in value.get('movies', ''):
-            movies.append(movie_id)
-
-        person = {
-            "id": key,
-            "name": value.get('name', ''),
-            "movie_count": len(value.get('movies', '')), # the count of movies
-            "movie_ids": moviez
-        }
-        actors.append(person)
-        moviez = []
-
-    sorted_data = sort_by_movie_count(actors)
-
-    # Print each row with index ID
-    for i in range(len(sorted_data)):
-        if source == sorted_data[i]['id'] or target == sorted_data[i]['id']:
-            print(f"Record {i+1}: id - {sorted_data[i]['id']}, Name: {sorted_data[i]['name']}, {sorted_data[i]['movie_count']}, {sorted_data[i]['movie_ids']}")
-
-
-
-    exit()
-    return [(1, 2), (3, 4)]
-    raise NotImplementedError
 
 def sort_by_movie_count(data):
     # Sort the data by movie_count in descending order
