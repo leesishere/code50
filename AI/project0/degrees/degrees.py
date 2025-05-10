@@ -134,12 +134,17 @@ def shortest_path(source, target):
 
     # Create a cursor object
     cursor = conn.cursor()
+    # Drop the table if it exists
+    cursor.execute("DROP TABLE IF EXISTS actor_movies")
+
+    # Commit changes
+    conn.commit()
+
+    print("Table 'actor_movies' dropped successfully!")
 
     # Create table (if it doesn't exist)
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS actor_movies (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        degree INTEGER,
         actor_id INTEGER,
         movie_id INTEGER
     )
