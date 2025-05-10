@@ -122,7 +122,8 @@ def shortest_path(source, target):
     people_count = len(people)
     movie_count = len(movies)
     degrees = []
-    print(movie_count)
+    print(people_count)
+    exit()
 
     for source_movie in people[source]['movies']:
         for star in movies[m]['stars']:
