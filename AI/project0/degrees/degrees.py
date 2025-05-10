@@ -186,10 +186,17 @@ def shortest_path(source, target):
     _sql += "WHERE degree = 1;\n"
 
     cursor.execute(_sql)
-    #rows = cursor.fetchall()
+    update_cursor = conn.cursor()
 
     for row in cursor.fetchall():
         print(row[0])
+        update_cursor.execute("UPDATE actor_movies SET degree = 2 WHERE movie_id = 112384")
+        # Commit changes
+        update_cursor.commit()
+
+
+# Commit changes
+#conn.commit()
 
     exit()
 
