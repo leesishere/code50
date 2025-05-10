@@ -142,6 +142,8 @@ def shortest_path(source, target):
         for movie_id in people[actor_id]['movies']:
             if source == actor_id:
                 actor_data.append({"degree": 1, "actor_id": actor_id, "movie_id": movie_id})
+            elif target == actor_id:
+                actor_data.append({"degree": -1, "actor_id": actor_id, "movie_id": movie_id})
             else:
                 actor_data.append({"degree": 0, "actor_id": actor_id, "movie_id": movie_id})
     for actor_row in actor_data:
