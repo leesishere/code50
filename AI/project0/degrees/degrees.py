@@ -137,11 +137,13 @@ def shortest_path(source, target):
     #with open(f"{directory}/people.csv", encoding="utf-8") as f:
 
     actor_data = []
-    #{'name': 'Tom Hanks', 'birth': '1956', 'movies': {'109830', '112384'}}
-    #["person_id"]["movies"]
+
     for actor_id in people:
         for movie_id in people[actor_id]['movies']:
-            actor_data.append({"actor_id": actor_id, "movie_id": movie_id})
+            if source == actor_id:
+                actor_data.append({"degree": 1, "actor_id": actor_id, "movie_id": movie_id})
+            else:
+                actor_data.append({"degree": 0, "actor_id": actor_id, "movie_id": movie_id})
     for actor_row in actor_data:
         print(actor_row)
     exit()
