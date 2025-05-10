@@ -122,21 +122,13 @@ def shortest_path(source, target):
     people_count = len(people)
     movie_count = len(movies)
     degrees = []
-    print(people_count)
-    exit()
 
-    for source_movie in people[source]['movies']:
-        for star in movies[m]['stars']:
-            #degrees[0] = (source_movie, source)
-            star_power = same_movie(star,target)
-
-            for star_movie in people[star]['movies']:
-
+    for i in range(people_count):
+        for source_movie in people[source]['movies']:
+            for star in movies[m]['stars']:
                 star_power = same_movie(star,target)
-                if star_power:
-                    #return [(m, source), (star),(m, target)]
-                    print(f"C is in the same movie as B - {star_power}")
-                print(f"{movies[m]['stars']}")
+                #degrees[0] = (source_movie, source)
+
     print()
 
     #people[row["person_id"]]["movies"].add(row["movie_id"])
