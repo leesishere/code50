@@ -177,7 +177,7 @@ def shortest_path(source, target):
 
     _sql = "SELECT *\n"
     _sql += "FROM actor_movies \n"
-    #_sql += " \n"
+    _sql += "ORDER BY actor_id;\n"
 
     cursor.execute(_sql)
     rows = cursor.fetchall()
