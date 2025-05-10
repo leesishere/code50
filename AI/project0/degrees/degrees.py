@@ -138,6 +138,7 @@ def shortest_path(source, target):
 
     actor_row = []
     #{'name': 'Tom Hanks', 'birth': '1956', 'movies': {'109830', '112384'}}
+    ["person_id"]]["movies"]
     for actor in people:
         for m in movies:
             print(actor)
