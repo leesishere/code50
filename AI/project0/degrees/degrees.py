@@ -136,25 +136,27 @@ def shortest_path(source, target):
 
     #with open(f"{directory}/people.csv", encoding="utf-8") as f:
 
-    print(people[source]["movies"])
-
-# Sample dictionary
-data = [
-    {"actor": "James", "age": 30, "location": "Reston, VA"},
-    {"name": "Emily", "age": 25, "location": "New York, NY"},
-    {"name": "Michael", "age": 35, "location": "San Francisco, CA"}
-]
-
-# Define CSV file path
-file_path = "data.csv"
-
-# Write to CSV file
-with open(file_path, "w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=data[0].keys())  # Use keys as column headers
-    writer.writeheader()  # Write headers
-    writer.writerows(data)  # Write row data
-
+    actor_row = []
+    #{'name': 'Tom Hanks', 'birth': '1956', 'movies': {'109830', '112384'}}
+    for actor in people:
+        for m in movies:
+            actor_row.append({"actor_id": "James", "movie_id": 30}
     exit()
+    # Sample dictionary
+
+    actor_datq = {"actor_id": "James", "movie_id": 30},
+
+
+    # Define CSV file path
+    file_path = "data.csv"
+
+    # Write to CSV file
+    with open(file_path, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=data[0].keys())  # Use keys as column headers
+        writer.writeheader()  # Write headers
+        writer.writerows(data)  # Write row data
+
+
     degree = 1
     while True:
         for actors_in_movie in movie_neighbors:
