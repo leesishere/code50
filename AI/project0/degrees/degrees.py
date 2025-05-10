@@ -188,6 +188,7 @@ def shortest_path(source, target):
     _sql += "JOIN actor_paths AS p ON a.movie_id = p.movie_id \n"
     _sql += "WHERE a.degree = -1 \n"
     _sql += ") \n"
+    _sql += "SELECT * FROM actor_paths; \n"
 
     cursor.execute(_sql)
     rows = cursor.fetchall()
