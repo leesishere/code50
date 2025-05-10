@@ -200,8 +200,8 @@ def shortest_path(source, target):
     cursor.execute(_sql)
     for row in cursor.fetchall():
         print(row)
-# Commit changes
-#conn.commit()
+    # Close connection
+    conn.close()
 
     exit()
 
