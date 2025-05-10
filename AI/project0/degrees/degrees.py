@@ -185,11 +185,10 @@ def shortest_path(source, target):
     _sql += "FROM actor_movies \n"
     _sql += "WHERE degree = 1;\n"
 
-
     cursor.execute(_sql)
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        print(row[0])
 
     exit()
 
