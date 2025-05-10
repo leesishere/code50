@@ -95,19 +95,21 @@ def main():
             movie = movies[path[i + 1][0]]["title"]
             print(f"{i + 1}: {person1} and {person2} starred in {movie}")
 
-def in_same_movie(movie_neighbors,actors_in_movie, target):
-    # Source and target starred in the same movie
-    all_actors = [a for m, a in movie_neighbors if m == actors_in_movie[0]]
-    for target in all_actors:
+def in_same_movie(movie_neighbors,source, target):
+    source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
+    target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
+    if source_movie and target_movie:
         return True
-    return False
+    else:
+        return False
 
-
-def get_movie_id(source, target):
-    for m in people[source]['movies']:
-        if target in movies[m]['stars']:
-            return m
-    return False
+def get_movie_id(movie_neighbors,source, target):
+    source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
+    target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
+    if source_movie and target_movie:
+        return target_movie
+    else:
+        None
 
 def shortest_path(source, target):
     """
@@ -119,17 +121,11 @@ def shortest_path(source, target):
     """
     degrees = []
     movie_neighbors = neighbors_for_person(source)
-    source_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == source), None)
-    target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
-
-    # Check if they are the same
-    if first_value_705 and first_value_398 and first_value_705 == first_value_398:
-        print(f"Yes, '{first_value_705}' is the same first value for both '705' and '398'.")
-    else:
-        print("No, they have different first values.")
 
 
-    if in_same_movie(movie_neighbors,source,target):
+
+
+    exit()
 
     degree = 1
     while True:
