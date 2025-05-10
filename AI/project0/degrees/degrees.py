@@ -100,8 +100,8 @@ def in_same_movie(movie_neighbors,source, target):
     target_movie = next((movie_id for movie_id, actor_id in movie_neighbors if actor_id == target), None)
     if source_movie and target_movie:
         matching_movie = source_movie & target_movie
-    if matching_movie:
-        return True
+        if matching_movie:
+            return True
     else:
         return False
 
