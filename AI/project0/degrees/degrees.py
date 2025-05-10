@@ -95,11 +95,19 @@ def main():
             movie = movies[path[i + 1][0]]["title"]
             print(f"{i + 1}: {person1} and {person2} starred in {movie}")
 
-def same_movie(source, target):
-   # Source and target starred in the same movie
+def in_same_movie(actors_in_movie,node, target):
+    # Source and target starred in the same movie
+    matching_values = [second for first, second in data if first == '109830']
     for m in people[source]['movies']:
         if target in movies[m]['stars']:
-            return [(m, source), (m, target)]
+            return True
+    return False
+
+
+def get_movie_id(source, target):
+    for m in people[source]['movies']:
+        if target in movies[m]['stars']:
+            return m
     return False
 
 def shortest_path(source, target):
@@ -110,10 +118,6 @@ def shortest_path(source, target):
     If no possible path, returns None.
 
     """
-    # Source and target starred in the same movie
-    star_power = same_movie(source,target)
-    if star_power:
-        return star_power
 
     # 'Tom Hanks' & 'Tom Cruise' approach
     source_matches = set()
@@ -123,8 +127,36 @@ def shortest_path(source, target):
     movie_count = len(movies)
     degrees = []
 
-    for i in range(people_count):
-        for source_movie in people[source]['movies']:
+
+    # neighbors.add((movie_id, person_id))
+    #list_of_lists.append(new_element)
+    #last_element = list_of_lists.pop()
+    movie_neighbors = neighbors_for_person(source)
+
+    degree = 1
+    while True:
+        for actors_in_movie in movie_neighbors:
+            if source == actors_in_movie[1]:
+                    continue
+            print(actors_in_movie)
+            exit()
+          
+
+                print(f"{node}")
+                if in_same_movie(actors,node, target):
+                    print(f" degree={degree}  {people[actors[1]]['name']} {people[target]['name']}")
+
+        actors_in_same_movie = neighbors_for_person(source)
+        degree += 1
+        break
+            #{movies[actors[0]]['title']}}
+            #people[row["person_id"]]["movies"].add(row["movie_id"])
+            #movies[row["movie_id"]]["stars"].add(row["person_id"])
+
+    exit()
+    for source_movie in people[source]['movies']:
+        degrees[0] = (source_movie, source)
+        for i in range(people_count):
             for star in movies[m]['stars']:
                 star_power = same_movie(star,target)
                 #degrees[0] = (source_movie, source)
