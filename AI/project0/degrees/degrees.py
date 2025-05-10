@@ -127,7 +127,7 @@ def shortest_path(source, target):
 
     for source_movie in people[source]['movies']:
         for star in movies[m]['stars']:
-            degrees[0] = (source_movie, source)
+            #degrees[0] = (source_movie, source)
             star_power = same_movie(star,target)
 
             for star_movie in people[star]['movies']:
