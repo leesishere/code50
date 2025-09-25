@@ -62,22 +62,22 @@ def main():
     load_data(directory)
     print("Data loaded.")
 
-    '''
+
     source = person_id_for_name(input("Name: "))
     if source is None:
         sys.exit("Person not found.")
     target = person_id_for_name(input("Name: "))
     if target is None:
         sys.exit("Person not found.")
-    '''
+
 
     #source = 'Kevin Bacon'
-    source = 'Tom Hanks'
-    source = person_id_for_name(source)
+    #source = 'Tom Hanks'
+    #source = person_id_for_name(source)
 
-    target = 'Tom Cruise'
+    #target = 'Tom Cruise'
     #target = 'Kevin Bacon'
-    target = person_id_for_name(target)
+    #target = person_id_for_name(target)
 
     path = shortest_path(source, target)
 
@@ -101,43 +101,40 @@ def shortest_path(source, target):
 
     If no possible path, returns None.
     """
-    print(neighbors_for_person(source))
-    exit()
 
-    # TODO
-    raise NotImplementedError
-
-def StackFrontier():
-    def __init__(self):
-        self.frontier = []
-
-    def add(self, node):
-        self.frontier.append(node)
-
-    def contains_state(self, state):
-        return any(node.state == state for node in self.frontier)
-
-    def empty(self):
-        return len(self.frontier) == 0
-
-    def remove(self):
-        if self.empty():
-            raise Exception("empty frontier")
-        else:
-            node = self.frontier[-1]
-            self.frontier = self.frontier[:-1]
-            return node
+    #for item in neighbors_for_person(source):
+    #    print(f"Movie: {movie_name_for_id(item[0])},\t\t Actor: {person_name_for_id(item[1])}")
 
 
-def QueueFrontier(StackFrontier):
+    start = Node(state=source, parent=None, action=None)
+    frontier = QueueFrontier()
+    frontier.add(start)
 
-    def remove(self):
-        if self.empty():
-            raise Exception("empty frontier")
-        else:
-            node = self.frontier[0]
-            self.frontier = self.frontier[1:]
-            return node
+    explored = set()
+
+    while not frontier.empty():
+        node = frontier.remove()
+
+        # Goal check
+        if node.state == target:
+            # Reconstruct path
+            path = []
+            while node.parent is not None:
+                path.append((node.action, node.state))  # (movie_id, actor_id)
+                node = node.parent
+            return list(reversed(path))
+
+        explored.add(node.state)
+
+        # Expand neighbors dynamically using people/movies
+        for movie_id in people[node.state]["movies"]:
+            for neighbor in movies[movie_id]["stars"]:
+                if neighbor not in explored and not frontier.contains_state(neighbor):
+                    child = Node(state=neighbor, parent=node, action=movie_id)
+                    frontier.add(child)
+
+    return None
+
 
 def person_id_for_name(name):
     """
@@ -163,6 +160,26 @@ def person_id_for_name(name):
         return None
     else:
         return person_ids[0]
+
+def person_name_for_id(person_id):
+    """
+    Returns the IMDB id for a person's name,
+    resolving ambiguities as needed.
+    """
+    person = people[person_id]
+    name = person["name"]
+    birth = person["birth"]
+
+    return name
+
+def movie_name_for_id(movie_id):
+
+    movie = movies[movie_id]
+    title = movie["title"]
+    birth = movie["year"]
+
+    return title
+
 
 
 def neighbors_for_person(person_id):
