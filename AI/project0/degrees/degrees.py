@@ -62,12 +62,22 @@ def main():
     load_data(directory)
     print("Data loaded.")
 
+    '''
     source = person_id_for_name(input("Name: "))
     if source is None:
         sys.exit("Person not found.")
     target = person_id_for_name(input("Name: "))
     if target is None:
         sys.exit("Person not found.")
+    '''
+
+    #source = 'Kevin Bacon'
+    source = 'Tom Hanks'
+    source = person_id_for_name(source)
+
+    target = 'Tom Cruise'
+    #target = 'Kevin Bacon'
+    target = person_id_for_name(target)
 
     path = shortest_path(source, target)
 
@@ -91,10 +101,43 @@ def shortest_path(source, target):
 
     If no possible path, returns None.
     """
+    print(neighbors_for_person(source))
+    exit()
 
     # TODO
     raise NotImplementedError
 
+def StackFrontier():
+    def __init__(self):
+        self.frontier = []
+
+    def add(self, node):
+        self.frontier.append(node)
+
+    def contains_state(self, state):
+        return any(node.state == state for node in self.frontier)
+
+    def empty(self):
+        return len(self.frontier) == 0
+
+    def remove(self):
+        if self.empty():
+            raise Exception("empty frontier")
+        else:
+            node = self.frontier[-1]
+            self.frontier = self.frontier[:-1]
+            return node
+
+
+def QueueFrontier(StackFrontier):
+
+    def remove(self):
+        if self.empty():
+            raise Exception("empty frontier")
+        else:
+            node = self.frontier[0]
+            self.frontier = self.frontier[1:]
+            return node
 
 def person_id_for_name(name):
     """
