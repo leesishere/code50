@@ -62,22 +62,12 @@ def main():
     load_data(directory)
     print("Data loaded.")
 
-
     source = person_id_for_name(input("Name: "))
     if source is None:
         sys.exit("Person not found.")
     target = person_id_for_name(input("Name: "))
     if target is None:
         sys.exit("Person not found.")
-
-
-    #source = 'Kevin Bacon'
-    #source = 'Tom Hanks'
-    #source = person_id_for_name(source)
-
-    #target = 'Tom Cruise'
-    #target = 'Kevin Bacon'
-    #target = person_id_for_name(target)
 
     path = shortest_path(source, target)
 
@@ -102,9 +92,8 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    #for item in neighbors_for_person(source):
+    # for item in neighbors_for_person(source):
     #    print(f"Movie: {movie_name_for_id(item[0])},\t\t Actor: {person_name_for_id(item[1])}")
-
 
     start = Node(state=source, parent=None, action=None)
     frontier = QueueFrontier()
@@ -161,6 +150,7 @@ def person_id_for_name(name):
     else:
         return person_ids[0]
 
+
 def person_name_for_id(person_id):
     """
     Returns the IMDB id for a person's name,
@@ -172,6 +162,7 @@ def person_name_for_id(person_id):
 
     return name
 
+
 def movie_name_for_id(movie_id):
 
     movie = movies[movie_id]
@@ -179,7 +170,6 @@ def movie_name_for_id(movie_id):
     birth = movie["year"]
 
     return title
-
 
 
 def neighbors_for_person(person_id):
